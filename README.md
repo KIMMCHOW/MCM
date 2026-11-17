@@ -79,4 +79,10 @@ cd paper && latexmk -pdf main.tex
 - [x] 参数调研与最终模型规格（docs/design/FINAL_SPEC.md）
 - [x] 核心模型实现与测试（`src/phonebatt`，`tests/`：数值验收 T1–T5 与规格 §15.3 回归表）
 - [x] 续航预测、验证、不确定性、敏感性、老化与建议（17 项分析）
-- [ ] 论文撰写与审稿修订（进行中）
+- [x] 论文撰写与审稿修订（`paper/main.pdf`：计入页数 25 页 + 1 页 AI 使用报告；5 个视角对抗式审稿，135 条意见逐条核实修订）
+
+## 提交前需要人工处理
+
+- **队伍控制号**：在 `paper/preamble.tex` 中把 `\newcommand{\teamnumber}{0000000}` 改成你们的控制号，然后重新编译（`cd paper && latexmk -pdf main.tex`）。
+- **AI 使用报告**：`paper/ai_report.tex` 如实记录了 AI 工具的用途，请按 COMAP 政策和你们的实际使用情况核对、补充。
+- 页数已经用满（计入 25 页），再加内容会超限；如需增改，请同步压缩其他部分。
