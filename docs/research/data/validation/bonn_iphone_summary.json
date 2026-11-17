@@ -1,0 +1,2606 @@
+{
+ "source": "Schweizer et al. 2026, bonndata doi:10.60507/FK2/LSJGWW (CC BY 4.0); paper doi:10.3390/s26102923",
+ "model_mapping_inferred": {
+  "9": "13 Pro (inferred)",
+  "7": "13 Pro (inferred)",
+  "8": "13 Pro (inferred)",
+  "4": "14 Pro (inferred)",
+  "2": "14 Pro (inferred)",
+  "1": "14 Pro (inferred)",
+  "6": "14 Pro (inferred)",
+  "3": "14 Pro (inferred)",
+  "5": "14 Pro (inferred)"
+ },
+ "groups": {
+  "02-10-2023-GPS|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "runtime_h_median": 29.76375447862678,
+   "runtime_h_min": 28.874656640291214,
+   "runtime_h_max": 31.19218950808048,
+   "drain_pct_per_h_median": 3.5547419180926187,
+   "level_last_max": 0.009999999776482582
+  },
+  "02-10-2023-GPS|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "runtime_h_median": 48.491756375001536,
+   "runtime_h_min": 45.067643391953574,
+   "runtime_h_max": 51.2950682072507,
+   "drain_pct_per_h_median": 2.1958774310011906,
+   "level_last_max": 0.009999999776482582
+  },
+  "05-10-2023-GPS|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "runtime_h_median": 30.952200506064628,
+   "runtime_h_min": 30.26175893531905,
+   "runtime_h_max": 31.354683212836584,
+   "drain_pct_per_h_median": 3.4197767669575874,
+   "level_last_max": 0.009999999776482582
+  },
+  "05-10-2023-GPS|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "runtime_h_median": 48.85919047332472,
+   "runtime_h_min": 47.80174131499396,
+   "runtime_h_max": 51.144461695286964,
+   "drain_pct_per_h_median": 2.1803642905407816,
+   "level_last_max": 0.009999999776482582
+  },
+  "07-09-2023-Idle|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "runtime_h_median": 50.81708684053686,
+   "runtime_h_min": 50.61711076915264,
+   "runtime_h_max": 51.414544048574236,
+   "drain_pct_per_h_median": 2.0609427196012273,
+   "level_last_max": 0.009999999776482582
+  },
+  "07-09-2023-Idle|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "runtime_h_median": 55.02831094682217,
+   "runtime_h_min": 54.4024964019325,
+   "runtime_h_max": 57.33249720162816,
+   "drain_pct_per_h_median": 1.9222359021163795,
+   "level_last_max": 0.009999999776482582
+  },
+  "09-11-2023-CAM|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "runtime_h_median": 9.527346583008766,
+   "runtime_h_min": 9.230275884138214,
+   "runtime_h_max": 9.682566410303115,
+   "drain_pct_per_h_median": 10.992959258310492,
+   "level_last_max": 0.009999999776482582
+  },
+  "09-11-2023-CAM|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "runtime_h_median": 8.431189683377742,
+   "runtime_h_min": 8.340131837262048,
+   "runtime_h_max": 8.607419717841678,
+   "drain_pct_per_h_median": 12.665974268292075,
+   "level_last_max": 0.009999999776482582
+  },
+  "14-11-2023-CAM|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "runtime_h_median": 9.414847798612383,
+   "runtime_h_min": 9.242434689733717,
+   "runtime_h_max": 9.719897095561027,
+   "drain_pct_per_h_median": 11.153887893086543,
+   "level_last_max": 0.009999999776482582
+  },
+  "14-11-2023-CAM|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "runtime_h_median": 8.567498435344962,
+   "runtime_h_min": 8.51744809779856,
+   "runtime_h_max": 9.162498855524593,
+   "drain_pct_per_h_median": 12.458645213417848,
+   "level_last_max": 0.009999999776482582
+  },
+  "16-08-2023-Idle|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "runtime_h_median": 49.94240830050575,
+   "runtime_h_min": 48.98216034611066,
+   "runtime_h_max": 50.40748948309157,
+   "drain_pct_per_h_median": 2.0881857956342094,
+   "level_last_max": 0.009999999776482582
+  },
+  "16-08-2023-Idle|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "runtime_h_median": 54.04959372540315,
+   "runtime_h_min": 53.04674243417051,
+   "runtime_h_max": 55.74693291723728,
+   "drain_pct_per_h_median": 1.9538678604090007,
+   "level_last_max": 0.009999999776482582
+  },
+  "16-11-2023-Idle|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "runtime_h_median": 51.05965281950103,
+   "runtime_h_min": 50.45197327229712,
+   "runtime_h_max": 51.149188926617306,
+   "drain_pct_per_h_median": 2.060011277658231,
+   "level_last_max": 0.009999999776482582
+  },
+  "16-11-2023-Idle|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "runtime_h_median": 55.02749667432573,
+   "runtime_h_min": 53.89249353501532,
+   "runtime_h_max": 57.037496399482094,
+   "drain_pct_per_h_median": 1.938028859570624,
+   "level_last_max": 0.009999999776482582
+  },
+  "22-08-2023-Idle|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "runtime_h_median": 51.03701180828942,
+   "runtime_h_min": 50.414820787509285,
+   "runtime_h_max": 51.05990571220716,
+   "drain_pct_per_h_median": 2.0691920597017948,
+   "level_last_max": 0.009999999776482582
+  },
+  "22-08-2023-Idle|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "runtime_h_median": 55.072063163485794,
+   "runtime_h_min": 53.98485743747817,
+   "runtime_h_max": 57.28503280785349,
+   "drain_pct_per_h_median": 1.9289484454780372,
+   "level_last_max": 0.009999999776482582
+  },
+  "23-11-2023-CXL|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "runtime_h_median": 8.332440327207248,
+   "runtime_h_min": 8.038632309436798,
+   "runtime_h_max": 8.417469445268313,
+   "drain_pct_per_h_median": 12.688431817411512,
+   "level_last_max": 0.009999999776482582
+  },
+  "23-11-2023-CXL|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "runtime_h_median": 8.379194733599821,
+   "runtime_h_min": 8.110242518848843,
+   "runtime_h_max": 8.525219458937645,
+   "drain_pct_per_h_median": 12.69931858509022,
+   "level_last_max": 0.009999999776482582
+  },
+  "26-09-2023-GPS|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "runtime_h_median": 30.93905216137568,
+   "runtime_h_min": 29.498383248580826,
+   "runtime_h_max": 31.154024446407956,
+   "drain_pct_per_h_median": 3.430892783987046,
+   "level_last_max": 0.009999999776482582
+  },
+  "26-09-2023-GPS|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "runtime_h_median": 49.13637451261282,
+   "runtime_h_min": 48.57010020772616,
+   "runtime_h_max": 50.96544008188778,
+   "drain_pct_per_h_median": 2.164733940027898,
+   "level_last_max": 0.009999999776482582
+  },
+  "28-08-2023-Idle|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "runtime_h_median": 51.467491197453604,
+   "runtime_h_min": 50.64999270856381,
+   "runtime_h_max": 51.967493516339196,
+   "drain_pct_per_h_median": 2.0594671113676966,
+   "level_last_max": 0.009999999776482582
+  },
+  "28-08-2023-Idle|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "runtime_h_median": 56.06347921719154,
+   "runtime_h_min": 54.089993501967854,
+   "runtime_h_max": 56.93448930223783,
+   "drain_pct_per_h_median": 1.8831022038986773,
+   "level_last_max": 0.009999999776482582
+  },
+  "28-11-2023-CAM|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "runtime_h_median": 9.372401321199206,
+   "runtime_h_min": 9.181960495313009,
+   "runtime_h_max": 9.704541715317303,
+   "drain_pct_per_h_median": 11.224248734409871,
+   "level_last_max": 0.009999999776482582
+  },
+  "28-11-2023-CAM|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "runtime_h_median": 8.379985477593209,
+   "runtime_h_min": 8.287498710221714,
+   "runtime_h_max": 8.464998413390584,
+   "drain_pct_per_h_median": 12.663287644988571,
+   "level_last_max": 0.009999999776482582
+  },
+  "29-09-2023-GPS|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "runtime_h_median": 50.46400835441219,
+   "runtime_h_min": 50.01009453190697,
+   "runtime_h_max": 51.00546767645412,
+   "drain_pct_per_h_median": 2.097579570215372,
+   "level_last_max": 0.009999999776482582
+  },
+  "29-09-2023-GPS|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "runtime_h_median": 54.23416446473863,
+   "runtime_h_min": 53.36219206081496,
+   "runtime_h_max": 56.387575736376974,
+   "drain_pct_per_h_median": 1.964525203199435,
+   "level_last_max": 0.009999999776482582
+  },
+  "30-11-2023-CAM|13 Pro (inferred)": {
+   "n_devices": 3,
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "runtime_h_median": 9.324901051123938,
+   "runtime_h_min": 9.15696100446913,
+   "runtime_h_max": 9.582440060840712,
+   "drain_pct_per_h_median": 11.295564126527843,
+   "level_last_max": 0.009999999776482582
+  },
+  "30-11-2023-CAM|14 Pro (inferred)": {
+   "n_devices": 6,
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "runtime_h_median": 8.328747587766912,
+   "runtime_h_min": 8.262498067220053,
+   "runtime_h_max": 8.639806723329755,
+   "drain_pct_per_h_median": 12.72621282094393,
+   "level_last_max": 0.009999999776482582
+  }
+ },
+ "per_device": [
+  {
+   "device": "1",
+   "sensors": "GPS - Best",
+   "refresh_s": 9,
+   "n": 24398,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 45.067643391953574,
+   "t95_to_t15_h": 34.107305508653326,
+   "drain_pct_per_h_95_15": 2.3455385527215946,
+   "experiment": "02-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "GPS - Best",
+   "refresh_s": 9,
+   "n": 27392,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.3686838083797,
+   "t95_to_t15_h": 36.63875963966052,
+   "drain_pct_per_h_95_15": 2.1834800300772748,
+   "experiment": "02-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "GPS - Best",
+   "refresh_s": 9,
+   "n": 29147,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 49.774998340805375,
+   "t95_to_t15_h": 37.477500847246915,
+   "drain_pct_per_h_95_15": 2.1346140535375846,
+   "experiment": "02-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "GPS - Best",
+   "refresh_s": 9,
+   "n": 16474,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 28.874656640291214,
+   "t95_to_t15_h": 22.016149404446285,
+   "drain_pct_per_h_95_15": 3.6336962713308782,
+   "experiment": "02-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "GPS - Best",
+   "refresh_s": 9,
+   "n": 26828,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.2950682072507,
+   "t95_to_t15_h": 38.71524321443505,
+   "drain_pct_per_h_95_15": 2.0663695577707712,
+   "experiment": "02-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "GPS - Best",
+   "refresh_s": 9,
+   "n": 17536,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 29.76375447862678,
+   "t95_to_t15_h": 22.50514997806814,
+   "drain_pct_per_h_95_15": 3.5547419180926187,
+   "experiment": "02-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "GPS - Best",
+   "refresh_s": 9,
+   "n": 30407,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.61482894162337,
+   "t95_to_t15_h": 36.227374801105924,
+   "drain_pct_per_h_95_15": 2.208274831925106,
+   "experiment": "02-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "GPS - Best",
+   "refresh_s": 9,
+   "n": 21838,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 31.19218950808048,
+   "t95_to_t15_h": 23.477268660267193,
+   "drain_pct_per_h_95_15": 3.407551413141665,
+   "experiment": "02-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "GPS - Best",
+   "refresh_s": 9,
+   "n": 26573,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 45.82997300664584,
+   "t95_to_t15_h": 34.272482659750516,
+   "drain_pct_per_h_95_15": 2.3342341666409747,
+   "experiment": "02-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "GPS - Navigation",
+   "refresh_s": 9,
+   "n": 35804,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.144461695286964,
+   "t95_to_t15_h": 38.46101909584469,
+   "drain_pct_per_h_95_15": 2.080028087676001,
+   "experiment": "05-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "GPS - Navigation",
+   "refresh_s": 9,
+   "n": 34197,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.848381800850234,
+   "t95_to_t15_h": 36.51179437028037,
+   "drain_pct_per_h_95_15": 2.1910728130392263,
+   "experiment": "05-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "GPS - Navigation",
+   "refresh_s": 9,
+   "n": 34295,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.98835629946656,
+   "t95_to_t15_h": 36.888659982416364,
+   "drain_pct_per_h_95_15": 2.1686881561469953,
+   "experiment": "05-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "GPS - Navigation",
+   "refresh_s": 9,
+   "n": 21951,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 31.354683212836584,
+   "t95_to_t15_h": 23.62872357143296,
+   "drain_pct_per_h_95_15": 3.385709759486107,
+   "experiment": "05-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "GPS - Navigation",
+   "refresh_s": 9,
+   "n": 34053,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.64354865749677,
+   "t95_to_t15_h": 36.159899669223364,
+   "drain_pct_per_h_95_15": 2.2123955191194873,
+   "experiment": "05-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "GPS - Navigation",
+   "refresh_s": 9,
+   "n": 21670,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 30.952200506064628,
+   "t95_to_t15_h": 23.393339814742408,
+   "drain_pct_per_h_95_15": 3.4197767669575874,
+   "experiment": "05-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "GPS - Navigation",
+   "refresh_s": 9,
+   "n": 21187,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 30.26175893531905,
+   "t95_to_t15_h": 23.094007578425938,
+   "drain_pct_per_h_95_15": 3.4641020935116846,
+   "experiment": "05-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "GPS - Navigation",
+   "refresh_s": 9,
+   "n": 33465,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 47.80174131499396,
+   "t95_to_t15_h": 36.14442842947112,
+   "drain_pct_per_h_95_15": 2.2133425115880465,
+   "experiment": "05-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "GPS - Navigation",
+   "refresh_s": 9,
+   "n": 34212,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.86999914579921,
+   "t95_to_t15_h": 36.8722085679902,
+   "drain_pct_per_h_95_15": 2.1696557680423365,
+   "experiment": "05-10-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "bestForNavigation"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 20566,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.414544048574236,
+   "t95_to_t15_h": 39.407153281437026,
+   "drain_pct_per_h_95_15": 2.0300882793704482,
+   "experiment": "07-09-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 20327,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 50.81708684053686,
+   "t95_to_t15_h": 38.817187512848115,
+   "drain_pct_per_h_95_15": 2.0609427196012273,
+   "experiment": "07-09-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22250,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 55.62459676914745,
+   "t95_to_t15_h": 41.959698801106875,
+   "drain_pct_per_h_95_15": 1.9065913790088893,
+   "experiment": "07-09-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 21761,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.4024964019325,
+   "t95_to_t15_h": 40.735000030001004,
+   "drain_pct_per_h_95_15": 1.9639130953990582,
+   "experiment": "07-09-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 20247,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 50.61711076915264,
+   "t95_to_t15_h": 38.27220865501298,
+   "drain_pct_per_h_95_15": 2.090289607300242,
+   "experiment": "07-09-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22933,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 57.33249720162816,
+   "t95_to_t15_h": 43.43500001026524,
+   "drain_pct_per_h_95_15": 1.8418326230250521,
+   "experiment": "07-09-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 21806,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.5146838774946,
+   "t95_to_t15_h": 41.10726390500864,
+   "drain_pct_per_h_95_15": 1.9461280659511992,
+   "experiment": "07-09-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22185,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 55.46184309720993,
+   "t95_to_t15_h": 41.867006574471795,
+   "drain_pct_per_h_95_15": 1.9108125119405985,
+   "experiment": "07-09-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 21838,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.594778796434404,
+   "t95_to_t15_h": 41.37233499142859,
+   "drain_pct_per_h_95_15": 1.9336592922921607,
+   "experiment": "07-09-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "CAM - 30",
+   "refresh_s": 9,
+   "n": 3811,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.527346583008766,
+   "t95_to_t15_h": 7.277385290000174,
+   "drain_pct_per_h_95_15": 10.992959258310492,
+   "experiment": "09-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "CAM - 30",
+   "refresh_s": 9,
+   "n": 3350,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.374496343665653,
+   "t95_to_t15_h": 6.237125735812717,
+   "drain_pct_per_h_95_15": 12.82642091703411,
+   "experiment": "09-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "CAM - 30",
+   "refresh_s": 9,
+   "n": 3443,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.607419717841678,
+   "t95_to_t15_h": 6.449940840005874,
+   "drain_pct_per_h_95_15": 12.403214538620038,
+   "experiment": "09-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "CAM - 30",
+   "refresh_s": 9,
+   "n": 3373,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.432431482275327,
+   "t95_to_t15_h": 6.294949891368548,
+   "drain_pct_per_h_95_15": 12.70859996990503,
+   "experiment": "09-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "CAM - 30",
+   "refresh_s": 9,
+   "n": 3692,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.230275884138214,
+   "t95_to_t15_h": 7.005210128029187,
+   "drain_pct_per_h_95_15": 11.420071423682879,
+   "experiment": "09-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "CAM - 30",
+   "refresh_s": 9,
+   "n": 3372,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.429947884480159,
+   "t95_to_t15_h": 6.337462645305528,
+   "drain_pct_per_h_95_15": 12.623348566679121,
+   "experiment": "09-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "CAM - 30",
+   "refresh_s": 9,
+   "n": 3405,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.512442882855733,
+   "t95_to_t15_h": 6.399958743916618,
+   "drain_pct_per_h_95_15": 12.500080578807287,
+   "experiment": "09-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "CAM - 30",
+   "refresh_s": 9,
+   "n": 3873,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.682566410303115,
+   "t95_to_t15_h": 7.282550623085764,
+   "drain_pct_per_h_95_15": 10.98516222412504,
+   "experiment": "09-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "CAM - 30",
+   "refresh_s": 9,
+   "n": 3336,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.340131837262048,
+   "t95_to_t15_h": 6.277600234746933,
+   "drain_pct_per_h_95_15": 12.743723239526261,
+   "experiment": "09-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "30"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "CAM - 60",
+   "refresh_s": 9,
+   "n": 3430,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.574996553924349,
+   "t95_to_t15_h": 6.415000031656689,
+   "drain_pct_per_h_95_15": 12.470771567453884,
+   "experiment": "14-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "CAM - 60",
+   "refresh_s": 9,
+   "n": 3407,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.51744809779856,
+   "t95_to_t15_h": 6.354962824384372,
+   "drain_pct_per_h_95_15": 12.588586622888686,
+   "experiment": "14-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "CAM - 60",
+   "refresh_s": 9,
+   "n": 3416,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.539998961091042,
+   "t95_to_t15_h": 6.435000018146303,
+   "drain_pct_per_h_95_15": 12.432012396954924,
+   "experiment": "14-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "CAM - 60",
+   "refresh_s": 9,
+   "n": 3426,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.564997946884898,
+   "t95_to_t15_h": 6.42750000251664,
+   "drain_pct_per_h_95_15": 12.446518859381811,
+   "experiment": "14-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "CAM - 60",
+   "refresh_s": 9,
+   "n": 3697,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.242434689733717,
+   "t95_to_t15_h": 6.992452993856536,
+   "drain_pct_per_h_95_15": 11.440906370094558,
+   "experiment": "14-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "CAM - 60",
+   "refresh_s": 9,
+   "n": 3766,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.414847798612383,
+   "t95_to_t15_h": 7.17238695303599,
+   "drain_pct_per_h_95_15": 11.153887893086543,
+   "experiment": "14-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "CAM - 60",
+   "refresh_s": 9,
+   "n": 3888,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.719897095561027,
+   "t95_to_t15_h": 7.307424328327179,
+   "drain_pct_per_h_95_15": 10.947769885194782,
+   "experiment": "14-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "CAM - 60",
+   "refresh_s": 9,
+   "n": 3665,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.162498855524593,
+   "t95_to_t15_h": 6.845000020265579,
+   "drain_pct_per_h_95_15": 11.687363004112319,
+   "experiment": "14-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "CAM - 60",
+   "refresh_s": 9,
+   "n": 3428,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.569998923805025,
+   "t95_to_t15_h": 6.399999995562766,
+   "drain_pct_per_h_95_15": 12.500000008666474,
+   "experiment": "14-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "60"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "IDLE",
+   "refresh_s": 3,
+   "n": 63745,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 53.12079500105646,
+   "t95_to_t15_h": 39.799976171917386,
+   "drain_pct_per_h_95_15": 2.0100514546651285,
+   "experiment": "16-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "IDLE",
+   "refresh_s": 3,
+   "n": 64403,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 53.66899732861254,
+   "t95_to_t15_h": 40.861542736954156,
+   "drain_pct_per_h_95_15": 1.9578311204498406,
+   "experiment": "16-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "IDLE",
+   "refresh_s": 3,
+   "n": 65316,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.43019012219376,
+   "t95_to_t15_h": 41.02764821668466,
+   "drain_pct_per_h_95_15": 1.949904600368161,
+   "experiment": "16-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "IDLE",
+   "refresh_s": 3,
+   "n": 60488,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 50.40748948309157,
+   "t95_to_t15_h": 38.88897112607956,
+   "drain_pct_per_h_95_15": 2.057138506972501,
+   "experiment": "16-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "IDLE",
+   "refresh_s": 3,
+   "n": 65775,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.812583197553955,
+   "t95_to_t15_h": 41.16173398805989,
+   "drain_pct_per_h_95_15": 1.9435527187267239,
+   "experiment": "16-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "IDLE",
+   "refresh_s": 3,
+   "n": 58779,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.98216034611066,
+   "t95_to_t15_h": 37.12724556638135,
+   "drain_pct_per_h_95_15": 2.1547518211919243,
+   "experiment": "16-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "IDLE",
+   "refresh_s": 3,
+   "n": 63656,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 53.04674243417051,
+   "t95_to_t15_h": 40.36089599549771,
+   "drain_pct_per_h_95_15": 1.9821165518457289,
+   "experiment": "16-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "IDLE",
+   "refresh_s": 3,
+   "n": 66898,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 55.74693291723728,
+   "t95_to_t15_h": 42.34977439886994,
+   "drain_pct_per_h_95_15": 1.8890301338213202,
+   "experiment": "16-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "IDLE",
+   "refresh_s": 3,
+   "n": 59931,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 49.94240830050575,
+   "t95_to_t15_h": 38.31076725416713,
+   "drain_pct_per_h_95_15": 2.0881857956342094,
+   "experiment": "16-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "3"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 21557,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 53.89249353501532,
+   "t95_to_t15_h": 40.062499995297856,
+   "drain_pct_per_h_95_15": 1.996879875429382,
+   "experiment": "16-11-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22815,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 57.037496399482094,
+   "t95_to_t15_h": 42.66250000198682,
+   "drain_pct_per_h_95_15": 1.8751831232645613,
+   "experiment": "16-11-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 21899,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.74749671975771,
+   "t95_to_t15_h": 41.08249998026424,
+   "drain_pct_per_h_95_15": 1.947301163230852,
+   "experiment": "16-11-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22123,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 55.307496628893745,
+   "t95_to_t15_h": 41.477499975230955,
+   "drain_pct_per_h_95_15": 1.928756555910396,
+   "experiment": "16-11-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 20460,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.149188926617306,
+   "t95_to_t15_h": 39.00438519775867,
+   "drain_pct_per_h_95_15": 2.0510514290735977,
+   "experiment": "16-11-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 21600,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 53.999996128347185,
+   "t95_to_t15_h": 40.55999997635683,
+   "drain_pct_per_h_95_15": 1.9723865889209438,
+   "experiment": "16-11-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 20181,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 50.45197327229712,
+   "t95_to_t15_h": 38.0546059691906,
+   "drain_pct_per_h_95_15": 2.1022422375038867,
+   "experiment": "16-11-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 20424,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.05965281950103,
+   "t95_to_t15_h": 38.83473885198434,
+   "drain_pct_per_h_95_15": 2.060011277658231,
+   "experiment": "16-11-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22168,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 55.41982272187869,
+   "t95_to_t15_h": 41.51487073500951,
+   "drain_pct_per_h_95_15": 1.9270203323200032,
+   "experiment": "16-11-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "IDLE",
+   "refresh_s": 27,
+   "n": 6722,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 50.414820787509285,
+   "t95_to_t15_h": 37.927369315889145,
+   "drain_pct_per_h_95_15": 2.1092947241791724,
+   "experiment": "22-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "IDLE",
+   "refresh_s": 27,
+   "n": 6808,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.05990571220716,
+   "t95_to_t15_h": 38.66243330332968,
+   "drain_pct_per_h_95_15": 2.0691920597017948,
+   "experiment": "22-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "IDLE",
+   "refresh_s": 27,
+   "n": 7424,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 55.67950177722507,
+   "t95_to_t15_h": 41.984628374709025,
+   "drain_pct_per_h_95_15": 1.9054592858607013,
+   "experiment": "22-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "IDLE",
+   "refresh_s": 27,
+   "n": 7406,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 55.54436161756516,
+   "t95_to_t15_h": 41.707024729384315,
+   "drain_pct_per_h_95_15": 1.9181421000198249,
+   "experiment": "22-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "IDLE",
+   "refresh_s": 27,
+   "n": 7638,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 57.28503280785349,
+   "t95_to_t15_h": 43.09502880136172,
+   "drain_pct_per_h_95_15": 1.856362606665021,
+   "experiment": "22-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "IDLE",
+   "refresh_s": 27,
+   "n": 7280,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.59976470940643,
+   "t95_to_t15_h": 41.242326284646985,
+   "drain_pct_per_h_95_15": 1.9397547909362496,
+   "experiment": "22-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "IDLE",
+   "refresh_s": 27,
+   "n": 6805,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.03701180828942,
+   "t95_to_t15_h": 39.202129510906005,
+   "drain_pct_per_h_95_15": 2.0407054667207314,
+   "experiment": "22-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "IDLE",
+   "refresh_s": 27,
+   "n": 7228,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.20952929225233,
+   "t95_to_t15_h": 40.9871469152636,
+   "drain_pct_per_h_95_15": 1.9518313915674874,
+   "experiment": "22-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "IDLE",
+   "refresh_s": 27,
+   "n": 7198,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 53.98485743747817,
+   "t95_to_t15_h": 40.364893261392915,
+   "drain_pct_per_h_95_15": 1.9819202662556317,
+   "experiment": "22-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "27"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "CXL",
+   "refresh_s": 9,
+   "n": 5865,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.374896060294574,
+   "t95_to_t15_h": 6.316736163629426,
+   "drain_pct_per_h_95_15": 12.664768311936928,
+   "experiment": "23-11-2023-CXL",
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "CXL",
+   "refresh_s": 9,
+   "n": 5663,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.110242518848843,
+   "t95_to_t15_h": 6.090182716051737,
+   "drain_pct_per_h_95_15": 13.13589488688838,
+   "experiment": "23-11-2023-CXL",
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "CXL",
+   "refresh_s": 9,
+   "n": 5871,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.383493406905068,
+   "t95_to_t15_h": 6.320996335877313,
+   "drain_pct_per_h_95_15": 12.656232617305658,
+   "experiment": "23-11-2023-CXL",
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "CXL",
+   "refresh_s": 9,
+   "n": 5874,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.387443217436472,
+   "t95_to_t15_h": 6.282458292179638,
+   "drain_pct_per_h_95_15": 12.733868858243511,
+   "experiment": "23-11-2023-CXL",
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "CXL",
+   "refresh_s": 9,
+   "n": 5837,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.332440327207248,
+   "t95_to_t15_h": 6.304955659707387,
+   "drain_pct_per_h_95_15": 12.688431817411512,
+   "experiment": "23-11-2023-CXL",
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "CXL",
+   "refresh_s": 9,
+   "n": 5895,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.417469445268313,
+   "t95_to_t15_h": 6.342477749188741,
+   "drain_pct_per_h_95_15": 12.613367072550268,
+   "experiment": "23-11-2023-CXL",
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "CXL",
+   "refresh_s": 9,
+   "n": 5971,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.525219458937645,
+   "t95_to_t15_h": 6.404375512533718,
+   "drain_pct_per_h_95_15": 12.491459915714744,
+   "experiment": "23-11-2023-CXL",
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "CXL",
+   "refresh_s": 9,
+   "n": 5790,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.27490698920356,
+   "t95_to_t15_h": 6.2447468883461426,
+   "drain_pct_per_h_95_15": 12.810767422662856,
+   "experiment": "23-11-2023-CXL",
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "CXL",
+   "refresh_s": 9,
+   "n": 5629,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.038632309436798,
+   "t95_to_t15_h": 6.077479781044854,
+   "drain_pct_per_h_95_15": 13.163351073501428,
+   "experiment": "23-11-2023-CXL",
+   "config": {
+    "sensor": "GPS+CAM",
+    "samplingRate": "9",
+    "frameRate": "60",
+    "accuracy": "best"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "GPS - 10 Meters",
+   "refresh_s": 9,
+   "n": 34155,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.786617417203054,
+   "t95_to_t15_h": 36.68308679216438,
+   "drain_pct_per_h_95_15": 2.1808415538544113,
+   "experiment": "26-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "GPS - 10 Meters",
+   "refresh_s": 9,
+   "n": 34966,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 49.9426482344336,
+   "t95_to_t15_h": 37.562500851154326,
+   "drain_pct_per_h_95_15": 2.1297836455833727,
+   "experiment": "26-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "GPS - 10 Meters",
+   "refresh_s": 9,
+   "n": 17163,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 31.154024446407956,
+   "t95_to_t15_h": 23.31754590915309,
+   "drain_pct_per_h_95_15": 3.430892783987046,
+   "experiment": "26-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "GPS - 10 Meters",
+   "refresh_s": 9,
+   "n": 34002,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.57010020772616,
+   "t95_to_t15_h": 36.40481953309642,
+   "drain_pct_per_h_95_15": 2.1975112368644005,
+   "experiment": "26-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "GPS - 10 Meters",
+   "refresh_s": 9,
+   "n": 20651,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 29.498383248580826,
+   "t95_to_t15_h": 22.471367077430088,
+   "drain_pct_per_h_95_15": 3.560086029672437,
+   "experiment": "26-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "GPS - 10 Meters",
+   "refresh_s": 9,
+   "n": 34077,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 48.67721943385071,
+   "t95_to_t15_h": 36.667290841407244,
+   "drain_pct_per_h_95_15": 2.181781041474121,
+   "experiment": "26-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "GPS - 10 Meters",
+   "refresh_s": 9,
+   "n": 34644,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 49.48613160802258,
+   "t95_to_t15_h": 37.23309121946494,
+   "drain_pct_per_h_95_15": 2.148626326201385,
+   "experiment": "26-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "GPS - 10 Meters",
+   "refresh_s": 9,
+   "n": 21660,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 30.93905216137568,
+   "t95_to_t15_h": 23.64016281167666,
+   "drain_pct_per_h_95_15": 3.3840714481240943,
+   "experiment": "26-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "GPS - 10 Meters",
+   "refresh_s": 9,
+   "n": 35679,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 50.96544008188778,
+   "t95_to_t15_h": 38.3047981455591,
+   "drain_pct_per_h_95_15": 2.0885112015470804,
+   "experiment": "26-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "9",
+    "accuracy": "10m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22137,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 55.34227675245868,
+   "t95_to_t15_h": 42.05983462002542,
+   "drain_pct_per_h_95_15": 1.902052176922032,
+   "experiment": "28-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22714,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 56.7846816819244,
+   "t95_to_t15_h": 42.94476426773601,
+   "drain_pct_per_h_95_15": 1.8628580541564,
+   "experiment": "28-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22743,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 56.857427504724924,
+   "t95_to_t15_h": 42.91495011779997,
+   "drain_pct_per_h_95_15": 1.8641522308753227,
+   "experiment": "28-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 20260,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 50.64999270856381,
+   "t95_to_t15_h": 38.61500016113122,
+   "drain_pct_per_h_95_15": 2.0717337735641332,
+   "experiment": "28-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 22774,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 56.93448930223783,
+   "t95_to_t15_h": 43.13961813913451,
+   "drain_pct_per_h_95_15": 1.8544438604436149,
+   "experiment": "28-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 20587,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.467491197453604,
+   "t95_to_t15_h": 38.84500002861023,
+   "drain_pct_per_h_95_15": 2.0594671113676966,
+   "experiment": "28-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 21777,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.442473191685146,
+   "t95_to_t15_h": 41.3099843094084,
+   "drain_pct_per_h_95_15": 1.9365778355374466,
+   "experiment": "28-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 20787,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.967493516339196,
+   "t95_to_t15_h": 39.98500000278155,
+   "drain_pct_per_h_95_15": 2.0007502812163267,
+   "experiment": "28-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "IDLE",
+   "refresh_s": 9,
+   "n": 21636,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.089993501967854,
+   "t95_to_t15_h": 40.63250000331137,
+   "drain_pct_per_h_95_15": 1.9688672858790464,
+   "experiment": "28-08-2023-Idle",
+   "config": {
+    "sensor": "Idle",
+    "samplingRate": "9"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "CAM - 240",
+   "refresh_s": 9,
+   "n": 3673,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.181960495313009,
+   "t95_to_t15_h": 6.982090217471122,
+   "drain_pct_per_h_95_15": 11.457886894646228,
+   "experiment": "28-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "CAM - 240",
+   "refresh_s": 9,
+   "n": 3375,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.437498864663972,
+   "t95_to_t15_h": 6.405000023378266,
+   "drain_pct_per_h_95_15": 12.490241952849306,
+   "experiment": "28-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "CAM - 240",
+   "refresh_s": 9,
+   "n": 3332,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.329998060862223,
+   "t95_to_t15_h": 6.260000033312374,
+   "drain_pct_per_h_95_15": 12.779552647649004,
+   "experiment": "28-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "CAM - 240",
+   "refresh_s": 9,
+   "n": 3315,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.287498710221714,
+   "t95_to_t15_h": 6.127499969734086,
+   "drain_pct_per_h_95_15": 13.055895617323316,
+   "experiment": "28-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "CAM - 240",
+   "refresh_s": 9,
+   "n": 3386,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.464998413390584,
+   "t95_to_t15_h": 6.355000041127205,
+   "drain_pct_per_h_95_15": 12.588512900435822,
+   "experiment": "28-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "CAM - 240",
+   "refresh_s": 9,
+   "n": 3356,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.389973313013712,
+   "t95_to_t15_h": 6.327481097446547,
+   "drain_pct_per_h_95_15": 12.643261792166234,
+   "experiment": "28-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "CAM - 240",
+   "refresh_s": 9,
+   "n": 3749,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.372401321199206,
+   "t95_to_t15_h": 7.127425798641311,
+   "drain_pct_per_h_95_15": 11.224248734409871,
+   "experiment": "28-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "CAM - 240",
+   "refresh_s": 9,
+   "n": 3348,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.369997642172708,
+   "t95_to_t15_h": 6.307500008874469,
+   "drain_pct_per_h_95_15": 12.68331349781091,
+   "experiment": "28-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "CAM - 240",
+   "refresh_s": 9,
+   "n": 3882,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.704541715317303,
+   "t95_to_t15_h": 7.329654640820292,
+   "drain_pct_per_h_95_15": 10.914566090803818,
+   "experiment": "28-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "240"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "GPS - 100 Meters",
+   "refresh_s": 9,
+   "n": 34170,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 53.41973167445924,
+   "t95_to_t15_h": 39.92980206165049,
+   "drain_pct_per_h_95_15": 2.0035160674346004,
+   "experiment": "29-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "GPS - 100 Meters",
+   "refresh_s": 9,
+   "n": 32278,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 50.46400835441219,
+   "t95_to_t15_h": 38.13919678469499,
+   "drain_pct_per_h_95_15": 2.097579570215372,
+   "experiment": "29-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "GPS - 100 Meters",
+   "refresh_s": 9,
+   "n": 35039,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.77760616885291,
+   "t95_to_t15_h": 41.39903991805183,
+   "drain_pct_per_h_95_15": 1.932411963136286,
+   "experiment": "29-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "GPS - 100 Meters",
+   "refresh_s": 9,
+   "n": 34517,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 53.960859597524006,
+   "t95_to_t15_h": 40.57358596000407,
+   "drain_pct_per_h_95_15": 1.9717261392389873,
+   "experiment": "29-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "GPS - 100 Meters",
+   "refresh_s": 9,
+   "n": 32626,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 51.00546767645412,
+   "t95_to_t15_h": 38.75353699915939,
+   "drain_pct_per_h_95_15": 2.0643277025716467,
+   "experiment": "29-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "GPS - 100 Meters",
+   "refresh_s": 9,
+   "n": 34866,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 54.50746933195326,
+   "t95_to_t15_h": 40.872123920520146,
+   "drain_pct_per_h_95_15": 1.9573242671598825,
+   "experiment": "29-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "GPS - 100 Meters",
+   "refresh_s": 9,
+   "n": 34135,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 53.36219206081496,
+   "t95_to_t15_h": 40.215677443345385,
+   "drain_pct_per_h_95_15": 1.9892739619443573,
+   "experiment": "29-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "GPS - 100 Meters",
+   "refresh_s": 9,
+   "n": 36068,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 56.387575736376974,
+   "t95_to_t15_h": 42.545059220261045,
+   "drain_pct_per_h_95_15": 1.8803593523240874,
+   "experiment": "29-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "GPS - 100 Meters",
+   "refresh_s": 9,
+   "n": 31882,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 50.01009453190697,
+   "t95_to_t15_h": 37.35993202911483,
+   "drain_pct_per_h_95_15": 2.14133151895607,
+   "experiment": "29-09-2023-GPS",
+   "config": {
+    "sensor": "GPS",
+    "samplingRate": "15",
+    "accuracy": "100m"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "3",
+   "sensors": "CAM - 120",
+   "refresh_s": 9,
+   "n": 3343,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.357497258053886,
+   "t95_to_t15_h": 6.294999985297521,
+   "drain_pct_per_h_95_15": 12.70849883825996,
+   "experiment": "30-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "8",
+   "sensors": "CAM - 120",
+   "refresh_s": 9,
+   "n": 3730,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.324901051123938,
+   "t95_to_t15_h": 7.08242626077599,
+   "drain_pct_per_h_95_15": 11.295564126527843,
+   "experiment": "30-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "4",
+   "sensors": "CAM - 120",
+   "refresh_s": 9,
+   "n": 3320,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.299997917479939,
+   "t95_to_t15_h": 6.167499979204602,
+   "drain_pct_per_h_95_15": 12.971220149127149,
+   "experiment": "30-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "5",
+   "sensors": "CAM - 120",
+   "refresh_s": 9,
+   "n": 3370,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.42499805437194,
+   "t95_to_t15_h": 6.3775000186098945,
+   "drain_pct_per_h_95_15": 12.54410031619845,
+   "experiment": "30-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "2",
+   "sensors": "CAM - 120",
+   "refresh_s": 9,
+   "n": 3456,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.639806723329755,
+   "t95_to_t15_h": 6.462356228298611,
+   "drain_pct_per_h_95_15": 12.37938565653199,
+   "experiment": "30-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "6",
+   "sensors": "CAM - 120",
+   "refresh_s": 9,
+   "n": 3305,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.262498067220053,
+   "t95_to_t15_h": 6.235000029140049,
+   "drain_pct_per_h_95_15": 12.830793845406582,
+   "experiment": "30-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "1",
+   "sensors": "CAM - 120",
+   "refresh_s": 9,
+   "n": 3313,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 8.282498872743712,
+   "t95_to_t15_h": 6.277499959998661,
+   "drain_pct_per_h_95_15": 12.7439268036279,
+   "experiment": "30-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "model_inferred": "14 Pro (inferred)"
+  },
+  {
+   "device": "9",
+   "sensors": "CAM - 120",
+   "refresh_s": 9,
+   "n": 3663,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.15696100446913,
+   "t95_to_t15_h": 6.9545916807651516,
+   "drain_pct_per_h_95_15": 11.503191513207332,
+   "experiment": "30-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  },
+  {
+   "device": "7",
+   "sensors": "CAM - 120",
+   "refresh_s": 9,
+   "n": 3833,
+   "level_first": 1.0,
+   "level_last": 0.009999999776482582,
+   "runtime_h": 9.582440060840712,
+   "t95_to_t15_h": 7.284955620500776,
+   "drain_pct_per_h_95_15": 10.98153566987697,
+   "experiment": "30-11-2023-CAM",
+   "config": {
+    "sensor": "CAM",
+    "samplingRate": "9",
+    "frameRate": "120"
+   },
+   "model_inferred": "13 Pro (inferred)"
+  }
+ ]
+}

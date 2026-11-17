@@ -1,0 +1,85 @@
+{
+ "source": "Saha & Goebel 2007, NASA PCoE Battery Data Set; https://phm-datasets.s3.amazonaws.com/NASA/5.+Battery+Data+Set.zip",
+ "sign": "I_A > 0 = discharge",
+ "decimation_s": 10.0,
+ "curves": [
+  {
+   "file": "nasa_B0005_24C_2A_CC_fresh.csv",
+   "cell": "B0005",
+   "ambient_C": 24,
+   "cycle_k": 0,
+   "n_full_runs": 168,
+   "t_load_end_s": 3346.937,
+   "Q_Ah": 1.8621974714702128,
+   "V0": 4.191491807505295,
+   "Vmin": 2.612467347907089,
+   "T0": 24.330033885570543,
+   "Tmax": 38.98218133148803
+  },
+  {
+   "file": "nasa_B0005_24C_2A_CC_aged.csv",
+   "cell": "B0005",
+   "ambient_C": 24,
+   "cycle_k": -1,
+   "n_full_runs": 168,
+   "t_load_end_s": 2383.953,
+   "Q_Ah": 1.3305448265546593,
+   "V0": 4.201968615940368,
+   "Vmin": 2.655378369801326,
+   "T0": 25.09329713312876,
+   "Tmax": 41.051007697556734
+  },
+  {
+   "file": "nasa_B0029_43C_4A_CC_fresh.csv",
+   "cell": "B0029",
+   "ambient_C": 43,
+   "cycle_k": 0,
+   "n_full_runs": 40,
+   "t_load_end_s": 1572.359,
+   "Q_Ah": 1.7462872590013376,
+   "V0": 4.122635846291491,
+   "Vmin": 1.9999364731586213,
+   "T0": 43.41517780938604,
+   "Tmax": 58.72626885895911
+  },
+  {
+   "file": "nasa_B0047_4C_1A_CC_fresh.csv",
+   "cell": "B0047",
+   "ambient_C": 4,
+   "cycle_k": 0,
+   "n_full_runs": 72,
+   "t_load_end_s": 6179.11,
+   "Q_Ah": 1.7072227411574235,
+   "V0": 4.246711253516259,
+   "Vmin": 2.4706118669327277,
+   "T0": 6.212696115916043,
+   "Tmax": 12.376815880696887
+  },
+  {
+   "file": "nasa_B0055_4C_2A_CC_fresh.csv",
+   "cell": "B0055",
+   "ambient_C": 4,
+   "cycle_k": 0,
+   "n_full_runs": 101,
+   "t_load_end_s": 2491.25,
+   "Q_Ah": 1.373114888430358,
+   "V0": 4.174020568347548,
+   "Vmin": 2.480538609588174,
+   "T0": 4.947298679153754,
+   "Tmax": 16.633080095446793
+  },
+  {
+   "file": "nasa_B0025_24C_4A_square_0p05Hz_fresh.csv",
+   "cell": "B0025",
+   "ambient_C": 24,
+   "cycle_k": 0,
+   "n_full_runs": 28,
+   "t_load_end_s": 3393.328999999998,
+   "Q_Ah": 1.8987799730523127,
+   "V0": 4.196831409847343,
+   "Vmin": 1.9182683747066012,
+   "T0": 26.51514107879548,
+   "Tmax": 41.81748104839704
+  }
+ ]
+}
