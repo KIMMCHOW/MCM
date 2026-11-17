@@ -1,0 +1,2148 @@
+[
+ {
+  "cell": "B0005",
+  "n_discharge": 168,
+  "n_discharge_gt5min": 168,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.8564874208181574,
+   "q_int_Ah": 1.8622028761760747,
+   "energy_Wh": 6.6087781949284645,
+   "duration_s": 3690.234,
+   "t_load_s": 3346.937,
+   "mean_abs_I_A": 1.818711710270297,
+   "V_start": 4.191491807505295,
+   "V_end_min": 2.612467347907089,
+   "V_mean_energy": 3.548903440907151,
+   "T_start_C": 24.330033885570543,
+   "T_max_C": 38.98218133148803
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.3250793286429356,
+   "q_int_Ah": 1.32798489156344,
+   "energy_Wh": 4.6112125267366455,
+   "duration_s": 2820.39,
+   "t_load_s": 2383.953,
+   "mean_abs_I_A": 1.6980469256755544,
+   "V_start": 4.201968615940368,
+   "V_end_min": 2.655378369801326,
+   "V_mean_energy": 3.4723380936268433,
+   "T_start_C": 25.09329713312876,
+   "T_max_C": 41.051007697556734
+  },
+  "q_int_Ah_max": 1.8622028761760747,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.04466870036616091,
+   "Rct_ohm": 0.06945627304536996
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.05003573195803179,
+   "Rct_ohm": 0.07479234613687553
+  },
+  "n_impedance": 278,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 168,
+    "Q_first5_median_Ah": 1.8410487396827961,
+    "E_first5_median_Wh": 6.555683334957384,
+    "t_load_first5_median_s": 3309.719,
+    "I_first5_median_A": 1.818711710270297,
+    "Vbar_first5_median": 3.5602991942624627,
+    "dT_first5_median_C": 14.140595614085552,
+    "Q_max_Ah": 1.8622028761760747,
+    "Q_last_Ah": 1.32798489156344
+   }
+  }
+ },
+ {
+  "cell": "B0006",
+  "n_discharge": 168,
+  "n_discharge_gt5min": 168,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 2.035337591005598,
+   "q_int_Ah": 2.0467027976309904,
+   "energy_Wh": 7.259532673353608,
+   "duration_s": 3690.234,
+   "t_load_s": 3690.234,
+   "mean_abs_I_A": 1.9905377543149845,
+   "V_start": 4.179799607333447,
+   "V_end_min": 2.4757677568281857,
+   "V_mean_energy": 3.5469403187196225,
+   "T_start_C": 24.277567510331888,
+   "T_max_C": 39.16298653238707
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.1856752327929356,
+   "q_int_Ah": 1.204588199235937,
+   "energy_Wh": 4.053102764878838,
+   "duration_s": 2820.39,
+   "t_load_s": 2164.687,
+   "mean_abs_I_A": 1.5427100462165395,
+   "V_start": 4.188511527828155,
+   "V_end_min": 2.4160441724133666,
+   "V_mean_energy": 3.3647206302117985,
+   "T_start_C": 24.907725860706154,
+   "T_max_C": 41.36263766174168
+  },
+  "q_int_Ah_max": 2.0467027976309904,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.06123359021000344,
+   "Rct_ohm": 0.0785415394665875
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.07358936787982846,
+   "Rct_ohm": 0.09999474026181411
+  },
+  "n_impedance": 278,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 168,
+    "Q_first5_median_Ah": 2.0247293324555025,
+    "E_first5_median_Wh": 7.2024172506399236,
+    "t_load_first5_median_s": 3651.641,
+    "I_first5_median_A": 1.9899467848963859,
+    "Vbar_first5_median": 3.5547017054622083,
+    "dT_first5_median_C": 14.343782682671154,
+    "Q_max_Ah": 2.0467027976309904,
+    "Q_last_Ah": 1.204588199235937
+   }
+  }
+ },
+ {
+  "cell": "B0007",
+  "n_discharge": 168,
+  "n_discharge_gt5min": 168,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.89105229539079,
+   "q_int_Ah": 1.9190294812778448,
+   "energy_Wh": 6.789434464560018,
+   "duration_s": 3690.234,
+   "t_load_s": 3487.078,
+   "mean_abs_I_A": 1.869128126500791,
+   "V_start": 4.199359521791473,
+   "V_end_min": 2.145975766935391,
+   "V_mean_energy": 3.5379521423709783,
+   "T_start_C": 23.93704394613529,
+   "T_max_C": 40.59042914535701
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.4324552720625434,
+   "q_int_Ah": 1.4565465631206378,
+   "energy_Wh": 5.076871747570432,
+   "duration_s": 2820.39,
+   "t_load_s": 2644.328,
+   "mean_abs_I_A": 1.8574525637904344,
+   "V_start": 4.205067189469255,
+   "V_end_min": 2.1732119934933296,
+   "V_mean_energy": 3.48555403315997,
+   "T_start_C": 24.737923198971707,
+   "T_max_C": 40.57390100608222
+  },
+  "q_int_Ah_max": 1.9190294812778448,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.03816813609946085,
+   "Rct_ohm": 0.06158094574229446
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.0671426900201505,
+   "Rct_ohm": 0.09331350931281934
+  },
+  "n_impedance": 278,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 168,
+    "Q_first5_median_Ah": 1.9086150443129848,
+    "E_first5_median_Wh": 6.7719351932569545,
+    "t_load_first5_median_s": 3468.953,
+    "I_first5_median_A": 1.877784734502072,
+    "Vbar_first5_median": 3.5471215801864364,
+    "dT_first5_median_C": 16.064300065860998,
+    "Q_max_Ah": 1.9190294812778448,
+    "Q_last_Ah": 1.4565465631206378
+   }
+  }
+ },
+ {
+  "cell": "B0018",
+  "n_discharge": 132,
+  "n_discharge_gt5min": 132,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.8550045207910817,
+   "q_int_Ah": 1.8683727988907475,
+   "energy_Wh": 6.605962018502889,
+   "duration_s": 3434.891,
+   "t_load_s": 3357.531,
+   "mean_abs_I_A": 1.9542109199809996,
+   "V_start": 4.188108651124536,
+   "V_end_min": 2.4721608434600437,
+   "V_mean_energy": 3.535676617870292,
+   "T_start_C": 23.8195202516044,
+   "T_max_C": 38.10180309676608
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.341051440640485,
+   "q_int_Ah": 1.3605410437881327,
+   "energy_Wh": 4.700870879926169,
+   "duration_s": 2742.843,
+   "t_load_s": 2447.687,
+   "mean_abs_I_A": 1.7778658975348722,
+   "V_start": 4.185409109511607,
+   "V_end_min": 2.3655846763383734,
+   "V_mean_energy": 3.4551481569696785,
+   "T_start_C": 23.123582937943876,
+   "T_max_C": 38.371813640118894
+  },
+  "q_int_Ah_max": 1.8683727988907475,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.06515815158455215,
+   "Rct_ohm": 0.09555369570022001
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.06606850271516486,
+   "Rct_ohm": 0.08895885074391789
+  },
+  "n_impedance": 53,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 132,
+    "Q_first5_median_Ah": 1.8531673472578591,
+    "E_first5_median_Wh": 6.572161523569824,
+    "t_load_first5_median_s": 3331.719,
+    "I_first5_median_A": 1.9474911909917818,
+    "Vbar_first5_median": 3.546447941301515,
+    "dT_first5_median_C": 13.834935560845658,
+    "Q_max_Ah": 1.8683727988907475,
+    "Q_last_Ah": 1.3605410437881327
+   }
+  }
+ },
+ {
+  "cell": "B0025",
+  "n_discharge": 28,
+  "n_discharge_gt5min": 28,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.847011162956716,
+   "q_int_Ah": 1.8990134427579637,
+   "energy_Wh": 6.277296672104584,
+   "duration_s": 6515.422000000006,
+   "t_load_s": 3393.328999999998,
+   "mean_abs_I_A": 1.068283780737223,
+   "V_start": 4.196831409847343,
+   "V_end_min": 1.9182683747066012,
+   "V_mean_energy": 3.3055567331782436,
+   "T_start_C": 26.51514107879548,
+   "T_max_C": 41.81748104839704
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.7677890780323617,
+   "q_int_Ah": 1.8019185062409038,
+   "energy_Wh": 5.989660840309081,
+   "duration_s": 6198.75,
+   "t_load_s": 3219.281,
+   "mean_abs_I_A": 1.0616823792692962,
+   "V_start": 4.179880908916163,
+   "V_end_min": 1.9679550948765454,
+   "V_mean_energy": 3.324046464678634,
+   "T_start_C": 26.30004424292267,
+   "T_max_C": 39.45687787991913
+  },
+  "q_int_Ah_max": 1.900891935502285,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.05064225689246009,
+   "Rct_ohm": 0.10592230651613348
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.04966087070085884,
+   "Rct_ohm": 0.08244546715154538
+  },
+  "n_impedance": 21,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 28,
+    "Q_first5_median_Ah": 1.8990134427579637,
+    "E_first5_median_Wh": 6.27962015759953,
+    "t_load_first5_median_s": 3393.328999999998,
+    "I_first5_median_A": 1.0699350367796663,
+    "Vbar_first5_median": 3.312406938172436,
+    "dT_first5_median_C": 15.247562747779646,
+    "Q_max_Ah": 1.900891935502285,
+    "Q_last_Ah": 1.8019185062409038
+   }
+  }
+ },
+ {
+  "cell": "B0026",
+  "n_discharge": 28,
+  "n_discharge_gt5min": 28,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.8132504303869899,
+   "q_int_Ah": 1.8652551159776132,
+   "energy_Wh": 6.142136971689416,
+   "duration_s": 6515.422000000006,
+   "t_load_s": 3332.2660000000033,
+   "mean_abs_I_A": 1.049714799396727,
+   "V_start": 4.185453870728775,
+   "V_end_min": 1.98069037313681,
+   "V_mean_energy": 3.292920587149932,
+   "T_start_C": 26.419339530533897,
+   "T_max_C": 40.711455499237935
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.768754111010884,
+   "q_int_Ah": 1.8028205151826027,
+   "energy_Wh": 5.978990373674964,
+   "duration_s": 6198.75,
+   "t_load_s": 3219.281,
+   "mean_abs_I_A": 1.062210545753597,
+   "V_start": 4.167840102339013,
+   "V_end_min": 2.094755756018166,
+   "V_mean_energy": 3.3164645749936836,
+   "T_start_C": 26.221382774021837,
+   "T_max_C": 40.014600736484276
+  },
+  "q_int_Ah_max": 1.867492096774493,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.0927177470818637,
+   "Rct_ohm": 0.1378722191002069
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.09038899546557286,
+   "Rct_ohm": 0.1176756750010452
+  },
+  "n_impedance": 21,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 27,
+    "Q_first5_median_Ah": 1.8568933377532453,
+    "E_first5_median_Wh": 6.140518116960434,
+    "t_load_first5_median_s": 3315.703,
+    "I_first5_median_A": 1.05032568804846,
+    "Vbar_first5_median": 3.3039091694021665,
+    "dT_first5_median_C": 14.105239810626934,
+    "Q_max_Ah": 1.867492096774493,
+    "Q_last_Ah": 1.8028205151826027
+   }
+  }
+ },
+ {
+  "cell": "B0027",
+  "n_discharge": 28,
+  "n_discharge_gt5min": 28,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.8233077742149364,
+   "q_int_Ah": 1.8636903433435108,
+   "energy_Wh": 5.98605391953849,
+   "duration_s": 6515.422000000006,
+   "t_load_s": 3372.75,
+   "mean_abs_I_A": 1.0486169621289125,
+   "V_start": 4.201942981365258,
+   "V_end_min": 2.4407952016086623,
+   "V_mean_energy": 3.2119358996083798,
+   "T_start_C": 26.288547313515906,
+   "T_max_C": 42.07194057268294
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.7700926253324452,
+   "q_int_Ah": 1.8173541858528734,
+   "energy_Wh": 5.701178957731697,
+   "duration_s": 6198.75,
+   "t_load_s": 3290.094,
+   "mean_abs_I_A": 1.0701748904460906,
+   "V_start": 4.186200185347402,
+   "V_end_min": 2.4249816079125552,
+   "V_mean_energy": 3.137076416976016,
+   "T_start_C": 26.050915731101185,
+   "T_max_C": 42.033372446715575
+  },
+  "q_int_Ah_max": 1.8702433208474532,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.09083977652848653,
+   "Rct_ohm": 0.13916678457699339
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.09969227191464992,
+   "Rct_ohm": 0.1248543133814611
+  },
+  "n_impedance": 21,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 28,
+    "Q_first5_median_Ah": 1.8558884140581293,
+    "E_first5_median_Wh": 5.858711332531759,
+    "t_load_first5_median_s": 3356.953,
+    "I_first5_median_A": 1.0494164359063816,
+    "Vbar_first5_median": 3.1600541080406135,
+    "dT_first5_median_C": 16.561741605423165,
+    "Q_max_Ah": 1.8702433208474532,
+    "Q_last_Ah": 1.8173541858528734
+   }
+  }
+ },
+ {
+  "cell": "B0028",
+  "n_discharge": 28,
+  "n_discharge_gt5min": 28,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.8046847720100736,
+   "q_int_Ah": 1.8050122265203394,
+   "energy_Wh": 6.427857534647174,
+   "duration_s": 6515.422000000006,
+   "t_load_s": 6515.422000000006,
+   "mean_abs_I_A": 0.9972197512793336,
+   "V_start": 4.181907184700754,
+   "V_end_min": 2.6151397684307285,
+   "V_mean_energy": 3.5611157864778833,
+   "T_start_C": 26.429257363552026,
+   "T_max_C": 31.679728237853865
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.7172335652295245,
+   "q_int_Ah": 1.7178341653770364,
+   "energy_Wh": 6.12542483935695,
+   "duration_s": 6198.75,
+   "t_load_s": 6198.75,
+   "mean_abs_I_A": 0.9973021764239647,
+   "V_start": 4.167590440976821,
+   "V_end_min": 2.651385292787423,
+   "V_mean_energy": 3.5657835679455823,
+   "T_start_C": 26.236488265406727,
+   "T_max_C": 31.550251048213177
+  },
+  "q_int_Ah_max": 1.8051263145254925,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.08141136501428463,
+   "Rct_ohm": 0.13435294061149733
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.07970222029917101,
+   "Rct_ohm": 0.11372273509721359
+  },
+  "n_impedance": 21,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 28,
+    "Q_first5_median_Ah": 1.7978274191463788,
+    "E_first5_median_Wh": 6.414389839522008,
+    "t_load_first5_median_s": 6489.5,
+    "I_first5_median_A": 0.9972197512793336,
+    "Vbar_first5_median": 3.5678562754191425,
+    "dT_first5_median_C": 5.374489478742625,
+    "Q_max_Ah": 1.8051263145254925,
+    "Q_last_Ah": 1.7178341653770364
+   }
+  }
+ },
+ {
+  "cell": "B0029",
+  "n_discharge": 40,
+  "n_discharge_gt5min": 40,
+  "ambient_C": [
+   43
+  ],
+  "first": {
+   "amb_C": 43.0,
+   "capacity_Ah_reported": 1.697507332205763,
+   "q_int_Ah": 1.7410421311147735,
+   "energy_Wh": 5.848769296073699,
+   "duration_s": 1572.359,
+   "t_load_s": 1572.359,
+   "mean_abs_I_A": 3.9753962170197243,
+   "V_start": 4.122635846291491,
+   "V_end_min": 1.9999364731586213,
+   "V_mean_energy": 3.359349662795802,
+   "T_start_C": 43.41517780938604,
+   "T_max_C": 58.72626885895911
+  },
+  "last": {
+   "amb_C": 43.0,
+   "capacity_Ah_reported": 1.612079811711934,
+   "q_int_Ah": 1.6548680989676507,
+   "energy_Wh": 5.594336604859487,
+   "duration_s": 1536.781,
+   "t_load_s": 1490.969,
+   "mean_abs_I_A": 3.849366331322892,
+   "V_start": 4.199896848400753,
+   "V_end_min": 1.8433554303146658,
+   "V_mean_energy": 3.3805332330409765,
+   "T_start_C": 44.68322152965014,
+   "T_max_C": 60.24494659507955
+  },
+  "q_int_Ah_max": 1.892494572020735,
+  "impedance_first": {
+   "amb_C": 43.0,
+   "Re_ohm": 0.02834045552997675,
+   "Rct_ohm": 0.044702257716667325
+  },
+  "impedance_last": {
+   "amb_C": 43.0,
+   "Re_ohm": 0.02816890978226904,
+   "Rct_ohm": 0.04119568604095505
+  },
+  "n_impedance": 17,
+  "by_ambient_full_charge": {
+   "43": {
+    "n_full": 40,
+    "Q_first5_median_Ah": 1.8638646872958329,
+    "E_first5_median_Wh": 6.320175715434061,
+    "t_load_first5_median_s": 1677.891,
+    "I_first5_median_A": 3.9333280595638493,
+    "Vbar_first5_median": 3.390620959548365,
+    "dT_first5_median_C": 15.191386306321903,
+    "Q_max_Ah": 1.892494572020735,
+    "Q_last_Ah": 1.6548680989676507
+   }
+  }
+ },
+ {
+  "cell": "B0030",
+  "n_discharge": 40,
+  "n_discharge_gt5min": 40,
+  "ambient_C": [
+   43
+  ],
+  "first": {
+   "amb_C": 43.0,
+   "capacity_Ah_reported": 1.6560706096175404,
+   "q_int_Ah": 1.703316443986384,
+   "energy_Wh": 5.696280405212558,
+   "duration_s": 1572.359,
+   "t_load_s": 1533.375,
+   "mean_abs_I_A": 3.881117422296153,
+   "V_start": 4.121227217169418,
+   "V_end_min": 2.1274170450668684,
+   "V_mean_energy": 3.3442290922062474,
+   "T_start_C": 43.15149833518289,
+   "T_max_C": 61.11438949471705
+  },
+  "last": {
+   "amb_C": 43.0,
+   "capacity_Ah_reported": 1.562780404428482,
+   "q_int_Ah": 1.5937783241973997,
+   "energy_Wh": 5.3784825764669755,
+   "duration_s": 1536.781,
+   "t_load_s": 1435.078,
+   "mean_abs_I_A": 3.7091888178040837,
+   "V_start": 4.18874384592953,
+   "V_end_min": 2.068863283525511,
+   "V_mean_energy": 3.374674190763317,
+   "T_start_C": 44.60651740406935,
+   "T_max_C": 62.69299470731855
+  },
+  "q_int_Ah_max": 1.8184713298775959,
+  "impedance_first": {
+   "amb_C": 43.0,
+   "Re_ohm": 0.06341817961720268,
+   "Rct_ohm": 0.07725939357478039
+  },
+  "impedance_last": {
+   "amb_C": 43.0,
+   "Re_ohm": 0.06461539153738693,
+   "Rct_ohm": 0.07534304021675395
+  },
+  "n_impedance": 17,
+  "by_ambient_full_charge": {
+   "43": {
+    "n_full": 40,
+    "Q_first5_median_Ah": 1.7890879772156743,
+    "E_first5_median_Wh": 6.044846843117793,
+    "t_load_first5_median_s": 1610.031,
+    "I_first5_median_A": 3.7800140354599048,
+    "Vbar_first5_median": 3.3787309065288564,
+    "dT_first5_median_C": 17.603483796623976,
+    "Q_max_Ah": 1.8184713298775959,
+    "Q_last_Ah": 1.5937783241973997
+   }
+  }
+ },
+ {
+  "cell": "B0031",
+  "n_discharge": 40,
+  "n_discharge_gt5min": 40,
+  "ambient_C": [
+   43
+  ],
+  "first": {
+   "amb_C": 43.0,
+   "capacity_Ah_reported": 1.6666751942525773,
+   "q_int_Ah": 1.68239729852878,
+   "energy_Wh": 5.6681999019368785,
+   "duration_s": 1572.359,
+   "t_load_s": 1533.375,
+   "mean_abs_I_A": 3.8334458538036693,
+   "V_start": 4.116561748956975,
+   "V_end_min": 2.4944372580491163,
+   "V_mean_energy": 3.3691209008083858,
+   "T_start_C": 42.830036312976034,
+   "T_max_C": 60.84632469517393
+  },
+  "last": {
+   "amb_C": 43.0,
+   "capacity_Ah_reported": 1.6672987794846676,
+   "q_int_Ah": 1.6799175146237812,
+   "energy_Wh": 5.735442109296097,
+   "duration_s": 1536.781,
+   "t_load_s": 1536.781,
+   "mean_abs_I_A": 3.9181599954738218,
+   "V_start": 4.207044816296319,
+   "V_end_min": 2.4650879684691613,
+   "V_mean_energy": 3.414121264507772,
+   "T_start_C": 44.28900255099606,
+   "T_max_C": 61.44540062417477
+  },
+  "q_int_Ah_max": 1.8488295015018863,
+  "impedance_first": {
+   "amb_C": 43.0,
+   "Re_ohm": 0.040124519949728245,
+   "Rct_ohm": 0.05376303915907888
+  },
+  "impedance_last": {
+   "amb_C": 43.0,
+   "Re_ohm": 0.040724137674663326,
+   "Rct_ohm": 0.05065160968263164
+  },
+  "n_impedance": 17,
+  "by_ambient_full_charge": {
+   "43": {
+    "n_full": 40,
+    "Q_first5_median_Ah": 1.831123770330734,
+    "E_first5_median_Wh": 6.242970387442652,
+    "t_load_first5_median_s": 1668.078,
+    "I_first5_median_A": 3.863759217538865,
+    "Vbar_first5_median": 3.4072638728936826,
+    "dT_first5_median_C": 17.597910662228557,
+    "Q_max_Ah": 1.8488295015018863,
+    "Q_last_Ah": 1.6799175146237812
+   }
+  }
+ },
+ {
+  "cell": "B0032",
+  "n_discharge": 40,
+  "n_discharge_gt5min": 40,
+  "ambient_C": [
+   43
+  ],
+  "first": {
+   "amb_C": 43.0,
+   "capacity_Ah_reported": 1.7048641073512139,
+   "q_int_Ah": 1.7102678224838375,
+   "energy_Wh": 5.652485056851266,
+   "duration_s": 1572.359,
+   "t_load_s": 1552.844,
+   "mean_abs_I_A": 3.895034492956119,
+   "V_start": 4.087016142066692,
+   "V_end_min": 2.62709691854036,
+   "V_mean_energy": 3.3050291787879815,
+   "T_start_C": 43.26523418326313,
+   "T_max_C": 59.47600707924567
+  },
+  "last": {
+   "amb_C": 43.0,
+   "capacity_Ah_reported": 1.6358000873538245,
+   "q_int_Ah": 1.64215658709948,
+   "energy_Wh": 5.46262352552257,
+   "duration_s": 1536.781,
+   "t_load_s": 1490.969,
+   "mean_abs_I_A": 3.8197223601535972,
+   "V_start": 4.186758471539941,
+   "V_end_min": 2.6076358711453813,
+   "V_mean_energy": 3.326493690331402,
+   "T_start_C": 44.42345154289389,
+   "T_max_C": 62.789754357166764
+  },
+  "q_int_Ah_max": 1.8940362206449968,
+  "impedance_first": {
+   "amb_C": 43.0,
+   "Re_ohm": 0.07066451610132236,
+   "Rct_ohm": 0.07945025753959979
+  },
+  "impedance_last": {
+   "amb_C": 43.0,
+   "Re_ohm": 0.07233299460436984,
+   "Rct_ohm": 0.07943581755418613
+  },
+  "n_impedance": 17,
+  "by_ambient_full_charge": {
+   "43": {
+    "n_full": 39,
+    "Q_first5_median_Ah": 1.8655040887565795,
+    "E_first5_median_Wh": 6.257486786995317,
+    "t_load_first5_median_s": 1697.688,
+    "I_first5_median_A": 3.9453935322885063,
+    "Vbar_first5_median": 3.354314163506412,
+    "dT_first5_median_C": 16.022496814792277,
+    "Q_max_Ah": 1.8940362206449968,
+    "Q_last_Ah": 1.64215658709948
+   }
+  }
+ },
+ {
+  "cell": "B0033",
+  "n_discharge": 197,
+  "n_discharge_gt5min": 197,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 0.06842572240601812,
+   "q_int_Ah": 0.19974870136827397,
+   "energy_Wh": 0.5002361477865859,
+   "duration_s": 1819.406,
+   "t_load_s": 187.812,
+   "mean_abs_I_A": 0.40344167973765666,
+   "V_start": 3.6772190710694983,
+   "V_end_min": 1.9848598462488805,
+   "V_mean_energy": 2.504327409189546,
+   "T_start_C": 23.712130442495322,
+   "T_max_C": 34.973341925251844
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.3152825503676357,
+   "q_int_Ah": 1.414117223030759,
+   "energy_Wh": 4.23223397045269,
+   "duration_s": 2829.516,
+   "t_load_s": 1272.0,
+   "mean_abs_I_A": 1.8021184116514508,
+   "V_start": 4.199637020490028,
+   "V_end_min": 1.9943670583085842,
+   "V_mean_energy": 2.992845219282527,
+   "T_start_C": 24.071663702754314,
+   "T_max_C": 53.47500454222108
+  },
+  "q_int_Ah_max": 1.9848864832701825,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10369425753447586,
+   "Rct_ohm": 0.1418732466241537
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.08579020382149445,
+   "Rct_ohm": 0.11292432770216322
+  },
+  "n_impedance": 92,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 195,
+    "Q_first5_median_Ah": 1.3016827186444002,
+    "E_first5_median_Wh": 3.9262071848746625,
+    "t_load_first5_median_s": 1173.25,
+    "I_first5_median_A": 1.466589518835069,
+    "Vbar_first5_median": 3.0162551354784037,
+    "dT_first5_median_C": 29.037600424081944,
+    "Q_max_Ah": 1.9848864832701825,
+    "Q_last_Ah": 1.414117223030759
+   }
+  }
+ },
+ {
+  "cell": "B0034",
+  "n_discharge": 197,
+  "n_discharge_gt5min": 197,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 0.7459302957645664,
+   "q_int_Ah": 0.9978837210771054,
+   "energy_Wh": 2.7862110524439747,
+   "duration_s": 1819.406,
+   "t_load_s": 901.078,
+   "mean_abs_I_A": 1.9933552708919002,
+   "V_start": 3.8542753609711045,
+   "V_end_min": 2.170439265213917,
+   "V_mean_energy": 2.7921199570592927,
+   "T_start_C": 23.6206484175058,
+   "T_max_C": 51.867480808484146
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.2802601605963335,
+   "q_int_Ah": 1.4141407395341752,
+   "energy_Wh": 4.2170623732570105,
+   "duration_s": 2829.516,
+   "t_load_s": 1272.0,
+   "mean_abs_I_A": 1.8021623313447368,
+   "V_start": 4.182734512107648,
+   "V_end_min": 1.961659201159055,
+   "V_mean_energy": 2.9820669579508268,
+   "T_start_C": 23.93933295948579,
+   "T_max_C": 58.63989407541342
+  },
+  "q_int_Ah_max": 1.9330587645050055,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.12557395008126016,
+   "Rct_ohm": 0.15780591351992612
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.12781469468004525,
+   "Rct_ohm": 0.15295508998008162
+  },
+  "n_impedance": 92,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 196,
+    "Q_first5_median_Ah": 1.7255173449675252,
+    "E_first5_median_Wh": 5.295698972474417,
+    "t_load_first5_median_s": 1550.968,
+    "I_first5_median_A": 1.9366801187559786,
+    "Vbar_first5_median": 3.063594333563557,
+    "dT_first5_median_C": 29.331056151012262,
+    "Q_max_Ah": 1.9330587645050055,
+    "Q_last_Ah": 1.4141407395341752
+   }
+  }
+ },
+ {
+  "cell": "B0036",
+  "n_discharge": 197,
+  "n_discharge_gt5min": 197,
+  "ambient_C": [
+   24
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.001982588175331,
+   "q_int_Ah": 1.0019825881753313,
+   "energy_Wh": 3.3112237277044034,
+   "duration_s": 1819.406,
+   "t_load_s": 1819.406,
+   "mean_abs_I_A": 1.9773749348609408,
+   "V_start": 3.848136609578083,
+   "V_end_min": 2.692363558999662,
+   "V_mean_energy": 3.3046719242240874,
+   "T_start_C": 23.91297719702689,
+   "T_max_C": 25.25510878948548
+  },
+  "last": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 1.5591129431541175,
+   "q_int_Ah": 1.5591129431541175,
+   "energy_Wh": 5.356684895328864,
+   "duration_s": 2829.516,
+   "t_load_s": 2829.516,
+   "mean_abs_I_A": 1.9737323749924904,
+   "V_start": 4.182118777318184,
+   "V_end_min": 2.67894320816739,
+   "V_mean_energy": 3.4357260125698015,
+   "T_start_C": 23.931898582036833,
+   "T_max_C": 36.62637340717898
+  },
+  "q_int_Ah_max": 2.4440624320786553,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10545822995255894,
+   "Rct_ohm": 0.14876911753412897
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10452218668748398,
+   "Rct_ohm": 0.12898188064464913
+  },
+  "n_impedance": 92,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 196,
+    "Q_first5_median_Ah": 1.8011007566288921,
+    "E_first5_median_Wh": 6.231026800280113,
+    "t_load_first5_median_s": 3260.531,
+    "I_first5_median_A": 1.987062297874344,
+    "Vbar_first5_median": 3.4637394036650795,
+    "dT_first5_median_C": 1.9542421808372126,
+    "Q_max_Ah": 2.4440624320786553,
+    "Q_last_Ah": 1.5591129431541175
+   }
+  }
+ },
+ {
+  "cell": "B0038",
+  "n_discharge": 47,
+  "n_discharge_gt5min": 47,
+  "ambient_C": [
+   24,
+   44
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 0.8980573709676724,
+   "q_int_Ah": 1.0840801087171679,
+   "energy_Wh": 3.1012193399700205,
+   "duration_s": 982.938,
+   "t_load_s": 982.938,
+   "mean_abs_I_A": 3.952127452371893,
+   "V_start": 4.053116638334503,
+   "V_end_min": 2.1981645845929387,
+   "V_mean_energy": 2.8606920420667143,
+   "T_start_C": 25.045828878659496,
+   "T_max_C": 51.693778100060996
+  },
+  "last": {
+   "amb_C": 44.0,
+   "capacity_Ah_reported": 1.5301475534434217,
+   "q_int_Ah": 1.6497823061569195,
+   "energy_Wh": 4.962487504019987,
+   "duration_s": 1489.313,
+   "t_load_s": 1489.313,
+   "mean_abs_I_A": 3.9673854309358183,
+   "V_start": 4.186501078488458,
+   "V_end_min": 2.052769819032336,
+   "V_mean_energy": 3.0079650421150648,
+   "T_start_C": 45.41312547252811,
+   "T_max_C": 69.86974573152932
+  },
+  "q_int_Ah_max": 1.8053504448064586,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10741225627911477,
+   "Rct_ohm": 0.19422549669639166
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.15644311656628923,
+   "Rct_ohm": 0.16888662807381682
+  },
+  "n_impedance": 28,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 11,
+    "Q_first5_median_Ah": 1.1768420562513668,
+    "E_first5_median_Wh": 3.5144260798278486,
+    "t_load_first5_median_s": 1060.454,
+    "I_first5_median_A": 2.899480377067548,
+    "Vbar_first5_median": 2.9771044329443868,
+    "dT_first5_median_C": 24.531106509544724,
+    "Q_max_Ah": 1.2391453044636422,
+    "Q_last_Ah": 1.1521572344050093
+   },
+   "44": {
+    "n_full": 35,
+    "Q_first5_median_Ah": 1.8025367761282627,
+    "E_first5_median_Wh": 6.54159431107518,
+    "t_load_first5_median_s": 6452.438,
+    "I_first5_median_A": 0.9883523609236716,
+    "Vbar_first5_median": 3.6271458480747834,
+    "dT_first5_median_C": 3.810237482018458,
+    "Q_max_Ah": 1.8053504448064586,
+    "Q_last_Ah": 1.6497823061569195
+   }
+  }
+ },
+ {
+  "cell": "B0039",
+  "n_discharge": 47,
+  "n_discharge_gt5min": 47,
+  "ambient_C": [
+   24,
+   44
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 0.11903831859341765,
+   "q_int_Ah": 0.465743786499136,
+   "energy_Wh": 1.2975922184985231,
+   "duration_s": 982.938,
+   "t_load_s": 431.016,
+   "mean_abs_I_A": 1.721873697269778,
+   "V_start": 4.078134998132295,
+   "V_end_min": 2.4897962179516666,
+   "V_mean_energy": 2.7860644760333915,
+   "T_start_C": 24.62407997958134,
+   "T_max_C": 41.68577610887712
+  },
+  "last": {
+   "amb_C": 44.0,
+   "capacity_Ah_reported": 1.3153386221697692,
+   "q_int_Ah": 1.373561641855777,
+   "energy_Wh": 4.3034544967526465,
+   "duration_s": 1489.313,
+   "t_load_s": 1252.953,
+   "mean_abs_I_A": 3.2988222829259044,
+   "V_start": 4.204083091786472,
+   "V_end_min": 2.442276380666166,
+   "V_mean_energy": 3.1330625183580265,
+   "T_start_C": 45.21433150575771,
+   "T_max_C": 64.14381595669508
+  },
+  "q_int_Ah_max": 1.7824024371434204,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10413759871076331,
+   "Rct_ohm": 0.12657715456937985
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.1065281068779178,
+   "Rct_ohm": 0.11819047381996031
+  },
+  "n_impedance": 28,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 11,
+    "Q_first5_median_Ah": 0.5620765965688381,
+    "E_first5_median_Wh": 1.6175150158475866,
+    "t_load_first5_median_s": 517.969,
+    "I_first5_median_A": 1.406337937934001,
+    "Vbar_first5_median": 2.8713955366044677,
+    "dT_first5_median_C": 18.50329919689953,
+    "Q_max_Ah": 0.5689226903732506,
+    "Q_last_Ah": 0.5398311019893661
+   },
+   "44": {
+    "n_full": 35,
+    "Q_first5_median_Ah": 1.7807155529193712,
+    "E_first5_median_Wh": 6.516183279911379,
+    "t_load_first5_median_s": 6442.016,
+    "I_first5_median_A": 0.9752001313830848,
+    "Vbar_first5_median": 3.6593060970509894,
+    "dT_first5_median_C": 3.0904816028362205,
+    "Q_max_Ah": 1.7824024371434204,
+    "Q_last_Ah": 1.373561641855777
+   }
+  }
+ },
+ {
+  "cell": "B0040",
+  "n_discharge": 47,
+  "n_discharge_gt5min": 47,
+  "ambient_C": [
+   24,
+   44
+  ],
+  "first": {
+   "amb_C": 24.0,
+   "capacity_Ah_reported": 0.6734628137095633,
+   "q_int_Ah": 0.6790551184788365,
+   "energy_Wh": 2.000587814147746,
+   "duration_s": 982.938,
+   "t_load_s": 621.641,
+   "mean_abs_I_A": 2.4962950152812526,
+   "V_start": 4.068028641979544,
+   "V_end_min": 2.689034363728547,
+   "V_mean_energy": 2.946134650496853,
+   "T_start_C": 24.62082872256712,
+   "T_max_C": 40.67740211970284
+  },
+  "last": {
+   "amb_C": 44.0,
+   "capacity_Ah_reported": 0.5569902643736575,
+   "q_int_Ah": 0.5638265238724336,
+   "energy_Wh": 1.7901620651090195,
+   "duration_s": 1489.313,
+   "t_load_s": 517.719,
+   "mean_abs_I_A": 1.3627216697521727,
+   "V_start": 4.1824060069381375,
+   "V_end_min": 2.5354681123911122,
+   "V_mean_energy": 3.1750227939153244,
+   "T_start_C": 45.221402560632534,
+   "T_max_C": 55.67880428959517
+  },
+  "q_int_Ah_max": 1.7357924496202632,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.11879545490125676,
+   "Rct_ohm": 0.14757159306159412
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.13851689250703758,
+   "Rct_ohm": 0.14988972373642645
+  },
+  "n_impedance": 28,
+  "by_ambient_full_charge": {
+   "24": {
+    "n_full": 11,
+    "Q_first5_median_Ah": 0.7855195663007222,
+    "E_first5_median_Wh": 2.379966114841976,
+    "t_load_first5_median_s": 717.422,
+    "I_first5_median_A": 1.944987147407484,
+    "Vbar_first5_median": 3.033087279973391,
+    "dT_first5_median_C": 16.040157217420752,
+    "Q_max_Ah": 0.7972142674298119,
+    "Q_last_Ah": 0.7211299463718643
+   },
+   "44": {
+    "n_full": 35,
+    "Q_first5_median_Ah": 1.7334508942808629,
+    "E_first5_median_Wh": 6.332063646341632,
+    "t_load_first5_median_s": 6256.438,
+    "I_first5_median_A": 0.9498068063922427,
+    "Vbar_first5_median": 3.6521202964053785,
+    "dT_first5_median_C": 2.4834494830833336,
+    "Q_max_Ah": 1.7357924496202632,
+    "Q_last_Ah": 0.5638265238724336
+   }
+  }
+ },
+ {
+  "cell": "B0041",
+  "n_discharge": 67,
+  "n_discharge_gt5min": 61,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.055620243768194036,
+   "q_int_Ah": 0.07411221405276677,
+   "energy_Wh": 0.2063588860670498,
+   "duration_s": 1063.609,
+   "t_load_s": 76.047,
+   "mean_abs_I_A": 0.25384049585406016,
+   "V_start": 4.18669249732225,
+   "V_end_min": 1.9487619326826215,
+   "V_mean_energy": 2.784411297173303,
+   "T_start_C": 4.842367203458604,
+   "T_max_C": 9.925006929139913
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.8364948433646345,
+   "q_int_Ah": 0.963596464956783,
+   "energy_Wh": 3.1120259254236777,
+   "duration_s": 5051.672,
+   "t_load_s": 3454.187,
+   "mean_abs_I_A": 0.6879539040604206,
+   "V_start": 4.186593388980786,
+   "V_end_min": 1.9845398354520498,
+   "V_mean_energy": 3.2295945850769088,
+   "T_start_C": 6.880854491100997,
+   "T_max_C": 14.227945473001952
+  },
+  "q_int_Ah_max": 1.3310011410919456,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.05354334539080437,
+   "Rct_ohm": 0.1859019069554843
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.05718925656090362,
+   "Rct_ohm": 0.19412918831236575
+  },
+  "n_impedance": 29,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 61,
+    "Q_first5_median_Ah": 0.07459355736752166,
+    "E_first5_median_Wh": 0.20936641497242506,
+    "t_load_first5_median_s": 76.625,
+    "I_first5_median_A": 0.26118758593145086,
+    "Vbar_first5_median": 2.7964527396283376,
+    "dT_first5_median_C": 4.942997434073581,
+    "Q_max_Ah": 1.3310011410919456,
+    "Q_last_Ah": 0.963596464956783
+   }
+  }
+ },
+ {
+  "cell": "B0042",
+  "n_discharge": 112,
+  "n_discharge_gt5min": 106,
+  "ambient_C": [
+   4,
+   22
+  ],
+  "first": {
+   "amb_C": 22.0,
+   "capacity_Ah_reported": 1.7287126633755356,
+   "q_int_Ah": 1.7690413416125992,
+   "energy_Wh": 6.163066297718137,
+   "duration_s": 3360.922,
+   "t_load_s": 3174.86,
+   "mean_abs_I_A": 1.893937222207411,
+   "V_start": 4.186002776703463,
+   "V_end_min": 2.129158438168119,
+   "V_mean_energy": 3.4838452628247176,
+   "T_start_C": 22.916770992915133,
+   "T_max_C": 36.717449850963185
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.3374691704584258,
+   "q_int_Ah": 1.4090837632325797,
+   "energy_Wh": 4.7288599653675485,
+   "duration_s": 5051.672,
+   "t_load_s": 5051.672,
+   "mean_abs_I_A": 1.0021901409949285,
+   "V_start": 4.174072805021775,
+   "V_end_min": 2.153907127504055,
+   "V_mean_energy": 3.355982155751386,
+   "T_start_C": 6.2901135645673065,
+   "T_max_C": 13.279102890770861
+  },
+  "q_int_Ah_max": 1.7690413416125992,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.07586446951010223,
+   "Rct_ohm": 0.12833068256289634
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.0790373338975149,
+   "Rct_ohm": 0.20945677298641602
+  },
+  "n_impedance": 50,
+  "by_ambient_full_charge": {
+   "22": {
+    "n_full": 41,
+    "Q_first5_median_Ah": 1.7528881211627392,
+    "E_first5_median_Wh": 6.1362517309425515,
+    "t_load_first5_median_s": 3145.5,
+    "I_first5_median_A": 1.9414587224154318,
+    "Vbar_first5_median": 3.5019052125609913,
+    "dT_first5_median_C": 13.505741629871544,
+    "Q_max_Ah": 1.7690413416125992,
+    "Q_last_Ah": 1.5917543421208546
+   },
+   "4": {
+    "n_full": 64,
+    "Q_first5_median_Ah": 1.1151717441418438,
+    "E_first5_median_Wh": 2.9512940844907773,
+    "t_load_first5_median_s": 1012.187,
+    "I_first5_median_A": 3.9351759952435854,
+    "Vbar_first5_median": 2.6464928832660495,
+    "dT_first5_median_C": 32.14928445044966,
+    "Q_max_Ah": 1.579135487853239,
+    "Q_last_Ah": 1.4090837632325797
+   }
+  }
+ },
+ {
+  "cell": "B0043",
+  "n_discharge": 112,
+  "n_discharge_gt5min": 106,
+  "ambient_C": [
+   4,
+   22
+  ],
+  "first": {
+   "amb_C": 22.0,
+   "capacity_Ah_reported": 1.713782642126885,
+   "q_int_Ah": 1.7323021228168933,
+   "energy_Wh": 6.054605300154338,
+   "duration_s": 3360.922,
+   "t_load_s": 3145.829,
+   "mean_abs_I_A": 1.8551386250615751,
+   "V_start": 4.204104775621549,
+   "V_end_min": 2.421307986424623,
+   "V_mean_energy": 3.495120868586685,
+   "T_start_C": 22.754464720702696,
+   "T_max_C": 36.84241052511593
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.2767801501201566,
+   "q_int_Ah": 1.3083609678187897,
+   "energy_Wh": 4.4511778558122,
+   "duration_s": 5051.672,
+   "t_load_s": 4741.062,
+   "mean_abs_I_A": 0.9308273876292896,
+   "V_start": 4.192997819348426,
+   "V_end_min": 2.499796953515674,
+   "V_mean_energy": 3.4021022984451306,
+   "T_start_C": 6.192042865051369,
+   "T_max_C": 11.488807348025915
+  },
+  "q_int_Ah_max": 1.7323021228168933,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.0695338223583365,
+   "Rct_ohm": 0.11270565686795861
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.0782066915934319,
+   "Rct_ohm": 0.21741559374160302
+  },
+  "n_impedance": 50,
+  "by_ambient_full_charge": {
+   "22": {
+    "n_full": 41,
+    "Q_first5_median_Ah": 1.7002488698984168,
+    "E_first5_median_Wh": 5.956497018261155,
+    "t_load_first5_median_s": 3086.906,
+    "I_first5_median_A": 1.884059999964965,
+    "Vbar_first5_median": 3.5050507071500165,
+    "dT_first5_median_C": 14.087945804413234,
+    "Q_max_Ah": 1.7323021228168933,
+    "Q_last_Ah": 1.4855766257101586
+   },
+   "4": {
+    "n_full": 65,
+    "Q_first5_median_Ah": 0.07774049494419041,
+    "E_first5_median_Wh": 0.23075995646425376,
+    "t_load_first5_median_s": 78.906,
+    "I_first5_median_A": 0.284546376077407,
+    "Vbar_first5_median": 2.969603847373289,
+    "dT_first5_median_C": 4.440895639331157,
+    "Q_max_Ah": 1.5736555561088026,
+    "Q_last_Ah": 1.3083609678187897
+   }
+  }
+ },
+ {
+  "cell": "B0044",
+  "n_discharge": 112,
+  "n_discharge_gt5min": 106,
+  "ambient_C": [
+   4,
+   22
+  ],
+  "first": {
+   "amb_C": 22.0,
+   "capacity_Ah_reported": 1.686525555152074,
+   "q_int_Ah": 1.6893051844930358,
+   "energy_Wh": 5.826185465685865,
+   "duration_s": 3360.922,
+   "t_load_s": 3060.063,
+   "mean_abs_I_A": 1.809888745849267,
+   "V_start": 4.181684067765273,
+   "V_end_min": 2.6909422904080547,
+   "V_mean_energy": 3.448864964819436,
+   "T_start_C": 22.898191363080095,
+   "T_max_C": 37.78004007704112
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.2486254509320867,
+   "q_int_Ah": 1.2507797308968882,
+   "energy_Wh": 4.245032613602169,
+   "duration_s": 5051.672,
+   "t_load_s": 4527.062,
+   "mean_abs_I_A": 0.8906107795294059,
+   "V_start": 4.167775501643388,
+   "V_end_min": 2.6932435794466025,
+   "V_mean_energy": 3.3939090223010027,
+   "T_start_C": 6.385705098046586,
+   "T_max_C": 10.307592528834146
+  },
+  "q_int_Ah_max": 1.6893051844930358,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.08024913040541176,
+   "Rct_ohm": 0.1445925073678542
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.08469367284007304,
+   "Rct_ohm": 0.23048845645489305
+  },
+  "n_impedance": 50,
+  "by_ambient_full_charge": {
+   "22": {
+    "n_full": 41,
+    "Q_first5_median_Ah": 1.6562103539183726,
+    "E_first5_median_Wh": 5.7319576362411375,
+    "t_load_first5_median_s": 3000.094,
+    "I_first5_median_A": 1.8359435332188945,
+    "Vbar_first5_median": 3.4617750350949037,
+    "dT_first5_median_C": 14.918988838646374,
+    "Q_max_Ah": 1.6893051844930358,
+    "Q_last_Ah": 1.4183909487146376
+   },
+   "4": {
+    "n_full": 65,
+    "Q_first5_median_Ah": 0.06411590500228831,
+    "E_first5_median_Wh": 0.19039253406769685,
+    "t_load_first5_median_s": 67.187,
+    "I_first5_median_A": 0.2305687398777317,
+    "Vbar_first5_median": 2.9695055237994645,
+    "dT_first5_median_C": 3.695460382038993,
+    "Q_max_Ah": 1.4960897385112955,
+    "Q_last_Ah": 1.2507797308968882
+   }
+  }
+ },
+ {
+  "cell": "B0045",
+  "n_discharge": 72,
+  "n_discharge_gt5min": 72,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.0819793880779518,
+   "q_int_Ah": 1.2128022183668825,
+   "energy_Wh": 3.9162220133643757,
+   "duration_s": 6436.141,
+   "t_load_s": 4348.625,
+   "mean_abs_I_A": 0.6797383425468184,
+   "V_start": 4.202937200343293,
+   "V_end_min": 1.990881848788414,
+   "V_mean_energy": 3.2290689727116635,
+   "T_start_C": 6.546128313360122,
+   "T_max_C": 15.71039018923076
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.6069476168507777,
+   "q_int_Ah": 0.7491616159482564,
+   "energy_Wh": 2.349540799417883,
+   "duration_s": 4450.625,
+   "t_load_s": 2690.625,
+   "mean_abs_I_A": 0.6056443773005142,
+   "V_start": 4.1890724171726745,
+   "V_end_min": 1.9697892783360584,
+   "V_mean_energy": 3.1362268826919757,
+   "T_start_C": 5.447328740126087,
+   "T_max_C": 16.26952559815265
+  },
+  "q_int_Ah_max": 1.2128022183668825,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.07262833091140136,
+   "Rct_ohm": 0.24565288003805374
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.07391035231000713,
+   "Rct_ohm": 0.23877946759746088
+  },
+  "n_impedance": 40,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 69,
+    "Q_first5_median_Ah": 1.0312660192261873,
+    "E_first5_median_Wh": 3.328953235269964,
+    "t_load_first5_median_s": 3698.235,
+    "I_first5_median_A": 0.6646741680212028,
+    "Vbar_first5_median": 3.2272045639853935,
+    "dT_first5_median_C": 10.666150535701693,
+    "Q_max_Ah": 1.2128022183668825,
+    "Q_last_Ah": 0.7491616159482564
+   }
+  }
+ },
+ {
+  "cell": "B0046",
+  "n_discharge": 72,
+  "n_discharge_gt5min": 72,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.7282392323598248,
+   "q_int_Ah": 1.7962465336918838,
+   "energy_Wh": 6.1735746368615425,
+   "duration_s": 6436.141,
+   "t_load_s": 6436.141,
+   "mean_abs_I_A": 1.0031661082518326,
+   "V_start": 4.237702541731068,
+   "V_end_min": 2.1792997733612083,
+   "V_mean_energy": 3.4369305777714123,
+   "T_start_C": 6.398455346375354,
+   "T_max_C": 13.880080551261507
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.1538041170229467,
+   "q_int_Ah": 1.2394701313441616,
+   "energy_Wh": 4.115675224073774,
+   "duration_s": 4450.625,
+   "t_load_s": 4450.625,
+   "mean_abs_I_A": 0.9996591394483646,
+   "V_start": 4.174510564064746,
+   "V_end_min": 2.189500804437932,
+   "V_mean_energy": 3.3205118219431955,
+   "T_start_C": 5.512487384505981,
+   "T_max_C": 14.051631055988958
+  },
+  "q_int_Ah_max": 1.7962465336918838,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.09194533928221202,
+   "Rct_ohm": 0.1870717035021495
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.08083179905043456,
+   "Rct_ohm": 0.21146271210164572
+  },
+  "n_impedance": 40,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 70,
+    "Q_first5_median_Ah": 1.5594934823124262,
+    "E_first5_median_Wh": 5.3372633521978345,
+    "t_load_first5_median_s": 5590.907,
+    "I_first5_median_A": 1.0023602664995583,
+    "Vbar_first5_median": 3.4218728298595225,
+    "dT_first5_median_C": 7.481625204886153,
+    "Q_max_Ah": 1.7962465336918838,
+    "Q_last_Ah": 1.2394701313441616
+   }
+  }
+ },
+ {
+  "cell": "B0047",
+  "n_discharge": 72,
+  "n_discharge_gt5min": 72,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.6743047446975208,
+   "q_int_Ah": 1.7059340104658989,
+   "energy_Wh": 5.938076996968498,
+   "duration_s": 6436.141,
+   "t_load_s": 6179.11,
+   "mean_abs_I_A": 0.9527678704653465,
+   "V_start": 4.246711253516259,
+   "V_end_min": 2.4706118669327277,
+   "V_mean_energy": 3.480836281203386,
+   "T_start_C": 6.212696115916043,
+   "T_max_C": 12.376815880696887
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.1567087516841796,
+   "q_int_Ah": 1.1884531616634397,
+   "energy_Wh": 4.014765260913163,
+   "duration_s": 4450.625,
+   "t_load_s": 4311.641,
+   "mean_abs_I_A": 0.9573123780210179,
+   "V_start": 4.194180006661532,
+   "V_end_min": 2.4992087242533025,
+   "V_mean_energy": 3.378143447650747,
+   "T_start_C": 5.3659263532424175,
+   "T_max_C": 12.67528068575023
+  },
+  "q_int_Ah_max": 1.7059340104658989,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.05605783343888099,
+   "Rct_ohm": 0.20097016584458333
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.07300469972093052,
+   "Rct_ohm": 0.22171366635291487
+  },
+  "n_impedance": 40,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 72,
+    "Q_first5_median_Ah": 1.5323186894261,
+    "E_first5_median_Wh": 5.315605637509509,
+    "t_load_first5_median_s": 5550.11,
+    "I_first5_median_A": 0.9789479794332585,
+    "Vbar_first5_median": 3.4689948469533873,
+    "dT_first5_median_C": 6.1641197647808434,
+    "Q_max_Ah": 1.7059340104658989,
+    "Q_last_Ah": 1.1884531616634397
+   }
+  }
+ },
+ {
+  "cell": "B0048",
+  "n_discharge": 72,
+  "n_discharge_gt5min": 72,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.6579955793677608,
+   "q_int_Ah": 1.660100520386815,
+   "energy_Wh": 5.7563524218003606,
+   "duration_s": 6436.141,
+   "t_load_s": 6004.953,
+   "mean_abs_I_A": 0.9276655898472513,
+   "V_start": 4.223690952621402,
+   "V_end_min": 2.6876065414465464,
+   "V_mean_energy": 3.4674722109352087,
+   "T_start_C": 6.52486744360099,
+   "T_max_C": 10.851944131643279
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.2231273969878986,
+   "q_int_Ah": 1.2252805362982342,
+   "energy_Wh": 4.167378290847269,
+   "duration_s": 4450.625,
+   "t_load_s": 4435.047,
+   "mean_abs_I_A": 0.9865545525457216,
+   "V_start": 4.170920111392399,
+   "V_end_min": 2.690437364566134,
+   "V_mean_energy": 3.4011625643198222,
+   "T_start_C": 5.4384961126886715,
+   "T_max_C": 10.751912617606896
+  },
+  "q_int_Ah_max": 1.660100520386815,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.07799077882418357,
+   "Rct_ohm": 0.23974893898915942
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.08052683359122734,
+   "Rct_ohm": 0.2257253229535857
+  },
+  "n_impedance": 40,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 72,
+    "Q_first5_median_Ah": 1.5008903285707391,
+    "E_first5_median_Wh": 5.186644817819354,
+    "t_load_first5_median_s": 5429.047,
+    "I_first5_median_A": 0.9590550928011438,
+    "Vbar_first5_median": 3.457491494717381,
+    "dT_first5_median_C": 5.057240473390265,
+    "Q_max_Ah": 1.660100520386815,
+    "Q_last_Ah": 1.2252805362982342
+   }
+  }
+ },
+ {
+  "cell": "B0049",
+  "n_discharge": 25,
+  "n_discharge_gt5min": 24,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.8583727215167135,
+   "q_int_Ah": 0.9500014522947592,
+   "energy_Wh": 2.8930160454195093,
+   "duration_s": 1713.235,
+   "t_load_s": 1713.235,
+   "mean_abs_I_A": 1.9911008133050878,
+   "V_start": 3.8454913513399713,
+   "V_end_min": 1.9925401284554691,
+   "V_mean_energy": 3.045275392402123,
+   "T_start_C": 9.292640050962104,
+   "T_max_C": 16.380725919820748
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.6913885231046639,
+   "q_int_Ah": 0.9473130388287341,
+   "energy_Wh": 2.793937821930618,
+   "duration_s": 1708.86,
+   "t_load_s": 1708.86,
+   "mean_abs_I_A": 1.9877745412866725,
+   "V_start": 4.187572397568079,
+   "V_end_min": 1.9924291348754952,
+   "V_mean_energy": 2.9493290046815637,
+   "T_start_C": 6.047374959267245,
+   "T_max_C": 22.293655276575564
+  },
+  "q_int_Ah_max": 2.545275282223077,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.048745478569106604,
+   "Rct_ohm": 0.1617636532324595
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.06042629807036345,
+   "Rct_ohm": 0.06042629807036345
+  },
+  "n_impedance": 12,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 23,
+    "Q_first5_median_Ah": 1.6189361609769464,
+    "E_first5_median_Wh": 5.145033371788586,
+    "t_load_first5_median_s": 2905.484,
+    "I_first5_median_A": 1.838286633259802,
+    "Vbar_first5_median": 3.1780335110211007,
+    "dT_first5_median_C": 15.182355543280645,
+    "Q_max_Ah": 2.545275282223077,
+    "Q_last_Ah": 0.9473130388287341
+   }
+  }
+ },
+ {
+  "cell": "B0050",
+  "n_discharge": 25,
+  "n_discharge_gt5min": 24,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.8631448527758341,
+   "q_int_Ah": 0.9412071140306761,
+   "energy_Wh": 2.868804386129135,
+   "duration_s": 1713.235,
+   "t_load_s": 1693.656,
+   "mean_abs_I_A": 1.9678823415208642,
+   "V_start": 3.818275498868238,
+   "V_end_min": 2.1766233079901336,
+   "V_mean_energy": 3.048005421297351,
+   "T_start_C": 9.269790882570577,
+   "T_max_C": 17.700710235479104
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": NaN,
+   "q_int_Ah": 0.0003814025707666841,
+   "energy_Wh": 8.925548944176319e-05,
+   "duration_s": 1708.86,
+   "t_load_s": NaN,
+   "mean_abs_I_A": 0.0008013335280087693,
+   "V_start": 0.2449807966483791,
+   "V_end_min": 0.22599553989299218,
+   "V_mean_energy": 0.2340191081102166,
+   "T_start_C": 5.901167389823339,
+   "T_max_C": 6.577509402056284
+  },
+  "q_int_Ah_max": 3.027215799957785,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.08458047397458193,
+   "Rct_ohm": 0.2124424800585705
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": -5470.6838293611745,
+   "Rct_ohm": 2784.3566886626104
+  },
+  "n_impedance": 12,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 13,
+    "Q_first5_median_Ah": 1.744559647696314,
+    "E_first5_median_Wh": 5.703599905358647,
+    "t_load_first5_median_s": 3135.344,
+    "I_first5_median_A": 2.0000500371673122,
+    "Vbar_first5_median": 3.2805943413372236,
+    "dT_first5_median_C": 14.458558678592192,
+    "Q_max_Ah": 3.027215799957785,
+    "Q_last_Ah": 0.18083398607411683
+   }
+  }
+ },
+ {
+  "cell": "B0051",
+  "n_discharge": 25,
+  "n_discharge_gt5min": 24,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.6434735598158292,
+   "q_int_Ah": 0.6875440299038832,
+   "energy_Wh": 2.0906681510586402,
+   "duration_s": 1713.235,
+   "t_load_s": 1254.797,
+   "mean_abs_I_A": 1.444694618164293,
+   "V_start": 3.8000325140227753,
+   "V_end_min": 2.469359676853076,
+   "V_mean_energy": 3.0407771140866573,
+   "T_start_C": 9.13006459295357,
+   "T_max_C": 17.933039751399626
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.677848893570423,
+   "q_int_Ah": 0.7528916003525731,
+   "energy_Wh": 2.412974456426105,
+   "duration_s": 1708.86,
+   "t_load_s": 1370.125,
+   "mean_abs_I_A": 1.5784322210682304,
+   "V_start": 4.1919700049548565,
+   "V_end_min": 2.495715251425015,
+   "V_mean_energy": 3.2049427238876467,
+   "T_start_C": 5.784528692369955,
+   "T_max_C": 18.153508709771476
+  },
+  "q_int_Ah_max": 2.409736041397775,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.0713694865779506,
+   "Rct_ohm": 0.21835138725756187
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.0803664878283902,
+   "Rct_ohm": 0.15188907554777661
+  },
+  "n_impedance": 12,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 23,
+    "Q_first5_median_Ah": 1.2791335008062426,
+    "E_first5_median_Wh": 4.2228209536256855,
+    "t_load_first5_median_s": 2325.547,
+    "I_first5_median_A": 1.5006986661957025,
+    "Vbar_first5_median": 3.293185771193988,
+    "dT_first5_median_C": 13.609377777826957,
+    "Q_max_Ah": 2.409736041397775,
+    "Q_last_Ah": 0.7528916003525731
+   }
+  }
+ },
+ {
+  "cell": "B0052",
+  "n_discharge": 25,
+  "n_discharge_gt5min": 24,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.8606591508342232,
+   "q_int_Ah": 0.8633759401071218,
+   "energy_Wh": 2.667672655609814,
+   "duration_s": 1713.235,
+   "t_load_s": 1568.344,
+   "mean_abs_I_A": 1.8087003987272394,
+   "V_start": 3.83956882325682,
+   "V_end_min": 2.691234036028442,
+   "V_mean_energy": 3.089815839990662,
+   "T_start_C": 9.127699798558957,
+   "T_max_C": 16.429874854641657
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": NaN,
+   "q_int_Ah": 0.0006611891709313202,
+   "energy_Wh": 0.00021248989676865318,
+   "duration_s": 1708.86,
+   "t_load_s": NaN,
+   "mean_abs_I_A": 0.0013876128523206282,
+   "V_start": 0.32795605032297154,
+   "V_end_min": 0.31539862717685724,
+   "V_mean_energy": 0.321375343261218,
+   "T_start_C": 5.947913329392545,
+   "T_max_C": 6.555064601703525
+  },
+  "q_int_Ah_max": 1.4211840355746594,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.07844815250356232,
+   "Rct_ohm": 0.19047636278832983
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": -4050.7544527422683,
+   "Rct_ohm": 3322.1171066883585
+  },
+  "n_impedance": 12,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 3,
+    "Q_first5_median_Ah": 1.37365361944625,
+    "E_first5_median_Wh": 4.548775778171521,
+    "t_load_first5_median_s": 2489.453,
+    "I_first5_median_A": 1.6053127060143075,
+    "Vbar_first5_median": 3.311443084178115,
+    "dT_first5_median_C": 10.09064312632432,
+    "Q_max_Ah": 1.4211840355746594,
+    "Q_last_Ah": 1.3544965116607628
+   }
+  }
+ },
+ {
+  "cell": "B0053",
+  "n_discharge": 55,
+  "n_discharge_gt5min": 55,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.0691417886194299,
+   "q_int_Ah": 1.304783389092342,
+   "energy_Wh": 4.011344928214263,
+   "duration_s": 2349.64,
+   "t_load_s": 2349.64,
+   "mean_abs_I_A": 1.993560711727946,
+   "V_start": 4.081952934128504,
+   "V_end_min": 1.9808329057464713,
+   "V_mean_energy": 3.07433782629982,
+   "T_start_C": 5.6480393241342135,
+   "T_max_C": 19.02185891684059
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.0102740078425778,
+   "q_int_Ah": 1.3089496358359487,
+   "energy_Wh": 3.995531604583357,
+   "duration_s": 2357.687,
+   "t_load_s": 2357.687,
+   "mean_abs_I_A": 1.9906079852392542,
+   "V_start": 4.1919833117809935,
+   "V_end_min": 1.9333820178355814,
+   "V_mean_energy": 3.0524716117374884,
+   "T_start_C": 5.219841286029437,
+   "T_max_C": 22.111677092018486
+  },
+  "q_int_Ah_max": 1.4229899670644315,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10090192584083808,
+   "Rct_ohm": 0.15478049323493148
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10195074893248685,
+   "Rct_ohm": 0.1658850218902032
+  },
+  "n_impedance": 26,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 54,
+    "Q_first5_median_Ah": 1.3827713722396666,
+    "E_first5_median_Wh": 4.293925654382691,
+    "t_load_first5_median_s": 2488.719,
+    "I_first5_median_A": 1.994739489778059,
+    "Vbar_first5_median": 3.1004041354702174,
+    "dT_first5_median_C": 12.789045635472167,
+    "Q_max_Ah": 1.4229899670644315,
+    "Q_last_Ah": 1.3089496358359487
+   }
+  }
+ },
+ {
+  "cell": "B0054",
+  "n_discharge": 102,
+  "n_discharge_gt5min": 102,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.7399351039859233,
+   "q_int_Ah": 0.853680937318209,
+   "energy_Wh": 2.5036223534541326,
+   "duration_s": 2660.313,
+   "t_load_s": 1537.344,
+   "mean_abs_I_A": 1.1711014926455596,
+   "V_start": 3.849349497973326,
+   "V_end_min": 2.1808531235872497,
+   "V_mean_energy": 2.93273779934588,
+   "T_start_C": 6.150630538748289,
+   "T_max_C": 19.2224107892251
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.8373919001793014,
+   "q_int_Ah": 1.2232783619902203,
+   "energy_Wh": 3.672636127945664,
+   "duration_s": 2357.687,
+   "t_load_s": 2199.187,
+   "mean_abs_I_A": 1.8581997718360517,
+   "V_start": 4.183536913886723,
+   "V_end_min": 2.1601370672426743,
+   "V_mean_energy": 3.002289782981566,
+   "T_start_C": 5.103571054269733,
+   "T_max_C": 24.067733333922256
+  },
+  "q_int_Ah_max": 1.508306324019199,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10729220819696772,
+   "Rct_ohm": 0.2218699476933641
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10150507023603897,
+   "Rct_ohm": 0.1742737496764066
+  },
+  "n_impedance": 48,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 100,
+    "Q_first5_median_Ah": 1.2906907627837938,
+    "E_first5_median_Wh": 4.066930551997024,
+    "t_load_first5_median_s": 2318.469,
+    "I_first5_median_A": 1.6490088129931413,
+    "Vbar_first5_median": 3.1509720757785296,
+    "dT_first5_median_C": 14.025344850945878,
+    "Q_max_Ah": 1.508306324019199,
+    "Q_last_Ah": 1.2232783619902203
+   }
+  }
+ },
+ {
+  "cell": "B0055",
+  "n_discharge": 102,
+  "n_discharge_gt5min": 102,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.7989997927037011,
+   "q_int_Ah": 0.8546396998483863,
+   "energy_Wh": 2.5703639452986398,
+   "duration_s": 2660.313,
+   "t_load_s": 1556.563,
+   "mean_abs_I_A": 1.1719845140949632,
+   "V_start": 3.843735024444539,
+   "V_end_min": 2.4930794984834495,
+   "V_mean_energy": 3.0075410090996524,
+   "T_start_C": 5.905007114660983,
+   "T_max_C": 18.02446981350722
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.9907591663373165,
+   "q_int_Ah": 1.1080003692654639,
+   "energy_Wh": 3.6243868552078875,
+   "duration_s": 2357.687,
+   "t_load_s": 2016.218,
+   "mean_abs_I_A": 1.6853937523601872,
+   "V_start": 4.202802351530416,
+   "V_end_min": 2.496842059818817,
+   "V_mean_energy": 3.2711061798748617,
+   "T_start_C": 4.9486562512902355,
+   "T_max_C": 18.127312484256297
+  },
+  "q_int_Ah_max": 1.370598821086628,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10157829311159554,
+   "Rct_ohm": 0.23471686484653742
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.0968087979207628,
+   "Rct_ohm": 0.15489738203707232
+  },
+  "n_impedance": 48,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 101,
+    "Q_first5_median_Ah": 1.3024358654701338,
+    "E_first5_median_Wh": 4.2740779747527755,
+    "t_load_first5_median_s": 2367.047,
+    "I_first5_median_A": 1.7062192795030635,
+    "Vbar_first5_median": 3.281603407942074,
+    "dT_first5_median_C": 11.520235732692075,
+    "Q_max_Ah": 1.370598821086628,
+    "Q_last_Ah": 1.1080003692654639
+   }
+  }
+ },
+ {
+  "cell": "B0056",
+  "n_discharge": 102,
+  "n_discharge_gt5min": 102,
+  "ambient_C": [
+   4
+  ],
+  "first": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 0.7852781208785192,
+   "q_int_Ah": 0.7886169819899576,
+   "energy_Wh": 2.3697650324434174,
+   "duration_s": 2660.313,
+   "t_load_s": 1432.891,
+   "mean_abs_I_A": 1.0829326313727061,
+   "V_start": 3.8387228819147694,
+   "V_end_min": 2.689656173110366,
+   "V_mean_energy": 3.0049632287446664,
+   "T_start_C": 6.293379384392066,
+   "T_max_C": 15.737541036017063
+  },
+  "last": {
+   "amb_C": 4.0,
+   "capacity_Ah_reported": 1.1290590137779504,
+   "q_int_Ah": 1.1327946389542145,
+   "energy_Wh": 3.7270408347403072,
+   "duration_s": 2357.687,
+   "t_load_s": 2055.125,
+   "mean_abs_I_A": 1.7228075335961501,
+   "V_start": 4.181882887350109,
+   "V_end_min": 2.6950189281281465,
+   "V_mean_energy": 3.290129301972224,
+   "T_start_C": 5.330925832926126,
+   "T_max_C": 14.899199505524647
+  },
+  "q_int_Ah_max": 1.3472175816638754,
+  "impedance_first": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10885981803966972,
+   "Rct_ohm": 0.24235190183691696
+  },
+  "impedance_last": {
+   "amb_C": 24.0,
+   "Re_ohm": 0.10267706871685421,
+   "Rct_ohm": 0.17039406000537094
+  },
+  "n_impedance": 48,
+  "by_ambient_full_charge": {
+   "4": {
+    "n_full": 101,
+    "Q_first5_median_Ah": 1.3001952596272803,
+    "E_first5_median_Wh": 4.234746460431265,
+    "t_load_first5_median_s": 2357.422,
+    "I_first5_median_A": 1.7048140651008785,
+    "Vbar_first5_median": 3.2570080755756763,
+    "dT_first5_median_C": 8.597842856297168,
+    "Q_max_Ah": 1.3472175816638754,
+    "Q_last_Ah": 1.1327946389542145
+   }
+  }
+ }
+]

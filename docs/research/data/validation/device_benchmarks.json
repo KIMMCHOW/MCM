@@ -1,0 +1,452 @@
+{
+ "note": "Derived average battery-side power for published smartphone battery-life figures (validation targets).\n\nUsage:  python3 -I validation_device_benchmarks.py <bonn_iphone_summary.json> <out.json>\n\nP_avg = E_batt / TTE, with E_batt the rated pack energy. For Android phones only mAh is published, so\nE = Q * V_nom with V_nom = 3.87 V (range 3.85-3.89 V), the nominal voltage implied by Apple's own Wh/mAh pairs\n(12.38 Wh / 3200 mAh = 3.869 V; 11.97 Wh / 3095 mAh = 3.867 V; 16.68 Wh / 4323 mAh = 3.858 V; 9to5Mac 2022).\nEvery runtime below is copied from the source named in `src` (keys resolve to validation_data.md, section e).\n",
+ "rows": [
+  {
+   "device": "iPhone 14 Pro",
+   "test": "video playback (local)",
+   "conditions": "Apple lab: looped 2h23m movie, Wi-Fi associated, BT headphones, Auto-Brightness/True Tone off",
+   "hours": 23,
+   "source": "APL14P",
+   "E_Wh": 12.38,
+   "E_basis": "12.38 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.538,
+   "P_range_W": [
+    0.538,
+    0.538
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro",
+   "test": "video playback (streamed)",
+   "conditions": "Apple lab: looped 3h01m HDR movie streamed",
+   "hours": 20,
+   "source": "APL14P",
+   "E_Wh": 12.38,
+   "E_basis": "12.38 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.619,
+   "P_range_W": [
+    0.619,
+    0.619
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro",
+   "test": "audio playback",
+   "conditions": "Apple lab: 358-track AAC playlist, BT headphones, display not visible (AOD on)",
+   "hours": 75,
+   "source": "APL14P",
+   "E_Wh": 12.38,
+   "E_basis": "12.38 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.165,
+   "P_range_W": [
+    0.165,
+    0.165
+   ]
+  },
+  {
+   "device": "iPhone 13 Pro",
+   "test": "video playback (local)",
+   "conditions": "Apple lab (Aug 2021), same protocol family",
+   "hours": 22,
+   "source": "APL13P",
+   "E_Wh": 11.97,
+   "E_basis": "11.97 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.544,
+   "P_range_W": [
+    0.544,
+    0.544
+   ]
+  },
+  {
+   "device": "iPhone 13 Pro",
+   "test": "video playback (streamed)",
+   "conditions": "Apple lab",
+   "hours": 20,
+   "source": "APL13P",
+   "E_Wh": 11.97,
+   "E_basis": "11.97 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.599,
+   "P_range_W": [
+    0.599,
+    0.599
+   ]
+  },
+  {
+   "device": "iPhone 13 Pro",
+   "test": "audio playback",
+   "conditions": "Apple lab",
+   "hours": 75,
+   "source": "APL13P",
+   "E_Wh": 11.97,
+   "E_basis": "11.97 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.16,
+   "P_range_W": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro",
+   "test": "web browsing (cellular)",
+   "conditions": "Laptop Mag: continuous web surfing, 150 nits, T-Mobile eSIM (mobile network), mean of 3 runs",
+   "hours": 10.367,
+   "source": "LMAG22",
+   "E_Wh": 12.38,
+   "E_basis": "12.38 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 1.194,
+   "P_range_W": [
+    1.194,
+    1.194
+   ]
+  },
+  {
+   "device": "iPhone 13 Pro",
+   "test": "web browsing (cellular)",
+   "conditions": "Laptop Mag: same test",
+   "hours": 12.0,
+   "source": "LMAG22",
+   "E_Wh": 11.97,
+   "E_basis": "11.97 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.998,
+   "P_range_W": [
+    0.998,
+    0.998
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro Max",
+   "test": "idle screen-on, min brightness, no WLAN",
+   "conditions": "Notebookcheck Reader/Idle",
+   "hours": 57.883,
+   "source": "NBC22",
+   "E_Wh": 16.68,
+   "E_basis": "16.68 Wh rated",
+   "E_source": "NBC22",
+   "P_avg_W": 0.288,
+   "P_range_W": [
+    0.288,
+    0.288
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro Max",
+   "test": "web browsing (Wi-Fi)",
+   "conditions": "Notebookcheck WiFi websurfing, fixed 150 cd/m2",
+   "hours": 15.8,
+   "source": "NBC22",
+   "E_Wh": 16.68,
+   "E_basis": "16.68 Wh rated",
+   "E_source": "NBC22",
+   "P_avg_W": 1.056,
+   "P_range_W": [
+    1.056,
+    1.056
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro Max",
+   "test": "video playback (local H.264 1080p)",
+   "conditions": "Notebookcheck Big Buck Bunny loop",
+   "hours": 28.133,
+   "source": "NBC22",
+   "E_Wh": 16.68,
+   "E_basis": "16.68 Wh rated",
+   "E_source": "NBC22",
+   "P_avg_W": 0.593,
+   "P_range_W": [
+    0.593,
+    0.593
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro Max",
+   "test": "max load (3D benchmark), max brightness",
+   "conditions": "Notebookcheck Load",
+   "hours": 6.933,
+   "source": "NBC22",
+   "E_Wh": 16.68,
+   "E_basis": "16.68 Wh rated",
+   "E_source": "NBC22",
+   "P_avg_W": 2.406,
+   "P_range_W": [
+    2.406,
+    2.406
+   ]
+  },
+  {
+   "device": "Pixel 8",
+   "test": "idle screen-on, min brightness, no WLAN",
+   "conditions": "Notebookcheck Reader/Idle",
+   "hours": 24.883,
+   "source": "NBC23",
+   "E_Wh": 17.71,
+   "E_basis": "4575 mAh x 3.87 V (assumed)",
+   "E_source": "GPX",
+   "P_avg_W": 0.712,
+   "P_range_W": [
+    0.708,
+    0.715
+   ]
+  },
+  {
+   "device": "Pixel 8",
+   "test": "web browsing (Wi-Fi)",
+   "conditions": "Notebookcheck WiFi v1.3 (150 cd/m2 script)",
+   "hours": 13.567,
+   "source": "NBC23",
+   "E_Wh": 17.71,
+   "E_basis": "4575 mAh x 3.87 V (assumed)",
+   "E_source": "GPX",
+   "P_avg_W": 1.305,
+   "P_range_W": [
+    1.298,
+    1.312
+   ]
+  },
+  {
+   "device": "Pixel 8",
+   "test": "video playback (local H.264 1080p)",
+   "conditions": "Notebookcheck Big Buck Bunny loop",
+   "hours": 22.717,
+   "source": "NBC23",
+   "E_Wh": 17.71,
+   "E_basis": "4575 mAh x 3.87 V (assumed)",
+   "E_source": "GPX",
+   "P_avg_W": 0.779,
+   "P_range_W": [
+    0.775,
+    0.783
+   ]
+  },
+  {
+   "device": "Pixel 8",
+   "test": "max load (Burnout benchmark), max brightness",
+   "conditions": "Notebookcheck Load",
+   "hours": 3.417,
+   "source": "NBC23",
+   "E_Wh": 17.71,
+   "E_basis": "4575 mAh x 3.87 V (assumed)",
+   "E_source": "GPX",
+   "P_avg_W": 5.182,
+   "P_range_W": [
+    5.155,
+    5.209
+   ]
+  },
+  {
+   "device": "Galaxy S24 (Exynos 2400)",
+   "test": "idle screen-on, min brightness, no WLAN",
+   "conditions": "Notebookcheck Reader/Idle",
+   "hours": 39.967,
+   "source": "NBC24",
+   "E_Wh": 15.48,
+   "E_basis": "4000 mAh x 3.87 V (assumed)",
+   "E_source": "NBC24",
+   "P_avg_W": 0.387,
+   "P_range_W": [
+    0.385,
+    0.389
+   ]
+  },
+  {
+   "device": "Galaxy S24 (Exynos 2400)",
+   "test": "web browsing (Wi-Fi)",
+   "conditions": "Notebookcheck WiFi v1.3, Chrome 122, 150 cd/m2",
+   "hours": 14.667,
+   "source": "NBC24",
+   "E_Wh": 15.48,
+   "E_basis": "4000 mAh x 3.87 V (assumed)",
+   "E_source": "NBC24",
+   "P_avg_W": 1.055,
+   "P_range_W": [
+    1.05,
+    1.061
+   ]
+  },
+  {
+   "device": "Galaxy S24 (Exynos 2400)",
+   "test": "video playback (local H.264 1080p)",
+   "conditions": "Notebookcheck Big Buck Bunny loop",
+   "hours": 20.45,
+   "source": "NBC24",
+   "E_Wh": 15.48,
+   "E_basis": "4000 mAh x 3.87 V (assumed)",
+   "E_source": "NBC24",
+   "P_avg_W": 0.757,
+   "P_range_W": [
+    0.753,
+    0.761
+   ]
+  },
+  {
+   "device": "Galaxy S24 (Exynos 2400)",
+   "test": "max load (Burnout benchmark), max brightness",
+   "conditions": "Notebookcheck Load",
+   "hours": 2.65,
+   "source": "NBC24",
+   "E_Wh": 15.48,
+   "E_basis": "4000 mAh x 3.87 V (assumed)",
+   "E_source": "NBC24",
+   "P_avg_W": 5.842,
+   "P_range_W": [
+    5.811,
+    5.872
+   ]
+  },
+  {
+   "device": "Pixel 8a",
+   "test": "typical mixed use (median-user profile)",
+   "conditions": "Google: talk/data/standby mix, US carrier, late 2023; 'average ... at least 31 hours'",
+   "hours": 31,
+   "source": "GPX",
+   "E_Wh": 17.38,
+   "E_basis": "4492 mAh x 3.87 V (assumed)",
+   "E_source": "GPX",
+   "P_avg_W": 0.561,
+   "P_range_W": [
+    0.558,
+    0.564
+   ]
+  },
+  {
+   "device": "iPhone 13 Pro",
+   "test": "idle, black full-screen OLED, airplane mode (9 s log)",
+   "conditions": "Bonn dataset, median of 3 devices, 100% -> 1%",
+   "hours": 50.817,
+   "source": "BONN26",
+   "E_Wh": 11.97,
+   "E_basis": "11.97 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.236,
+   "P_range_W": [
+    0.236,
+    0.236
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro",
+   "test": "idle, black full-screen OLED, airplane mode (9 s log)",
+   "conditions": "Bonn dataset, median of 6 devices, 100% -> 1%",
+   "hours": 55.028,
+   "source": "BONN26",
+   "E_Wh": 12.38,
+   "E_basis": "12.38 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.225,
+   "P_range_W": [
+    0.225,
+    0.225
+   ]
+  },
+  {
+   "device": "iPhone 13 Pro",
+   "test": "GPS 'best' accuracy, black screen, airplane mode",
+   "conditions": "Bonn dataset, median of 3 devices, 100% -> 1%",
+   "hours": 29.764,
+   "source": "BONN26",
+   "E_Wh": 11.97,
+   "E_basis": "11.97 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.402,
+   "P_range_W": [
+    0.402,
+    0.402
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro",
+   "test": "GPS 'best' accuracy, black screen, airplane mode",
+   "conditions": "Bonn dataset, median of 6 devices, 100% -> 1%",
+   "hours": 48.492,
+   "source": "BONN26",
+   "E_Wh": 12.38,
+   "E_basis": "12.38 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 0.255,
+   "P_range_W": [
+    0.255,
+    0.255
+   ]
+  },
+  {
+   "device": "iPhone 13 Pro",
+   "test": "rear camera 30 fps (frames not rendered), black screen",
+   "conditions": "Bonn dataset, median of 3 devices, 100% -> 1%",
+   "hours": 9.527,
+   "source": "BONN26",
+   "E_Wh": 11.97,
+   "E_basis": "11.97 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 1.256,
+   "P_range_W": [
+    1.256,
+    1.256
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro",
+   "test": "rear camera 30 fps (frames not rendered), black screen",
+   "conditions": "Bonn dataset, median of 6 devices, 100% -> 1%",
+   "hours": 8.431,
+   "source": "BONN26",
+   "E_Wh": 12.38,
+   "E_basis": "12.38 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 1.468,
+   "P_range_W": [
+    1.468,
+    1.468
+   ]
+  },
+  {
+   "device": "iPhone 13 Pro",
+   "test": "camera 60 fps + GPS best, black screen",
+   "conditions": "Bonn dataset, median of 3 devices, 100% -> 1%",
+   "hours": 8.332,
+   "source": "BONN26",
+   "E_Wh": 11.97,
+   "E_basis": "11.97 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 1.437,
+   "P_range_W": [
+    1.437,
+    1.437
+   ]
+  },
+  {
+   "device": "iPhone 14 Pro",
+   "test": "camera 60 fps + GPS best, black screen",
+   "conditions": "Bonn dataset, median of 6 devices, 100% -> 1%",
+   "hours": 8.379,
+   "source": "BONN26",
+   "E_Wh": 12.38,
+   "E_basis": "12.38 Wh rated",
+   "E_source": "N9M22",
+   "P_avg_W": 1.477,
+   "P_range_W": [
+    1.477,
+    1.477
+   ]
+  }
+ ],
+ "additivity_check_bonn": {
+  "13 Pro (inferred)": {
+   "TTE_pred_h": 8.324,
+   "TTE_obs_h": 8.332,
+   "rel_err_pct": -0.1
+  },
+  "14 Pro (inferred)": {
+   "TTE_pred_h": 8.391,
+   "TTE_obs_h": 8.379,
+   "rel_err_pct": 0.15
+  }
+ }
+}
