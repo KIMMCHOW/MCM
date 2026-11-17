@@ -1,0 +1,94 @@
+\section{Time-to-Empty Predictions}\label{sec:tte}
+
+\subsection{Baseline scenarios}
+For RP-63 (\cref{sec:params}), new, at 25\,$^\circ$C and from full charge, the nominal L2 TTE spans two orders
+of magnitude, from 5.68\,h of gaming to 443\,h of Wi-Fi standby (\cref{tab:baseline}); for steady loads
+$E_u/\bar P$ is only 0.2--1.9\,\% too long (\cref{sec:analytic}). All these runs end at the cut-off with
+at most 1.1\,\% displayed, except the camera (brown-out in a 4\,W burst). The scheduled day S12
+(9.5\,h screen-on from 07:00, including 1\,h of gaming) dies on the second evening. Over 2048 parameter samples
+(\cref{sec:uq}) the medians are 3--38\,\% shorter than nominal (S12 to S2b), because several defaults sit at the
+low-power end of their priors (\cref{sec:params}); only gaming's is longer (16\,\%), as the priors throttle
+more. Published iPhone runtimes are matched within $-4$ to $+17\,\%$ except Bluetooth audio, while Android
+floors exceed ours (\cref{fig:power_breakdown}b); room-temperature TTEs hold to about $\pm15\,\%$, cold ones are
+indicative (\cref{sec:validation}).
+
+\begin{table}[t]
+\centering\small
+\caption{TTE from full charge at 25\,$^\circ$C, new pack. $\bar P$: mean power (demand$\to$delivered if
+throttled). TTE, event and $s_{\mathrm{off}}$ (displayed SOC at shutdown) are nominal; median and 90\,\% interval
+over the parameter sample. Shares: two largest components of the demand (S12: of the day's energy). S13, S14:
+mean TTE; $^a$median and 5--95\,\% range over 2000 usage paths; $^b$9.7 and 9.2\,\% brown-outs; CM was not sampled.}
+\label{tab:baseline}
+\input{tables/tab_tte_baseline.tex}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/fig_power_breakdown.pdf}
+  \caption{(a) Power by component before throttling; black tick: capped game power; grey band: published
+  maximum loads \cite{NBC22,NBC23,NBC24}. (b) Components for 14 published runtimes; diamonds: power implied by
+  the observed runtime (filled: within $\pm25\,\%$); right: TTE error.}
+  \label{fig:power_breakdown}
+\end{figure}
+
+\paragraph{Trajectories and initial charge.} At constant power SOC falls almost linearly, with the voltage knee
+only in the last few percent (\cref{fig:trajectories}). TTE is therefore nearly proportional to the starting
+charge $s_0$ at 25\,$^\circ$C (\cref{fig:tte_s0}a): half a charge gives 0.471--0.476 of the full-charge TTE,
+matching the energy fraction at $s=0.5$ (0.477). There is no ``last 20\,\% drains faster''. Cold, aged packs are
+linear with an offset (\cref{fig:tte_s0}b): the chord through 50 and 100\,\% reaches zero at $s_0=12\,\%$
+($-10\,^\circ$C, SOH 0.8) and 25\,\% ($-20\,^\circ$C, where a cold-soaked phone at $s_0\le25\,\%$ browns out at
+once). The cold hike ($-20\,^\circ$C, SOH 0.8) dies at its first or second photo burst from
+$s_0\le45\,\%$. The scheduled day's steps reflect the time of day: its start time alone moves the TTE between
+26.3 and 43.3\,h.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.66\textwidth]{figures/fig_trajectories.pdf}
+  \caption{SOC, voltage and temperatures. A game throttles within 10\,min. In (d) ($-20\,^\circ$C, SOH 0.8;
+  grey: 25\,$^\circ$C, new) a photo burst ends the hike at 12.3\,h with 44\,\% still displayed.}
+  \label{fig:trajectories}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.74\textwidth]{figures/fig_tte_s0.pdf}
+  \caption{(a) TTE against initial displayed SOC at 25\,$^\circ$C (bars: 5--95\,\% over usage paths).
+  (b) TTE relative to full charge: cold, aged packs reach zero at a positive $s_0$.}
+  \label{fig:tte_s0}
+\end{figure}
+
+\subsection{Drivers of rapid drain in each case}
+Energy shares equal TTE elasticities (F1), so \cref{tab:baseline} names each driver. Standby splits between
+suspend floor and radio paging until 5G push gives the radio 79\,\%. Reading and Wi-Fi video are display-bound,
+a 120\,Hz social feed loads SoC and display alike, cellular video and calls are radio-bound (32--48\,\%), and
+navigation adds GNSS and sensors (21\,\%) to a bright screen. Gaming is SoC-bound (81\,\%); screen-off music
+pays more for keeping the processor awake than for audio. Over the scheduled day the shares are SoC 40.0,
+display 27.2, radio 14.5, awake 7.2, suspend 4.0, GNSS 3.4, audio 1.7, camera 1.3 and sensors 0.6\,\%, and its
+one hour of gaming uses about a quarter of the energy. Cold, aged packs die from resistance times burst power.
+
+\subsection{What reduces battery life most}
+\textbf{(1) Sustained gaming}, capped by heat: throttling turns 3.91 into 3.06\,W at 0.85 performance (5.68\,h;
+4.43\,h unthrottled; 10.3\,h but 0.52 performance at 35\,$^\circ$C, F5). Skipping it extends the typical
+day by 37\,\% (median 27\,\%, 90\,\%: 20--36\,\%), the largest lever in every parameter
+sample. \textbf{(2) Cold with age}: at $-20\,^\circ$C, SOH 0.8 the social feed loses 39\,\% and the hike 54\,\%
+(vs.\ warm and new), stranding 23 and 44\,\% of the displayed charge. \textbf{(3) Cellular instead of
+Wi-Fi}: radio tails \cite{HU12,NA21} raise the video radio share from 13 to 43\,\% (Wi-Fi to 5G); Wi-Fi gains
+53\,\% (90\,\%: 34--102\,\%) for video and 56\,\% for calls, and 5G push more than halves standby (174 vs 378\,h
+on LTE). \textbf{(4) Poor coverage}: at $-110$\,dBm the LTE feed loses 12\,\% (90\,\%: 5--35\,\%) and a video call
+23\,\%; the Wi-Fi edge ($-90$\,dBm) costs 41\,\% \cite{DI13}. Typical day: $-5.7\,\%$.
+\textbf{(5) Bright, fast screens}: brightness $+0.2$ costs 7.5\,\% of the typical day; 60\,Hz and a dark theme
+gain 4.7 and 4.6\,\% (\cref{sec:recs}).
+
+\subsection{What changes battery life surprisingly little}
+\textbf{Background sync:} halving wake-ups gains 0.1--0.4\,\% per day. \textbf{GNSS on a stationary phone:} a
+Bonn iPhone 14 Pro lasts 48.5\,h with GPS against 55.0\,h idle \cite{SCH26,BONN26}, about 0.03\,W.
+\textbf{Bluetooth:} 0.04\,W \cite{CH10}, 4\,\% of the social feed. \textbf{Sensors:} 0.6\,\% of the day.
+\textbf{Resistance at 25\,$^\circ$C:} losses of 0.41/0.89/3.15\,\% at 0.5/1.06/3.5\,W, and its full prior moves
+the social-feed TTE by under 1\,\%. \textbf{Cold on a fresh pack at moderate load:} $-3.4\,\%$ (navigation) and
+$-2.7\,\%$ (social) at $-10\,^\circ$C, as the pack warms itself by 3--5\,K. \textbf{Self-discharge:}
+0.1\,\%/month \cite{ZIL19}. \textbf{Optimised charging:} +0.76 points of SOH after two years (\cref{sec:aging}).
+
+\begin{keybox}[Key finding]
+At 25\,$^\circ$C TTE $\approx E_u/\bar P$: games, cellular radios and the screen decide drain; sync, GNSS,
+sensors and resistance move a day by a few percent. Only cold with age strands charge (up to 44\,\%).
+\end{keybox}

@@ -1,0 +1,81 @@
+\section{Validation}\label{sec:validation}
+
+Tests, pass criteria and expected failures were pre-registered; data never set parameters except in the one
+calibration run (\cref{sec:params}). With
+$\varepsilon=\TTE_{\mathrm{model}}/\TTE_{\mathrm{obs}}-1$, L2 passes 31 of 59 criteria (\cref{tab:validation}).
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{Pre-registered tests; ``Passed'' counts criteria met by L2 (and the KiBaM variant X9).
+$f_Q=Q(T)/Q(25\,^\circ\mathrm C)$; tolerance 0.05 (0.10 at $-20\,^\circ$C).}
+\label{tab:validation}
+\input{tables/tab_validation.tex}
+\end{table}
+
+\paragraph{V1: Bonn iPhones.} Six iPhone 14 Pro and three 13 Pro units ran to empty in airplane mode with a black
+screen, idle or with rear camera, GPS or both \cite{SCH26,BONN26}. Each is RP-63 with its measured capacity
+(3.32, 3.16\,A\,h); the 14 Pro idle run sets $\Delta P_{\mathrm{awake}}$ and the other seven are hold-outs
+(\cref{fig:validation_bonn}a). Idle, camera and camera+GPS are within $\pm15\,\%$ on both phones. GPS fails ($-48$,
+$-20\,\%$), as pre-registered for the 14 Pro: its data imply only about 0.03\,W for GPS, against 0.27\,W measured for
+a phone receiver \cite{KW19}, so the receiver in the closed box was probably duty-cycled or without a fix. We
+did not retune: GPS on a stationary modern iPhone costs surprisingly little. The 90\,\% parameter interval covers
+only 3 of 8 observed ranges; apart from GPS the misses lie above it, because the priors of $P_{d0}$ and $\Delta
+P_{\mathrm{cam}}$ lie mostly above their defaults. Camera and GPS powers add (residual $\le0.15\,\%$ in data,
+$\le0.43\,\%$ in model).
+
+\emph{SOC shape.} At constant power the current rises as the OCV falls, so the coulombic display $s$ should drain ${\approx}10\,\%$ faster near empty, the energy fraction $\varsigma$ evenly. Over 28 traces the slope error is 4.4\,\%
+for $s$ and 2.0\,\% for $\varsigma$ (closer on 27; \cref{fig:validation_bonn}b): the iPhone gauge behaves as an energy gauge, so $\varsigma$ is the better display model. Using it instead of $s$ lowers the cold, aged stranded charge by at most 2.2 points (hike: 44.2 to 42.0\,\%).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/fig_validation_bonn.pdf}
+  \caption{Bonn iPhone test. (a) Model vs.\ observed TTE, 90\,\% parameter intervals, $\pm15\,\%$ band (CAL:
+  calibration run); only GPS falls outside. (b) Drain time per 1\,\% by SOC window: flat, as $\varsigma$ predicts.}
+  \label{fig:validation_bonn}
+\end{figure}
+
+\paragraph{V6: published runtimes.} We compare 14 published runtimes of five phones
+\cite{APL14P,NBC22,NBC23,NBC24,LMAG22,GPX} at $\pm25\,\%$ (settings are undisclosed), plus two power bands
+(both pass); 11 of 16 checks pass (\cref{fig:validation_band}). All iPhone cases pass except Bluetooth audio ($-25.5\,\%$), which our
+awake-processor audio state and a DSP-audio variant ($+21.6\,\%$) bracket. Web browsing is within 4\,\% on three of
+four phones. Android local video ($+53$, $+57\,\%$) and idle ($+54$, $+183\,\%$) fail: their screen-on floors are
+1.6--2.9 times ours, and we do not tune to them.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/fig_validation_band.pdf}
+  \caption{Published-runtime test: model error for 14 runtimes of five phones (band $\pm25\,\%$; open markers
+  fail; arrow: DSP-audio variant). iPhone cases pass except audio; Android idle and video fail on their higher
+  floors.}
+  \label{fig:validation_band}
+\end{figure}
+
+\paragraph{V7: cold shutdowns.} At or below 0\,$^\circ$C, phones shut down at 15--35\,\% displayed charge, lose
+15\,\% of runtime at 0\,$^\circ$C and regain about 330\,mA\,h after warming \cite{LEE20}. For a 2015-class phone
+(2.7\,A\,h, the reported 0.25\,$\Omega$ pack resistance, 3\,W bursts) the model reproduces brown-out and recovery
+but overstates their size: $-51\,\%$, shutdown at 59--78\,\% (0 to $-10\,^\circ$C), 1430\,mA\,h. With the also-reported
+0.13\,$\Omega$ shut-off resistance, all three fall inside the bands ($-11\,\%$, 18\,\% at $-5\,^\circ$C, 414\,mA\,h).
+
+\paragraph{V2: temperature (LG HG2).} Calibrated at 25\,$^\circ$C only (voltage RMSE $\le34$\,mV), the LG HG2 cell
+\cite{KOL20} is predicted at five other temperatures. As pre-registered, L2 under-predicts the cold loss: at
+$-20\,^\circ$C it keeps 0.98 (0.5C) and 0.84 (2C) of its capacity, against 0.73 and 0.49 measured, because its
+effective activation energy (about 20\,kJ/mol) is below the data's 26. The kinetic-battery variant X9
+(\cref{sec:structural}) closes most of the 2C gap (0.52) but stays 0.04--0.12 high at 0.5C. Part of the loss is
+not kinetic (only 0.90 remains even at C/20).
+
+\paragraph{V5: DFN reference.} Against PyBaMM's Doyle--Fuller--Newman (DFN) model \cite{SULZER21} of the Ai2020 cell \cite{AI20}, L2 is within 2.4\,\% at 25\,$^\circ$C (0.1--1C) but $+4.2\,\%$ at 0\,$^\circ$C and
+0.5C, where only X9 passes. At 1C and 0\,$^\circ$C the DFN delivers only 1.67 of 2.47\,A\,h, and at 0.5C and
+$-10\,^\circ$C only 1.21: a transport-limited collapse no equivalent circuit captures ($+45$ to $+360\,\%$). Sustained
+phone loads ($\le0.21$C) lie between the passing and failing 0\,$^\circ$C cases.
+
+\paragraph{V3, V4: aging and pulses.} With NASA cell B0005's measured fade (1.86 to 1.33\,A\,h) and resistance
+growth \cite{NASA07}, the 2\,A TTE falls by 28.7\,\% (observed 28.8\,\%); both runs end by charge depletion, so
+only the capacity channel is tested. On an Oxford Kokam power cell \cite{OX17} the $R\cdot
+Q$-scaled circuit has 82\,mV RMSE, OCV alone 33\,mV (step resistance 21, not 84\,m$\Omega$): so we use the scaling only between phone packs.
+
+\begin{keybox}[Where the model performs well or poorly]
+\textbf{Well:} known loads at room temperature (Bonn idle and camera within $\pm15\,\%$, published iPhone runtimes
+$-4$ to $+17\,\%$ except audio, cells within 2.4\,\% of the DFN). \textbf{Poorly:} vendor floors (the largest
+cross-device uncertainty), duty-cycled GPS, and the cold, where L2 overstates capacity (V2, V5) and brown-out hinges
+on pack resistance (V7). With a known floor, room-temperature TTEs hold to about $\pm15\,\%$; cold ones are indicative.
+\end{keybox}

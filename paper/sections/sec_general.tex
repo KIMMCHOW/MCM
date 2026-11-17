@@ -1,0 +1,41 @@
+\section{Generalisation to Other Portable Devices}\label{sec:general}
+The equations of \cref{sec:model} hold for any regulated load on a lithium-ion pack; only constants change:
+$E_u=N_sQ\bar U$ for $N_s$ cells in series (so $\TTE\approx E_u/\bar P$), $R\propto(N_s/N_p)/Q_{\mathrm{cell}}$
+(RP-63: $R_0Q=0.28\,\Omega$\,A\,h), $C_{\mathrm{th}}\propto$ mass, $R_{\mathrm{th}},R_{\mathrm{skin}}\propto
+1/(hA_{\mathrm{surf}})$ and thus $P_{\mathrm{sust}}\propto(T_{\lim}-\Tamb)\,hA_{\mathrm{surf}}$. Display laws differ
+(OLED $\propto A\,g(b)\,\mathrm{APL}$, LCD $P_{\mathrm{panel}}+c_1b+c_2b^2$, e-paper an energy per page); usage
+needs its own activity set but keeps F6--F8.
+
+Five dimensionless groups tell which model layer a device needs (\cref{tab:general}): resistive loss
+$\Pi_1=PR_\Sigma/\bar U^2$ (F3), throttling $\Pi_2=P_{\mathrm{dem}}/P_{\mathrm{sust}}$ (F5), thermal memory
+$\Pi_3=\tau_{\mathrm{th}}/\TTE$, burst margin $\Pi_4=\Delta P_b/\Delta P_{b,\mathrm{safe}}$ (F4; brown-out at 1)
+and usage spread $\Pi_5=\mathrm{CV}_{\TTE}=\sqrt{2\tau_c/\mu}\,\mathrm{CV}_P$ (F7; $\tau_c$: correlation time of
+the power, $\mu$: mean TTE). Per cell, $\Pi_1=c\,RQ_\Sigma/\bar U$ and $\Pi_4$ depend only on the C-rate $c$ and
+$RQ$, not on pack size.
+
+\begin{table}[t]\centering\small
+\caption{Dimensionless groups. RP-63: $\Pi_1$ at 1\,W, $\Pi_2$, $\Pi_3$ gaming, $\Pi_4$ social feed, $\Pi_5$ typical
+day. Other classes: illustrative mid values without device data (input ranges move each by about a decade).}
+\label{tab:general}
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+ & RP-63 & Tablet & Laptop & Watch & Earbuds & E-reader & Drone \\
+\midrule
+Energy (W\,h) & 18.2 & 30 & 55 & 1.1 & 0.2 & 5 & 40 \\
+$\Pi_1$ resistive loss & 0.0047 & 0.0085 & 0.0075 & 0.0078 & 0.011 & 0.0017 & 0.032 \\
+$\Pi_2$ throttling & 1.19 & 0.89 & 1.8 & 1.2 & 0.13 & 0.17 & 0.30 \\
+$\Pi_3$ thermal memory & 0.022 & 0.045 & 0.12 & 0.0077 & 0.0034 & 0.017 & 0.32 \\
+$\Pi_4$ burst margin ($\soc=0.5$, 25\,$^\circ$C, new) & 0.11 & 0.092 & 0.15 & 0.31 & 0.11 & 0.13 & 0.32 \\
+$\Pi_4$ ($\soc=0.2$, $-20\,^\circ$C, SOH 0.8) & 1.18 & 1.4 & 2.0 & 4.3 & 2.1 & 1.1 & $\infty$ \\
+$\Pi_5$ usage spread & 0.175 & 0.24 & 0.18 & 0.16 & 0.039 & 0.079 & 0.034 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+RP-63 has a group above 1 only in gaming ($\Pi_2=1.19$) or when cold, aged and low ($\Pi_4=1.18$; 1.35 with RC
+polarisation). Drones have the largest $\Pi_1$ and $\Pi_3$, and, cold and aged, hover alone breaches
+$V_{\mathrm{sys}}$ (pre-warm the pack). Watches ($\Pi_4=4.3$ cold) and e-readers are floor-dominated (TTE elasticity
+to the floor about $-0.6$ and $-0.7$; an e-reader lasts about 48 days on 5\,W\,h): standby is their lever.
+Earbuds, e-readers and drones keep $\Pi_5<0.1$. Every class reaches $\Pi_4\gtrsim1$ when cold, aged
+and low, so O1 carries over.

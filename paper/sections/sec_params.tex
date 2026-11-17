@@ -1,0 +1,41 @@
+\section{Parameter Estimation and Data}\label{sec:params}
+
+\paragraph{Reference phone.} All predictions are for \textbf{RP-63}, a generic 2024-class 6.3-inch phone with a
+19.5:9 LTPO OLED panel (97.4\,cm$^2$ active area), a 5G modem and one 4.70\,A\,h LiCoO$_2$/graphite pouch cell
+charged to 4.45\,V (mean OCV 3.87\,V), as in current large phones \cite{PIX9,MR24}. It models no specific product.
+Its nominal energy is 18.2\,W\,h; the usable energy above the 3.40\,V cut-off at vanishing load is
+$E_u=17.8$\,W\,h, and the gauge reads 0\,\% at coulombic SOC $\soc_e=0.026$.
+
+\begin{table}[t]
+\centering
+\caption{Main RP-63 parameters (powers at the battery terminals; resistances at 25\,$^\circ$C). UQ: U uniform,
+LU log-uniform, T triangular with the value as mode. Source: fit = our fit; der. = derived from cited numbers;
+assum. = labelled assumption; \textbf{cal.} = calibrated. Wi-Fi and 5G share the LTE radio structure with their
+own values (e.g.\ active power 0.13 and 0.90\,W, tail power 0.12 and 0.255\,W).}
+\label{tab:params}
+\input{tables/tab_params.tex}
+\end{table}
+
+\paragraph{Where the numbers come from.} Each of the 93 parameters carries a source tag (\cref{tab:params}). Most
+are \emph{published measurements}: component powers \cite{CH13,CH10,GU24,KW19}, radio state machines
+\cite{HU12,NA21}, phone thermal constants \cite{HE19,KANG19,PU23} and aging rates \cite{SCH14,KEIL16}. The OCV
+curve, $R_1$, $\tau_1$, the low-SOC rise $A_R$ and the activation energies are our \emph{fits} to PyBaMM \cite{SULZER21} runs of the Ai2020 and Marquis2019 parameter sets \cite{AI20,MQ19}; they agree with published Arrhenius
+fits \cite{BARC22,SUN23}. \emph{Derived} values are computed from cited numbers, e.g.\ $R_{\mathrm{th}}$ from
+measured heating curves \cite{HE19}. \emph{Labelled assumptions} (pack resistance, brown-out margin, burst
+multiplier, throttle shape) get wide ranges. Only \emph{one constant is calibrated}: $\Delta P_{\mathrm{awake}}$
+is set so that the black-screen idle run of the Bonn iPhone 14 Pro \cite{BONN26} lasts the observed 55.0\,h (exact
+value 0.0877\,W, used as 0.090\,W; the blind prior 0.10\,W gives $-5.1$\,\%). All other runs are hold-outs
+(\cref{sec:validation}). The aging rates $k_H,k_L$ follow the manufacturers' statement of SOH 0.80 after 1000
+cycles \cite{AP-BATT,GOOG}.
+
+\paragraph{Uncertainty.} 68 parameters carry an independent prior (LU when the range spans a factor of three or
+more); the rest are definitions, fitted shape constants or negligible terms. The default set is \emph{optimistic}: several defaults sit at the low-power end of their ranges
+($\Delta P_{\mathrm{awake}}$, $P_{d0}$, the 5G tail, Wi-Fi active power). At 25\,$^\circ$C the median TTEs are 3--38\,\% shorter than the nominal ones, except for throttled gaming
+(\cref{sec:uq}). Other devices keep the same physics; only their capacity
+and screen size change, and the pack resistance is scaled as $R\cdot Q=\text{const}$.
+
+\paragraph{Data and licences.} The Bonn iPhone traces
+\cite{BONN26,SCH26} and the LG HG2 cell data \cite{KOL20} are CC BY 4.0, the Oxford degradation data \cite{OX17}
+ODbL v1.0, and the Ai2020 set (via PyBaMM) BSD-3. The NASA battery data \cite{NASA07} are public without a stated
+licence; we use them only for a secondary check and acknowledge the repository and its donors. Published
+specifications and reviews \cite{APL14P,NBC22,NBC23,NBC24,LMAG22,GPX} enter only as cited facts.

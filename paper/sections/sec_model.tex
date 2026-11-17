@@ -29,9 +29,12 @@ closes L1:
 \subsection{Component load model}\label{sec:load}
 The battery-side power demand is the sum of component powers (A2), each driven by a field of $\bm u(t)$:
 \begin{equation}
-  P=P_{\mathrm{susp}}+a\,\Delta P_{\mathrm{awake}}+(1-a)\lambda E_{\mathrm{wake}}+P_{\mathrm{disp}}+P_{\mathrm{SoC}}(T_s)
-  +P_{\mathrm{net}}+g P_G+c_r\Delta P_{\mathrm{cam}}+c_f\Delta P_{\mathrm{camf}}+au\,\Delta P_{\mathrm{aud}}
-  +bt\,\Delta P_{\mathrm{BT}}+P_{\mathrm{sens}}. \label{eq:load}
+\begin{aligned}
+  P={}&P_{\mathrm{susp}}+a\,\Delta P_{\mathrm{awake}}+(1-a)\lambda E_{\mathrm{wake}}+P_{\mathrm{disp}}+P_{\mathrm{SoC}}(T_s)
+  +P_{\mathrm{net}}\\
+  &+g P_G+c_r\Delta P_{\mathrm{cam}}+c_f\Delta P_{\mathrm{camf}}+au\,\Delta P_{\mathrm{aud}}
+  +bt\,\Delta P_{\mathrm{BT}}+P_{\mathrm{sens}}.
+\end{aligned}\label{eq:load}
 \end{equation}
 Here $a\in\{0,1\}$ means the application processor is awake. The floor terms are the suspend power, the awake
 overhead and the energy of background wake-ups while asleep.
@@ -64,7 +67,7 @@ time-averaged power is then exact:
 \end{equation}
 where $\lambda e^{-\lambda T_{\mathrm{tail}}}$ is the rate of promotions from idle and $e_b$ the energy per bit.
 Real-time media (calls) use a measured connected power $P_{rt}$. Weak signal multiplies cellular traffic energy
-by $m=1+\gamma_{\mathrm{sig}}\max(0,(\mathrm{RSRP_{ref}}-\mathrm{RSRP})/10\,\mathrm{dB})$, which reproduces the
+by $m=1+\gamma_{\mathrm{sig}}\max(0,\allowbreak(\mathrm{RSRP_{ref}}-\mathrm{RSRP})/10\,\mathrm{dB})$, which reproduces the
 $+52$\,\% energy between $-85$ and $-105$\,dBm measured by \cite{DI13}. Wi-Fi, LTE and 5G non-standalone (NSA)
 differ only in their parameters (\cref{tab:params}).
 
@@ -83,13 +86,13 @@ al.\ \cite{AI20} (RMSE 7\,mV), stretched to a modern 4.45\,V charge limit, plus 
   \Ocv(\soc,T)=-b_0e^{-b_1\soc}+a_0+a_1\soc+a_2\soc^2+a_3\soc^3+\Delta V_{hv}\soc^{p}+(T-T_{\mathrm{ref}})\,k_S\frac{\partial U}{\partial T}(\soc). \label{eq:ocv}
 \end{equation}
 
-\paragraph{Temperature-dependent resistance.} Ion transport is thermally activated. With
-$a_R(T;E)=\exp[(E/R_g)(1/T-1/T_{\mathrm{ref}})]$,
+\paragraph{Temperature-dependent resistance.} Ion transport is thermally activated, so each resistance and the
+RC time constant carry an Arrhenius factor:
 \begin{equation}
-  R_0(\soc,T)=R_{0\infty}\big[1+A_Re^{-\soc/\soc_0}\big]a_R(T;E_{a,R_0})(1+r_g),\quad
-  R_1=R_{1,\mathrm{ref}}\,a_R(T;E_{a,R_1})(1+r_g),\quad \tau_1=\tau_{1,\mathrm{ref}}\,a_R(T;E_{a,\tau}), \label{eq:resist}
+  R_0(\soc,T)=R_{0\infty}\big[1+A_Re^{-\soc/\soc_0}\big]a_R(T;E_{a,R_0})(1+r_g),\ \
+  R_1=R_{1,\mathrm{ref}}\,a_R(T;E_{a,R_1})(1+r_g),\ \ \tau_1=\tau_{1,\mathrm{ref}}\,a_R(T;E_{a,\tau}), \label{eq:resist}
 \end{equation}
-where the factor $1+A_Re^{-\soc/\soc_0}$ captures the resistance rise near empty and $r_g$ the growth with aging.
+where $a_R(T;E)=\exp[(E/R_g)(1/T-1/T_{\mathrm{ref}})]$, $R_{0\infty}$ is set so that $R_0(0.5,T_{\mathrm{ref}})=R_{0,\mathrm{ref}}$, the factor $1+A_Re^{-\soc/\soc_0}$ captures the resistance rise near empty and $r_g$ the growth with aging.
 At $-20\,^\circ$C the pack resistance is $3.6\times$ its 25\,$^\circ$C value.
 
 \paragraph{Thermal balance.} All power delivered to the phone becomes heat inside it (A4). The battery adds its
@@ -152,13 +155,13 @@ problem's glossary defines SOC as remaining \emph{energy} relative to full; we a
 $\varsigma=\int_{\soc_e}^{\soc}\Ocv\,\dd\zeta\big/\!\int_{\soc_e}^{1}\Ocv\,\dd\zeta$. The two differ by at most
 2.4 points. TTE is the first time any event function crosses zero:
 \begin{equation}
-  \TTE=\inf\{t>0:\ \min_i g_i(\bm x(t),\bm u(t))\le0\},\qquad
+  \TTE=\inf\{t>0:\ \min_i g_i(\bm x(t),\bm u(t))\le0\},\quad
   \begin{aligned}
-  &g_1=\soc,\ \ g_2=V-\Vcut\ \text{(cut-off)},\ \ g_3=V_{pk}-V_{\mathrm{sys}}\ \text{(brown-out)},\\
-  &g_4=D\ \text{(infeasible power)},\ \ g_5=T_{\mathrm{shut}}-T\ \text{(thermal shutdown)}.
+  &g_1=\soc,\ g_2=V-\Vcut\ \text{(cut-off)},\ g_3=V_{pk}-V_{\mathrm{sys}}\ \text{(brown-out)},\\
+  &g_4=D\ \text{(infeasible power)},\ g_5=T_{\mathrm{shut}}-T\ \text{(thermal shutdown)}.
   \end{aligned}\label{eq:tte}
 \end{equation}
 The \emph{stranded charge} $s_{\mathrm{off}}=s(\TTE)$ is the displayed SOC at shutdown. It returns once the phone
 warms up, because $\soc$ is not reset \cite{LEE20}. Single trajectories are integrated with LSODA
 ($\mathrm{rtol}=10^{-7}$) segment by segment between input switches, with terminal events. Batches of thousands
-of parameter samples use a vectorised RK4 scheme ($h=2$\,s) that agrees with LSODA to within 0.2\,\% of TTE.
+of parameter samples use a vectorised RK4 scheme ($h=2$--10\,s) that agrees with LSODA to within 0.2\,\% of TTE.

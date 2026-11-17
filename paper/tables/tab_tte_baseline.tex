@@ -1,0 +1,28 @@
+% Compact baseline TTE table (nominal values, parameter interval, component shares), generated from the
+% scenario, uncertainty and power results (5-95 % parameter interval); numbers are not hand-edited.
+% S13/S14 rows: full-model Monte Carlo over 2000 usage paths (mean, median, 5-95 % path quantiles).
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular}{@{}llrrlrrl@{}}
+\toprule
+ID & Scenario & $\bar P$ (W) & TTE (h) & Median [90\,\%] (h) & Event & $s_{\mathrm{off}}$ (\%) & Top shares (\%) \\
+\midrule
+S1 & Standby, Wi-Fi & 0.040 & 443 & 373 [271, 584] & cut-off & 0.02 & floor 52, radio 48 \\
+S2a & Standby, LTE & 0.047 & 378 & 348 [258, 519] & cut-off & 0.02 & radio 56, floor 44 \\
+S2b & Standby, 5G, heavy push & 0.102 & 174 & 108 [81, 149] & cut-off & 0.04 & radio 79, floor 21 \\
+S16 & Music, screen off, BT & 0.224 & 79.2 & 59.3 [41.0, 89.9] & cut-off & 0.09 & floor 49, audio 40 \\
+S3 & Reading & 0.456 & 38.9 & 29.8 [22.7, 42.3] & cut-off & 0.18 & disp. 59, floor 24 \\
+S5a & Video, Wi-Fi & 0.548 & 32.3 & 24.5 [19.3, 32.2] & cut-off & 0.21 & disp. 34, SoC 23 \\
+S5b & Video, LTE & 0.694 & 25.5 & 20.4 [16.4, 25.9] & cut-off & 0.27 & radio 32, disp. 27 \\
+S5c & Video, 5G NSA & 0.837 & 21.1 & 15.0 [12.3, 19.0] & cut-off & 0.32 & radio 43, disp. 23 \\
+S4 & Social feed, Wi-Fi & 1.06 & 16.6 & 14.6 [11.7, 18.8] & cut-off & 0.40 & SoC 40, disp. 39 \\
+S6 & Navigation & 1.49 & 11.8 & 10.3 [8.1, 13.4] & cut-off & 0.56 & disp. 34, SoC 29 \\
+S8b & Video call, Wi-Fi & 1.62 & 10.8 & 8.6 [7.0, 11.2] & cut-off & 0.61 & SoC 35, radio 20 \\
+CM & Camera & 1.69 & 10.4 & -- & brown-out & 0.68 & cam. 68, disp. 21 \\
+S8a & Video call, LTE & 2.52 & 6.93 & 5.5 [4.1, 8.0] & cut-off & 0.93 & radio 48, SoC 22 \\
+S7 & 3D gaming & 3.91$\to$3.06 & 5.68 & 6.6 [4.7, 9.0] & cut-off & 1.07 & SoC 81, disp. 11 \\
+\midrule
+S12 & Scheduled day & 0.528$\to$0.502 & 34.9 & 33.9 [25.2, 35.4] & cut-off & 0.93 & SoC 40, disp. 27 \\
+S13 & Typical day (random) & 0.440 & 39.6 & 39.7 [27.8, 50.9]$^{a}$ & mixed$^{b}$ & 0.76 & -- \\
+S14 & Heavy day (random) & 0.822 & 21.5 & 21.5 [13.5, 29.7]$^{a}$ & mixed$^{b}$ & 0.97 & -- \\
+\bottomrule
+\end{tabular}
