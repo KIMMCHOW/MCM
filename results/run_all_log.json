@@ -1,0 +1,43 @@
+{
+ "meta": {
+  "spec": "FINAL_SPEC 2026-11-17",
+  "script": "analysis/run_all.py",
+  "seed": null,
+  "solver": null,
+  "h_s": null
+ },
+ "finished_utc": "2026-11-17T14:14:42Z",
+ "total_s": 13.7,
+ "runs": [
+  {
+   "id": "AN0",
+   "script": "run_params.py",
+   "status": "ok",
+   "seconds": 0.2
+  },
+  {
+   "id": "AN1",
+   "script": "run_power.py",
+   "status": "ok",
+   "seconds": 4.9
+  },
+  {
+   "id": "AN2",
+   "script": "run_cell_maps.py",
+   "status": "ok",
+   "seconds": 3.1
+  },
+  {
+   "id": "AN4",
+   "script": "run_analytic.py",
+   "status": "ok",
+   "seconds": 3.8
+  },
+  {
+   "id": "AN16",
+   "script": "make_architecture.py",
+   "status": "ok",
+   "seconds": 1.6
+  }
+ ]
+}

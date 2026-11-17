@@ -1,25 +1,27 @@
 \section{Assumptions and Notation}\label{sec:assumptions}
+\Cref{tab:assumptions} lists the main modeling assumptions and \cref{tab:notation} the notation.
 
 \begin{table}[h]
 \centering\small
-\caption{Main assumptions. Each one is either supported by a measurement or tested by a structural variant
-(X$n$, \cref{sec:structural}).}
+\caption{Main assumptions. Each one is supported by a measurement, a time-scale argument or a structural
+variant (X$n$, \cref{sec:structural}).}
 \label{tab:assumptions}
 \begin{tabularx}{\textwidth}{@{}lXX@{}}
 \toprule
 \# & Assumption & Justification / test \\
 \midrule
-A1 & The power-management IC (PMIC) regulates the rails, so the phone is a \emph{constant-power} load at the battery terminals. & DC--DC converters hold rail voltages fixed \cite{CH13}; X4 tests constant current. \\
+A1 & The power-management IC (PMIC) regulates the rails, so the phone is a \emph{constant-power} load on the battery. & DC--DC converters hold rail voltages fixed \cite{CH13}; X4 tests constant current. \\
 A2 & Component powers add. & Bonn iPhone data: additivity residual 0.15\,\% \cite{BONN26}. \\
 A3 & One lumped thermal node for phone and cell; the skin hot spot follows it quasi-statically. & Single-exponential heating and cooling of phones \cite{HE19}. \\
 A4 & All electrical power ends up as heat inside the phone (light and RF neglected). & Energy balance \cite{BERN85}. \\
-A5 & Sub-second bursts see only the ohmic resistance $R_0$; polarisation is frozen. & Burst $\le 1$\,s $\ll \tau_1\ge 20$\,s. \\
-A6 & Traffic bursts are Poisson; radio timers restart at each burst. & LTE/5G state machines \cite{HU12,NA21}; X10 uses an ODE tail. \\
+A5 & Sub-second bursts see only the ohmic resistance $R_0$; polarization is frozen. & Bursts last $\le 1$\,s, whereas $\tau_1=20$--135\,s (default, $-20$ to 40\,$^\circ$C). \\
+A6 & Poisson traffic bursts; radio timers restart at each burst. & LTE/5G state machines \cite{HU12,NA21}; X10 uses an ODE tail. \\
 A7 & Battery health is frozen within one discharge (time-scale separation). & Hours vs.\ months. \\
 A8 & One Arrhenius factor for the whole pack resistance (cell + protection circuit). & Phone-level $R(-5\,^\circ\mathrm C)/R(25\,^\circ\mathrm C)=2.0$--$3.3$ \cite{LEE20}; X6 splits it. \\
-A9 & OCV hysteresis and self-discharge are neglected. & Hysteresis absorbed in $\pm20$\,mV offset; self-discharge 0.1\,\%/month \cite{ZIL19}. \\
+A9 & OCV hysteresis and self-discharge are neglected. & Hysteresis absorbed in the $\pm20$\,mV offset $\delta U$; self-discharge 0.1\,\%/month \cite{ZIL19}. \\
 A10 & Usage switches between activities as a Markov chain. & Gives closed forms; X15 uses heavy-tailed sessions. \\
 A11 & Aging follows square-root laws with Arrhenius and SOC stress factors. & \cite{SCM18,SCH14,KEIL16}; X17 tests $t^{0.75}$. \\
+A12 & Constant $\Tamb$ within a run; no battery-saver mode and no charging during a discharge; RP-63 is a generic 2024 phone. & Saver modes only extend TTE (conservative); other phones in V1, V6; other devices in \cref{sec:general}. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -28,18 +30,25 @@ A11 & Aging follows square-root laws with Arrhenius and SOC stress factors. & \c
 \centering\small
 \caption{Notation (SI units unless stated; $I>0$ is discharge; all powers are battery-side).}
 \label{tab:notation}
+\setlength{\tabcolsep}{4pt}
 \begin{tabular}{@{}llll@{}}
 \toprule
 Symbol & Meaning & Symbol & Meaning \\
 \midrule
 $\soc$ & coulombic SOC (state) & $s,\ \varsigma$ & displayed SOC, energy-fraction SOC \\
-$v_1$ & polarisation voltage (state) & $T$, $T_s$ & cell temperature (state), skin temperature \\
+$v_1$ & polarization voltage (state) & $T$, $T_s$ & cell temperature (state), skin temperature \\
 $P(t)$ & power demand & $\Delta P_b$ & sub-second burst amplitude \\
 $I$, $V$ & current, terminal voltage & $\Ocv(\soc,T)$ & open-circuit voltage \\
-$R_0$, $R_1$, $\tau_1$ & ohmic, polarisation resistance, RC time constant & $Q_{\max}$ & present capacity (A\,h) \\
+$R_0$, $R_1$, $\tau_1$ & ohmic, polarization resistance, RC time constant & $Q_{\max}$ & present capacity (A\,h) \\
 $\Vcut$, $V_{\mathrm{sys}}$ & fuel-gauge cut-off, brown-out threshold & $E_u$ & usable energy (W\,h) \\
 $C_{\mathrm{th}}$, $R_{\mathrm{th}}$ & heat capacity, thermal resistance & $q_{\mathrm{loss}}$, SOH & capacity loss, $\mathrm{SOH}=1-q_{\mathrm{loss}}$ \\
 $\bm u(t)$ & usage input & $\Lambda$, $\pi$ & CTMC generator, stationary law \\
+\midrule
+\multicolumn{4}{@{}p{0.97\textwidth}@{}}{\footnotesize Abbreviations: OCV open-circuit voltage; ECM equivalent-circuit
+model; SOH state of health; SoC system-on-chip; DVFS dynamic voltage and frequency scaling; GNSS
+satellite positioning; RAT radio access technology; RSRP/RSSI cellular/Wi-Fi received signal power; FCE full
+equivalent cycles; UQ uncertainty quantification; SD standard deviation; CV coefficient of variation;
+RMSE root-mean-square error; KiBaM kinetic battery model.} \\
 \bottomrule
 \end{tabular}
 \end{table}

@@ -2,6 +2,8 @@
 
 本仓库是 2026 年美国大学生数学建模竞赛（MCM）A 题 *Modeling Smartphone Battery Drain* 的完整解答，包括模型代码、分析脚本、图表和英文论文（MCM 要求英文提交）。
 
+> 📖 中文解题导读：[`docs/解题说明.md`](docs/解题说明.md)（建模思路、核心方程、主要结论、验证的成功与不足）。
+
 ## 题目要点
 
 建立一个**连续时间**数学模型，描述锂离子电池手机在真实使用条件下的荷电状态 SOC(t)，并据此预测**剩余续航时间（Time-to-Empty, TTE）**：
@@ -30,6 +32,7 @@
 
 ```
 src/phonebatt/     模型代码（参数、功耗子模型、电-热-老化常微分方程、续航事件检测、批量积分器）
+tests/             数值验收测试与回归测试（pytest）
 analysis/          各项分析脚本（续航场景、验证、不确定性、敏感性、老化、建议）
 results/           分析结果（JSON）
 paper/             LaTeX 论文源码与图表（paper/figures/）
@@ -40,17 +43,46 @@ docs/design/       模型设计方案与最终规格
 ## 运行方式
 
 ```bash
-pip install -r requirements.txt
-# 运行全部分析（生成 results/*.json 与 paper/figures/*.pdf）
-PYTHONPATH=src python3 analysis/run_all.py
+pip install -r requirements.txt pytest
+# 单元与回归测试（快速部分约 1 分钟；加 -m slow 运行慢速测试）
+python3 -m pytest -q -m "not slow"
+# 运行全部分析（生成 results/*.json、paper/figures/*.pdf、paper/tables/*.tex；全量约 2 小时）
+PYTHONPATH=src:analysis python3 analysis/run_all.py
+# 只跑某几项，例如功耗分解与电芯图
+PYTHONPATH=src:analysis python3 analysis/run_all.py --only run_power,run_cell_maps
 # 编译论文
 cd paper && latexmk -pdf main.tex
 ```
+
+各分析脚本与输出的对应关系见 `analysis/README.md`；每组分析的要点摘要见 `results/*_summary.md`。
+
+## 主要结论（参考机 RP-63：6.3 英寸 OLED，4.70 Ah / 4.45 V 电芯，25 °C）
+
+| 场景 | 平均功耗 | 续航（名义值） |
+|---|---|---|
+| 待机（家中 Wi-Fi） | 0.040 W | 443 h |
+| 刷社交媒体（Wi-Fi） | 1.06 W | 16.6 h |
+| 看视频：Wi-Fi / LTE / 5G | 0.55 / 0.69 / 0.84 W | 32.3 / 25.5 / 21.1 h |
+| 导航 | 1.49 W | 11.8 h |
+| 3D 游戏（15 / 25 / 35 °C） | 降频后约 3.9 / 2.9 / 1.7 W | 4.4 / 5.7 / 10.3 h |
+| 典型一天（随机使用，CTMC） | 0.44 W | 均值约 40 h，标准差约 7 h |
+
+- **25 °C 下续航是“能量问题”**：内阻几乎不影响续航（弹性 −0.007），屏幕、SoC、射频决定一切。
+- **低温 + 老化是“电压问题”**：−20 °C、SOH 0.8 时，拍照的瞬时大功率会让手机在显示 44 % 电量时关机；刷社交媒体时则在 23 % 关机。按模型推导的“峰值功率调速器”能把后者降到 2.4 %，续航多 25 %。拍照这种长脉冲只能靠“低温感知电量显示”提前预警，或者给手机保暖。
+- **游戏是“散热问题”**：温控降频决定续航，环境越热续航反而越长，但性能只剩约一半。
+- **影响意外小的因素**：后台同步减半只多 0.1–0.4 %；静止时的 GPS、蓝牙耳机、传感器功耗都很小。
+- **最有效的用户行为**：少玩 3D 游戏（+37 %）、刷新率限 60 Hz（+4.7 %）、深色模式（+4.6 %）、视频通话改语音、优先 Wi-Fi、避免弱信号和 5G 待机。
 
 ## 进度
 
 - [x] 项目骨架、论文模板、批量 RK4 积分器
 - [x] 参数调研与最终模型规格（docs/design/FINAL_SPEC.md）
-- [ ] 核心模型实现与测试
-- [ ] 续航预测、验证、不确定性与敏感性分析
-- [ ] 论文撰写与审稿修订
+- [x] 核心模型实现与测试（`src/phonebatt`，`tests/`：数值验收 T1–T5 与规格 §15.3 回归表）
+- [x] 续航预测、验证、不确定性、敏感性、老化与建议（17 项分析）
+- [x] 论文撰写与审稿修订（`paper/main.pdf`：计入页数 25 页 + 1 页 AI 使用报告；5 个视角对抗式审稿，135 条意见逐条核实修订）
+
+## 提交前需要人工处理
+
+- **队伍控制号**：在 `paper/preamble.tex` 中把 `\newcommand{\teamnumber}{0000000}` 改成你们的控制号，然后重新编译（`cd paper && latexmk -pdf main.tex`）。
+- **AI 使用报告**：`paper/ai_report.tex` 如实记录了 AI 工具的用途，请按 COMAP 政策和你们的实际使用情况核对、补充。
+- 页数已经用满（计入 25 页），再加内容会超限；如需增改，请同步压缩其他部分。

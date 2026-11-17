@@ -1,0 +1,65 @@
+% T1: resolved RP-63 parameters (generated, then re-laid out for the paper as two panels; values unchanged).
+% UQ: U uniform, LU log-uniform, T triangular with mode = value. Source tags: fit = our fit to open data or
+% PyBaMM; der. = derived from cited numbers; assum. = engineering assumption; cal. = calibrated (Delta P_awake to
+% the Bonn idle run; k_H, k_L to the 1000-cycle rating).
+\scriptsize
+\setlength{\tabcolsep}{2.0pt}
+\renewcommand{\arraystretch}{0.94}
+\begin{tabular}[t]{@{}lllll@{}}
+\toprule
+Symbol & Meaning & Value & UQ range & Source \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Cell and pack}} \\
+$Q_n$ & capacity & 4.70 A\,h & T(4.56, 4.80) & \cite{PIX9,MR24} \\
+$R_{0,\mathrm{ref}}$ & $R_0$ at $\soc=0.5$ & 60 m$\Omega$ & LU(35, 130) & assum. \cite{PINE,BU802a,HE19,LEE20} \\
+$A_R$ & low-SOC rise & 0.80 & U(0.50, 2.00) & fit \cite{AI20} \\
+$E_{a,R_0}$ & act.\ energy & 18 kJ/mol & T(12, 27) & fit \cite{BARC22,SUN23,LEE20} \\
+$R_{1,\mathrm{ref}}$ & RC resistance & 10 m$\Omega$ & LU(3, 25) & fit \cite{AI20} \\
+$\tau_{1,\mathrm{ref}}$ & RC time & 30 s & U(10, 60) & fit \\
+$E_{a,R_1}$ & act.\ energy & 30 kJ/mol & T(25, 55) & fit \cite{BARC22} \\
+$E_{a,\tau}$ & act.\ energy & 21 kJ/mol & U(15, 27) & fit \cite{MQ19} \\
+$V_{\mathrm{cut}}$ & cut-off & 3.40 V & U(3.30, 3.50) & \cite{QC-FG,LEE20} \\
+$\Delta_{\mathrm{sys}}$ & $\Vcut-V_{\mathrm{sys}}$ & 0.10 V & U(0.00, 0.20) & assum. \cite{QC-SMB} \\
+$\delta U$ & OCV offset & 0 mV & U($-$20, 20) & assum. \cite{OVEJ19} \\
+$k_S$ & entropic mult. & 1.0 & U(0.5, 1.5) & fit \cite{AI20} \\
+\addlinespace[2pt]
+\multicolumn{5}{@{}l}{\textit{Thermal}} \\
+$C_{\mathrm{th}}$ & heat capacity & 150 J/K & T(100, 230) & \cite{MAL99,HE19,KANG19} \\
+$R_{\mathrm{th}}$ & to ambient & 3.0 K/W & T(2.0, 4.0) & der. \cite{HE19} \\
+$R_{\mathrm{skin}}$ & skin hot spot & 5.5 K/W & T(4.0, 9.0) & \cite{PU23,KANG19} \\
+$T_{\mathrm{lim}}$ & skin limit & 45 $^\circ$C & U(41, 48) & \cite{CHI15,KANG19,UL-TS} \\
+$w_{\mathrm{thr}}$ & throttle width & 1.0 K & U(0.5, 3.0) & assum. \cite{AOSP-TH} \\
+$P_{\mathrm{fl}}$ & throttled floor & 0.5 W & U(0.3, 1.0) & assum. \\
+$k_{\mathrm{env}}$ & case, pocket & 1.0 & U(0.8, 1.5) & assum. \cite{KANG19} \\
+\bottomrule
+\end{tabular}\hfill
+\begin{tabular}[t]{@{}lllll@{}}
+\toprule
+Symbol & Meaning & Value & UQ range & Source \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Device power (battery side)}} \\
+$P_{\mathrm{susp}}$ & suspend & 20 mW & U(10, 30) & \cite{CH13,CH15,HU12} \\
+$\Delta P_{\mathrm{awake}}$ & awake extra & 90 mW & LU(50, 250) & \textbf{cal.} \cite{BONN26,CH10,AOSP} \\
+$P_{d0}$ & OLED fixed & 0.12 W & U(0.08, 0.25) & \cite{CH13,GU24} \\
+$p_c$ & OLED content & 2.57 mW/cm$^2$ & U(1.23, 5.13) & \cite{GU24,CH13} \\
+$\gamma_b$ & brightness & 2.0 & U(1.0, 2.9) & \cite{CH13,DH21} \\
+$\kappa_{RR}$ & refresh cost & 2.8 mW/Hz & U(1.0, 3.3) & \cite{AT20} \\
+$P_{\mathrm{SoC,max}}$ & CPU+GPU max & 5.0 W & U(3.0, 7.0) & \cite{CH13} \\
+$v_0$ & DVFS offset & 0.446 & U(0.35, 0.55) & der. \cite{LX} \\
+$P_G$ & GNSS & 0.27 W & T(0.14, 0.45) & \cite{KW19,CH13,CH10} \\
+$\Delta P_{\mathrm{cam}}$ & rear camera & 1.15 W & U(0.90, 2.00) & der. \cite{CX13,CH13} \\
+$m_b$ & burst mult. & 1.0 & U(0.5, 2.0) & assum. \cite{HU12,LEE20} \\
+\addlinespace[2pt]
+\multicolumn{5}{@{}l}{\textit{Radio (LTE)}} \\
+$P_{\mathrm{act}}$ & connected & 0.60 W & LU(0.30, 1.30) & der. \cite{GU24,HU12} \\
+$e_b$ & per Mbit/s & 30 mW & LU(14, 80) & \cite{SU14,NA21,HU12} \\
+$P_{\mathrm{rt}}$ & call & 1.20 W & U(0.60, 2.60) & \cite{HU12,GU24} \\
+$\gamma_{\mathrm{sig}}$ & per 10 dB & 0.26 & LU(0.10, 1.00) & der. \cite{DI13} \\
+\addlinespace[2pt]
+\multicolumn{5}{@{}l}{\textit{Aging (rates in $10^{-3}$\,d$^{-1/2}$ and $10^{-3}$\,FCE$^{-1/2}$)}} \\
+$k_c$ & calendar & 1.413 & U(1.05, 2.09) & \cite{SCH14,KEIL16} \\
+$E_{\mathrm{cal}}$ & calendar $E_a$ & 58 kJ/mol & U(20, 60) & \cite{SCH14,CA21,SCM18} \\
+$k_H$\,/\,$k_L$ & SEI / plating & 2.697 / 1.288 & fixed & \textbf{cal.} \cite{AP-BATT,GOOG} \\
+$\gamma_R$ & $R$ growth & 2.5 & LU(1.5, 7.0) & \cite{SCH14,KEIL16} \\
+\bottomrule
+\end{tabular}

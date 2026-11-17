@@ -93,3 +93,35 @@ def rk4_batch(
     x_final[:, alive] = x[:, alive]
     hist = (np.array(times), np.array(states)) if record_every else None
     return t_event, x_final, hist
+
+
+
+def solve_ivp_segmented(segments, x0, t_max: float, problem, method: str = "LSODA", **solver_kw):
+    """Thin segment-by-segment wrapper around ``scipy.integrate.solve_ivp`` (FINAL_SPEC §6.2).
+
+    The input is piecewise constant: ``segments`` is a sequence of ``(duration_s, payload)`` repeated
+    cyclically.  At each switch ``problem(j, payload, t, x)`` is called with the cyclic segment index j and the
+    carried state; it returns ``(rhs, events)`` for solve_ivp, or ``None`` to stop before integrating (e.g. an
+    event is already violated at the switching instant).  The solver is restarted at every switch.
+
+    Yields ``(k, j, t_start, x_start, sol)`` per segment (``sol`` is None when ``problem`` stopped).  The caller
+    stops iterating once it has found its terminal event; iteration also ends at ``t_max``.
+    """
+    from scipy.integrate import solve_ivp
+
+    x = np.array(x0, dtype=float, copy=True)
+    t, k, m = 0.0, 0, len(segments)
+    while t < t_max:
+        j = k % m
+        dur, payload = segments[j]
+        prob = problem(j, payload, t, x)
+        if prob is None:
+            yield k, j, t, x.copy(), None
+            return
+        rhs, events = prob
+        sol = solve_ivp(rhs, (t, min(t + dur, t_max)), x, method=method, events=events, **solver_kw)
+        if not sol.success:
+            raise RuntimeError(f"solve_ivp failed in segment {k}: {sol.message}")
+        yield k, j, t, x.copy(), sol
+        x, t = sol.y[:, -1].copy(), float(sol.t[-1])
+        k += 1

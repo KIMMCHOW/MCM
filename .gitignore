@@ -13,3 +13,7 @@ paper/*.synctex.gz
 data/raw/
 paper/main.pdf.tmp
 paper/figures/png/
+
+# regenerable per-cell sample caches of analysis scripts (e.g. analysis/run_uq.py)
+results/cache/
+results/cache/

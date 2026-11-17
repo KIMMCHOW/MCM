@@ -1,0 +1,672 @@
+{
+ "meta": {
+  "spec": "FINAL_SPEC 2026-11-17",
+  "seed": null,
+  "solver": "closed forms; LSODA for the RP-63 gaming TTE",
+  "h_s": null,
+  "script": "analysis/run_generalization.py",
+  "phonebatt_version": "1.0.0",
+  "generated_utc": "2026-11-17T16:44:46Z",
+  "git_sha": "911187e14a6588cb33d93d9fa2aa8108ae7a7c5c",
+  "git_src_dirty": true,
+  "runtime_s": 0.4
+ },
+ "RP63": {
+  "Pi1": 0.004673994368128993,
+  "Pi1_S4": 0.004954088366487486,
+  "Pi1_gaming": 0.014311630679929705,
+  "Pi1_cold_aged_S4": 0.03608725967540806,
+  "Pi2": 1.1934663232404532,
+  "Pi2_S4": 0.32386629162742325,
+  "Pi3": 0.022002279908034154,
+  "Pi4": 0.11004917885929516,
+  "Pi4_cold_aged": 1.18286244989892,
+  "Pi4_cold_aged_with_v1": 1.3528472967989522,
+  "Pi5": 0.17485999398002605,
+  "Pi5_heavy": 0.2301574268203748,
+  "inputs": {
+   "U_bar_V": 3.8699462011549883,
+   "R_sigma_ohm": 0.06999999999999999,
+   "R_sigma_cold_aged_ohm": 0.509903738166384,
+   "RQ_sigma_ohm_Ah": 0.32899999999999996,
+   "P_S4_W": 1.0599260453261126,
+   "P_gaming_demand_W": 3.905889785150574,
+   "P_sust_W": 3.272727272727273,
+   "tau_th_min": 7.5,
+   "tte_gaming_L2_h": 5.681229423608784,
+   "dPb_W": 3.0,
+   "E_Wh": 18.188747145428447,
+   "tau_c_h": 0.23364987584702265,
+   "cv_P": 1.6594573607840082,
+   "mu_dynkin_h": 41.24787940559493,
+   "floor_share": 0.045
+  },
+  "conditions": {
+   "Pi1": "P = 1 W, 25 \u00b0C, z = 0.5 (Pi1_S4: social load 1.06 W)",
+   "Pi2": "gaming demand 3.906 W vs sharp-cap P_sust at 25 \u00b0C (Pi2_S4: social)",
+   "Pi3": "\u03c4_th = k_env R_th C_th vs the L2 gaming TTE at 25 \u00b0C",
+   "Pi4": "S4 (P = 1.06 W, \u0394P_b = 3 W) at 25 \u00b0C, new, z = 0.5; cold_aged: \u221220 \u00b0C, SOH 0.8, z = 0.2 (P_cut,sys without RC polarisation, \u00a77 F4 table)",
+   "Pi5": "typical-day CTMC (S13), F7"
+  },
+  "proto": {
+   "Pi1": 0.005,
+   "Pi2": 1.19,
+   "Pi3": 0.02,
+   "Pi4": 0.11,
+   "Pi4_cold_aged": 1.2,
+   "Pi5": 0.175
+  },
+  "dev": {
+   "Pi1": -0.0003260056318710068,
+   "Pi2": 0.003466323240453262,
+   "Pi3": 0.002002279908034154,
+   "Pi4": 4.917885929515975e-05,
+   "Pi4_cold_aged": -0.01713755010107998,
+   "Pi5": -0.00014000601997393725
+  },
+  "per_cell_check": {
+   "Pi1": 0.004954088366487485,
+   "Pi2": 1.1934663232404532,
+   "Pi3": 0.02299756934402424,
+   "Pi4": 0.11004917885929516,
+   "Pi5": 0.17662942697333345
+  },
+  "per_cell_check_cold_aged_Pi4": 1.1828624498989195
+ },
+ "classes": {
+  "tablet": {
+   "Pi1": {
+    "mid": 0.008527250324604286,
+    "lo": 0.0025840152498800874,
+    "hi": 0.032300190623501084
+   },
+   "Pi2": {
+    "mid": 0.8888888888888888,
+    "lo": 0.46153846153846156,
+    "hi": 2.0
+   },
+   "Pi3": {
+    "mid": 0.04544460949468691,
+    "lo": 0.012781296420380693,
+    "hi": 0.2045007427260911
+   },
+   "Pi4": {
+    "mid": 0.09180751353314358,
+    "lo": 0.0298647957343326,
+    "hi": 0.3873330662881669
+   },
+   "Pi5": {
+    "mid": 0.23717082451262844,
+    "lo": 0.07905694150420949,
+    "hi": 0.6324555320336759
+   },
+   "Pi4_cold_aged": {
+    "mid": 1.3729627512107503,
+    "lo": 0.2724920244792214,
+    "hi": null
+   },
+   "floor_elasticity": {
+    "mid": -0.2,
+    "lo": -0.35,
+    "hi": -0.1
+   },
+   "inputs": {
+    "E_Wh": {
+     "mid": 30,
+     "lo": 20,
+     "hi": 40
+    },
+    "RQ_sigma": {
+     "mid": 0.33,
+     "lo": 0.2,
+     "hi": 0.5
+    },
+    "P_typ": {
+     "mid": 3.0,
+     "lo": 2.0,
+     "hi": 5.0
+    },
+    "P_dem": {
+     "mid": 8,
+     "lo": 6,
+     "hi": 12
+    },
+    "P_sust": {
+     "mid": 9,
+     "lo": 6,
+     "hi": 13
+    },
+    "dPb": {
+     "mid": 4,
+     "lo": 3,
+     "hi": 6
+    },
+    "tau_th_min": {
+     "mid": 10,
+     "lo": 5,
+     "hi": 20
+    },
+    "CV_P": {
+     "mid": 1.5,
+     "lo": 1.0,
+     "hi": 2.0
+    },
+    "tau_c_h": {
+     "mid": 0.5,
+     "lo": 0.25,
+     "hi": 1.0
+    },
+    "mu_h": {
+     "mid": 40,
+     "lo": 20,
+     "hi": 80
+    },
+    "floor_share": {
+     "mid": 0.2,
+     "lo": 0.1,
+     "hi": 0.35
+    }
+   },
+   "notes": "display-dominated; 2.5-4x the phone's surface relaxes throttling (smaller \u03a02); same cell chemistry and similar C-rates as a phone, so \u03a01 and \u03a04 stay phone-like",
+   "status": "illustrative order of magnitude [unverified]; no device data"
+  },
+  "laptop": {
+   "Pi1": {
+    "mid": 0.007517135272378434,
+    "lo": 0.0012920076249400437,
+    "hi": 0.03197718871726608
+   },
+   "Pi2": {
+    "mid": 1.8,
+    "lo": 0.5555555555555556,
+    "hi": 6.0
+   },
+   "Pi3": {
+    "mid": 0.11619360382164269,
+    "lo": 0.012781296420380693,
+    "hi": 0.5751583389171312
+   },
+   "Pi4": {
+    "mid": 0.15052024500211364,
+    "lo": 0.019713616116718128,
+    "hi": 0.8493911020005029
+   },
+   "Pi5": {
+    "mid": 0.1767766952966369,
+    "lo": 0.054772255750516606,
+    "hi": 0.5059644256269408
+   },
+   "Pi4_cold_aged": {
+    "mid": 2.0226419108571907,
+    "lo": 0.16653487460986882,
+    "hi": null
+   },
+   "floor_elasticity": {
+    "mid": -0.05,
+    "lo": -0.1,
+    "hi": -0.02
+   },
+   "inputs": {
+    "E_Wh": {
+     "mid": 55,
+     "lo": 40,
+     "hi": 100
+    },
+    "RQ_sigma": {
+     "mid": 0.2,
+     "lo": 0.1,
+     "hi": 0.33
+    },
+    "P_typ": {
+     "mid": 8,
+     "lo": 5,
+     "hi": 15
+    },
+    "P_dem": {
+     "mid": 45,
+     "lo": 25,
+     "hi": 90
+    },
+    "P_sust": {
+     "mid": 25,
+     "lo": 15,
+     "hi": 45
+    },
+    "dPb": {
+     "mid": 20,
+     "lo": 10,
+     "hi": 40
+    },
+    "tau_th_min": {
+     "mid": 15,
+     "lo": 5,
+     "hi": 30
+    },
+    "CV_P": {
+     "mid": 0.5,
+     "lo": 0.3,
+     "hi": 0.8
+    },
+    "tau_c_h": {
+     "mid": 0.5,
+     "lo": 0.2,
+     "hi": 1.0
+    },
+    "mu_h": {
+     "mid": 8,
+     "lo": 5,
+     "hi": 12
+    },
+    "floor_share": {
+     "mid": 0.05,
+     "lo": 0.02,
+     "hi": 0.1
+    }
+   },
+   "notes": "multi-cell (2-4 S; N_s drops out of the per-cell groups); large cells with a small PCM share give a small \u03a01; CPU/GPU turbo exceeds the sustainable power (\u03a02 > 1); continuous sessions give a small CV_P",
+   "status": "illustrative order of magnitude [unverified]; no device data"
+  },
+  "smartwatch": {
+   "Pi1": {
+    "mid": 0.007752045749640261,
+    "lo": 0.0012920076249400437,
+    "hi": 0.0387602287482013
+   },
+   "Pi2": {
+    "mid": 1.2,
+    "lo": 0.5,
+    "hi": 3.3333333333333335
+   },
+   "Pi3": {
+    "mid": 0.007746240254776178,
+    "lo": 0.0012781296420380694,
+    "hi": 0.05112518568152278
+   },
+   "Pi4": {
+    "mid": 0.31103321526392586,
+    "lo": 0.059140848350154374,
+    "hi": 2.070315613928715
+   },
+   "Pi5": {
+    "mid": 0.16329931618554522,
+    "lo": 0.035355339059327376,
+    "hi": 0.5477225575051661
+   },
+   "Pi4_cold_aged": {
+    "mid": 4.279907956228953,
+    "lo": 0.49960462382960635,
+    "hi": null
+   },
+   "floor_elasticity": {
+    "mid": -0.6,
+    "lo": -0.8,
+    "hi": -0.4
+   },
+   "inputs": {
+    "E_Wh": {
+     "mid": 1.1,
+     "lo": 0.8,
+     "hi": 2.0
+    },
+    "RQ_sigma": {
+     "mid": 0.33,
+     "lo": 0.2,
+     "hi": 0.6
+    },
+    "P_typ": {
+     "mid": 0.1,
+     "lo": 0.05,
+     "hi": 0.2
+    },
+    "P_dem": {
+     "mid": 0.6,
+     "lo": 0.4,
+     "hi": 1.0
+    },
+    "P_sust": {
+     "mid": 0.5,
+     "lo": 0.3,
+     "hi": 0.8
+    },
+    "dPb": {
+     "mid": 0.5,
+     "lo": 0.3,
+     "hi": 1.0
+    },
+    "tau_th_min": {
+     "mid": 1.0,
+     "lo": 0.5,
+     "hi": 3.0
+    },
+    "CV_P": {
+     "mid": 2.0,
+     "lo": 1.0,
+     "hi": 3.0
+    },
+    "tau_c_h": {
+     "mid": 0.1,
+     "lo": 0.03,
+     "hi": 0.3
+    },
+    "mu_h": {
+     "mid": 30,
+     "lo": 18,
+     "hi": 48
+    },
+    "floor_share": {
+     "mid": 0.6,
+     "lo": 0.4,
+     "hi": 0.8
+    }
+   },
+   "notes": "tiny C_th (\u03c4_th about a minute); standby and BLE floor dominate, so the floor elasticity approaches -1; LTE bursts are large relative to the cell (large c_b), so \u03a04 is large and exceeds 1 in the cold",
+   "status": "illustrative order of magnitude [unverified]; no device data"
+  },
+  "earbuds": {
+   "Pi1": {
+    "mid": 0.010659062905755358,
+    "lo": 0.0025840152498800874,
+    "hi": 0.062016365997122076
+   },
+   "Pi2": {
+    "mid": 0.13333333333333333,
+    "lo": 0.06,
+    "hi": 0.3
+   },
+   "Pi3": {
+    "mid": 0.0034083457121015185,
+    "lo": 0.0008520864280253796,
+    "hi": 0.02045007427260911
+   },
+   "Pi4": {
+    "mid": 0.10509250552921248,
+    "lo": 0.019909863822888403,
+    "hi": 1.3222479684285642
+   },
+   "Pi5": {
+    "mid": 0.03872983346207416,
+    "lo": 0.005000000000000001,
+    "hi": 0.15811388300841897
+   },
+   "Pi4_cold_aged": {
+    "mid": 2.080051938687369,
+    "lo": 0.1816613496528143,
+    "hi": null
+   },
+   "floor_elasticity": {
+    "mid": -0.1,
+    "lo": -0.2,
+    "hi": -0.05
+   },
+   "inputs": {
+    "E_Wh": {
+     "mid": 0.2,
+     "lo": 0.1,
+     "hi": 0.3
+    },
+    "RQ_sigma": {
+     "mid": 0.33,
+     "lo": 0.2,
+     "hi": 0.6
+    },
+    "P_typ": {
+     "mid": 0.025,
+     "lo": 0.015,
+     "hi": 0.04
+    },
+    "P_dem": {
+     "mid": 0.04,
+     "lo": 0.03,
+     "hi": 0.06
+    },
+    "P_sust": {
+     "mid": 0.3,
+     "lo": 0.2,
+     "hi": 0.5
+    },
+    "dPb": {
+     "mid": 0.03,
+     "lo": 0.015,
+     "hi": 0.06
+    },
+    "tau_th_min": {
+     "mid": 1.0,
+     "lo": 0.5,
+     "hi": 2.0
+    },
+    "CV_P": {
+     "mid": 0.3,
+     "lo": 0.1,
+     "hi": 0.5
+    },
+    "tau_c_h": {
+     "mid": 0.05,
+     "lo": 0.01,
+     "hi": 0.2
+    },
+    "mu_h": {
+     "mid": 6,
+     "lo": 4,
+     "hi": 8
+    },
+    "floor_share": {
+     "mid": 0.1,
+     "lo": 0.05,
+     "hi": 0.2
+    }
+   },
+   "notes": "one bud; playback is nearly constant power (small CV_P, small \u03a05), no thermal limit (\u03a02 << 1); \u03a04 is set by BLE/ANC peaks on a ~50 mAh cell",
+   "status": "illustrative order of magnitude [unverified]; no device data"
+  },
+  "e-reader": {
+   "Pi1": {
+    "mid": 0.0017054500649208576,
+    "lo": 0.0003445353666506783,
+    "hi": 0.011074351070914657
+   },
+   "Pi2": {
+    "mid": 0.16666666666666666,
+    "lo": 0.075,
+    "hi": 0.5
+   },
+   "Pi3": {
+    "mid": 0.01704172856050759,
+    "lo": 0.003408345712101518,
+    "hi": 0.09738130606004337
+   },
+   "Pi4": {
+    "mid": 0.1305215546621102,
+    "lo": 0.026096189724632665,
+    "hi": 0.6086713927203622
+   },
+   "Pi5": {
+    "mid": 0.07905694150420947,
+    "lo": 0.025724787771376323,
+    "hi": 0.25298221281347033
+   },
+   "Pi4_cold_aged": {
+    "mid": 1.1292188639310305,
+    "lo": 0.20926801139914677,
+    "hi": 12.875615601141094
+   },
+   "floor_elasticity": {
+    "mid": -0.7,
+    "lo": -0.85,
+    "hi": -0.5
+   },
+   "inputs": {
+    "E_Wh": {
+     "mid": 5.0,
+     "lo": 3.5,
+     "hi": 7.5
+    },
+    "RQ_sigma": {
+     "mid": 0.33,
+     "lo": 0.2,
+     "hi": 0.5
+    },
+    "P_typ": {
+     "mid": 0.1,
+     "lo": 0.05,
+     "hi": 0.3
+    },
+    "P_dem": {
+     "mid": 0.5,
+     "lo": 0.3,
+     "hi": 1.0
+    },
+    "P_sust": {
+     "mid": 3.0,
+     "lo": 2.0,
+     "hi": 4.0
+    },
+    "dPb": {
+     "mid": 1.0,
+     "lo": 0.5,
+     "hi": 2.0
+    },
+    "tau_th_min": {
+     "mid": 10,
+     "lo": 5,
+     "hi": 20
+    },
+    "CV_P": {
+     "mid": 2.5,
+     "lo": 1.5,
+     "hi": 4.0
+    },
+    "tau_c_h": {
+     "mid": 0.5,
+     "lo": 0.25,
+     "hi": 1.0
+    },
+    "mu_h": {
+     "mid": 1000,
+     "lo": 500,
+     "hi": 1700
+    },
+    "floor_share": {
+     "mid": 0.7,
+     "lo": 0.5,
+     "hi": 0.85
+    }
+   },
+   "notes": "TTE \u2248 E_u/(P_sleep + \u03bd_page E_page + P_light); weeks of runtime make the TTE very predictable (small \u03a05) although single sessions are bursty; sleep floor dominates",
+   "status": "illustrative order of magnitude [unverified]; no device data"
+  },
+  "drone": {
+   "Pi1": {
+    "mid": 0.032300190623501084,
+    "lo": 0.005033795941324844,
+    "hi": 0.25840152498800867
+   },
+   "Pi2": {
+    "mid": 0.3,
+    "lo": 0.1,
+    "hi": 0.8333333333333334
+   },
+   "Pi3": {
+    "mid": 0.3195324105095173,
+    "lo": 0.04426423002729245,
+    "hi": 2.3669067445149437
+   },
+   "Pi4": {
+    "mid": 0.3227775552401392,
+    "lo": 0.03953163168694635,
+    "hi": null
+   },
+   "Pi5": {
+    "mid": 0.03354101966249684,
+    "lo": 0.010000000000000002,
+    "hi": 0.14696938456699069
+   },
+   "Pi4_cold_aged": {
+    "mid": null,
+    "lo": 0.4275141047261622,
+    "hi": null
+   },
+   "floor_elasticity": {
+    "mid": -0.02,
+    "lo": -0.05,
+    "hi": -0.01
+   },
+   "inputs": {
+    "E_Wh": {
+     "mid": 40,
+     "lo": 18,
+     "hi": 77
+    },
+    "RQ_sigma": {
+     "mid": 0.05,
+     "lo": 0.03,
+     "hi": 0.1
+    },
+    "P_typ": {
+     "mid": 100,
+     "lo": 50,
+     "hi": 180
+    },
+    "P_dem": {
+     "mid": 150,
+     "lo": 100,
+     "hi": 250
+    },
+    "P_sust": {
+     "mid": 500,
+     "lo": 300,
+     "hi": 1000
+    },
+    "dPb": {
+     "mid": 100,
+     "lo": 50,
+     "hi": 200
+    },
+    "tau_th_min": {
+     "mid": 5,
+     "lo": 2,
+     "hi": 10
+    },
+    "CV_P": {
+     "mid": 0.15,
+     "lo": 0.1,
+     "hi": 0.3
+    },
+    "tau_c_h": {
+     "mid": 0.01,
+     "lo": 0.003,
+     "hi": 0.03
+    },
+    "mu_h": {
+     "mid": 0.4,
+     "lo": 0.25,
+     "hi": 0.6
+    },
+    "floor_share": {
+     "mid": 0.02,
+     "lo": 0.01,
+     "hi": 0.05
+    }
+   },
+   "notes": "near-constant hover power at 2-3C: the largest \u03a01; manoeuvre transients give a large \u03a04 that exceeds 1 on a cold, aged pack (hence pre-warming advice); battery heats through the whole flight (\u03a03 ~ 0.3)",
+   "status": "illustrative order of magnitude [unverified]; no device data"
+  }
+ },
+ "scaling_rules": {
+  "energy": "E_u = N_s Q \u016a; TTE = E_u/P\u0304 still holds",
+  "pack_resistance": "R \u221d (N_s/N_p)/Q_cell (A12); RP-63 R0\u00b7Q = 0.28 \u03a9\u00b7Ah incl. PCM",
+  "thermal": "C_th \u221d mass; R_th, R_skin \u221d 1/(h A_surface); P_sust \u221d (T_lim \u2212 T_amb) h A_surface",
+  "display": "OLED \u221d A g(b) APL; LCD P_panel + c1 b + c2 b\u00b2; e-paper energy per refresh",
+  "usage": "device-specific activity set; same PDMP formulas F6-F9",
+  "size_invariance": "\u03a01 = c RQ_\u03a3/\u016a and \u03a04 = c_b \u016a/(V_sys(U \u2212 V_sys)/RQ0 \u2212 c \u016a) depend on C-rates and the specific resistance R\u00b7Q only, not on pack size or N_s"
+ },
+ "ereader_example": {
+  "E_u_Wh": 4.8899577902237885,
+  "P_sleep_W": 0.003,
+  "pages_per_day": 30,
+  "E_page_J": 0.6,
+  "P_light_avg_W": 0.0010416666666666667,
+  "tte_h": 1150.5783035820677,
+  "tte_days": 47.940762649252825,
+  "note": "illustrative inputs [unverified]: 3 mW sleep, 30 page turns/day at 0.6 J, front light 50 mW for 30 min/day"
+ }
+}

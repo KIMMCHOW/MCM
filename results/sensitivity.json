@@ -1,0 +1,7387 @@
+{
+ "meta": {
+  "spec": "FINAL_SPEC 2026-11-17",
+  "seed": null,
+  "solver": "LSODA reference (model.run, rtol 1e-7) for S4/S7/S10a; analytic quasi-steady metrics for S12 (E_u/Pbar) and S13 (Dynkin mean, F6)",
+  "h_s": null,
+  "script": "analysis/run_sensitivity.py",
+  "phonebatt_version": "1.0.0",
+  "generated_utc": "2026-11-17T15:42:10Z",
+  "git_sha": "911187e14a6588cb33d93d9fa2aa8108ae7a7c5c",
+  "git_src_dirty": true,
+  "runtime_compute_s": 31.7477285861969,
+  "workers": 2,
+  "n_runs": 1210
+ },
+ "base": {
+  "cases": {
+   "S4|25|1.0": {
+    "value_h": 16.63806578093875,
+    "kind": "lsoda",
+    "T_amb_C": 25.0,
+    "soh": 1.0,
+    "event": "cutoff"
+   },
+   "S4|-10|0.8": {
+    "value_h": 12.149444187537572,
+    "kind": "lsoda",
+    "T_amb_C": -10.0,
+    "soh": 0.8,
+    "event": "brownout"
+   },
+   "S7|25|1.0": {
+    "value_h": 5.681229423608784,
+    "kind": "lsoda",
+    "T_amb_C": 25.0,
+    "soh": 1.0,
+    "event": "cutoff"
+   },
+   "S12-EuPbar|25|1.0": {
+    "value_h": 35.910433001890674,
+    "kind": "s12",
+    "T_amb_C": 25.0,
+    "soh": 1.0,
+    "event": ""
+   },
+   "S13-Dynkin|25|1.0": {
+    "value_h": 41.24787940559493,
+    "kind": "s13",
+    "T_amb_C": 25.0,
+    "soh": 1.0,
+    "event": ""
+   }
+  },
+  "oat": {
+   "S4": 16.63806578093875,
+   "S7": 5.681229423608784,
+   "S10a": 12.149444187537572,
+   "S12": 35.910433001890674,
+   "S13": 41.24787940559493
+  }
+ },
+ "elasticities": {
+  "S4|25|1.0": {
+   "Q_n": 1.0000012009708006,
+   "dU": 0.37666890310364026,
+   "k_S": -0.00048149144345292343,
+   "R0_ref": -0.007488930888629896,
+   "A_R": -0.0014865457184851253,
+   "Ea_R0": 0.0005977163251531908,
+   "R1_ref": -0.0009430150425997283,
+   "tau1_ref": 6.794350612578419e-07,
+   "Ea_R1": 0.00012478327114216688,
+   "Ea_tau": 2.373367584111311e-08,
+   "V_cut": -0.11590075312120508,
+   "d_sys": 0.0,
+   "C_th": -1.9360230413902647e-06,
+   "R_th": 0.0002250700181767638,
+   "R_skin": 0.0,
+   "T_lim_C": 0.0,
+   "w_thr": 0.0,
+   "P_fl": 0.0,
+   "P_susp": -0.019008431522099682,
+   "P_awake": -0.08553818616037191,
+   "E_wake": 0.0,
+   "P_d0": -0.11405140645015797,
+   "p_c": -0.1194825259757805,
+   "gamma_b": 0.053325869200562474,
+   "k_RR": -0.15967362352472522,
+   "P_SoC_max": -0.40593068826497036,
+   "v0": -0.46448235686002864,
+   "P_G": 0.0,
+   "P_cam": 0.0,
+   "P_camf": 0.0,
+   "P_aud": 0.0,
+   "P_BT": 0.0,
+   "m_b": 0.0,
+   "wifi_P_idle": -0.002352367198732419,
+   "wifi_P_act": -0.04710113983553104,
+   "wifi_e_b": -0.028512651336255336,
+   "wifi_P_rt": 0.0,
+   "lte_P_idle": -0.014256314702970901,
+   "lte_P_tail": 0.0,
+   "lte_T_tail": 0.0,
+   "lte_P_act": 0.0,
+   "lte_T_act": 0.0,
+   "lte_E_pro": 0.0,
+   "lte_e_b": 0.0,
+   "lte_P_rt": 0.0,
+   "nr_P_idle": 0.0,
+   "nr_P_tail": 0.0,
+   "nr_T_tail": 0.0,
+   "nr_P_act": 0.0,
+   "nr_T_act": 0.0,
+   "nr_E_pro": 0.0,
+   "nr_e_b": 0.0,
+   "nr_P_rt": 0.0,
+   "k_ul": 0.0,
+   "gamma_sig": 0.0,
+   "gamma_R": 0.0
+  },
+  "S4|-10|0.8": {
+   "Q_n": 1.0000327756160985,
+   "dU": 1.0046427235967053,
+   "k_S": 0.015542974826949411,
+   "R0_ref": -0.2741145682659612,
+   "A_R": -0.06346898617663199,
+   "Ea_R0": -0.2358713411938492,
+   "R1_ref": -0.018300295534190922,
+   "tau1_ref": 1.4513146648287968e-05,
+   "Ea_R1": -0.026324234195504934,
+   "Ea_tau": 1.5405407023899366e-05,
+   "V_cut": -0.6579110908811465,
+   "d_sys": 0.6579110908811538,
+   "C_th": -4.725734648538897e-05,
+   "R_th": 0.029677466536659487,
+   "R_skin": 0.0,
+   "T_lim_C": 0.0,
+   "w_thr": 0.0,
+   "P_fl": 0.0,
+   "P_susp": -0.020202930108648324,
+   "P_awake": -0.09091389670598306,
+   "E_wake": 0.0,
+   "P_d0": -0.12121907795397706,
+   "p_c": -0.12699153633022744,
+   "gamma_b": 0.0566773854040101,
+   "k_RR": -0.16970829595825224,
+   "P_SoC_max": -0.431438532929565,
+   "v0": -0.4936801971881916,
+   "P_G": 0.0,
+   "P_cam": 0.0,
+   "P_camf": 0.0,
+   "P_aud": 0.0,
+   "P_BT": 0.0,
+   "m_b": -0.18981203850751135,
+   "wifi_P_idle": -0.0025002628222409863,
+   "wifi_P_act": -0.05006115336527204,
+   "wifi_e_b": -0.030304421437950646,
+   "wifi_P_rt": 0.0,
+   "lte_P_idle": -0.015152193964917727,
+   "lte_P_tail": 0.0,
+   "lte_T_tail": 0.0,
+   "lte_P_act": 0.0,
+   "lte_T_act": 0.0,
+   "lte_E_pro": 0.0,
+   "lte_e_b": 0.0,
+   "lte_P_rt": 0.0,
+   "nr_P_idle": 0.0,
+   "nr_P_tail": 0.0,
+   "nr_T_tail": 0.0,
+   "nr_P_act": 0.0,
+   "nr_T_act": 0.0,
+   "nr_E_pro": 0.0,
+   "nr_e_b": 0.0,
+   "nr_P_rt": 0.0,
+   "k_ul": 0.0,
+   "gamma_sig": 0.0,
+   "gamma_R": -0.09697489720757728
+  },
+  "S7|25|1.0": {
+   "Q_n": 1.0090976697892242,
+   "dU": 0.4087614513719012,
+   "k_S": 0.016050636337371107,
+   "R0_ref": -0.012481099136596736,
+   "A_R": -0.00368508147865339,
+   "Ea_R0": 0.002772467640569494,
+   "R1_ref": -0.0012482382922434849,
+   "tau1_ref": 7.952122289756332e-06,
+   "Ea_R1": 0.00046066105163892606,
+   "Ea_tau": -8.932608108404713e-07,
+   "V_cut": -0.14920093671577056,
+   "d_sys": 0.02408371994375773,
+   "C_th": -0.00908171994487123,
+   "R_th": -0.00702629088387867,
+   "R_skin": 0.7672651063536851,
+   "T_lim_C": -4.45835540767559,
+   "w_thr": 0.03236247629408526,
+   "P_fl": -0.012417786918821056,
+   "P_susp": -0.0016269594077264167,
+   "P_awake": -0.007327256089545296,
+   "E_wake": 0.0,
+   "P_d0": -0.009765843037170764,
+   "p_c": -0.011625946228563014,
+   "gamma_b": 0.0,
+   "k_RR": -0.013674085535174777,
+   "P_SoC_max": -0.17979316391781164,
+   "v0": -0.03588792955634713,
+   "P_G": 0.0,
+   "P_cam": 0.0,
+   "P_camf": 0.0,
+   "P_aud": -0.004070020928515795,
+   "P_BT": 0.0,
+   "m_b": 0.0,
+   "wifi_P_idle": -2.000079025609987e-06,
+   "wifi_P_act": -0.010492071997875524,
+   "wifi_e_b": -0.0005486353352221827,
+   "wifi_P_rt": 0.0,
+   "lte_P_idle": -0.001218981398200637,
+   "lte_P_tail": 0.0,
+   "lte_T_tail": 0.0,
+   "lte_P_act": 0.0,
+   "lte_T_act": 0.0,
+   "lte_E_pro": 0.0,
+   "lte_e_b": 0.0,
+   "lte_P_rt": 0.0,
+   "nr_P_idle": 0.0,
+   "nr_P_tail": 0.0,
+   "nr_T_tail": 0.0,
+   "nr_P_act": 0.0,
+   "nr_T_act": 0.0,
+   "nr_E_pro": 0.0,
+   "nr_e_b": 0.0,
+   "nr_P_rt": 0.0,
+   "k_ul": -0.0003058916951370525,
+   "gamma_sig": 0.0,
+   "gamma_R": 0.0
+  },
+  "S12-EuPbar|25|1.0": {
+   "Q_n": 1.0000000000000013,
+   "dU": 0.35917133398569184,
+   "k_S": 0.0,
+   "R0_ref": 0.0,
+   "A_R": 0.0,
+   "Ea_R0": 0.0,
+   "R1_ref": 0.0,
+   "tau1_ref": 0.0,
+   "Ea_R1": 0.0,
+   "Ea_tau": 0.0,
+   "V_cut": -0.10191005419269727,
+   "d_sys": 0.0,
+   "C_th": 0.0,
+   "R_th": 0.0,
+   "R_skin": 0.19765650518847966,
+   "T_lim_C": -1.155562085963253,
+   "w_thr": 0.010101197655078595,
+   "P_fl": -0.0033964578390481563,
+   "P_susp": -0.039070588595061594,
+   "P_awake": -0.06613962659477547,
+   "E_wake": -0.0010155374893375316,
+   "P_d0": -0.08818642986125702,
+   "p_c": -0.11776743250482888,
+   "gamma_b": -0.006088448541670345,
+   "k_RR": -0.038779882541380366,
+   "P_SoC_max": -0.24658102426001308,
+   "v0": -0.252069348740917,
+   "P_G": -0.034038048048820366,
+   "P_cam": 0.0,
+   "P_camf": -0.012541507181691733,
+   "P_aud": -0.013631867809508563,
+   "P_BT": 0.0,
+   "m_b": 0.0,
+   "wifi_P_idle": -0.006677326152125631,
+   "wifi_P_act": -0.015122076697687172,
+   "wifi_e_b": -0.015992759599779322,
+   "wifi_P_rt": 0.0,
+   "lte_P_idle": -0.027667840000917328,
+   "lte_P_tail": -0.01278110078922784,
+   "lte_T_tail": -0.0014697217790389568,
+   "lte_P_act": -0.0014977730196727489,
+   "lte_T_act": -0.0011862764040222714,
+   "lte_E_pro": -0.0010577990896789543,
+   "lte_e_b": -0.0003782001681605539,
+   "lte_P_rt": -0.05016231145262344,
+   "nr_P_idle": 0.0,
+   "nr_P_tail": 0.0,
+   "nr_T_tail": 0.0,
+   "nr_P_act": 0.0,
+   "nr_T_act": 0.0,
+   "nr_E_pro": 0.0,
+   "nr_e_b": 0.0,
+   "nr_P_rt": 0.0,
+   "k_ul": -7.770321979790659e-05,
+   "gamma_sig": 0.0,
+   "gamma_R": 0.0
+  },
+  "S13-Dynkin|25|1.0": {
+   "Q_n": 0.9800325090326292,
+   "dU": 0.3520111871779585,
+   "k_S": 0.0,
+   "R0_ref": 0.0,
+   "A_R": 0.0,
+   "Ea_R0": 0.0,
+   "R1_ref": 0.0,
+   "tau1_ref": 0.0,
+   "Ea_R1": 0.0,
+   "Ea_tau": 0.0,
+   "V_cut": -0.09987845846064473,
+   "d_sys": 0.0,
+   "C_th": 0.0,
+   "R_th": 0.0,
+   "R_skin": 0.1975202471447633,
+   "T_lim_C": -1.1374530304523776,
+   "w_thr": 0.007052529024233636,
+   "P_fl": -0.0034529861302572775,
+   "P_susp": -0.0448712011819678,
+   "P_awake": -0.0789041806078058,
+   "E_wake": -0.0011390399709576544,
+   "P_d0": -0.06588832841067385,
+   "p_c": -0.08088774759166154,
+   "gamma_b": -0.0003460953687947524,
+   "k_RR": -0.04495219753251812,
+   "P_SoC_max": -0.21612748151358427,
+   "v0": -0.2174496561192105,
+   "P_G": -0.018788773844131284,
+   "P_cam": -0.0166784520218795,
+   "P_camf": -0.010545543341221857,
+   "P_aud": -0.027204709987837642,
+   "P_BT": -0.013105646885017369,
+   "m_b": 0.0,
+   "wifi_P_idle": -0.004257036033250283,
+   "wifi_P_act": -0.008698244137583864,
+   "wifi_e_b": -0.00833677464636068,
+   "wifi_P_rt": -0.005495701389206579,
+   "lte_P_idle": -0.02826985237339459,
+   "lte_P_tail": -0.03903013828617673,
+   "lte_T_tail": -0.010039498144196843,
+   "lte_P_act": -0.020190350021829007,
+   "lte_T_act": -0.012653627662342508,
+   "lte_E_pro": -0.0038317178116231906,
+   "lte_e_b": -0.015822782807596678,
+   "lte_P_rt": -0.020197839822413514,
+   "nr_P_idle": 0.0,
+   "nr_P_tail": 0.0,
+   "nr_T_tail": 0.0,
+   "nr_P_act": 0.0,
+   "nr_T_act": 0.0,
+   "nr_E_pro": 0.0,
+   "nr_e_b": 0.0,
+   "nr_P_rt": 0.0,
+   "k_ul": -0.00010395029006871646,
+   "gamma_sig": 0.0,
+   "gamma_R": 0.0
+  }
+ },
+ "elasticity_units": {
+  "Q_n": "dlnTTE/dlntheta",
+  "dU": "pct_TTE_per_+10mV",
+  "k_S": "dlnTTE/dlntheta",
+  "R0_ref": "dlnTTE/dlntheta",
+  "A_R": "dlnTTE/dlntheta",
+  "Ea_R0": "dlnTTE/dlntheta",
+  "R1_ref": "dlnTTE/dlntheta",
+  "tau1_ref": "dlnTTE/dlntheta",
+  "Ea_R1": "dlnTTE/dlntheta",
+  "Ea_tau": "dlnTTE/dlntheta",
+  "V_cut": "pct_TTE_per_+10mV",
+  "d_sys": "pct_TTE_per_+10mV",
+  "C_th": "dlnTTE/dlntheta",
+  "R_th": "dlnTTE/dlntheta",
+  "R_skin": "dlnTTE/dlntheta",
+  "T_lim_C": "pct_TTE_per_+1K",
+  "w_thr": "dlnTTE/dlntheta",
+  "P_fl": "dlnTTE/dlntheta",
+  "P_susp": "dlnTTE/dlntheta",
+  "P_awake": "dlnTTE/dlntheta",
+  "E_wake": "dlnTTE/dlntheta",
+  "P_d0": "dlnTTE/dlntheta",
+  "p_c": "dlnTTE/dlntheta",
+  "gamma_b": "dlnTTE/dlntheta",
+  "k_RR": "dlnTTE/dlntheta",
+  "P_SoC_max": "dlnTTE/dlntheta",
+  "v0": "dlnTTE/dlntheta",
+  "P_G": "dlnTTE/dlntheta",
+  "P_cam": "dlnTTE/dlntheta",
+  "P_camf": "dlnTTE/dlntheta",
+  "P_aud": "dlnTTE/dlntheta",
+  "P_BT": "dlnTTE/dlntheta",
+  "m_b": "dlnTTE/dlntheta",
+  "wifi_P_idle": "dlnTTE/dlntheta",
+  "wifi_P_act": "dlnTTE/dlntheta",
+  "wifi_e_b": "dlnTTE/dlntheta",
+  "wifi_P_rt": "dlnTTE/dlntheta",
+  "lte_P_idle": "dlnTTE/dlntheta",
+  "lte_P_tail": "dlnTTE/dlntheta",
+  "lte_T_tail": "dlnTTE/dlntheta",
+  "lte_P_act": "dlnTTE/dlntheta",
+  "lte_T_act": "dlnTTE/dlntheta",
+  "lte_E_pro": "dlnTTE/dlntheta",
+  "lte_e_b": "dlnTTE/dlntheta",
+  "lte_P_rt": "dlnTTE/dlntheta",
+  "nr_P_idle": "dlnTTE/dlntheta",
+  "nr_P_tail": "dlnTTE/dlntheta",
+  "nr_T_tail": "dlnTTE/dlntheta",
+  "nr_P_act": "dlnTTE/dlntheta",
+  "nr_T_act": "dlnTTE/dlntheta",
+  "nr_E_pro": "dlnTTE/dlntheta",
+  "nr_e_b": "dlnTTE/dlntheta",
+  "nr_P_rt": "dlnTTE/dlntheta",
+  "k_ul": "dlnTTE/dlntheta",
+  "gamma_sig": "dlnTTE/dlntheta",
+  "gamma_R": "dlnTTE/dlntheta"
+ },
+ "elasticity_detail": {
+  "S4|25|1.0": {
+   "Q_n": {
+    "minus_h": 15.806161467908868,
+    "plus_h": 17.46997003805837,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "dU": {
+    "minus_h": 16.574992265031398,
+    "plus_h": 16.700333104780846,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "k_S": {
+    "minus_h": 16.638465763129457,
+    "plus_h": 16.637663985948674,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "R0_ref": {
+    "minus_h": 16.644294054716337,
+    "plus_h": 16.631823529016426,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "A_R": {
+    "minus_h": 16.639304229281066,
+    "plus_h": 16.636828840427437,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "Ea_R0": {
+    "minus_h": 16.637567069973183,
+    "plus_h": 16.638562384245763,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "R1_ref": {
+    "minus_h": 16.63885086071096,
+    "plus_h": 16.63728055662755,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "tau1_ref": {
+    "minus_h": 16.63806527019196,
+    "plus_h": 16.638066401583938,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "Ea_R1": {
+    "minus_h": 16.63796153774178,
+    "plus_h": 16.63816932623746,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "Ea_tau": {
+    "minus_h": 16.63806577040948,
+    "plus_h": 16.638065809930687,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "V_cut": {
+    "minus_h": 16.656896266547623,
+    "plus_h": 16.618328979457804,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "d_sys": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "C_th": {
+    "minus_h": 16.638067371237188,
+    "plus_h": 16.638064147380977,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "R_th": {
+    "minus_h": 16.637876672260376,
+    "plus_h": 16.638251457728227,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "R_skin": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "T_lim_C": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "w_thr": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_fl": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_susp": {
+    "minus_h": 16.653907119704645,
+    "plus_h": 16.62225435249619,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_awake": {
+    "minus_h": 16.709588067200666,
+    "plus_h": 16.567148572931224,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "E_wake": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_d0": {
+    "minus_h": 16.73356458679763,
+    "plus_h": 16.543642658842423,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "p_c": {
+    "minus_h": 16.738139293746112,
+    "plus_h": 16.539172880923722,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "gamma_b": {
+    "minus_h": 16.59329015587171,
+    "plus_h": 16.682085908713645,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "k_RR": {
+    "minus_h": 16.77206936364465,
+    "plus_h": 16.506170430743282,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_SoC_max": {
+    "minus_h": 16.982948201970746,
+    "plus_h": 16.30681056317017,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "v0": {
+    "minus_h": 17.02818827025098,
+    "plus_h": 16.254716351840372,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_G": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_cam": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_camf": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_aud": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_BT": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "m_b": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "wifi_P_idle": {
+    "minus_h": 16.640024603182166,
+    "plus_h": 16.636107452651647,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "wifi_P_act": {
+    "minus_h": 16.677373962212698,
+    "plus_h": 16.598941084563762,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "wifi_e_b": {
+    "minus_h": 16.661838950412605,
+    "plus_h": 16.614359757621642,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "wifi_P_rt": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_P_idle": {
+    "minus_h": 16.649943961198698,
+    "plus_h": 16.62620440689302,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_P_tail": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_T_tail": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_P_act": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_T_act": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_E_pro": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_e_b": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_P_rt": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_P_idle": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_P_tail": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_T_tail": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_P_act": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_T_act": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_E_pro": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_e_b": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_P_rt": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "k_ul": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "gamma_sig": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "gamma_R": {
+    "minus_h": 16.63806578093875,
+    "plus_h": 16.63806578093875,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   }
+  },
+  "S4|-10|0.8": {
+   "Q_n": {
+    "minus_h": 11.541952074463895,
+    "plus_h": 12.756936244562926,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "dU": {
+    "minus_h": 12.023028160822545,
+    "plus_h": 12.267145174797623,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "k_S": {
+    "minus_h": 12.139964852769317,
+    "plus_h": 12.158864413689557,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "R0_ref": {
+    "minus_h": 12.306663705738178,
+    "plus_h": 11.973627780045184,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "A_R": {
+    "minus_h": 12.188129653650561,
+    "plus_h": 12.110953647563132,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "Ea_R0": {
+    "minus_h": 12.28232652483468,
+    "plus_h": 11.99577544545382,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "R1_ref": {
+    "minus_h": 12.160531698730148,
+    "plus_h": 12.138279377774712,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "tau1_ref": {
+    "minus_h": 12.149435373155544,
+    "plus_h": 12.149453020538044,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "Ea_R1": {
+    "minus_h": 12.164794219835509,
+    "plus_h": 12.132786787027952,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "Ea_tau": {
+    "minus_h": 12.149435072326092,
+    "plus_h": 12.149453804660464,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "V_cut": {
+    "minus_h": 12.225578077689008,
+    "plus_h": 12.065712996108559,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "d_sys": {
+    "minus_h": 12.065712996108557,
+    "plus_h": 12.225578077689008,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "C_th": {
+    "minus_h": 12.149472977980064,
+    "plus_h": 12.149415515012656,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "R_th": {
+    "minus_h": 12.131216542683413,
+    "plus_h": 12.167302532244499,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "R_skin": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "T_lim_C": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "w_thr": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_fl": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_susp": {
+    "minus_h": 12.16173868609951,
+    "plus_h": 12.137172748710322,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_awake": {
+    "minus_h": 12.204952331409405,
+    "plus_h": 12.094403451832363,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "E_wake": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_d0": {
+    "minus_h": 12.223559965077737,
+    "plus_h": 12.076159377028315,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "p_c": {
+    "minus_h": 12.227110216693568,
+    "plus_h": 12.0726900757437,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "gamma_b": {
+    "minus_h": 12.11469284997908,
+    "plus_h": 12.183608342323186,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "k_RR": {
+    "minus_h": 12.253442129055804,
+    "plus_h": 12.047075030845592,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_SoC_max": {
+    "minus_h": 12.417086687423998,
+    "plus_h": 11.89232961625253,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "v0": {
+    "minus_h": 12.452191219336623,
+    "plus_h": 11.851890460889816,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_G": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_cam": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_camf": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_aud": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "P_BT": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "m_b": {
+    "minus_h": 12.259180962681722,
+    "plus_h": 12.028490899238053,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "wifi_P_idle": {
+    "minus_h": 12.150964464219209,
+    "plus_h": 12.147924248627318,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "wifi_P_act": {
+    "minus_h": 12.179951317321335,
+    "plus_h": 12.11907880991224,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "wifi_e_b": {
+    "minus_h": 12.167894618346137,
+    "plus_h": 12.13104565227707,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "wifi_P_rt": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "lte_P_idle": {
+    "minus_h": 12.158662881647729,
+    "plus_h": 12.140238437926952,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "lte_P_tail": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "lte_T_tail": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "lte_P_act": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "lte_T_act": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "lte_E_pro": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "lte_e_b": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "lte_P_rt": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "nr_P_idle": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "nr_P_tail": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "nr_T_tail": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "nr_P_act": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "nr_T_act": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "nr_E_pro": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "nr_e_b": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "nr_P_rt": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "k_ul": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "gamma_sig": {
+    "minus_h": 12.149444187537572,
+    "plus_h": 12.149444187537572,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   },
+   "gamma_R": {
+    "minus_h": 12.207136148118154,
+    "plus_h": 12.089231864193463,
+    "ev_minus": "brownout",
+    "ev_plus": "brownout"
+   }
+  },
+  "S7|25|1.0": {
+   "Q_n": {
+    "minus_h": 5.394587604598349,
+    "plus_h": 5.9678703609572175,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "dU": {
+    "minus_h": 5.657785568897426,
+    "plus_h": 5.704230920592847,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "k_S": {
+    "minus_h": 5.676666542787247,
+    "plus_h": 5.685792886399302,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "R0_ref": {
+    "minus_h": 5.684758918655248,
+    "plus_h": 5.67766222648214,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "A_R": {
+    "minus_h": 5.6822764180256975,
+    "plus_h": 5.680181091692503,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "Ea_R0": {
+    "minus_h": 5.680435484764983,
+    "plus_h": 5.6820119001959615,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "R1_ref": {
+    "minus_h": 5.6815841734525465,
+    "plus_h": 5.6808744288087105,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "tau1_ref": {
+    "minus_h": 5.681228323163195,
+    "plus_h": 5.681232844717708,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "Ea_R1": {
+    "minus_h": 5.681097181288733,
+    "plus_h": 5.681359111763047,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "Ea_tau": {
+    "minus_h": 5.681229625957194,
+    "plus_h": 5.681229118051701,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "V_cut": {
+    "minus_h": 5.689469294676524,
+    "plus_h": 5.672516399642531,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "d_sys": {
+    "minus_h": 5.678492920841295,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "brownout",
+    "ev_plus": "cutoff"
+   },
+   "C_th": {
+    "minus_h": 5.683812122461673,
+    "plus_h": 5.6786482825802596,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "R_th": {
+    "minus_h": 5.683220387505126,
+    "plus_h": 5.679225263762513,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "R_skin": {
+    "minus_h": 5.465191125819316,
+    "plus_h": 5.90140016697762,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "T_lim_C": {
+    "minus_h": 5.948567819995958,
+    "plus_h": 5.44198902153612,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "w_thr": {
+    "minus_h": 5.671946422528778,
+    "plus_h": 5.690347348938276,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_fl": {
+    "minus_h": 5.684741678600733,
+    "plus_h": 5.677680984493695,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_susp": {
+    "minus_h": 5.681692520421014,
+    "plus_h": 5.680767435948673,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_awake": {
+    "minus_h": 5.683314566987928,
+    "plus_h": 5.679148309210287,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "E_wake": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_d0": {
+    "minus_h": 5.684010341286435,
+    "plus_h": 5.678457507401339,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "p_c": {
+    "minus_h": 5.684540806935561,
+    "plus_h": 5.677930321347408,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "gamma_b": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "k_RR": {
+    "minus_h": 5.68512495937396,
+    "plus_h": 5.677349904389912,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_SoC_max": {
+    "minus_h": 5.736014473436335,
+    "plus_h": 5.6337218868947065,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "v0": {
+    "minus_h": 5.691553140408355,
+    "plus_h": 5.671146956790743,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_G": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_cam": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_camf": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_aud": {
+    "minus_h": 5.682387199961605,
+    "plus_h": 5.68007299766412,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "P_BT": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "m_b": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "wifi_P_idle": {
+    "minus_h": 5.681229633027714,
+    "plus_h": 5.681228495788672,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "wifi_P_act": {
+    "minus_h": 5.684217538339566,
+    "plus_h": 5.6782517717927385,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "wifi_e_b": {
+    "minus_h": 5.681385525855414,
+    "plus_h": 5.681073573393729,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "wifi_P_rt": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_P_idle": {
+    "minus_h": 5.681576145122447,
+    "plus_h": 5.6808830358276925,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_P_tail": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_T_tail": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_P_act": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_T_act": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_E_pro": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_e_b": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "lte_P_rt": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_P_idle": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_P_tail": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_T_tail": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_P_act": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_T_act": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_E_pro": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_e_b": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "nr_P_rt": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "k_ul": {
+    "minus_h": 5.681316454185635,
+    "plus_h": 5.68114252505605,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "gamma_sig": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   },
+   "gamma_R": {
+    "minus_h": 5.681229423608784,
+    "plus_h": 5.681229423608784,
+    "ev_minus": "cutoff",
+    "ev_plus": "cutoff"
+   }
+  },
+  "S12-EuPbar|25|1.0": {
+   "Q_n": {
+    "minus_h": 34.11491135179614,
+    "plus_h": 37.705954651985216,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "dU": {
+    "minus_h": 35.78078481599025,
+    "plus_h": 36.03874477849611,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "k_S": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "R0_ref": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "A_R": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "Ea_R0": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "R1_ref": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "tau1_ref": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "Ea_R1": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "Ea_tau": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "V_cut": {
+    "minus_h": 35.946253506841465,
+    "plus_h": 35.87306082337535,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "d_sys": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "C_th": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "R_th": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "R_skin": {
+    "minus_h": 35.54965246971614,
+    "plus_h": 36.2599028851028,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "T_lim_C": {
+    "minus_h": 36.33607848513051,
+    "plus_h": 35.50614378778034,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "w_thr": {
+    "minus_h": 35.892094295868795,
+    "plus_h": 35.9283982157685,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_fl": {
+    "minus_h": 35.916505768018176,
+    "plus_h": 35.90429877211912,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_susp": {
+    "minus_h": 35.98078126521906,
+    "plus_h": 35.84035963543035,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_awake": {
+    "minus_h": 36.02968505143223,
+    "plus_h": 35.79197480637186,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "E_wake": {
+    "minus_h": 35.91225803598421,
+    "plus_h": 35.90860815328145,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_d0": {
+    "minus_h": 36.0696135343264,
+    "plus_h": 35.752663777951106,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "p_c": {
+    "minus_h": 36.123324841185116,
+    "plus_h": 35.700054029959574,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "gamma_b": {
+    "minus_h": 35.919856580631,
+    "plus_h": 35.89797537608606,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "k_RR": {
+    "minus_h": 35.98026758092355,
+    "plus_h": 35.84089072667151,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_SoC_max": {
+    "minus_h": 36.364900626307744,
+    "plus_h": 35.47844607264727,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "v0": {
+    "minus_h": 36.362595025731224,
+    "plus_h": 35.456715288197195,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_G": {
+    "minus_h": 35.97170436631997,
+    "plus_h": 35.84937001215277,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_cam": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_camf": {
+    "minus_h": 35.93298912740061,
+    "plus_h": 35.88791442710288,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_aud": {
+    "minus_h": 35.93494755763722,
+    "plus_h": 35.88595405822066,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_BT": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "m_b": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "wifi_P_idle": {
+    "minus_h": 35.92243630204053,
+    "plus_h": 35.89843772074613,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "wifi_P_act": {
+    "minus_h": 35.93763468578463,
+    "plus_h": 35.88328530173576,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "wifi_e_b": {
+    "minus_h": 35.939195343543595,
+    "plus_h": 35.88171669593314,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "wifi_P_rt": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_P_idle": {
+    "minus_h": 35.9602216698271,
+    "plus_h": 35.8607822095794,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_P_tail": {
+    "minus_h": 35.93341559402483,
+    "plus_h": 35.88747978975941,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_T_tail": {
+    "minus_h": 35.913206271575746,
+    "plus_h": 35.90792401279581,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_P_act": {
+    "minus_h": 35.91312473195517,
+    "plus_h": 35.90774167529247,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_T_act": {
+    "minus_h": 35.912565957009825,
+    "plus_h": 35.90830243163099,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_E_pro": {
+    "minus_h": 35.91233398881224,
+    "plus_h": 35.9085322162125,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_e_b": {
+    "minus_h": 35.911112648082614,
+    "plus_h": 35.909753381423926,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_P_rt": {
+    "minus_h": 36.000877107274505,
+    "plus_h": 35.82059060496848,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_P_idle": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_P_tail": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_T_tail": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_P_act": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_T_act": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_E_pro": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_e_b": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_P_rt": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "k_ul": {
+    "minus_h": 35.91057264212433,
+    "plus_h": 35.91029337361832,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "gamma_sig": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "gamma_R": {
+    "minus_h": 35.910433001890674,
+    "plus_h": 35.910433001890674,
+    "ev_minus": "",
+    "ev_plus": ""
+   }
+  },
+  "S13-Dynkin|25|1.0": {
+   "Q_n": {
+    "minus_h": 39.22659963961071,
+    "plus_h": 43.269159171579155,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "dU": {
+    "minus_h": 41.10193003492414,
+    "plus_h": 41.39232433488687,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "k_S": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "R0_ref": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "A_R": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "Ea_R0": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "R1_ref": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "tau1_ref": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "Ea_R1": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "Ea_tau": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "V_cut": {
+    "minus_h": 41.288203765850106,
+    "plus_h": 41.20580827365408,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "d_sys": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "C_th": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "R_th": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "R_skin": {
+    "minus_h": 40.83276214104126,
+    "plus_h": 41.64799642048945,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "T_lim_C": {
+    "minus_h": 41.72791135490105,
+    "plus_h": 40.78956084630849,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "w_thr": {
+    "minus_h": 41.23316938817757,
+    "plus_h": 41.26228374400796,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_fl": {
+    "minus_h": 41.25496634559617,
+    "plus_h": 41.24071163729061,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_susp": {
+    "minus_h": 41.34070707784462,
+    "plus_h": 41.15546779681795,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_awake": {
+    "minus_h": 41.41140113732702,
+    "plus_h": 41.085663036558415,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "E_wake": {
+    "minus_h": 41.2502306492742,
+    "plus_h": 41.24552842979602,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_d0": {
+    "minus_h": 41.384340166396164,
+    "plus_h": 41.11233592538493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "p_c": {
+    "minus_h": 41.41554619677314,
+    "plus_h": 41.08161906657105,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "gamma_b": {
+    "minus_h": 41.24751877039338,
+    "plus_h": 41.24609004619691,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "k_RR": {
+    "minus_h": 41.34088636320859,
+    "plus_h": 41.15531265627216,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_SoC_max": {
+    "minus_h": 41.70410178231523,
+    "plus_h": 40.811695804789096,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "v0": {
+    "minus_h": 41.695316269984936,
+    "plus_h": 40.797699262102554,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_G": {
+    "minus_h": 41.28670760618615,
+    "plus_h": 41.20914315468117,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_cam": {
+    "minus_h": 41.28233794213494,
+    "plus_h": 41.213485411107996,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_camf": {
+    "minus_h": 41.269663247366466,
+    "plus_h": 41.22612880095578,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_aud": {
+    "minus_h": 41.304112604330165,
+    "plus_h": 41.191805145750976,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "P_BT": {
+    "minus_h": 41.27494996390329,
+    "plus_h": 41.22084681649563,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "m_b": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "wifi_P_idle": {
+    "minus_h": 41.25666828538369,
+    "plus_h": 41.239094259164176,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "wifi_P_act": {
+    "minus_h": 41.26584526622699,
+    "plus_h": 41.22993690219984,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "wifi_e_b": {
+    "minus_h": 41.26509485915804,
+    "plus_h": 41.230678728215,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "wifi_P_rt": {
+    "minus_h": 41.25922770990525,
+    "plus_h": 41.236540186274816,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_P_idle": {
+    "minus_h": 41.306313954306816,
+    "plus_h": 41.189609334685485,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_P_tail": {
+    "minus_h": 41.32860906074154,
+    "plus_h": 41.16748320981133,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_T_tail": {
+    "minus_h": 41.26883853003204,
+    "plus_h": 41.22739293432965,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_P_act": {
+    "minus_h": 41.2896207951849,
+    "plus_h": 41.20627027258695,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_T_act": {
+    "minus_h": 41.274232840798035,
+    "plus_h": 41.22199545974097,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_E_pro": {
+    "minus_h": 41.255790120570936,
+    "plus_h": 41.239971906082765,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_e_b": {
+    "minus_h": 41.28056768771555,
+    "plus_h": 41.2152475632187,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "lte_P_rt": {
+    "minus_h": 41.28967165524433,
+    "plus_h": 41.20629014151748,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_P_idle": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_P_tail": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_T_tail": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_P_act": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_T_act": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_E_pro": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_e_b": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "nr_P_rt": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "k_ul": {
+    "minus_h": 41.248093979723414,
+    "plus_h": 41.247664848972754,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "gamma_sig": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   },
+   "gamma_R": {
+    "minus_h": 41.24787940559493,
+    "plus_h": 41.24787940559493,
+    "ev_minus": "",
+    "ev_plus": ""
+   }
+  }
+ },
+ "proto_check": {
+  "table": {
+   "S4|25|1.0": {
+    "Q_n": {
+     "model": 1.0000012009708006,
+     "proto": 1.0,
+     "diff": 1.2009708005855657e-06
+    },
+    "P_SoC_max": {
+     "model": -0.40593068826497036,
+     "proto": -0.406,
+     "diff": 6.931173502966459e-05
+    },
+    "p_c": {
+     "model": -0.1194825259757805,
+     "proto": -0.119,
+     "diff": -0.0004825259757805095
+    },
+    "P_d0": {
+     "model": -0.11405140645015797,
+     "proto": -0.114,
+     "diff": -5.1406450157970296e-05
+    },
+    "P_awake": {
+     "model": -0.08553818616037191,
+     "proto": -0.086,
+     "diff": 0.00046181383962808076
+    },
+    "R0_ref": {
+     "model": -0.007488930888629896,
+     "proto": -0.007,
+     "diff": -0.0004889308886298956
+    },
+    "Ea_R0": {
+     "model": 0.0005977163251531908,
+     "proto": 0.001,
+     "diff": -0.0004022836748468092
+    },
+    "R1_ref": {
+     "model": -0.0009430150425997283,
+     "proto": -0.001,
+     "diff": 5.698495740027174e-05
+    },
+    "m_b": {
+     "model": 0.0,
+     "proto": 0.0,
+     "diff": 0.0
+    },
+    "R_skin": {
+     "model": 0.0,
+     "proto": 0.0,
+     "diff": 0.0
+    },
+    "R_th": {
+     "model": 0.0002250700181767638,
+     "proto": 0.0,
+     "diff": 0.0002250700181767638
+    },
+    "C_th": {
+     "model": -1.9360230413902647e-06,
+     "proto": 0.0,
+     "diff": -1.9360230413902647e-06
+    }
+   },
+   "S4|-10|0.8": {
+    "Q_n": {
+     "model": 1.0000327756160985,
+     "proto": 1.0,
+     "diff": 3.2775616098490445e-05
+    },
+    "P_SoC_max": {
+     "model": -0.431438532929565,
+     "proto": -0.431,
+     "diff": -0.00043853292956502754
+    },
+    "p_c": {
+     "model": -0.12699153633022744,
+     "proto": -0.127,
+     "diff": 8.463669772557081e-06
+    },
+    "P_d0": {
+     "model": -0.12121907795397706,
+     "proto": -0.121,
+     "diff": -0.0002190779539770621
+    },
+    "P_awake": {
+     "model": -0.09091389670598306,
+     "proto": -0.091,
+     "diff": 8.610329401693984e-05
+    },
+    "R0_ref": {
+     "model": -0.2741145682659612,
+     "proto": -0.274,
+     "diff": -0.00011456826596117908
+    },
+    "Ea_R0": {
+     "model": -0.2358713411938492,
+     "proto": -0.236,
+     "diff": 0.00012865880615078873
+    },
+    "R1_ref": {
+     "model": -0.018300295534190922,
+     "proto": -0.018,
+     "diff": -0.00030029553419092317
+    },
+    "m_b": {
+     "model": -0.18981203850751135,
+     "proto": -0.19,
+     "diff": 0.00018796149248864746
+    },
+    "R_skin": {
+     "model": 0.0,
+     "proto": 0.0,
+     "diff": 0.0
+    },
+    "R_th": {
+     "model": 0.029677466536659487,
+     "proto": 0.03,
+     "diff": -0.00032253346334051164
+    },
+    "C_th": {
+     "model": -4.725734648538897e-05,
+     "proto": 0.0,
+     "diff": -4.725734648538897e-05
+    }
+   },
+   "S7|25|1.0": {
+    "Q_n": {
+     "model": 1.0090976697892242,
+     "proto": 1.009,
+     "diff": 9.766978922431946e-05
+    },
+    "P_SoC_max": {
+     "model": -0.17979316391781164,
+     "proto": -0.18,
+     "diff": 0.00020683608218835525
+    },
+    "p_c": {
+     "model": -0.011625946228563014,
+     "proto": -0.012,
+     "diff": 0.0003740537714369864
+    },
+    "P_d0": {
+     "model": -0.009765843037170764,
+     "proto": -0.01,
+     "diff": 0.00023415696282923573
+    },
+    "P_awake": {
+     "model": -0.007327256089545296,
+     "proto": -0.007,
+     "diff": -0.00032725608954529625
+    },
+    "R0_ref": {
+     "model": -0.012481099136596736,
+     "proto": -0.012,
+     "diff": -0.0004810991365967361
+    },
+    "Ea_R0": {
+     "model": 0.002772467640569494,
+     "proto": 0.003,
+     "diff": -0.0002275323594305061
+    },
+    "R1_ref": {
+     "model": -0.0012482382922434849,
+     "proto": -0.001,
+     "diff": -0.00024823829224348485
+    },
+    "m_b": {
+     "model": 0.0,
+     "proto": 0.0,
+     "diff": 0.0
+    },
+    "R_skin": {
+     "model": 0.7672651063536851,
+     "proto": 0.767,
+     "diff": 0.00026510635368504065
+    },
+    "R_th": {
+     "model": -0.00702629088387867,
+     "proto": -0.007,
+     "diff": -2.6290883878669902e-05
+    },
+    "C_th": {
+     "model": -0.00908171994487123,
+     "proto": -0.009,
+     "diff": -8.17199448712308e-05
+    }
+   }
+  },
+  "max_abs_diff": 0.0004889308886298956
+ },
+ "oat": {
+  "S4": {
+   "Q_n": {
+    "kind": "hardware",
+    "lo": 4.56,
+    "hi": 4.8,
+    "default": 4.7,
+    "lo_h": 16.142463225162487,
+    "hi_h": 16.992067798063804,
+    "lo_pct": -2.9787269884702927,
+    "hi_pct": 2.1276632860209865,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.404817312613733,
+    "hi_s_off_pct": 0.4048196495071687
+   },
+   "dU": {
+    "kind": "hardware",
+    "lo": -0.02,
+    "hi": 0.02,
+    "default": 0.0,
+    "lo_h": 16.511035766106804,
+    "hi_h": 16.7618617588403,
+    "lo_pct": -0.7634902788849152,
+    "hi_pct": 0.7440527013865772,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.440688950992257,
+    "hi_s_off_pct": 0.37432365741369883
+   },
+   "k_S": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.5,
+    "default": 1.0,
+    "lo_h": 16.641985612417695,
+    "hi_h": 16.63396707840057,
+    "lo_pct": 0.023559418087137907,
+    "hi_pct": -0.024634489321917474,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.391871176903715,
+    "hi_s_off_pct": 0.418572907558575
+   },
+   "R0_ref": {
+    "kind": "hardware",
+    "lo": 0.035,
+    "hi": 0.13,
+    "default": 0.06,
+    "lo_h": 16.689550803541064,
+    "hi_h": 16.298293617972888,
+    "lo_pct": 0.3094411530774055,
+    "hi_pct": -2.0421373940901155,
+    "lo_event": "cutoff",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 0.2549598731949981,
+    "hi_s_off_pct": 2.141961165910093
+   },
+   "A_R": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 0.8,
+    "lo_h": 16.64739112020434,
+    "hi_h": 16.552275068869285,
+    "lo_pct": 0.056048217313064974,
+    "hi_pct": -0.5156291193880835,
+    "lo_event": "cutoff",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 0.353681704719927,
+    "hi_s_off_pct": 0.94087343939778
+   },
+   "Ea_R0": {
+    "kind": "hardware",
+    "lo": 12000.0,
+    "hi": 27000.0,
+    "default": 18000.0,
+    "lo_h": 16.634700825077402,
+    "hi_h": 16.642938518132794,
+    "lo_pct": -0.020224441384297798,
+    "hi_pct": 0.029286680664686315,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.41494949543294707,
+    "hi_s_off_pct": 0.3901878145329155
+   },
+   "R1_ref": {
+    "kind": "hardware",
+    "lo": 0.003,
+    "hi": 0.025,
+    "default": 0.01,
+    "lo_h": 16.64904036813857,
+    "hi_h": 16.614432303037656,
+    "lo_pct": 0.0659607152917685,
+    "hi_pct": -0.1420446235293138,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.37972241010136076,
+    "hi_s_off_pct": 0.45930465237292145
+   },
+   "tau1_ref": {
+    "kind": "hardware",
+    "lo": 10.0,
+    "hi": 60.0,
+    "default": 30.0,
+    "lo_h": 16.638058393837095,
+    "hi_h": 16.638076595980152,
+    "lo_pct": -4.439880062490076e-05,
+    "hi_pct": 6.500179494661751e-05,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40484607009594226,
+    "hi_s_off_pct": 0.4047789455467456
+   },
+   "Ea_R1": {
+    "kind": "hardware",
+    "lo": 25000.0,
+    "hi": 55000.0,
+    "default": 30000.0,
+    "lo_h": 16.637715560535405,
+    "hi_h": 16.63970471318509,
+    "lo_pct": -0.002104934599700403,
+    "hi_pct": 0.009850497455166085,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40564330206814575,
+    "hi_s_off_pct": 0.4009677384207755
+   },
+   "Ea_tau": {
+    "kind": "hardware",
+    "lo": 15000.0,
+    "hi": 27000.0,
+    "default": 21000.0,
+    "lo_h": 16.63806603725376,
+    "hi_h": 16.63806569978308,
+    "lo_pct": 1.5405337006058062e-06,
+    "hi_pct": -4.877710568784721e-07,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.4048175671164966,
+    "hi_s_off_pct": 0.4048197655635378
+   },
+   "V_cut": {
+    "kind": "hardware",
+    "lo": 3.3,
+    "hi": 3.5,
+    "default": 3.4,
+    "lo_h": 16.795369641119958,
+    "hi_h": 16.38099332495126,
+    "lo_pct": 0.9454455959744035,
+    "hi_pct": -1.5450861859315546,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.2962130759615224,
+    "hi_s_off_pct": 0.6606504377476956
+   },
+   "d_sys": {
+    "kind": "hardware",
+    "lo": 0.0,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 16.45636547795179,
+    "hi_h": 16.63806578093875,
+    "lo_pct": -1.0920758781656215,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.6278671564522347,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "C_th": {
+    "kind": "hardware",
+    "lo": 100.0,
+    "hi": 230.0,
+    "default": 150.0,
+    "lo_h": 16.63807644303296,
+    "hi_h": 16.638048105949732,
+    "lo_pct": 6.408253430123523e-05,
+    "hi_pct": -0.00010623223426486916,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40482163946922584,
+    "hi_s_off_pct": 0.40481799486438613
+   },
+   "R_th": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 4.0,
+    "default": 3.0,
+    "lo_h": 16.636739535481812,
+    "hi_h": 16.639239788945062,
+    "lo_pct": -0.007971151661489984,
+    "hi_pct": 0.00705615677789595,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.407484472811841,
+    "hi_s_off_pct": 0.4025743088896444
+   },
+   "R_skin": {
+    "kind": "hardware",
+    "lo": 4.0,
+    "hi": 9.0,
+    "default": 5.5,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "T_lim_C": {
+    "kind": "hardware",
+    "lo": 41.0,
+    "hi": 48.0,
+    "default": 45.0,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "w_thr": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 3.0,
+    "default": 1.0,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "P_fl": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.0,
+    "default": 0.5,
+    "lo_h": 16.638077849355334,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 7.253497338322035e-05,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481831688489245,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "P_susp": {
+    "kind": "hardware",
+    "lo": 0.01,
+    "hi": 0.03,
+    "default": 0.02,
+    "lo_h": 16.797837001307997,
+    "hi_h": 16.481282588503262,
+    "lo_pct": 0.9602752055006825,
+    "hi_pct": -0.9423162193234247,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40108338304547025,
+    "hi_s_off_pct": 0.40855229095188583
+   },
+   "P_awake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.25,
+    "default": 0.09,
+    "lo_h": 17.29595670287818,
+    "hi_h": 14.43812175938434,
+    "lo_pct": 3.9541310306221877,
+    "hi_pct": -13.222354392147896,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.3898683555545065,
+    "hi_s_off_pct": 0.4643533361735415
+   },
+   "E_wake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.3,
+    "default": 0.1,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "P_d0": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.25,
+    "default": 0.12,
+    "lo_h": 17.29595670287818,
+    "hi_h": 14.805522850326584,
+    "lo_pct": 3.9541310306221877,
+    "hi_pct": -11.014158464931667,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.3898683555545065,
+    "hi_s_off_pct": 0.45322352781558084
+   },
+   "p_c": {
+    "kind": "hardware",
+    "lo": 0.00123,
+    "hi": 0.00513,
+    "default": 0.002566735112936345,
+    "lo_h": 17.742478359015802,
+    "hi_h": 14.861677331881246,
+    "lo_pct": 6.637866399965264,
+    "hi_pct": -10.676652397255248,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.38033282268537905,
+    "hi_s_off_pct": 0.45156924132484344
+   },
+   "gamma_b": {
+    "kind": "hardware",
+    "lo": 1.0,
+    "hi": 2.9,
+    "default": 2.0,
+    "lo_h": 16.154998180981202,
+    "hi_h": 17.00805609968139,
+    "lo_pct": -2.903387967794724,
+    "hi_pct": 2.223757999361431,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.41654702510458386,
+    "hi_s_off_pct": 0.39627228152435595
+   },
+   "k_RR": {
+    "kind": "hardware",
+    "lo": 0.001,
+    "hi": 0.0033,
+    "default": 0.0028,
+    "lo_h": 18.541316942144647,
+    "hi_h": 16.176351150037217,
+    "lo_pct": 11.43913713447593,
+    "hi_pct": -2.775049918545769,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.3643885919171065,
+    "hi_s_off_pct": 0.41601384463671853
+   },
+   "P_SoC_max": {
+    "kind": "hardware",
+    "lo": 3.0,
+    "hi": 7.0,
+    "default": 5.0,
+    "lo_h": 19.86116077570424,
+    "hi_h": 14.310026437978074,
+    "lo_pct": 19.37181302924045,
+    "hi_pct": -13.9922474980702,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.34078253038455164,
+    "hi_s_off_pct": 0.46836331681511056
+   },
+   "v0": {
+    "kind": "hardware",
+    "lo": 0.35,
+    "hi": 0.55,
+    "default": 0.446,
+    "lo_h": 18.36116762409371,
+    "hi_h": 14.911971033570817,
+    "lo_pct": 10.35638316281342,
+    "hi_pct": -10.374371456959963,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.3678666250593742,
+    "hi_s_off_pct": 0.4500977394503904
+   },
+   "P_G": {
+    "kind": "hardware",
+    "lo": 0.14,
+    "hi": 0.45,
+    "default": 0.27,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "P_cam": {
+    "kind": "hardware",
+    "lo": 0.9,
+    "hi": 2.0,
+    "default": 1.15,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "P_camf": {
+    "kind": "hardware",
+    "lo": 0.2,
+    "hi": 0.5,
+    "default": 0.3,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "P_aud": {
+    "kind": "hardware",
+    "lo": 0.02,
+    "hi": 0.15,
+    "default": 0.05,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "P_BT": {
+    "kind": "hardware",
+    "lo": 0.03,
+    "hi": 0.05,
+    "default": 0.04,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "m_b": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.50501855673277,
+    "lo_pct": 0.0,
+    "hi_pct": -0.7996555967365038,
+    "lo_event": "cutoff",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 1.3029393940227194
+   },
+   "wifi_P_idle": {
+    "kind": "hardware",
+    "lo": 0.002,
+    "hi": 0.01,
+    "default": 0.004,
+    "lo_h": 16.657674843407914,
+    "hi_h": 16.5795126033838,
+    "lo_pct": 0.11785662304346634,
+    "hi_pct": -0.3519229838724991,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.4043564976177954,
+    "hi_s_off_pct": 0.4062050445290447
+   },
+   "wifi_P_act": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.3,
+    "default": 0.13,
+    "lo_h": 16.82103851897175,
+    "hi_h": 15.671538112884337,
+    "lo_pct": 1.0997236123601706,
+    "hi_pct": -5.8091347923489245,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40054666833993025,
+    "hi_s_off_pct": 0.42898502164202945
+   },
+   "wifi_e_b": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.06,
+    "default": 0.015,
+    "lo_h": 16.960682322167255,
+    "hi_h": 15.325228737409825,
+    "lo_pct": 1.9390267202700207,
+    "hi_pct": -7.890562886420149,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.39734641258707093,
+    "hi_s_off_pct": 0.4383602128641084
+   },
+   "wifi_P_rt": {
+    "kind": "hardware",
+    "lo": 0.13,
+    "hi": 0.8,
+    "default": 0.3,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "lte_P_idle": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.035,
+    "default": 0.015,
+    "lo_h": 16.797837001307997,
+    "hi_h": 16.327404167002204,
+    "lo_pct": 0.9602752055006825,
+    "hi_pct": -1.8671738531798154,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40108338304547025,
+    "hi_s_off_pct": 0.4122844776922001
+   },
+   "lte_P_tail": {
+    "kind": "hardware",
+    "lo": 0.066,
+    "hi": 0.178,
+    "default": 0.12,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "lte_T_tail": {
+    "kind": "hardware",
+    "lo": 5.0,
+    "hi": 11.6,
+    "default": 10.0,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "lte_P_act": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.3,
+    "default": 0.6,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "lte_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "lte_E_pro": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.5,
+    "default": 0.31,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "lte_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "lte_P_rt": {
+    "kind": "hardware",
+    "lo": 0.6,
+    "hi": 2.6,
+    "default": 1.2,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "nr_P_idle": {
+    "kind": "hardware",
+    "lo": 0.015,
+    "hi": 0.06,
+    "default": 0.03,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "nr_P_tail": {
+    "kind": "hardware",
+    "lo": 0.249,
+    "hi": 0.593,
+    "default": 0.255,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "nr_T_tail": {
+    "kind": "hardware",
+    "lo": 10.2,
+    "hi": 21.4,
+    "default": 10.3,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "nr_P_act": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.8,
+    "default": 0.9,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "nr_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "nr_E_pro": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "nr_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "nr_P_rt": {
+    "kind": "hardware",
+    "lo": 1.2,
+    "hi": 3.0,
+    "default": 1.4,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "k_ul": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 8.4,
+    "default": 5.0,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "gamma_sig": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 1.0,
+    "default": 0.26,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "gamma_R": {
+    "kind": "hardware",
+    "lo": 1.5,
+    "hi": 7.0,
+    "default": 2.5,
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "brightness": {
+    "kind": "behaviour",
+    "label": "Brightness",
+    "lo": "\u22120.2",
+    "hi": "+0.2",
+    "lo_h": 18.276026557227333,
+    "hi_h": 14.472331506841613,
+    "lo_pct": 9.844658615096336,
+    "hi_pct": -13.016743067444114,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.3695329075372123,
+    "hi_s_off_pct": 0.4632937328602444
+   },
+   "dark_theme": {
+    "kind": "behaviour",
+    "label": "Dark theme",
+    "lo": "APL \u00d7 0.25",
+    "hi": "off",
+    "lo_h": 18.276026557227333,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 9.844658615096336,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.3695329075372123,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "refresh": {
+    "kind": "behaviour",
+    "label": "Refresh rate",
+    "lo": "60 Hz",
+    "hi": "120 Hz",
+    "lo_h": 19.797923031514017,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 18.991734328850463,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.3418436621935101,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "bg_rate": {
+    "kind": "behaviour",
+    "label": "Background wake-ups",
+    "lo": "\u00d7 0.5",
+    "hi": "\u00d7 5",
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "rsrp": {
+    "kind": "behaviour",
+    "label": "Cellular RSRP",
+    "lo": "\u2212115 dBm",
+    "hi": "\u221285 dBm",
+    "lo_h": 16.63806578093875,
+    "hi_h": 16.63806578093875,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.40481867484985745
+   },
+   "rat": {
+    "kind": "behaviour",
+    "label": "Data RAT",
+    "lo": "Wi-Fi",
+    "hi": "5G NSA",
+    "lo_h": 16.63806578093875,
+    "hi_h": 12.722917156080056,
+    "lo_pct": 0.0,
+    "hi_pct": -23.53127266358117,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40481867484985745,
+    "hi_s_off_pct": 0.5244632123174339,
+    "mid": "LTE",
+    "mid_h": 14.463876076076328,
+    "mid_pct": -13.067562861503179
+   },
+   "tamb": {
+    "kind": "behaviour",
+    "label": "Ambient",
+    "lo": "\u221210 \u00b0C",
+    "hi": "35 \u00b0C",
+    "lo_h": 16.18116631962041,
+    "hi_h": 16.644419592911863,
+    "lo_pct": -2.7461092372995877,
+    "hi_pct": 0.0381884051714243,
+    "lo_event": "brownout",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 2.755397085569294,
+    "hi_s_off_pct": 0.39770031641900006
+   },
+   "k_env": {
+    "kind": "behaviour",
+    "label": "Enclosure k_env",
+    "lo": "0.8",
+    "hi": "1.5",
+    "lo_h": 16.63728870678479,
+    "hi_h": 16.639771854503056,
+    "lo_pct": -0.0046704596807667365,
+    "hi_pct": 0.0102540378597471,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.40636647086532096,
+    "hi_s_off_pct": 0.4016046357173965
+   }
+  },
+  "S7": {
+   "Q_n": {
+    "kind": "hardware",
+    "lo": 4.56,
+    "hi": 4.8,
+    "default": 4.7,
+    "lo_h": 5.510463628532523,
+    "hi_h": 5.803204628962933,
+    "lo_pct": -3.0057894575887145,
+    "hi_pct": 2.1469860880335645,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.07408955704398,
+    "hi_s_off_pct": 1.0741183207543805
+   },
+   "dU": {
+    "kind": "hardware",
+    "lo": -0.02,
+    "hi": 0.02,
+    "default": 0.0,
+    "lo_h": 5.633849459605791,
+    "hi_h": 5.726835048340848,
+    "lo_pct": -0.8339737840211359,
+    "hi_pct": 0.8027421765885112,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.1791495454388594,
+    "hi_s_off_pct": 0.9862867240173329
+   },
+   "k_S": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.5,
+    "default": 1.0,
+    "lo_h": 5.635640661795333,
+    "hi_h": 5.726891172911784,
+    "lo_pct": -0.8024453584641988,
+    "hi_pct": 0.8037300714040629,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0512824292493723,
+    "hi_s_off_pct": 1.0988889633038816
+   },
+   "R0_ref": {
+    "kind": "hardware",
+    "lo": 0.035,
+    "hi": 0.13,
+    "default": 0.06,
+    "lo_h": 5.709601978759196,
+    "hi_h": 5.421163142411986,
+    "lo_pct": 0.4994087201003916,
+    "hi_pct": -4.577640890826762,
+    "lo_event": "cutoff",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 0.6582628987337836,
+    "hi_s_off_pct": 5.559361377349151
+   },
+   "A_R": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 0.8,
+    "lo_h": 5.689066364353366,
+    "hi_h": 5.609842974104463,
+    "lo_pct": 0.13794445110797415,
+    "hi_pct": -1.256531714907838,
+    "lo_event": "cutoff",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 0.9330615763272592,
+    "hi_s_off_pct": 2.3833639351832496
+   },
+   "Ea_R0": {
+    "kind": "hardware",
+    "lo": 12000.0,
+    "hi": 27000.0,
+    "default": 18000.0,
+    "lo_h": 5.675043894708796,
+    "hi_h": 5.688598231242811,
+    "lo_pct": -0.1088765905894018,
+    "hi_pct": 0.12970445452187285,
+    "lo_event": "brownout",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.1695012876406772,
+    "hi_s_off_pct": 0.9641223047475677
+   },
+   "R1_ref": {
+    "kind": "hardware",
+    "lo": 0.003,
+    "hi": 0.025,
+    "default": 0.01,
+    "lo_h": 5.6861649919107435,
+    "hi_h": 5.670405123761271,
+    "lo_pct": 0.0868750042279487,
+    "hi_pct": -0.19052742004277423,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0081421277623162,
+    "hi_s_off_pct": 1.2199539121781182
+   },
+   "tau1_ref": {
+    "kind": "hardware",
+    "lo": 10.0,
+    "hi": 60.0,
+    "default": 30.0,
+    "lo_h": 5.681210783928326,
+    "hi_h": 5.681248588635615,
+    "lo_pct": -0.0003280923734583219,
+    "hi_pct": 0.00033733942783609194,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0742509796401023,
+    "hi_s_off_pct": 1.0739109783961625
+   },
+   "Ea_R1": {
+    "kind": "hardware",
+    "lo": 25000.0,
+    "hi": 55000.0,
+    "default": 30000.0,
+    "lo_h": 5.6807796118114595,
+    "hi_h": 5.683098308679842,
+    "lo_pct": -0.007917508056531908,
+    "hi_pct": 0.032895785959485835,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0802384146777932,
+    "hi_s_off_pct": 1.0487094444659446
+   },
+   "Ea_tau": {
+    "kind": "hardware",
+    "lo": 15000.0,
+    "hi": 27000.0,
+    "default": 21000.0,
+    "lo_h": 5.68123125691412,
+    "hi_h": 5.681227968049336,
+    "lo_pct": 3.2269517724614616e-05,
+    "hi_pct": -2.5620501120648953e-05,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0740916178814557,
+    "hi_s_off_pct": 1.0741228464149966
+   },
+   "V_cut": {
+    "kind": "hardware",
+    "lo": 3.3,
+    "hi": 3.5,
+    "default": 3.4,
+    "lo_h": 5.748051652854612,
+    "hi_h": 5.560865637457751,
+    "lo_pct": 1.176193113556434,
+    "hi_pct": -2.1186221709486253,
+    "lo_event": "brownout",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.7674718706799277,
+    "hi_s_off_pct": 1.8598709236805313
+   },
+   "d_sys": {
+    "kind": "hardware",
+    "lo": 0.0,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 5.582846503811624,
+    "hi_h": 5.681229423608784,
+    "lo_pct": -1.7317188316374188,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 2.9051969475152855,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "C_th": {
+    "kind": "hardware",
+    "lo": 100.0,
+    "hi": 230.0,
+    "default": 150.0,
+    "lo_h": 5.698428768095802,
+    "hi_h": 5.653671168624624,
+    "lo_pct": 0.3027398333104614,
+    "hi_pct": -0.48507555195077545,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0743059542190587,
+    "hi_s_off_pct": 1.0740867351224865
+   },
+   "R_th": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 4.0,
+    "default": 3.0,
+    "lo_h": 5.6936350878011694,
+    "hi_h": 5.667626007068972,
+    "lo_pct": 0.21836231680476548,
+    "hi_pct": -0.23944494273160366,
+    "lo_event": "brownout",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.1455919279473987,
+    "hi_s_off_pct": 1.023142920985163
+   },
+   "R_skin": {
+    "kind": "hardware",
+    "lo": 4.0,
+    "hi": 9.0,
+    "default": 5.5,
+    "lo_h": 4.645003391681608,
+    "hi_h": 8.533793632489058,
+    "lo_pct": -18.239468161962602,
+    "hi_pct": 50.21033294353903,
+    "lo_event": "cutoff",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 1.3088995627469036,
+    "hi_s_off_pct": 0.7527755290446864
+   },
+   "T_lim_C": {
+    "kind": "hardware",
+    "lo": 41.0,
+    "hi": 48.0,
+    "default": 45.0,
+    "lo_h": 6.950821222785975,
+    "hi_h": 5.040150066981799,
+    "lo_pct": 22.347131307552992,
+    "hi_pct": -11.284165958215485,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.8925469066602786,
+    "hi_s_off_pct": 1.2011328253371973
+   },
+   "w_thr": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 3.0,
+    "default": 1.0,
+    "lo_h": 5.579958122590218,
+    "hi_h": 5.953979561525915,
+    "lo_pct": -1.7825596093290041,
+    "hi_pct": 4.8008999035261235,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0881552372889747,
+    "hi_s_off_pct": 1.0391285168044768
+   },
+   "P_fl": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.0,
+    "default": 0.5,
+    "lo_h": 5.708369882445053,
+    "hi_h": 5.6020901125497735,
+    "lo_pct": 0.4777215777184596,
+    "hi_pct": -1.3929962189194622,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0691540865748281,
+    "hi_s_off_pct": 1.0889766066065445
+   },
+   "P_susp": {
+    "kind": "hardware",
+    "lo": 0.01,
+    "hi": 0.03,
+    "default": 0.02,
+    "lo_h": 5.685868579558677,
+    "hi_h": 5.676613650949191,
+    "lo_pct": 0.0816576061972496,
+    "hi_pct": -0.08124601763856987,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0733897278855864,
+    "hi_s_off_pct": 1.0748250237418544
+   },
+   "P_awake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.25,
+    "default": 0.09,
+    "lo_h": 5.69993476661036,
+    "hi_h": 5.6099321811822,
+    "lo_pct": 0.3292481539971748,
+    "hi_pct": -1.254961507632535,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.071223262867964,
+    "hi_s_off_pct": 1.0853355179101762
+   },
+   "E_wake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.3,
+    "default": 0.1,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "P_d0": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.25,
+    "default": 0.12,
+    "lo_h": 5.69993476661036,
+    "hi_h": 5.622915048156529,
+    "lo_pct": 0.3292481539971748,
+    "hi_pct": -1.0264393690901596,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.071223262867964,
+    "hi_s_off_pct": 1.0832621477608857
+   },
+   "p_c": {
+    "kind": "hardware",
+    "lo": 0.00123,
+    "hi": 0.00513,
+    "default": 0.002566735112936345,
+    "lo_h": 5.71634451032934,
+    "hi_h": 5.61741540205674,
+    "lo_pct": 0.6180895736164649,
+    "hi_pct": -1.1232431713963043,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0687162403396475,
+    "hi_s_off_pct": 1.0841381779741723
+   },
+   "gamma_b": {
+    "kind": "hardware",
+    "lo": 1.0,
+    "hi": 2.9,
+    "default": 2.0,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "k_RR": {
+    "kind": "hardware",
+    "lo": 0.001,
+    "hi": 0.0033,
+    "default": 0.0028,
+    "lo_h": 5.732687077965694,
+    "hi_h": 5.66745136437071,
+    "lo_pct": 0.9057485716572833,
+    "hi_pct": -0.24251897275645584,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0662361147694805,
+    "hi_s_off_pct": 1.0762492142698206
+   },
+   "P_SoC_max": {
+    "kind": "hardware",
+    "lo": 3.0,
+    "hi": 7.0,
+    "default": 5.0,
+    "lo_h": 6.729569468956814,
+    "hi_h": 5.4148484805110995,
+    "lo_pct": 18.452696893238873,
+    "hi_pct": -4.688790457761094,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 0.9460854359190264,
+    "hi_s_off_pct": 1.1140416062141465
+   },
+   "v0": {
+    "kind": "hardware",
+    "lo": 0.35,
+    "hi": 0.55,
+    "default": 0.446,
+    "lo_h": 5.727508586720721,
+    "hi_h": 5.636101510927747,
+    "lo_pct": 0.8145976805587374,
+    "hi_pct": -0.7943335731787848,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0675902830227932,
+    "hi_s_off_pct": 1.080575617008353
+   },
+   "P_G": {
+    "kind": "hardware",
+    "lo": 0.14,
+    "hi": 0.45,
+    "default": 0.27,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "P_cam": {
+    "kind": "hardware",
+    "lo": 0.9,
+    "hi": 2.0,
+    "default": 1.15,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "P_camf": {
+    "kind": "hardware",
+    "lo": 0.2,
+    "hi": 0.5,
+    "default": 0.3,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "P_aud": {
+    "kind": "hardware",
+    "lo": 0.02,
+    "hi": 0.15,
+    "default": 0.05,
+    "lo_h": 5.695220459007913,
+    "hi_h": 5.636065076190886,
+    "lo_pct": 0.24626774164389076,
+    "hi_pct": -0.7949748910018317,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0719481015130286,
+    "hi_s_off_pct": 1.0811751870303834
+   },
+   "P_BT": {
+    "kind": "hardware",
+    "lo": 0.03,
+    "hi": 0.05,
+    "default": 0.04,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "m_b": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.593593623581533,
+    "lo_pct": 0.0,
+    "hi_pct": -1.542549921731251,
+    "lo_event": "cutoff",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 2.706976202484605
+   },
+   "wifi_P_idle": {
+    "kind": "hardware",
+    "lo": 0.002,
+    "hi": 0.01,
+    "default": 0.004,
+    "lo_h": 5.681237201674863,
+    "hi_h": 5.681206620230525,
+    "lo_pct": 0.00013690814961719866,
+    "hi_pct": -0.00040138104903109095,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741085472544007,
+    "hi_s_off_pct": 1.074113265096375
+   },
+   "wifi_P_act": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.3,
+    "default": 0.13,
+    "lo_h": 5.695104035923489,
+    "hi_h": 5.606239217067668,
+    "lo_pct": 0.2442184830108829,
+    "hi_pct": -1.3199644117431353,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0719694313677384,
+    "hi_s_off_pct": 1.0859278917248456
+   },
+   "wifi_e_b": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.06,
+    "default": 0.015,
+    "lo_h": 5.683314566987928,
+    "hi_h": 5.671905963684544,
+    "lo_pct": 0.036702326621051995,
+    "hi_pct": -0.1641098999715651,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0737843432664822,
+    "hi_s_off_pct": 1.075553117072194
+   },
+   "wifi_P_rt": {
+    "kind": "hardware",
+    "lo": 0.13,
+    "hi": 0.8,
+    "default": 0.3,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "lte_P_idle": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.035,
+    "default": 0.015,
+    "lo_h": 5.685868579558677,
+    "hi_h": 5.672020580568021,
+    "lo_pct": 0.0816576061972496,
+    "hi_pct": -0.1620924337696117,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0733897278855864,
+    "hi_s_off_pct": 1.075536165612528
+   },
+   "lte_P_tail": {
+    "kind": "hardware",
+    "lo": 0.066,
+    "hi": 0.178,
+    "default": 0.12,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "lte_T_tail": {
+    "kind": "hardware",
+    "lo": 5.0,
+    "hi": 11.6,
+    "default": 10.0,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "lte_P_act": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.3,
+    "default": 0.6,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "lte_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "lte_E_pro": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.5,
+    "default": 0.31,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "lte_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "lte_P_rt": {
+    "kind": "hardware",
+    "lo": 0.6,
+    "hi": 2.6,
+    "default": 1.2,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "nr_P_idle": {
+    "kind": "hardware",
+    "lo": 0.015,
+    "hi": 0.06,
+    "default": 0.03,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "nr_P_tail": {
+    "kind": "hardware",
+    "lo": 0.249,
+    "hi": 0.593,
+    "default": 0.255,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "nr_T_tail": {
+    "kind": "hardware",
+    "lo": 10.2,
+    "hi": 21.4,
+    "default": 10.3,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "nr_P_act": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.8,
+    "default": 0.9,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "nr_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "nr_E_pro": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "nr_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "nr_P_rt": {
+    "kind": "hardware",
+    "lo": 1.2,
+    "hi": 3.0,
+    "default": 1.4,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "k_ul": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 8.4,
+    "default": 5.0,
+    "lo_h": 5.682271922316565,
+    "hi_h": 5.680049863791542,
+    "lo_pct": 0.018349878697909716,
+    "hi_pct": -0.02076240421378106,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0739462945305678,
+    "hi_s_off_pct": 1.0742896203073313
+   },
+   "gamma_sig": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 1.0,
+    "default": 0.26,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "gamma_R": {
+    "kind": "hardware",
+    "lo": 1.5,
+    "hi": 7.0,
+    "default": 2.5,
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "brightness": {
+    "kind": "behaviour",
+    "label": "Brightness",
+    "lo": "\u22120.2",
+    "hi": "+0.2",
+    "lo_h": 5.724587004686373,
+    "hi_h": 5.619809122417616,
+    "lo_pct": 0.763172508003529,
+    "hi_pct": -1.0811093270750693,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0674658120740141,
+    "hi_s_off_pct": 1.0837566793487816
+   },
+   "dark_theme": {
+    "kind": "behaviour",
+    "label": "Dark theme",
+    "lo": "APL \u00d7 0.25",
+    "hi": "off",
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "refresh": {
+    "kind": "behaviour",
+    "label": "Refresh rate",
+    "lo": "60 Hz",
+    "hi": "120 Hz",
+    "lo_h": 5.762698181421451,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 1.4339987305233226,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.061732412229207,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "bg_rate": {
+    "kind": "behaviour",
+    "label": "Background wake-ups",
+    "lo": "\u00d7 0.5",
+    "hi": "\u00d7 5",
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "rsrp": {
+    "kind": "behaviour",
+    "label": "Cellular RSRP",
+    "lo": "\u2212115 dBm",
+    "hi": "\u221285 dBm",
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.681229423608784,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.0741097284499794
+   },
+   "rat": {
+    "kind": "behaviour",
+    "label": "Data RAT",
+    "lo": "Wi-Fi",
+    "hi": "5G NSA",
+    "lo_h": 5.681229423608784,
+    "hi_h": 5.405126993190085,
+    "lo_pct": 0.0,
+    "hi_pct": -4.859906365888589,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.0741097284499794,
+    "hi_s_off_pct": 1.1199547205882432,
+    "mid": "LTE",
+    "mid_h": 5.512472433538739,
+    "mid_pct": -2.970430825566772
+   },
+   "tamb": {
+    "kind": "behaviour",
+    "label": "Ambient",
+    "lo": "\u221210 \u00b0C",
+    "hi": "35 \u00b0C",
+    "lo_h": 4.012947754194296,
+    "hi_h": 10.287942880004694,
+    "lo_pct": -29.364800204720055,
+    "hi_pct": 81.08655913898426,
+    "lo_event": "brownout",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 9.348802818881929,
+    "hi_s_off_pct": 0.5739927608726737
+   },
+   "k_env": {
+    "kind": "behaviour",
+    "label": "Enclosure k_env",
+    "lo": "0.8",
+    "hi": "1.5",
+    "lo_h": 4.871963725140842,
+    "hi_h": 7.891752303717954,
+    "lo_pct": -14.244552334129946,
+    "hi_pct": 38.90923452102064,
+    "lo_event": "cutoff",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 1.2951732516187708,
+    "hi_s_off_pct": 0.7555797435348045
+   }
+  },
+  "S10a": {
+   "Q_n": {
+    "kind": "hardware",
+    "lo": 4.56,
+    "hi": 4.8,
+    "default": 4.7,
+    "lo_h": 11.787533927595613,
+    "hi_h": 12.407951344594714,
+    "lo_pct": -2.9788215358295345,
+    "hi_pct": 2.1277282570861145,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538272384391684,
+    "hi_s_off_pct": 8.538159109178363
+   },
+   "dU": {
+    "kind": "hardware",
+    "lo": -0.02,
+    "hi": 0.02,
+    "default": 0.0,
+    "lo_h": 11.887075749559855,
+    "hi_h": 12.379264453102111,
+    "lo_pct": -2.1595098008421187,
+    "hi_pct": 1.8916113528903766,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 9.932677475767383,
+    "hi_s_off_pct": 7.408523995298971
+   },
+   "k_S": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.5,
+    "default": 1.0,
+    "lo_h": 12.051977279521681,
+    "hi_h": 12.241011767228313,
+    "lo_pct": -0.8022334726708658,
+    "hi_pct": 0.7536771088233696,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 9.219719664882309,
+    "hi_s_off_pct": 7.906454572434285
+   },
+   "R0_ref": {
+    "kind": "hardware",
+    "lo": 0.035,
+    "hi": 0.13,
+    "default": 0.06,
+    "lo_h": 13.015291532255835,
+    "hi_h": 5.786611668814612,
+    "lo_pct": 7.126641608892825,
+    "hi_pct": -52.37138769895092,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 2.154408131344872,
+    "hi_s_off_pct": 57.84497255905324
+   },
+   "A_R": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 0.8,
+    "lo_h": 12.44578903608936,
+    "hi_h": 11.235566957840813,
+    "lo_pct": 2.439163833155167,
+    "hi_pct": -7.521967388715433,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 6.150550145712394,
+    "hi_s_off_pct": 15.875699646807155
+   },
+   "Ea_R0": {
+    "kind": "hardware",
+    "lo": 12000.0,
+    "hi": 27000.0,
+    "default": 18000.0,
+    "lo_h": 12.771769914849886,
+    "hi_h": 9.404890126252935,
+    "lo_pct": 5.122256769167022,
+    "hi_pct": -22.589955712541098,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 3.8760589782971095,
+    "hi_s_off_pct": 29.866061232726587
+   },
+   "R1_ref": {
+    "kind": "hardware",
+    "lo": 0.003,
+    "hi": 0.025,
+    "default": 0.01,
+    "lo_h": 12.29796813827496,
+    "hi_h": 11.777742388954827,
+    "lo_pct": 1.2224752708419162,
+    "hi_pct": -3.0594140180011054,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 7.653476632384046,
+    "hi_s_off_pct": 10.879654678157051
+   },
+   "tau1_ref": {
+    "kind": "hardware",
+    "lo": 10.0,
+    "hi": 60.0,
+    "default": 30.0,
+    "lo_h": 12.149325185629229,
+    "hi_h": 12.14961702367551,
+    "lo_pct": -0.0009794843822241717,
+    "hi_pct": 0.0014225847312143713,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538578013234503,
+    "hi_s_off_pct": 8.537674498879035
+   },
+   "Ea_R1": {
+    "kind": "hardware",
+    "lo": 25000.0,
+    "hi": 55000.0,
+    "default": 30000.0,
+    "lo_h": 12.196139334575724,
+    "hi_h": 11.543378939138327,
+    "lo_pct": 0.38433977980696366,
+    "hi_pct": -4.988419544500012,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.256756432189478,
+    "hi_s_off_pct": 12.422835000509659
+   },
+   "Ea_tau": {
+    "kind": "hardware",
+    "lo": 15000.0,
+    "hi": 27000.0,
+    "default": 21000.0,
+    "lo_h": 12.149397819732835,
+    "hi_h": 12.149505875490485,
+    "lo_pct": -0.0003816454812399783,
+    "hi_pct": 0.0005077430042188524,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.5383427182099,
+    "hi_s_off_pct": 8.538025062234004
+   },
+   "V_cut": {
+    "kind": "hardware",
+    "lo": 3.3,
+    "hi": 3.5,
+    "default": 3.4,
+    "lo_h": 12.688315955683178,
+    "hi_h": 10.874701802629454,
+    "lo_pct": 4.4353614850822565,
+    "hi_pct": -10.492186846009787,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 5.0603851152226795,
+    "hi_s_off_pct": 17.580540148850737
+   },
+   "d_sys": {
+    "kind": "hardware",
+    "lo": 0.0,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 10.874701802629454,
+    "hi_h": 12.688315955683178,
+    "lo_pct": -10.492186846009787,
+    "hi_pct": 4.4353614850822565,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 18.7981842421648,
+    "hi_s_off_pct": 4.129166421458332
+   },
+   "C_th": {
+    "kind": "hardware",
+    "lo": 100.0,
+    "hi": 230.0,
+    "default": 150.0,
+    "lo_h": 12.149638062622492,
+    "hi_h": 12.149143996011185,
+    "lo_pct": 0.001595752710392695,
+    "hi_pct": -0.0024708251814109516,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.53726652619216,
+    "hi_s_off_pct": 8.539614022772298
+   },
+   "R_th": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 4.0,
+    "default": 3.0,
+    "lo_h": 12.02061459352492,
+    "hi_h": 12.261866709122414,
+    "lo_pct": -1.060374384408469,
+    "hi_pct": 0.9253305735595685,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 9.511344731243472,
+    "hi_s_off_pct": 7.6935358140880945
+   },
+   "R_skin": {
+    "kind": "hardware",
+    "lo": 4.0,
+    "hi": 9.0,
+    "default": 5.5,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "T_lim_C": {
+    "kind": "hardware",
+    "lo": 41.0,
+    "hi": 48.0,
+    "default": 45.0,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "w_thr": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 3.0,
+    "default": 1.0,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "P_fl": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.0,
+    "default": 0.5,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "P_susp": {
+    "kind": "hardware",
+    "lo": 0.01,
+    "hi": 0.03,
+    "default": 0.02,
+    "lo_h": 12.273439180527319,
+    "hi_h": 12.027757606953791,
+    "lo_pct": 1.0205816091318543,
+    "hi_pct": -1.001581460891865,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.489061358959342,
+    "hi_s_off_pct": 8.587478171638875
+   },
+   "P_awake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.25,
+    "default": 0.09,
+    "lo_h": 12.659951922487346,
+    "hi_h": 10.440964903883865,
+    "lo_pct": 4.201901972383504,
+    "hi_pct": -14.062201177945234,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.342420188194268,
+    "hi_s_off_pct": 9.34114642783978
+   },
+   "E_wake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.3,
+    "default": 0.1,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "P_d0": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.25,
+    "default": 0.12,
+    "lo_h": 12.659951922487346,
+    "hi_h": 10.72644377571559,
+    "lo_pct": 4.201901972383504,
+    "hi_pct": -11.712473343279694,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.342420188194268,
+    "hi_s_off_pct": 9.18834292258296
+   },
+   "p_c": {
+    "kind": "hardware",
+    "lo": 0.00123,
+    "hi": 0.00513,
+    "default": 0.002566735112936345,
+    "lo_h": 13.00634302778687,
+    "hi_h": 10.770071273606673,
+    "lo_pct": 7.052987997000493,
+    "hi_pct": -11.353382859652184,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.218866495739942,
+    "hi_s_off_pct": 9.16573173896918
+   },
+   "gamma_b": {
+    "kind": "hardware",
+    "lo": 1.0,
+    "hi": 2.9,
+    "default": 2.0,
+    "lo_h": 11.77447936282616,
+    "hi_h": 12.436569490509875,
+    "lo_pct": -3.0862714287459903,
+    "hi_pct": 2.3632793281755715,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.693492998718659,
+    "hi_s_off_pct": 8.425989298761776
+   },
+   "k_RR": {
+    "kind": "hardware",
+    "lo": 0.001,
+    "hi": 0.0033,
+    "default": 0.0028,
+    "lo_h": 13.625858630259263,
+    "hi_h": 11.791055972990561,
+    "lo_pct": 12.152115108575412,
+    "hi_pct": -2.9498321817440165,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.014568479679467,
+    "hi_s_off_pct": 8.68640738225988
+   },
+   "P_SoC_max": {
+    "kind": "hardware",
+    "lo": 3.0,
+    "hi": 7.0,
+    "default": 5.0,
+    "lo_h": 14.64894178262154,
+    "hi_h": 10.341403114460595,
+    "lo_pct": 20.57293779453595,
+    "hi_pct": -14.881677261677495,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 7.717533212773896,
+    "hi_s_off_pct": 9.3964934823218
+   },
+   "v0": {
+    "kind": "hardware",
+    "lo": 0.35,
+    "hi": 0.55,
+    "default": 0.446,
+    "lo_h": 13.486169508548802,
+    "hi_h": 10.809138607415973,
+    "lo_pct": 11.002357806478024,
+    "hi_pct": -11.031826307712356,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.058882381882546,
+    "hi_s_off_pct": 9.145645444639927
+   },
+   "P_G": {
+    "kind": "hardware",
+    "lo": 0.14,
+    "hi": 0.45,
+    "default": 0.27,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "P_cam": {
+    "kind": "hardware",
+    "lo": 0.9,
+    "hi": 2.0,
+    "default": 1.15,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "P_camf": {
+    "kind": "hardware",
+    "lo": 0.2,
+    "hi": 0.5,
+    "default": 0.3,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "P_aud": {
+    "kind": "hardware",
+    "lo": 0.02,
+    "hi": 0.15,
+    "default": 0.05,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "P_BT": {
+    "kind": "hardware",
+    "lo": 0.03,
+    "hi": 0.05,
+    "default": 0.04,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "m_b": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 12.876881131538196,
+    "hi_h": 8.18187395819362,
+    "lo_pct": 5.987409240883634,
+    "hi_pct": -32.65639290243196,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 2.559554571469932,
+    "hi_s_off_pct": 40.09384446368405
+   },
+   "wifi_P_idle": {
+    "kind": "hardware",
+    "lo": 0.002,
+    "hi": 0.01,
+    "default": 0.004,
+    "lo_h": 12.1646628335688,
+    "hi_h": 12.103999713302906,
+    "lo_pct": 0.12526207616014862,
+    "hi_pct": -0.37404570557458827,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.532116132027237,
+    "hi_s_off_pct": 8.556483659134543
+   },
+   "wifi_P_act": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.3,
+    "default": 0.13,
+    "lo_h": 12.291444492991872,
+    "hi_h": 11.39910767399236,
+    "lo_pct": 1.1687802607460718,
+    "hi_pct": -6.175891686591539,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.48201256746747,
+    "hi_s_off_pct": 8.859767003516888
+   },
+   "wifi_e_b": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.06,
+    "default": 0.015,
+    "lo_h": 12.399808972918843,
+    "hi_h": 11.130158850027183,
+    "lo_pct": 2.0607097865273927,
+    "hi_pct": -8.38956352057597,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.440048462914568,
+    "hi_s_off_pct": 8.986157764658627
+   },
+   "wifi_P_rt": {
+    "kind": "hardware",
+    "lo": 0.13,
+    "hi": 0.8,
+    "default": 0.3,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "lte_P_idle": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.035,
+    "default": 0.015,
+    "lo_h": 12.273439180527319,
+    "hi_h": 11.908315386677115,
+    "lo_pct": 1.0205816091318543,
+    "hi_pct": -1.9846899754294767,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.489061358959342,
+    "hi_s_off_pct": 8.636879453798626
+   },
+   "lte_P_tail": {
+    "kind": "hardware",
+    "lo": 0.066,
+    "hi": 0.178,
+    "default": 0.12,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "lte_T_tail": {
+    "kind": "hardware",
+    "lo": 5.0,
+    "hi": 11.6,
+    "default": 10.0,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "lte_P_act": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.3,
+    "default": 0.6,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "lte_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "lte_E_pro": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.5,
+    "default": 0.31,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "lte_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "lte_P_rt": {
+    "kind": "hardware",
+    "lo": 0.6,
+    "hi": 2.6,
+    "default": 1.2,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "nr_P_idle": {
+    "kind": "hardware",
+    "lo": 0.015,
+    "hi": 0.06,
+    "default": 0.03,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "nr_P_tail": {
+    "kind": "hardware",
+    "lo": 0.249,
+    "hi": 0.593,
+    "default": 0.255,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "nr_T_tail": {
+    "kind": "hardware",
+    "lo": 10.2,
+    "hi": 21.4,
+    "default": 10.3,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "nr_P_act": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.8,
+    "default": 0.9,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "nr_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "nr_E_pro": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "nr_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "nr_P_rt": {
+    "kind": "hardware",
+    "lo": 1.2,
+    "hi": 3.0,
+    "default": 1.4,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "k_ul": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 8.4,
+    "default": 5.0,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "gamma_sig": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 1.0,
+    "default": 0.26,
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "gamma_R": {
+    "kind": "hardware",
+    "lo": 1.5,
+    "hi": 7.0,
+    "default": 2.5,
+    "lo_h": 12.555602273879787,
+    "hi_h": 8.727546456880438,
+    "lo_pct": 3.3430178374648234,
+    "hi_pct": -28.16505576582,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 5.512176215217943,
+    "hi_s_off_pct": 35.00693347694532
+   },
+   "brightness": {
+    "kind": "behaviour",
+    "label": "Brightness",
+    "lo": "\u22120.2",
+    "hi": "+0.2",
+    "lo_h": 13.420146228950006,
+    "hi_h": 10.467549345109449,
+    "lo_pct": 10.458931468781675,
+    "hi_pct": -13.843389182801847,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.080170800274923,
+    "hi_s_off_pct": 9.326552101358882
+   },
+   "dark_theme": {
+    "kind": "behaviour",
+    "label": "Dark theme",
+    "lo": "APL \u00d7 0.25",
+    "hi": "off",
+    "lo_h": 13.420146228950006,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 10.458931468781675,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.080170800274923,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "refresh": {
+    "kind": "behaviour",
+    "label": "Refresh rate",
+    "lo": "60 Hz",
+    "hi": "120 Hz",
+    "lo_h": 14.599935527193464,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 20.169575676305506,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 7.730743706705572,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "bg_rate": {
+    "kind": "behaviour",
+    "label": "Background wake-ups",
+    "lo": "\u00d7 0.5",
+    "hi": "\u00d7 5",
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "rsrp": {
+    "kind": "behaviour",
+    "label": "Cellular RSRP",
+    "lo": "\u2212115 dBm",
+    "hi": "\u221285 dBm",
+    "lo_h": 12.149444187537572,
+    "hi_h": 12.149444187537572,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 8.538205040554265
+   },
+   "rat": {
+    "kind": "behaviour",
+    "label": "Data RAT",
+    "lo": "Wi-Fi",
+    "hi": "5G NSA",
+    "lo_h": 12.149444187537572,
+    "hi_h": 9.107391547359896,
+    "lo_pct": 0.0,
+    "hi_pct": -25.038615703079614,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 10.185534252107352,
+    "mid": "LTE",
+    "mid_h": 10.460978715808892,
+    "mid_pct": -13.897470910320674
+   },
+   "tamb": {
+    "kind": "behaviour",
+    "label": "Ambient",
+    "lo": "\u221210 \u00b0C",
+    "hi": "35 \u00b0C",
+    "lo_h": 12.149444187537572,
+    "hi_h": 13.271099203339881,
+    "lo_pct": 0.0,
+    "hi_pct": 9.232150858002708,
+    "lo_event": "brownout",
+    "hi_event": "cutoff",
+    "lo_s_off_pct": 8.538205040554265,
+    "hi_s_off_pct": 0.5605322401909092
+   },
+   "k_env": {
+    "kind": "behaviour",
+    "label": "Enclosure k_env",
+    "lo": "0.8",
+    "hi": "1.5",
+    "lo_h": 12.074247680256985,
+    "hi_h": 12.314195869295547,
+    "lo_pct": -0.6189296079710416,
+    "hi_pct": 1.3560429531992213,
+    "lo_event": "brownout",
+    "hi_event": "brownout",
+    "lo_s_off_pct": 9.10562095910461,
+    "hi_s_off_pct": 7.301033029389206
+   }
+  },
+  "S12": {
+   "Q_n": {
+    "kind": "hardware",
+    "lo": 4.56,
+    "hi": 4.8,
+    "default": 4.7,
+    "lo_h": 34.84076052949393,
+    "hi_h": 36.674484767888345,
+    "lo_pct": -2.9787234042553234,
+    "hi_pct": 2.127659574468077,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "dU": {
+    "kind": "hardware",
+    "lo": -0.02,
+    "hi": 0.02,
+    "default": 0.0,
+    "lo_h": 35.64968645730205,
+    "hi_h": 36.16582149029364,
+    "lo_pct": -0.7261024799530835,
+    "hi_pct": 0.7111818684824023,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "k_S": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.5,
+    "default": 1.0,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "R0_ref": {
+    "kind": "hardware",
+    "lo": 0.035,
+    "hi": 0.13,
+    "default": 0.06,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "A_R": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 0.8,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "Ea_R0": {
+    "kind": "hardware",
+    "lo": 12000.0,
+    "hi": 27000.0,
+    "default": 18000.0,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "R1_ref": {
+    "kind": "hardware",
+    "lo": 0.003,
+    "hi": 0.025,
+    "default": 0.01,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "tau1_ref": {
+    "kind": "hardware",
+    "lo": 10.0,
+    "hi": 60.0,
+    "default": 30.0,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "Ea_R1": {
+    "kind": "hardware",
+    "lo": 25000.0,
+    "hi": 55000.0,
+    "default": 30000.0,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "Ea_tau": {
+    "kind": "hardware",
+    "lo": 15000.0,
+    "hi": 27000.0,
+    "default": 21000.0,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "V_cut": {
+    "kind": "hardware",
+    "lo": 3.3,
+    "hi": 3.5,
+    "default": 3.4,
+    "lo_h": 36.21425185983199,
+    "hi_h": 35.43898808599321,
+    "lo_pct": 0.8460462114876721,
+    "hi_pct": -1.3128355090361699,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "d_sys": {
+    "kind": "hardware",
+    "lo": 0.0,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "C_th": {
+    "kind": "hardware",
+    "lo": 100.0,
+    "hi": 230.0,
+    "default": 150.0,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "R_th": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 4.0,
+    "default": 3.0,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "R_skin": {
+    "kind": "hardware",
+    "lo": 4.0,
+    "hi": 9.0,
+    "default": 5.5,
+    "lo_h": 34.03687907166914,
+    "hi_h": 39.42686873748629,
+    "lo_pct": -5.2172969624813215,
+    "hi_pct": 9.792239863580798,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "T_lim_C": {
+    "kind": "hardware",
+    "lo": 41.0,
+    "hi": 48.0,
+    "default": 45.0,
+    "lo_h": 37.74188302217628,
+    "hi_h": 34.773454611187724,
+    "lo_pct": 5.1000499497992235,
+    "hi_pct": -3.166150602091289,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "w_thr": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 3.0,
+    "default": 1.0,
+    "lo_h": 35.70726614014053,
+    "hi_h": 36.425233871386745,
+    "lo_pct": -0.5657599888574061,
+    "hi_pct": 1.4335690952792746,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_fl": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.0,
+    "default": 0.5,
+    "lo_h": 35.95743122167057,
+    "hi_h": 35.784625152104525,
+    "lo_pct": 0.13087622690992617,
+    "hi_pct": -0.35033788030215396,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_susp": {
+    "kind": "hardware",
+    "lo": 0.01,
+    "hi": 0.03,
+    "default": 0.02,
+    "lo_h": 36.62655777442591,
+    "hi_h": 35.22180835721667,
+    "lo_pct": 1.9941969858662922,
+    "hi_pct": -1.9176172134648062,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_awake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.25,
+    "default": 0.09,
+    "lo_h": 36.999237481502796,
+    "hi_h": 32.13285825410257,
+    "lo_pct": 3.032000420476133,
+    "hi_pct": -10.519435250444387,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "E_wake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.3,
+    "default": 0.1,
+    "lo_h": 35.92869169428819,
+    "hi_h": 35.83758343444552,
+    "lo_pct": 0.050845091164886114,
+    "hi_pct": -0.20286463112633157,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_d0": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.25,
+    "default": 0.12,
+    "lo_h": 36.999237481502796,
+    "hi_h": 32.77887931985151,
+    "lo_pct": 3.032000420476133,
+    "hi_pct": -8.720456480918193,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "p_c": {
+    "kind": "hardware",
+    "lo": 0.00123,
+    "hi": 0.00513,
+    "default": 0.002566735112936345,
+    "lo_h": 38.26003545490043,
+    "hi_h": 32.131568259103446,
+    "lo_pct": 6.5429521634730925,
+    "hi_pct": -10.523027507321537,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "gamma_b": {
+    "kind": "hardware",
+    "lo": 1.0,
+    "hi": 2.9,
+    "default": 2.0,
+    "lo_h": 35.87379180280311,
+    "hi_h": 35.6843371598272,
+    "lo_pct": -0.10203496873911755,
+    "hi_pct": -0.6296104590316931,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "k_RR": {
+    "kind": "hardware",
+    "lo": 0.001,
+    "hi": 0.0033,
+    "default": 0.0028,
+    "lo_h": 36.83139666625884,
+    "hi_h": 35.66339463330968,
+    "lo_pct": 2.5646130870092154,
+    "hi_pct": -0.6879292393048742,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_SoC_max": {
+    "kind": "hardware",
+    "lo": 3.0,
+    "hi": 7.0,
+    "default": 5.0,
+    "lo_h": 40.955317261049984,
+    "hi_h": 32.88104968814979,
+    "lo_pct": 14.048519712624174,
+    "hi_pct": -8.435942038296751,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "v0": {
+    "kind": "hardware",
+    "lo": 0.35,
+    "hi": 0.55,
+    "default": 0.446,
+    "lo_h": 37.83890322747101,
+    "hi_h": 33.790625783111395,
+    "lo_pct": 5.370222702351701,
+    "hi_pct": -5.9030399846965675,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_G": {
+    "kind": "hardware",
+    "lo": 0.14,
+    "hi": 0.45,
+    "default": 0.27,
+    "lo_h": 36.50927090365577,
+    "hi_h": 35.112983833962595,
+    "lo_pct": 1.6675875273727936,
+    "hi_pct": -2.2206615216421755,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_cam": {
+    "kind": "hardware",
+    "lo": 0.9,
+    "hi": 2.0,
+    "default": 1.15,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_camf": {
+    "kind": "hardware",
+    "lo": 0.2,
+    "hi": 0.5,
+    "default": 0.3,
+    "lo_h": 36.06149023578319,
+    "hi_h": 35.613579452054374,
+    "lo_pct": 0.42064999295485794,
+    "hi_pct": -0.8266498758749852,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_aud": {
+    "kind": "hardware",
+    "lo": 0.02,
+    "hi": 0.15,
+    "default": 0.05,
+    "lo_h": 36.20698244356681,
+    "hi_h": 34.95818995346596,
+    "lo_pct": 0.825803024041849,
+    "hi_pct": -2.651716976998242,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_BT": {
+    "kind": "hardware",
+    "lo": 0.03,
+    "hi": 0.05,
+    "default": 0.04,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "m_b": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "wifi_P_idle": {
+    "kind": "hardware",
+    "lo": 0.002,
+    "hi": 0.01,
+    "default": 0.004,
+    "lo_h": 36.03082818942798,
+    "hi_h": 35.554027060250334,
+    "lo_pct": 0.3352652069969819,
+    "hi_pct": -0.9924857815598487,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "wifi_P_act": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.3,
+    "default": 0.13,
+    "lo_h": 36.03643476463704,
+    "hi_h": 35.21726771021249,
+    "lo_pct": 0.35087787089544964,
+    "hi_pct": -1.9302615806433998,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "wifi_e_b": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.06,
+    "default": 0.015,
+    "lo_h": 36.2977599797078,
+    "hi_h": 34.265138610358335,
+    "lo_pct": 1.0785917780404608,
+    "hi_pct": -4.5816612443679405,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "wifi_P_rt": {
+    "kind": "hardware",
+    "lo": 0.13,
+    "hi": 0.8,
+    "default": 0.3,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_P_idle": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.035,
+    "default": 0.015,
+    "lo_h": 36.585847962728344,
+    "hi_h": 34.63184997599078,
+    "lo_pct": 1.8808321269813355,
+    "hi_pct": -3.5604778862804998,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_P_tail": {
+    "kind": "hardware",
+    "lo": 0.066,
+    "hi": 0.178,
+    "default": 0.12,
+    "lo_h": 36.11834081516567,
+    "hi_h": 35.68977430241197,
+    "lo_pct": 0.5789621452463534,
+    "hi_pct": -0.6144696151870077,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_T_tail": {
+    "kind": "hardware",
+    "lo": 5.0,
+    "hi": 11.6,
+    "default": 10.0,
+    "lo_h": 35.955796398922416,
+    "hi_h": 35.9032137888715,
+    "lo_pct": 0.12632372611423026,
+    "hi_pct": -0.02010338616300622,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_P_act": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.3,
+    "default": 0.6,
+    "lo_h": 35.93736847349919,
+    "hi_h": 35.84774031525706,
+    "lo_pct": 0.07500737071897134,
+    "hi_pct": -0.17458070369218426,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 35.918979160927314,
+    "hi_h": 35.868270842585844,
+    "lo_pct": 0.023798540764441434,
+    "hi_pct": -0.1174092200520449,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_E_pro": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.5,
+    "default": 0.31,
+    "lo_h": 35.93620542848902,
+    "hi_h": 35.88714692468096,
+    "lo_pct": 0.07176863224396257,
+    "hi_pct": -0.06484488006169853,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 35.91768388784106,
+    "hi_h": 35.88779284035239,
+    "lo_pct": 0.020191585966133907,
+    "hi_pct": -0.06304619478437745,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_P_rt": {
+    "kind": "hardware",
+    "lo": 0.6,
+    "hi": 2.6,
+    "default": 1.2,
+    "lo_h": 36.8386032849655,
+    "hi_h": 33.99302863516219,
+    "lo_pct": 2.584681401713973,
+    "hi_pct": -5.33940753827038,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_P_idle": {
+    "kind": "hardware",
+    "lo": 0.015,
+    "hi": 0.06,
+    "default": 0.03,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_P_tail": {
+    "kind": "hardware",
+    "lo": 0.249,
+    "hi": 0.593,
+    "default": 0.255,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_T_tail": {
+    "kind": "hardware",
+    "lo": 10.2,
+    "hi": 21.4,
+    "default": 10.3,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_P_act": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.8,
+    "default": 0.9,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_E_pro": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_P_rt": {
+    "kind": "hardware",
+    "lo": 1.2,
+    "hi": 3.0,
+    "default": 1.4,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "k_ul": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 8.4,
+    "default": 5.0,
+    "lo_h": 35.91210947543272,
+    "hi_h": 35.9085350803434,
+    "lo_pct": 0.004668486013414963,
+    "hi_pct": -0.005285153613088234,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "gamma_sig": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 1.0,
+    "default": 0.26,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "gamma_R": {
+    "kind": "hardware",
+    "lo": 1.5,
+    "hi": 7.0,
+    "default": 2.5,
+    "lo_h": 35.910433001890674,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "brightness": {
+    "kind": "behaviour",
+    "label": "Brightness",
+    "lo": "\u22120.2",
+    "hi": "+0.2",
+    "lo_h": 38.81103212669573,
+    "hi_h": 32.19417459598202,
+    "lo_pct": 8.077315928360807,
+    "hi_pct": -10.348687262314527,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "dark_theme": {
+    "kind": "behaviour",
+    "label": "Dark theme",
+    "lo": "APL \u00d7 0.25",
+    "hi": "off",
+    "lo_h": 38.62659006611942,
+    "hi_h": 35.910433001890674,
+    "lo_pct": 7.563699006597169,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "refresh": {
+    "kind": "behaviour",
+    "label": "Refresh rate",
+    "lo": "60 Hz",
+    "hi": "120 Hz",
+    "lo_h": 37.36579171990281,
+    "hi_h": 33.10543175613325,
+    "lo_pct": 4.052746225408943,
+    "hi_pct": -7.811103936312158,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "bg_rate": {
+    "kind": "behaviour",
+    "label": "Background wake-ups",
+    "lo": "\u00d7 0.5",
+    "hi": "\u00d7 5",
+    "lo_h": 35.93599403132512,
+    "hi_h": 35.70756849212112,
+    "lo_pct": 0.07117995328294047,
+    "hi_pct": -0.5649180274681531,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "rsrp": {
+    "kind": "behaviour",
+    "label": "Cellular RSRP",
+    "lo": "\u2212115 dBm",
+    "hi": "\u221285 dBm",
+    "lo_h": 34.24562824036731,
+    "hi_h": 35.910433001890674,
+    "lo_pct": -4.635991889698776,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "rat": {
+    "kind": "behaviour",
+    "label": "Data RAT",
+    "lo": "Wi-Fi",
+    "hi": "5G NSA",
+    "lo_h": 37.315097674029275,
+    "hi_h": 29.707912376367144,
+    "lo_pct": 3.911578209220279,
+    "hi_pct": -17.272196704498022,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null,
+    "mid": "LTE",
+    "mid_h": 33.120321930072606,
+    "mid_pct": -7.7696391788736445
+   },
+   "tamb": {
+    "kind": "behaviour",
+    "label": "Ambient",
+    "lo": "\u221210 \u00b0C",
+    "hi": "35 \u00b0C",
+    "lo_h": 33.67139813523756,
+    "hi_h": 40.77570151412406,
+    "lo_pct": -6.235053936930335,
+    "hi_pct": 13.54834265567677,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "k_env": {
+    "kind": "behaviour",
+    "label": "Enclosure k_env",
+    "lo": "0.8",
+    "hi": "1.5",
+    "lo_h": 34.4636335299,
+    "hi_h": 38.85236996728981,
+    "lo_pct": -4.02891124123872,
+    "hi_pct": 8.192429663112799,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   }
+  },
+  "S13": {
+   "Q_n": {
+    "kind": "hardware",
+    "lo": 4.56,
+    "hi": 4.8,
+    "default": 4.7,
+    "lo_h": 40.043712736497945,
+    "hi_h": 42.107998454949914,
+    "lo_pct": -2.9193420036367934,
+    "hi_pct": 2.0852442883119826,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "dU": {
+    "kind": "hardware",
+    "lo": -0.02,
+    "hi": 0.02,
+    "default": 0.0,
+    "lo_h": 40.9543481554429,
+    "hi_h": 41.5353789097346,
+    "lo_pct": -0.7116274930541344,
+    "hi_pct": 0.6970043267258808,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "k_S": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.5,
+    "default": 1.0,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "R0_ref": {
+    "kind": "hardware",
+    "lo": 0.035,
+    "hi": 0.13,
+    "default": 0.06,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "A_R": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 0.8,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "Ea_R0": {
+    "kind": "hardware",
+    "lo": 12000.0,
+    "hi": 27000.0,
+    "default": 18000.0,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "R1_ref": {
+    "kind": "hardware",
+    "lo": 0.003,
+    "hi": 0.025,
+    "default": 0.01,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "tau1_ref": {
+    "kind": "hardware",
+    "lo": 10.0,
+    "hi": 60.0,
+    "default": 30.0,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "Ea_R1": {
+    "kind": "hardware",
+    "lo": 25000.0,
+    "hi": 55000.0,
+    "default": 30000.0,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "Ea_tau": {
+    "kind": "hardware",
+    "lo": 15000.0,
+    "hi": 27000.0,
+    "default": 21000.0,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "V_cut": {
+    "kind": "hardware",
+    "lo": 3.3,
+    "hi": 3.5,
+    "default": 3.4,
+    "lo_h": 41.58989862326846,
+    "hi_h": 40.71715783549885,
+    "lo_pct": 0.8291801241717689,
+    "hi_pct": -1.2866638909540873,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "d_sys": {
+    "kind": "hardware",
+    "lo": 0.0,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "C_th": {
+    "kind": "hardware",
+    "lo": 100.0,
+    "hi": 230.0,
+    "default": 150.0,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "R_th": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 4.0,
+    "default": 3.0,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "R_skin": {
+    "kind": "hardware",
+    "lo": 4.0,
+    "hi": 9.0,
+    "default": 5.5,
+    "lo_h": 38.995787280172834,
+    "hi_h": 45.204256934913964,
+    "lo_pct": -5.459897958091431,
+    "hi_pct": 9.5917113469411,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "T_lim_C": {
+    "kind": "hardware",
+    "lo": 41.0,
+    "hi": 48.0,
+    "default": 45.0,
+    "lo_h": 43.28879393505564,
+    "hi_h": 39.94837203010984,
+    "lo_pct": 4.947925951276599,
+    "hi_pct": -3.1504828713905364,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "w_thr": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 3.0,
+    "default": 1.0,
+    "lo_h": 41.08474991741072,
+    "hi_h": 41.660717420829364,
+    "lo_pct": -0.3954857571710324,
+    "hi_pct": 1.0008708839912783,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_fl": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.0,
+    "default": 0.5,
+    "lo_h": 41.30248774614251,
+    "hi_h": 41.09113750057113,
+    "lo_pct": 0.13239066185830595,
+    "hi_pct": -0.37999991098339736,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_susp": {
+    "kind": "hardware",
+    "lo": 0.01,
+    "hi": 0.03,
+    "default": 0.02,
+    "lo_h": 42.19535211781161,
+    "hi_h": 40.34203381903713,
+    "lo_pct": 2.297021630857854,
+    "hi_pct": -2.1961021987349283,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_awake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.25,
+    "default": 0.09,
+    "lo_h": 42.74905936629481,
+    "hi_h": 36.179091931152904,
+    "lo_pct": 3.639411243275359,
+    "hi_pct": -12.288601371721642,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "E_wake": {
+    "kind": "hardware",
+    "lo": 0.05,
+    "hi": 0.3,
+    "default": 0.1,
+    "lo_h": 41.27140390455785,
+    "hi_h": 41.15404883362777,
+    "lo_pct": 0.05703202031697163,
+    "hi_pct": -0.22747974761202494,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_d0": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.25,
+    "default": 0.12,
+    "lo_h": 42.175407646703846,
+    "hi_h": 38.501708626151526,
+    "lo_pct": 2.248668912135887,
+    "hi_pct": -6.65772597044324,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "p_c": {
+    "kind": "hardware",
+    "lo": 0.00123,
+    "hi": 0.00513,
+    "default": 0.002566735112936345,
+    "lo_h": 43.066736349889545,
+    "hi_h": 38.17180283328593,
+    "lo_pct": 4.4095768570538985,
+    "hi_pct": -7.457538706563794,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "gamma_b": {
+    "kind": "hardware",
+    "lo": 1.0,
+    "hi": 2.9,
+    "default": 2.0,
+    "lo_h": 41.150660946746186,
+    "hi_h": 41.151498269130585,
+    "lo_pct": -0.23569322896040967,
+    "hi_pct": -0.23366325215562478,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "k_RR": {
+    "kind": "hardware",
+    "lo": 0.001,
+    "hi": 0.0033,
+    "default": 0.0028,
+    "lo_h": 42.4785072855856,
+    "hi_h": 40.919281183844944,
+    "lo_pct": 2.9834936916144805,
+    "hi_pct": -0.7966427037832458,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_SoC_max": {
+    "kind": "hardware",
+    "lo": 3.0,
+    "hi": 7.0,
+    "default": 5.0,
+    "lo_h": 46.097064241113635,
+    "hi_h": 38.14646465024858,
+    "lo_pct": 11.756203968296507,
+    "hi_pct": -7.51896776280253,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "v0": {
+    "kind": "hardware",
+    "lo": 0.35,
+    "hi": 0.55,
+    "default": 0.446,
+    "lo_h": 43.14812259626744,
+    "hi_h": 39.13325574195697,
+    "lo_pct": 4.606886991661341,
+    "hi_pct": -5.126623947972286,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_G": {
+    "kind": "hardware",
+    "lo": 0.14,
+    "hi": 0.45,
+    "default": 0.27,
+    "lo_h": 41.62564804925415,
+    "hi_h": 40.73883427951233,
+    "lo_pct": 0.9158498548363703,
+    "hi_pct": -1.2341122341759658,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_cam": {
+    "kind": "hardware",
+    "lo": 0.9,
+    "hi": 2.0,
+    "default": 1.15,
+    "lo_h": 41.39817118597197,
+    "hi_h": 40.74592697128397,
+    "lo_pct": 0.3643624412765556,
+    "hi_pct": -1.2169169458997042,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_camf": {
+    "kind": "hardware",
+    "lo": 0.2,
+    "hi": 0.5,
+    "default": 0.3,
+    "lo_h": 41.393722121356696,
+    "hi_h": 40.96073480067065,
+    "lo_pct": 0.35357627558905147,
+    "hi_pct": -0.696143920759551,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_aud": {
+    "kind": "hardware",
+    "lo": 0.02,
+    "hi": 0.15,
+    "default": 0.05,
+    "lo_h": 41.93336590384298,
+    "hi_h": 39.12201934517625,
+    "lo_pct": 1.661870884337091,
+    "hi_pct": -5.1538650981663,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "P_BT": {
+    "kind": "hardware",
+    "lo": 0.03,
+    "hi": 0.05,
+    "default": 0.04,
+    "lo_h": 41.38361348169735,
+    "hi_h": 41.11309457070465,
+    "lo_pct": 0.329069222608358,
+    "hi_pct": -0.32676791348453804,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "m_b": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "wifi_P_idle": {
+    "kind": "hardware",
+    "lo": 0.002,
+    "hi": 0.01,
+    "default": 0.004,
+    "lo_h": 41.33593659703182,
+    "hi_h": 40.98593842216009,
+    "lo_pct": 0.21348295404719497,
+    "hi_pct": -0.6350410911046933,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "wifi_P_act": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.3,
+    "default": 0.13,
+    "lo_h": 41.330995866810454,
+    "hi_h": 40.78590358493619,
+    "lo_pct": 0.20150481046123936,
+    "hi_pct": -1.1199989607128091,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "wifi_e_b": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.06,
+    "default": 0.015,
+    "lo_h": 41.47864120421,
+    "hi_h": 40.24132755563185,
+    "lo_pct": 0.5594513025650727,
+    "hi_pct": -2.440251146163286,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "wifi_P_rt": {
+    "kind": "hardware",
+    "lo": 0.13,
+    "hi": 0.8,
+    "default": 0.3,
+    "lo_h": 41.37702726287554,
+    "hi_h": 40.874783987202996,
+    "lo_pct": 0.3131018106668826,
+    "hi_pct": -0.9045202414486475,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_P_idle": {
+    "kind": "hardware",
+    "lo": 0.005,
+    "hi": 0.035,
+    "default": 0.015,
+    "lo_h": 42.04080878641327,
+    "hi_h": 39.748184103616666,
+    "lo_pct": 1.9223518693443076,
+    "hi_pct": -3.635811885579854,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_P_tail": {
+    "kind": "hardware",
+    "lo": 0.066,
+    "hi": 0.178,
+    "default": 0.12,
+    "lo_h": 41.98670359719374,
+    "hi_h": 40.48438255752086,
+    "lo_pct": 1.7911810309903853,
+    "hi_pct": -1.8509966065564765,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_T_tail": {
+    "kind": "hardware",
+    "lo": 5.0,
+    "hi": 11.6,
+    "default": 10.0,
+    "lo_h": 41.486299211729104,
+    "hi_h": 41.1838286508814,
+    "lo_pct": 0.578017123716279,
+    "hi_pct": -0.1552825397003077,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_P_act": {
+    "kind": "hardware",
+    "lo": 0.3,
+    "hi": 1.3,
+    "default": 0.6,
+    "lo_h": 41.67201668600952,
+    "hi_h": 40.30325282719832,
+    "lo_pct": 1.0282644502618066,
+    "hi_pct": -2.2901215577848077,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 41.35641927921935,
+    "hi_h": 40.794743893596994,
+    "lo_pct": 0.2631404939806403,
+    "hi_pct": -1.098566807622292,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_E_pro": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 0.5,
+    "default": 0.31,
+    "lo_h": 41.35533097438729,
+    "hi_h": 41.15117004149104,
+    "lo_pct": 0.26050204359788776,
+    "hi_pct": -0.23445899643211865,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 41.59949368614255,
+    "hi_h": 40.1896922619496,
+    "lo_pct": 0.8524420785130715,
+    "hi_pct": -2.565434051142501,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "lte_P_rt": {
+    "kind": "hardware",
+    "lo": 0.6,
+    "hi": 2.6,
+    "default": 1.2,
+    "lo_h": 41.673187454943616,
+    "hi_h": 40.34384573439774,
+    "lo_pct": 1.0311028238969122,
+    "hi_pct": -2.191709450824675,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_P_idle": {
+    "kind": "hardware",
+    "lo": 0.015,
+    "hi": 0.06,
+    "default": 0.03,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_P_tail": {
+    "kind": "hardware",
+    "lo": 0.249,
+    "hi": 0.593,
+    "default": 0.255,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_T_tail": {
+    "kind": "hardware",
+    "lo": 10.2,
+    "hi": 21.4,
+    "default": 10.3,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_P_act": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 1.8,
+    "default": 0.9,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_T_act": {
+    "kind": "hardware",
+    "lo": 0.08,
+    "hi": 0.2,
+    "default": 0.1,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_E_pro": {
+    "kind": "hardware",
+    "lo": 0.5,
+    "hi": 2.0,
+    "default": 1.0,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_e_b": {
+    "kind": "hardware",
+    "lo": 0.014,
+    "hi": 0.08,
+    "default": 0.03,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "nr_P_rt": {
+    "kind": "hardware",
+    "lo": 1.2,
+    "hi": 3.0,
+    "default": 1.4,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "k_ul": {
+    "kind": "hardware",
+    "lo": 2.0,
+    "hi": 8.4,
+    "default": 5.0,
+    "lo_h": 41.2504554546843,
+    "hi_h": 41.244962929466034,
+    "lo_pct": 0.006245288549355799,
+    "hi_pct": -0.0070706086492733355,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "gamma_sig": {
+    "kind": "hardware",
+    "lo": 0.1,
+    "hi": 1.0,
+    "default": 0.26,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "gamma_R": {
+    "kind": "hardware",
+    "lo": 1.5,
+    "hi": 7.0,
+    "default": 2.5,
+    "lo_h": 41.24787940559493,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 0.0,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "brightness": {
+    "kind": "behaviour",
+    "label": "Brightness",
+    "lo": "\u22120.2",
+    "hi": "+0.2",
+    "lo_h": 43.52175362495688,
+    "hi_h": 38.156875452629755,
+    "lo_pct": 5.512705749070634,
+    "hi_pct": -7.493728156473189,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "dark_theme": {
+    "kind": "behaviour",
+    "label": "Dark theme",
+    "lo": "APL \u00d7 0.25",
+    "hi": "off",
+    "lo_h": 43.131514886475685,
+    "hi_h": 41.24787940559493,
+    "lo_pct": 4.566623807150805,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "refresh": {
+    "kind": "behaviour",
+    "label": "Refresh rate",
+    "lo": "60 Hz",
+    "hi": "120 Hz",
+    "lo_h": 43.19655872549638,
+    "hi_h": 39.38774448928013,
+    "lo_pct": 4.724313947730185,
+    "hi_pct": -4.5096498125973605,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "bg_rate": {
+    "kind": "behaviour",
+    "label": "Background wake-ups",
+    "lo": "\u00d7 0.5",
+    "hi": "\u00d7 5",
+    "lo_h": 41.42530262953017,
+    "hi_h": 40.09986457021029,
+    "lo_pct": 0.43013901924660036,
+    "hi_pct": -2.7832093477971998,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "rsrp": {
+    "kind": "behaviour",
+    "label": "Cellular RSRP",
+    "lo": "\u2212115 dBm",
+    "hi": "\u221285 dBm",
+    "lo_h": 38.47656259278159,
+    "hi_h": 41.24787940559493,
+    "lo_pct": -6.718689185358295,
+    "hi_pct": 0.0,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "rat": {
+    "kind": "behaviour",
+    "label": "Data RAT",
+    "lo": "Wi-Fi",
+    "hi": "5G NSA",
+    "lo_h": 43.88184765612628,
+    "hi_h": 34.24242432064194,
+    "lo_pct": 6.38570585564231,
+    "hi_pct": -16.983794526907868,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null,
+    "mid": "LTE",
+    "mid_h": 38.77712645939344,
+    "mid_pct": -5.990012048634796
+   },
+   "tamb": {
+    "kind": "behaviour",
+    "label": "Ambient",
+    "lo": "\u221210 \u00b0C",
+    "hi": "35 \u00b0C",
+    "lo_h": 38.36664702031915,
+    "hi_h": 46.63851658172752,
+    "lo_pct": -6.985164878282113,
+    "hi_pct": 13.06888318578967,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   },
+   "k_env": {
+    "kind": "behaviour",
+    "label": "Enclosure k_env",
+    "lo": "0.8",
+    "hi": "1.5",
+    "lo_h": 39.55010108500155,
+    "hi_h": 44.55288410720759,
+    "lo_pct": -4.116037830451691,
+    "hi_pct": 8.012544521656938,
+    "lo_event": "",
+    "hi_event": "",
+    "lo_s_off_pct": null,
+    "hi_s_off_pct": null
+   }
+  }
+ },
+ "oat_ranking": {
+  "S4": [
+   {
+    "factor": "rat",
+    "kind": "behaviour",
+    "lo_pct": 0.0,
+    "hi_pct": -23.53127266358117,
+    "swing_pct": 23.53127266358117
+   },
+   {
+    "factor": "P_SoC_max",
+    "kind": "hardware",
+    "lo_pct": 19.37181302924045,
+    "hi_pct": -13.9922474980702,
+    "swing_pct": 33.36406052731065
+   },
+   {
+    "factor": "refresh",
+    "kind": "behaviour",
+    "lo_pct": 18.991734328850463,
+    "hi_pct": 0.0,
+    "swing_pct": 18.991734328850463
+   },
+   {
+    "factor": "P_awake",
+    "kind": "hardware",
+    "lo_pct": 3.9541310306221877,
+    "hi_pct": -13.222354392147896,
+    "swing_pct": 17.176485422770085
+   },
+   {
+    "factor": "brightness",
+    "kind": "behaviour",
+    "lo_pct": 9.844658615096336,
+    "hi_pct": -13.016743067444114,
+    "swing_pct": 22.86140168254045
+   },
+   {
+    "factor": "k_RR",
+    "kind": "hardware",
+    "lo_pct": 11.43913713447593,
+    "hi_pct": -2.775049918545769,
+    "swing_pct": 14.214187053021698
+   },
+   {
+    "factor": "P_d0",
+    "kind": "hardware",
+    "lo_pct": 3.9541310306221877,
+    "hi_pct": -11.014158464931667,
+    "swing_pct": 14.968289495553854
+   },
+   {
+    "factor": "p_c",
+    "kind": "hardware",
+    "lo_pct": 6.637866399965264,
+    "hi_pct": -10.676652397255248,
+    "swing_pct": 17.31451879722051
+   },
+   {
+    "factor": "v0",
+    "kind": "hardware",
+    "lo_pct": 10.35638316281342,
+    "hi_pct": -10.374371456959963,
+    "swing_pct": 20.730754619773386
+   },
+   {
+    "factor": "dark_theme",
+    "kind": "behaviour",
+    "lo_pct": 9.844658615096336,
+    "hi_pct": 0.0,
+    "swing_pct": 9.844658615096336
+   },
+   {
+    "factor": "wifi_e_b",
+    "kind": "hardware",
+    "lo_pct": 1.9390267202700207,
+    "hi_pct": -7.890562886420149,
+    "swing_pct": 9.82958960669017
+   },
+   {
+    "factor": "wifi_P_act",
+    "kind": "hardware",
+    "lo_pct": 1.0997236123601706,
+    "hi_pct": -5.8091347923489245,
+    "swing_pct": 6.908858404709095
+   },
+   {
+    "factor": "Q_n",
+    "kind": "hardware",
+    "lo_pct": -2.9787269884702927,
+    "hi_pct": 2.1276632860209865,
+    "swing_pct": 5.106390274491279
+   },
+   {
+    "factor": "gamma_b",
+    "kind": "hardware",
+    "lo_pct": -2.903387967794724,
+    "hi_pct": 2.223757999361431,
+    "swing_pct": 5.127145967156155
+   },
+   {
+    "factor": "tamb",
+    "kind": "behaviour",
+    "lo_pct": -2.7461092372995877,
+    "hi_pct": 0.0381884051714243,
+    "swing_pct": 2.784297642471012
+   }
+  ],
+  "S7": [
+   {
+    "factor": "tamb",
+    "kind": "behaviour",
+    "lo_pct": -29.364800204720055,
+    "hi_pct": 81.08655913898426,
+    "swing_pct": 110.45135934370431
+   },
+   {
+    "factor": "R_skin",
+    "kind": "hardware",
+    "lo_pct": -18.239468161962602,
+    "hi_pct": 50.21033294353903,
+    "swing_pct": 68.44980110550163
+   },
+   {
+    "factor": "k_env",
+    "kind": "behaviour",
+    "lo_pct": -14.244552334129946,
+    "hi_pct": 38.90923452102064,
+    "swing_pct": 53.153786855150585
+   },
+   {
+    "factor": "T_lim_C",
+    "kind": "hardware",
+    "lo_pct": 22.347131307552992,
+    "hi_pct": -11.284165958215485,
+    "swing_pct": 33.63129726576848
+   },
+   {
+    "factor": "P_SoC_max",
+    "kind": "hardware",
+    "lo_pct": 18.452696893238873,
+    "hi_pct": -4.688790457761094,
+    "swing_pct": 23.141487350999967
+   },
+   {
+    "factor": "rat",
+    "kind": "behaviour",
+    "lo_pct": 0.0,
+    "hi_pct": -4.859906365888589,
+    "swing_pct": 4.859906365888589
+   },
+   {
+    "factor": "w_thr",
+    "kind": "hardware",
+    "lo_pct": -1.7825596093290041,
+    "hi_pct": 4.8008999035261235,
+    "swing_pct": 6.583459512855128
+   },
+   {
+    "factor": "R0_ref",
+    "kind": "hardware",
+    "lo_pct": 0.4994087201003916,
+    "hi_pct": -4.577640890826762,
+    "swing_pct": 5.077049610927154
+   },
+   {
+    "factor": "Q_n",
+    "kind": "hardware",
+    "lo_pct": -3.0057894575887145,
+    "hi_pct": 2.1469860880335645,
+    "swing_pct": 5.152775545622279
+   },
+   {
+    "factor": "V_cut",
+    "kind": "hardware",
+    "lo_pct": 1.176193113556434,
+    "hi_pct": -2.1186221709486253,
+    "swing_pct": 3.2948152845050593
+   },
+   {
+    "factor": "d_sys",
+    "kind": "hardware",
+    "lo_pct": -1.7317188316374188,
+    "hi_pct": 0.0,
+    "swing_pct": 1.7317188316374188
+   },
+   {
+    "factor": "m_b",
+    "kind": "hardware",
+    "lo_pct": 0.0,
+    "hi_pct": -1.542549921731251,
+    "swing_pct": 1.542549921731251
+   },
+   {
+    "factor": "refresh",
+    "kind": "behaviour",
+    "lo_pct": 1.4339987305233226,
+    "hi_pct": 0.0,
+    "swing_pct": 1.4339987305233226
+   },
+   {
+    "factor": "P_fl",
+    "kind": "hardware",
+    "lo_pct": 0.4777215777184596,
+    "hi_pct": -1.3929962189194622,
+    "swing_pct": 1.8707177966379218
+   },
+   {
+    "factor": "wifi_P_act",
+    "kind": "hardware",
+    "lo_pct": 0.2442184830108829,
+    "hi_pct": -1.3199644117431353,
+    "swing_pct": 1.5641828947540182
+   }
+  ],
+  "S10a": [
+   {
+    "factor": "R0_ref",
+    "kind": "hardware",
+    "lo_pct": 7.126641608892825,
+    "hi_pct": -52.37138769895092,
+    "swing_pct": 59.498029307843744
+   },
+   {
+    "factor": "m_b",
+    "kind": "hardware",
+    "lo_pct": 5.987409240883634,
+    "hi_pct": -32.65639290243196,
+    "swing_pct": 38.6438021433156
+   },
+   {
+    "factor": "gamma_R",
+    "kind": "hardware",
+    "lo_pct": 3.3430178374648234,
+    "hi_pct": -28.16505576582,
+    "swing_pct": 31.508073603284824
+   },
+   {
+    "factor": "rat",
+    "kind": "behaviour",
+    "lo_pct": 0.0,
+    "hi_pct": -25.038615703079614,
+    "swing_pct": 25.038615703079614
+   },
+   {
+    "factor": "Ea_R0",
+    "kind": "hardware",
+    "lo_pct": 5.122256769167022,
+    "hi_pct": -22.589955712541098,
+    "swing_pct": 27.71221248170812
+   },
+   {
+    "factor": "P_SoC_max",
+    "kind": "hardware",
+    "lo_pct": 20.57293779453595,
+    "hi_pct": -14.881677261677495,
+    "swing_pct": 35.45461505621344
+   },
+   {
+    "factor": "refresh",
+    "kind": "behaviour",
+    "lo_pct": 20.169575676305506,
+    "hi_pct": 0.0,
+    "swing_pct": 20.169575676305506
+   },
+   {
+    "factor": "P_awake",
+    "kind": "hardware",
+    "lo_pct": 4.201901972383504,
+    "hi_pct": -14.062201177945234,
+    "swing_pct": 18.264103150328737
+   },
+   {
+    "factor": "brightness",
+    "kind": "behaviour",
+    "lo_pct": 10.458931468781675,
+    "hi_pct": -13.843389182801847,
+    "swing_pct": 24.30232065158352
+   },
+   {
+    "factor": "k_RR",
+    "kind": "hardware",
+    "lo_pct": 12.152115108575412,
+    "hi_pct": -2.9498321817440165,
+    "swing_pct": 15.101947290319428
+   },
+   {
+    "factor": "P_d0",
+    "kind": "hardware",
+    "lo_pct": 4.201901972383504,
+    "hi_pct": -11.712473343279694,
+    "swing_pct": 15.914375315663197
+   },
+   {
+    "factor": "p_c",
+    "kind": "hardware",
+    "lo_pct": 7.052987997000493,
+    "hi_pct": -11.353382859652184,
+    "swing_pct": 18.40637085665268
+   },
+   {
+    "factor": "v0",
+    "kind": "hardware",
+    "lo_pct": 11.002357806478024,
+    "hi_pct": -11.031826307712356,
+    "swing_pct": 22.03418411419038
+   },
+   {
+    "factor": "V_cut",
+    "kind": "hardware",
+    "lo_pct": 4.4353614850822565,
+    "hi_pct": -10.492186846009787,
+    "swing_pct": 14.927548331092044
+   },
+   {
+    "factor": "d_sys",
+    "kind": "hardware",
+    "lo_pct": -10.492186846009787,
+    "hi_pct": 4.4353614850822565,
+    "swing_pct": 14.927548331092044
+   }
+  ],
+  "S12": [
+   {
+    "factor": "rat",
+    "kind": "behaviour",
+    "lo_pct": 3.911578209220279,
+    "hi_pct": -17.272196704498022,
+    "swing_pct": 21.183774913718302
+   },
+   {
+    "factor": "P_SoC_max",
+    "kind": "hardware",
+    "lo_pct": 14.048519712624174,
+    "hi_pct": -8.435942038296751,
+    "swing_pct": 22.484461750920925
+   },
+   {
+    "factor": "tamb",
+    "kind": "behaviour",
+    "lo_pct": -6.235053936930335,
+    "hi_pct": 13.54834265567677,
+    "swing_pct": 19.783396592607104
+   },
+   {
+    "factor": "p_c",
+    "kind": "hardware",
+    "lo_pct": 6.5429521634730925,
+    "hi_pct": -10.523027507321537,
+    "swing_pct": 17.06597967079463
+   },
+   {
+    "factor": "P_awake",
+    "kind": "hardware",
+    "lo_pct": 3.032000420476133,
+    "hi_pct": -10.519435250444387,
+    "swing_pct": 13.551435670920519
+   },
+   {
+    "factor": "brightness",
+    "kind": "behaviour",
+    "lo_pct": 8.077315928360807,
+    "hi_pct": -10.348687262314527,
+    "swing_pct": 18.426003190675335
+   },
+   {
+    "factor": "R_skin",
+    "kind": "hardware",
+    "lo_pct": -5.2172969624813215,
+    "hi_pct": 9.792239863580798,
+    "swing_pct": 15.00953682606212
+   },
+   {
+    "factor": "P_d0",
+    "kind": "hardware",
+    "lo_pct": 3.032000420476133,
+    "hi_pct": -8.720456480918193,
+    "swing_pct": 11.752456901394325
+   },
+   {
+    "factor": "k_env",
+    "kind": "behaviour",
+    "lo_pct": -4.02891124123872,
+    "hi_pct": 8.192429663112799,
+    "swing_pct": 12.221340904351518
+   },
+   {
+    "factor": "refresh",
+    "kind": "behaviour",
+    "lo_pct": 4.052746225408943,
+    "hi_pct": -7.811103936312158,
+    "swing_pct": 11.8638501617211
+   },
+   {
+    "factor": "dark_theme",
+    "kind": "behaviour",
+    "lo_pct": 7.563699006597169,
+    "hi_pct": 0.0,
+    "swing_pct": 7.563699006597169
+   },
+   {
+    "factor": "v0",
+    "kind": "hardware",
+    "lo_pct": 5.370222702351701,
+    "hi_pct": -5.9030399846965675,
+    "swing_pct": 11.27326268704827
+   },
+   {
+    "factor": "lte_P_rt",
+    "kind": "hardware",
+    "lo_pct": 2.584681401713973,
+    "hi_pct": -5.33940753827038,
+    "swing_pct": 7.924088939984353
+   },
+   {
+    "factor": "T_lim_C",
+    "kind": "hardware",
+    "lo_pct": 5.1000499497992235,
+    "hi_pct": -3.166150602091289,
+    "swing_pct": 8.266200551890513
+   },
+   {
+    "factor": "rsrp",
+    "kind": "behaviour",
+    "lo_pct": -4.635991889698776,
+    "hi_pct": 0.0,
+    "swing_pct": 4.635991889698776
+   }
+  ],
+  "S13": [
+   {
+    "factor": "rat",
+    "kind": "behaviour",
+    "lo_pct": 6.38570585564231,
+    "hi_pct": -16.983794526907868,
+    "swing_pct": 23.36950038255018
+   },
+   {
+    "factor": "tamb",
+    "kind": "behaviour",
+    "lo_pct": -6.985164878282113,
+    "hi_pct": 13.06888318578967,
+    "swing_pct": 20.054048064071782
+   },
+   {
+    "factor": "P_awake",
+    "kind": "hardware",
+    "lo_pct": 3.639411243275359,
+    "hi_pct": -12.288601371721642,
+    "swing_pct": 15.928012614997002
+   },
+   {
+    "factor": "P_SoC_max",
+    "kind": "hardware",
+    "lo_pct": 11.756203968296507,
+    "hi_pct": -7.51896776280253,
+    "swing_pct": 19.275171731099036
+   },
+   {
+    "factor": "R_skin",
+    "kind": "hardware",
+    "lo_pct": -5.459897958091431,
+    "hi_pct": 9.5917113469411,
+    "swing_pct": 15.051609305032532
+   },
+   {
+    "factor": "k_env",
+    "kind": "behaviour",
+    "lo_pct": -4.116037830451691,
+    "hi_pct": 8.012544521656938,
+    "swing_pct": 12.12858235210863
+   },
+   {
+    "factor": "brightness",
+    "kind": "behaviour",
+    "lo_pct": 5.512705749070634,
+    "hi_pct": -7.493728156473189,
+    "swing_pct": 13.006433905543823
+   },
+   {
+    "factor": "p_c",
+    "kind": "hardware",
+    "lo_pct": 4.4095768570538985,
+    "hi_pct": -7.457538706563794,
+    "swing_pct": 11.867115563617691
+   },
+   {
+    "factor": "rsrp",
+    "kind": "behaviour",
+    "lo_pct": -6.718689185358295,
+    "hi_pct": 0.0,
+    "swing_pct": 6.718689185358295
+   },
+   {
+    "factor": "P_d0",
+    "kind": "hardware",
+    "lo_pct": 2.248668912135887,
+    "hi_pct": -6.65772597044324,
+    "swing_pct": 8.906394882579127
+   },
+   {
+    "factor": "P_aud",
+    "kind": "hardware",
+    "lo_pct": 1.661870884337091,
+    "hi_pct": -5.1538650981663,
+    "swing_pct": 6.815735982503391
+   },
+   {
+    "factor": "v0",
+    "kind": "hardware",
+    "lo_pct": 4.606886991661341,
+    "hi_pct": -5.126623947972286,
+    "swing_pct": 9.733510939633627
+   },
+   {
+    "factor": "T_lim_C",
+    "kind": "hardware",
+    "lo_pct": 4.947925951276599,
+    "hi_pct": -3.1504828713905364,
+    "swing_pct": 8.098408822667135
+   },
+   {
+    "factor": "refresh",
+    "kind": "behaviour",
+    "lo_pct": 4.724313947730185,
+    "hi_pct": -4.5096498125973605,
+    "swing_pct": 9.233963760327546
+   },
+   {
+    "factor": "dark_theme",
+    "kind": "behaviour",
+    "lo_pct": 4.566623807150805,
+    "hi_pct": 0.0,
+    "swing_pct": 4.566623807150805
+   }
+  ]
+ },
+ "behaviour_factors": {
+  "brightness": {
+   "label": "Brightness",
+   "lo": "\u22120.2",
+   "hi": "+0.2"
+  },
+  "dark_theme": {
+   "label": "Dark theme",
+   "lo": "APL \u00d7 0.25",
+   "hi": "off"
+  },
+  "refresh": {
+   "label": "Refresh rate",
+   "lo": "60 Hz",
+   "hi": "120 Hz"
+  },
+  "bg_rate": {
+   "label": "Background wake-ups",
+   "lo": "\u00d7 0.5",
+   "hi": "\u00d7 5"
+  },
+  "rsrp": {
+   "label": "Cellular RSRP",
+   "lo": "\u2212115 dBm",
+   "hi": "\u221285 dBm"
+  },
+  "rat": {
+   "label": "Data RAT",
+   "lo": "Wi-Fi",
+   "hi": "5G NSA"
+  },
+  "tamb": {
+   "label": "Ambient",
+   "lo": "\u221210 \u00b0C",
+   "hi": "35 \u00b0C"
+  },
+  "k_env": {
+   "label": "Enclosure k_env",
+   "lo": "0.8",
+   "hi": "1.5"
+  }
+ },
+ "notes": [
+  "elasticity step: central +-5 % (PROTO formula); voltages +-10 mV reported as % TTE per +10 mV; T_lim +-1 K reported as % TTE per +1 K",
+  "S12/S13 metrics are smooth L0 quantities with quasi-steady (F5) powers: resistance and cut-off parameters have no effect on them by construction",
+  "RAT factor: every state with a data path is forced to Wi-Fi (lo), LTE (mid) or 5G NSA (hi); navigation (NV) and tracking (TRK) stay cellular"
+ ],
+ "runtime_s": 33.01072549819946
+}

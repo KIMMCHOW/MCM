@@ -1,5 +1,8 @@
 """Generate paper/refs.bib from FINAL_SPEC.md §17 (single source of truth).
 
+NOTE: after the review round refs.bib was edited by hand (internal notes removed, secondary sources
+flagged, DOIs checked against doi.org).  Do not re-run this script unless those edits are ported to §17.
+
 Each numbered reference line ``N. **[KEY]** text`` (bold optional) becomes
 ``@misc{KEY, note = {text}}`` so that bibtex (unsrtnat) prints exactly the
 recorded bibliographic text, in order of first citation, and only for cited
