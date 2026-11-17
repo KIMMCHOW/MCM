@@ -286,8 +286,9 @@ def make_figure(oat: dict, base: dict) -> None:
         panel_label(ax, tag)
     hand = [Patch(facecolor=BLUE, label="factor at its low end"), Patch(facecolor=RED, label="factor at its high end")]
     fig.legend(handles=hand, loc="lower left", ncol=2, bbox_to_anchor=(0.0, -0.02), fontsize=7.2)
-    fig.text(1.0, 0.0, "italic: user behaviour / environment (low / high value shown)\n"
-             "upright: hardware parameter at its §4 range ends", ha="right", va="bottom", fontsize=6.6, color=INK2)
+    fig.text(1.0, 0.0, "italic: user behavior / environment (low / high value shown)\n"
+             "upright: hardware parameter at the ends of its prior range", ha="right", va="bottom", fontsize=6.6,
+             color=INK2)
     fig.subplots_adjust(wspace=1.05, bottom=0.22)
     save(fig, "fig_tornado")
 

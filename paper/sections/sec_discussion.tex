@@ -5,29 +5,32 @@
   \item \textbf{Continuous-time physics, one mechanism per level.} L0--L3 are ODEs driven by a piecewise-constant
   usage input; switching one mechanism off (\cref{sec:structural}) measures what it is worth for TTE.
   \item \textbf{Closed forms} (F1--F8) explain and check the simulations: TTE at constant power within
-  0.0009\,\% of isothermal L2, stranded charge within 0.17 points, mean and variance under random usage.
-  \item \textbf{Traceable and falsifiable.} Every parameter has a cited source or an open-data fit; one constant
-  is calibrated. The validation was pre-registered, and its failures are reported (31 of 59 criteria pass).
-  \item \textbf{Three sources of uncertainty:} a 2048-member parameter sample, Sobol' indices of 24 factor groups,
-  structural variants of the main assumptions, and usage randomness.
+  0.0009\,\% of isothermal L2, stranded charge within 0.17 points wherever a brown-out ends the run, approximate
+  mean and variance under random usage.
+  \item \textbf{Traceable and falsifiable.} Every parameter has a cited source, an open-data fit or a labeled
+  assumption; one discharge constant is calibrated to phone data and the aging rates to the manufacturers'
+  1000-cycle rating. The validation was pre-registered, and its failures are reported (31 of 59 criteria pass).
+  \item \textbf{Three sources of uncertainty} (parameters: a 2048-member sample; model structure: variants of the
+  main assumptions; usage randomness), plus Sobol' indices of 24 factor groups.
 \end{itemize}
 
 \paragraph{Limitations.}
 \begin{itemize}
   \item \textbf{Cold capacity.} No equivalent circuit captures the transport-limited collapse at high C-rates
-  (DFN: $+45$ to $+360\,\%$). At $-20\,^\circ$C L2 keeps 0.98 and 0.84 of the HG2 capacity (0.5C, 2C) where 0.73
+  (DFN: $+45$ to $+364\,\%$). At $-20\,^\circ$C L2 keeps 0.98 and 0.84 of the HG2 capacity (0.5C, 2C) where 0.73
   and 0.49 remain (activation energy 20.5 instead of 26.4\,kJ/mol). The brown-out size hinges on a pack resistance
   known within a factor of two (V7: 0.25 or 0.13\,$\Omega$). Cold TTEs are indicative.
   \item \textbf{One lumped thermal node} (A3): hot spots are quasi-static, and gaming time rests on two lumped
   parameters (enclosure factor and skin resistance, $S_{Ti}=0.40$ and 0.38).
-  \item \textbf{Device floors and GNSS.} Android screen-on floors are 1.6--2.9 times ours (idle and video fail by
-  $+53$ to $+183\,\%$); a stationary iPhone's GPS draws about 0.03\,W, not our 0.27\,W prior.
+  \item \textbf{Device floors and GNSS.} Android idle and video runtimes imply 1.5--2.8 times our power (TTE
+  errors $+53$ to $+183\,\%$); a stationary iPhone's GPS draws about 0.03\,W, not our 0.27\,W prior.
   \item \textbf{Transferred laws.} $R\cdot Q$ scaling fails for a power cell (step resistance 21, not
   84\,m$\Omega$). The aging laws come from NMC and LFP cells \cite{SCH14,SCM18}, calibrated only to SOH 0.80 after
-  1000 cycles; the fast-charge penalty rests on the LFP end of the plating prior, and the NASA test checks only
-  the capacity channel.
+  1000 cycles; the fast-charge penalty rests on the LFP end of the plating prior, and the NASA test is only a
+  consistency check of the capacity channel.
   \item \textbf{Assumed usage, optimistic defaults.} The CTMC rates are assumed, not fitted to logs, and carry
-  44\,\% of the typical day's TTE variance. At 25\,$^\circ$C the median TTEs are 3--38\,\% shorter than the nominal ones.
+  44\,\% of the typical day's TTE variance. At 25\,$^\circ$C the median TTEs are 3--38\,\% shorter than the
+  nominal ones (gaming's is 16\,\% longer).
   \item \textbf{No measured 4.45\,V OCV.} We stretch a 4.2\,V curve; other stretches move TTE by $\pm0.5\,\%$ at
   25\,$^\circ$C but by $-4$ to $+5\,\%$ on the cold, aged hike.
 \end{itemize}
@@ -39,5 +42,4 @@ cold: the kinetic-battery variant X9 \cite{MM93} closes most of the 2C HG2 gap (
 DFN test at 0\,$^\circ$C, 0.5C. (iii)~Two thermal nodes (processor hot spot, cell) would time throttling and cell
 heating separately. (iv)~Learning the usage chain on the device: session rate and gaming probability carry most of
 the usage-model variance (first-order indices 0.28, 0.45). (v)~Charging as optimal control over limit, rate and
-timing, with plating as a constraint; a plain 80\,\% limit gains 1.9 points of SOH in two years
-(\cref{sec:aging}).
+timing, with plating as a constraint.

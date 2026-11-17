@@ -372,29 +372,29 @@ def fig_trajectories(trajs):
             ("S7", key("S7", 25, 1.0, 1.0), "S7 3D gaming"),
             ("S9", key("S9", -20, 0.8, 1.0), "S9 cold hike, −20 °C")]
     ref9 = key("S9", 25, 1.0, 1.0)
-    fig, axs = plt.subplots(3, 4, figsize=(W1, 3.6), sharex="col", gridspec_kw=dict(hspace=0.14, wspace=0.30))
+    fig, axs = plt.subplots(3, 4, figsize=(W1, 3.75), sharex="col", gridspec_kw=dict(hspace=0.14, wspace=0.30))
     for j, (sid, k, title) in enumerate(cols):
         tr, sc = trajs[k]
         t = tr["t_h"]
         a0, a1, a2 = axs[:, j]
-        a0.set_title(title, fontsize=8, loc="left", color=INK, pad=3)
+        a0.set_title(title, fontsize=8.5, loc="left", color=INK, pad=3)
         panel_label(a0, f"({'abcd'[j]})")
         if sid == "S9":
             tr2 = trajs[ref9][0]
             a0.plot(tr2["t_h"], 100 * tr2["s"], color=MUTED, lw=1.2)
             a0.plot(t, 100 * tr["s"], color=BLUE, lw=1.6)
-            a0.text(14.5, 52, "25 °C, SOH 1.0", fontsize=6.2, color=INK2, ha="left", va="bottom")
-            a0.text(t[-1] + 0.5, 9, "−20 °C,\nSOH 0.8", fontsize=6.2, color=INK2, ha="right", va="center",
-                    linespacing=1.0)
+            a0.text(14.5, 52, "25 °C, SOH 1.0", fontsize=7.0, color=INK2, ha="left", va="bottom")
+            a0.text(t[-1] - 0.8, 100 * tr["s"][-1] - 5, "−20 °C,\nSOH 0.8", fontsize=7.0, color=INK2,
+                    ha="right", va="top", linespacing=1.0)
             xmax = tr2["t_h"][-1] * 1.03
         else:
             a0.plot(t, 100 * tr["s"], color=BLUE, lw=1.6)
             xmax = t[-1] * 1.03
         s_off = 100 * tr["s"][-1]
         a0.plot([t[-1]], [s_off], "o", color=INK, ms=3)
-        a0.annotate(f"$s_{{off}}$ = {s_off:.1f} %" if s_off >= 1 else f"$s_{{off}}$ = {s_off:.2f} %",
-                    (t[-1], s_off), xytext=(-2, 6) if s_off < 30 else (-4, -9), textcoords="offset points",
-                    ha="right", fontsize=6.3, color=INK2)
+        # stranded-charge label in the empty lower-left corner (the SOC curve runs top-left to bottom-right)
+        a0.text(0.04, 0.05, (f"$s_{{off}}$ = {s_off:.1f} %" if s_off >= 1 else f"$s_{{off}}$ = {s_off:.2f} %"),
+                transform=a0.transAxes, ha="left", va="bottom", fontsize=7.4, color=INK)
         a0.set_ylim(-4, 106)
         # terminal voltage (S9: per-cycle band between the photo-burst minimum and the tracking maximum)
         if sid == "S9":
@@ -403,32 +403,32 @@ def fig_trajectories(trajs):
             a1.plot(tc, vmax, color=BLUE, lw=0.9)
             a1.plot(tc, vmin, color=BLUE, lw=0.9)
             i, i2 = len(tc) // 2, len(tc) // 8
-            a1.annotate("tracking", (tc[i], vmax[i]), xytext=(4, 3), textcoords="offset points", fontsize=6.2,
+            a1.annotate("tracking", (tc[i], vmax[i]), xytext=(4, 3), textcoords="offset points", fontsize=7.0,
                         color=INK2)
             a1.annotate("30 s photo bursts", (tc[i2], vmin[i2]), xytext=(0.6, 3.56), textcoords="data",
-                        fontsize=6.2, color=INK2, va="center",
+                        fontsize=7.0, color=INK2, va="center",
                         arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.6, shrinkA=1, shrinkB=1))
         else:
             a1.plot(t, tr["V"], color=BLUE, lw=1.4)
         a1.axhline(float(sc.p.V_cut), color=MUTED, lw=0.8, ls="--")
         a1.set_ylim(3.2, 4.5)
         if j == 0:
-            a1.text(xmax * 0.03, float(sc.p.V_cut) - 0.03, "$V_{cut}$", fontsize=6.3, color=INK2, va="top")
+            a1.text(xmax * 0.03, float(sc.p.V_cut) - 0.03, "$V_{cut}$", fontsize=7.0, color=INK2, va="top")
         # temperatures (same scale for the three 25 °C columns)
         a2.plot(t, tr["T_C"], color=BLUE, lw=1.4, label="battery $T$")
         a2.plot(t, tr["Ts_C"], color=ORANGE, lw=1.4, label="skin $T_s$")
         if sid == "S7":
             a2.axhline(45.0, color=MUTED, lw=0.8, ls="--")
-            a2.text(t[-1], 45.4, "$T_{lim}$", fontsize=6.3, color=INK2, ha="right", va="bottom")
+            a2.text(t[-1], 45.4, "$T_{lim}$", fontsize=7.0, color=INK2, ha="right", va="bottom")
         a2.set_ylim((-22, 24) if sid == "S9" else (20, 48))
         a2.set_xlabel("time (h)")
         a2.set_xlim(0, xmax)
         for a in (a0, a1, a2):
-            a.tick_params(labelsize=6.8)
+            a.tick_params(labelsize=7.2)
     axs[0, 0].set_ylabel("SOC $s$ (%)")
     axs[1, 0].set_ylabel("$V$ (V)")
     axs[2, 0].set_ylabel("$T$, $T_s$ (°C)")
-    axs[2, 0].legend(loc="upper right", fontsize=6.3, handlelength=1.3)
+    axs[2, 0].legend(loc="upper right", fontsize=7.0, handlelength=1.3)
     fig.align_ylabels(axs[:, 0])
     save(fig, "fig_trajectories")
 

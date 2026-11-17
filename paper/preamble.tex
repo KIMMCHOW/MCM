@@ -22,9 +22,16 @@
 \usepackage{tcolorbox}
 \tcbuselibrary{skins,breakable}
 \usepackage[numbers,sort&compress]{natbib}
+\usepackage[titles]{tocloft}
+\setlength{\cftbeforesecskip}{2.5pt}
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=green!40!black,urlcolor=blue!60!black]{hyperref}
 \usepackage[nameinlink,capitalise]{cleveref}
 \usepackage{wrapfig}
+
+% Float placement: allow fuller top areas so that figures pack with less white space
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
 
 \definecolor{mcmblue}{RGB}{0,51,102}
 \newcommand{\teamnumber}{0000000}
@@ -33,7 +40,8 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\small Team \#\teamnumber}
-\rhead{\small Page \thepage\ of \pageref{LastPage}}
+% Total = last counted page (the AI-use report that follows is not counted)
+\rhead{\small Page \thepage\ of \pageref*{CountedEnd}}
 \renewcommand{\headrulewidth}{0.4pt}
 
 % Key-finding box

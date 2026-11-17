@@ -19,16 +19,33 @@
 % ======================= Contents ===============================
 \setcounter{page}{2}
 \setcounter{tocdepth}{2}
-\tableofcontents
+{\small\tableofcontents}
+\vspace{6pt}
+\noindent{\footnotesize\textbf{Where each requirement of the problem is answered}\par\smallskip
+\renewcommand{\arraystretch}{1.0}
+\noindent\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.56\textwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Requirement & Where \\
+\midrule
+Continuous-time SOC model, from simple to extended & \Cref{sec:model} (L0--L3, \crefrange{eq:L0}{eq:tte}), \cref{fig:architecture} \\
+Assumptions with rationale; parameters, data and validation & \Cref{tab:assumptions}; \cref{sec:params,sec:validation} \\
+TTE for various initial charges and usage scenarios & \Cref{sec:usage,sec:tte,sec:initial}; \cref{tab:baseline} \\
+Where the model performs well or poorly & Box at the end of \cref{sec:wellpoor} \\
+Drivers of rapid drain; largest and surprisingly small effects & \Cref{sec:drivers,sec:most,sec:least} \\
+Uncertainty and sensitivity to parameters, assumptions and usage & \Cref{sec:uq} (\cref{fig:tornado}, \cref{tab:structural}) \\
+Recommendations for users and the OS; battery aging & \Cref{sec:recs}; \cref{sec:aging} \\
+Other portable devices & \Cref{sec:general} \\
+\bottomrule
+\end{tabularx}}
 \clearpage
 % ======================= Body ===================================
 \input{sections/body}
+\par % end the conclusion paragraph at body leading, before the smaller bibliography font
 % ======================= References =============================
-\vspace{0.6\baselineskip}
-\phantomsection\addcontentsline{toc}{section}{References}
-{\fontsize{9}{10.4}\selectfont\raggedright\setlength{\bibsep}{0.5pt plus 0.3pt}
+\renewcommand{\bibsection}{\section*{\refname}\phantomsection\addcontentsline{toc}{section}{\refname}}
+{\fontsize{9}{10.1}\selectfont\raggedright\setlength{\bibsep}{0.3pt plus 0.3pt}
 \bibliographystyle{unsrt}
-\bibliography{refs,refs_extra}}
+\bibliography{refs,refs_extra}\label{CountedEnd}}
 % ======================= AI use report (not counted) ============
 \input{ai_report}
 \end{document}

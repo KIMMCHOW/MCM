@@ -2,54 +2,56 @@
 {\Large\bfseries Power, Voltage, Heat:\\[2pt] A Continuous-Time Model of Smartphone Battery Drain}
 \end{center}
 
-\noindent\textbf{Problem.} We predict, from physics, how long a smartphone runs on one charge under real use, and
-why that time varies so much with the user's activities, the temperature and the battery's age.
+\noindent\textbf{Key insight.} At room temperature battery life is an energy budget, usable energy divided by mean
+power; cold, age and heat turn it into a voltage and heat problem that an energy budget cannot see.
 
 \smallskip\noindent\textbf{Model.} A hierarchy of continuous-time models adds one mechanism per level. L0 is an energy
 bucket; L1 a constant-power equivalent circuit, whose current rises as the voltage falls; the main model L2 adds
-RC polarisation, a lumped thermal node with Arrhenius resistance, skin-temperature throttling, and a brown-out
+RC polarization, a lumped thermal node with Arrhenius resistance, skin-temperature throttling, and a brown-out
 threshold for sub-second power bursts; L3 tracks calendar, cycling and lithium-plating aging, which shrink
 capacity and raise resistance. Power is the sum of measured component laws (OLED display, processor frequency
 scaling, LTE/5G/Wi-Fi radio tails, GNSS, camera, audio). Usage is a daily schedule or a continuous-time Markov
-chain, which gives the mean and variance of the time-to-empty (TTE) in closed form. One constant is calibrated;
-every other parameter is a cited measurement, an open-data fit or a labelled assumption with a wide prior.
+chain, with approximate closed forms for the mean and variance of the time-to-empty (TTE). One discharge constant
+is calibrated to phone data and two aging rates to the 1000-cycle rating; every other parameter is a cited
+measurement, an open-data fit or a labeled assumption.
 
 \smallskip\noindent\textbf{Results} (2024-class phone, 4.70\,A\,h, new, 25\,$^\circ$C, from full charge unless stated):
 \begin{itemize}
-  \item TTE spans 5.7\,h (3D gaming) to 443\,h (Wi-Fi standby). At room temperature it is the usable energy over
-  the mean power (within 2\,\% for steady loads) and is nearly proportional to the starting charge.
+  \item Baseline TTE spans 5.7\,h (3D gaming) to 443\,h (Wi-Fi standby). At room temperature it is the usable
+  energy over the mean power (within 2\,\% for steady loads) and nearly proportional to the starting charge.
   \item \textbf{The radio matters:} video lasts 32.3\,h on Wi-Fi but 21.1\,h on 5G ($+53\,\%$, 90\,\% interval
-  $+34$ to $+102\,\%$); a weak signal ($-110$\,dBm) costs 12\,\% on social media and 23\,\% in a video call.
+  $+34$ to $+102\,\%$); a weak signal ($-110$\,dBm) costs 12\,\% on the social feed and 23\,\% in a video call.
   \item \textbf{Heat caps games:} a game lasts 4.4\,h in a 15\,$^\circ$C room, 5.7\,h at 25\,$^\circ$C and
   10.3\,h at 35\,$^\circ$C, where throttling delivers only 52\,\% of the requested performance.
-  \item \textbf{Cold with age strands charge:} on a $-20\,^\circ$C hike a pack at 80\,\% health shuts down in a
-  photo burst while still showing 44\,\% (after 12.3\,h, against 27.0\,h warm and new).
-  \item \textbf{Usage randomness dominates:} a typical random day lasts $39.6\pm7.1$\,h; the random sequence of
-  activities carries 66\,\% of the TTE variance (heavy users 74\,\%), hardware uncertainty the rest.
-  \item \textbf{Levers:} skipping one hour of gaming extends a typical day by 37\,\%, the top lever in every
-  parameter sample. \textbf{Surprisingly small:} halving background sync ($+0.4\,\%$), sensors (0.6\,\% of the
-  day's energy), GNSS on a stationary phone, and battery resistance at 25\,$^\circ$C (under 1\,\%).
-  \item \textbf{Uncertainty:} the default parameters are optimistic (median TTEs 3--38\,\% shorter). In the cold
-  on an aged pack, resistance and burst size dominate and the TTE's coefficient of variation rises from
-  0.13--0.21 to 0.47--0.56.
+  \item \textbf{Cold strands charge, age multiplies it:} on a $-20\,^\circ$C hike a pack at 80\,\% health shuts
+  down in a photo burst while still showing 44\,\% (after 12.3\,h, against 27.0\,h warm and new).
+  \item \textbf{Usage randomness dominates:} a typical random day lasts 39.6\,h on average (SD 7.1\,h); the
+  random sequence of activities carries 66\,\% of the TTE variance (heavy users 74\,\%), hardware the rest.
+  \item \textbf{Levers:} skipping one hour of gaming extends a typical day by 37\,\% (median 27\,\%), the top lever
+  in every parameter sample. \textbf{Surprisingly small:} halving background sync ($+0.4\,\%$), sensors (under
+  1\,\% of a day's energy), GNSS on a stationary phone, battery resistance at 25\,$^\circ$C (at most 2\,\%).
+  \item \textbf{Uncertainty:} the default parameters are optimistic (median TTEs 3--38\,\% shorter, gaming
+  excepted); any circuit form agrees within 1\,\% at 25\,$^\circ$C. Cold and aged, resistance and burst size
+  dominate and the TTE's coefficient of variation rises from 0.13--0.21 (active use, 25\,$^\circ$C) to 0.47--0.56
+  ($-10\,^\circ$C, SOH 0.8).
   \item \textbf{Aging:} charging to 100\,\% overnight reaches 80\,\% health after 2.9 years; an 80\,\% charge limit
   adds 1.9 points of health after two years, and a 35\,$^\circ$C climate removes 12.
   \item \textbf{Other devices:} the same equations and five dimensionless groups carry over to tablets, laptops,
   watches and drones (illustrative parameters); cold, age and low charge push every class towards brown-out.
 \end{itemize}
 
-\smallskip\noindent\textbf{Validation.} Pre-registered tests on open iPhone discharge traces, LG HG2 cell data, an
-electrochemical reference model and published runtimes pass 31 of 59 criteria: idle and camera runs within
-$\pm15\,\%$ and the cell model is within 2.4\,\% of the electrochemical model at 25\,$^\circ$C, but the model under-predicts cold capacity loss,
-over-predicts stationary GPS power, and Android floors exceed ours.
+\smallskip\noindent\textbf{Validation.} Idle and camera runs on open iPhone traces fall within $\pm15\,\%$, published
+iPhone runtimes within $-4$ to $+17\,\%$ (audio excepted) and the cell model within 2.4\,\% of an
+electrochemical model at 25\,$^\circ$C. Of 59 pre-registered criteria 31 pass (28 of 56 out of sample): the model
+under-predicts cold capacity loss, over-predicts stationary GPS power, and Android floors exceed ours.
 
 \smallskip\noindent\textbf{For users:} (1) stream and call on Wi-Fi, not on 5G or a weak signal; (2) keep games short, and
 cap the screen at 60\,Hz with a dark theme (about $+5\,\%$ each); (3) keep the phone warm in the cold and charge to 80\,\%.
-\textbf{For the OS:} (1) a burst governor that caps sub-second peaks at the predicted safe level (at
-$-20\,^\circ$C on an aged pack, stranded charge falls from 23 to 2.4\,\% and TTE rises by 25\,\%); (2) a
-temperature- and health-aware gauge that moves 0\,\% to the predicted shutdown charge and shows remaining time
-with a band (``41\,h, 30--54\,h''); (3) keep light traffic off 5G and batch background wake-ups (5G standby
-$+67\,\%$).
+\textbf{For the OS:} (1) a burst governor that caps sub-second peaks at the predicted safe level (social feed at
+$-20\,^\circ$C on an aged pack: stranded charge 23 to 2.4\,\%, TTE $+25\,\%$); (2) a temperature- and
+health-aware gauge that moves 0\,\% to the predicted shutdown charge and shows remaining time with a band
+(``41\,h (30--54\,h)''); (3) radio steering that batches background wake-ups ($+67\,\%$ in 5G standby) and keeps
+light traffic off 5G.
 
 \smallskip\noindent\textbf{Keywords:} state of charge; constant-power equivalent circuit; thermal throttling; brown-out;
 Markov usage model; Sobol' sensitivity; battery aging.

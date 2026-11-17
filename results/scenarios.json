@@ -2,13 +2,13 @@
  "meta": {
   "spec": "FINAL_SPEC 2026-11-17",
   "seed": 7,
-  "git_sha": "911187e",
-  "core_uncommitted": true,
+  "git_sha": "dce512e",
+  "core_uncommitted": false,
   "solver": "LSODA (rtol 1e-7, atol [1e-9,1e-7,1e-5], max_step 60 s) for deterministic runs; rk4_batch for the CTMC days S13/S14",
   "h_s": 10.0,
   "h_s_note": "h applies to the S13/S14 Monte Carlo only (LSODA is adaptive)",
   "n_paths": 400,
-  "runtime_s": 95.6,
+  "runtime_s": 87.4,
   "key_format": "{S}|Tamb={degC}|soh={SOH:.1f}|s0={s0:.2f}; S10a = S4 and S10b = S12 on an aged pack; S9 starts at T0 = 20 \u00b0C unless 'S9-T0=Tamb'; S7-nothrottle has throttling and the burst envelope disabled (as in final_proto.py)",
   "units": "s_off_pct = displayed SOC D1 at shutdown; soe_off_pct = energy-fraction SOC D2; P_mean_W = delivered energy / TTE; P_demand_W = schedule-mean demand before throttling; rho_perf = time-averaged delivered SoC performance"
  },

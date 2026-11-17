@@ -4,38 +4,63 @@
 19.5:9 LTPO OLED panel (97.4\,cm$^2$ active area), a 5G modem and one 4.70\,A\,h LiCoO$_2$/graphite pouch cell
 charged to 4.45\,V (mean OCV 3.87\,V), as in current large phones \cite{PIX9,MR24}. It models no specific product.
 Its nominal energy is 18.2\,W\,h; the usable energy above the 3.40\,V cut-off at vanishing load is
-$E_u=17.8$\,W\,h, and the gauge reads 0\,\% at coulombic SOC $\soc_e=0.026$.
+$E_u=17.8$\,W\,h, and the gauge reads 0\,\% at coulombic SOC $\soc_e=0.026$. Other phones (\cref{sec:validation})
+use the same parameters with their own capacity and screen size; the pack resistance is scaled as
+$R\cdot Q=\text{const}$.
 
 \begin{table}[t]
 \centering
-\caption{Main RP-63 parameters (powers at the battery terminals; resistances at 25\,$^\circ$C). UQ: U uniform,
-LU log-uniform, T triangular with the value as mode. Source: fit = our fit; der. = derived from cited numbers;
-assum. = labelled assumption; \textbf{cal.} = calibrated. Wi-Fi and 5G share the LTE radio structure with their
-own values (e.g.\ active power 0.13 and 0.90\,W, tail power 0.12 and 0.255\,W).}
+\caption{Main RP-63 parameters (powers at the battery terminals; resistances at 25\,$^\circ$C). UQ range: prior
+for uncertainty quantification, U uniform, LU log-uniform, T triangular with the value as mode. Source: fit = our
+fit; der. = derived from cited numbers; assum. = labeled assumption; \textbf{cal.} = calibrated
+($\Delta P_{\mathrm{awake}}$ to one phone run, $k_H,k_L$ to the 1000-cycle rating). Wi-Fi and 5G share the LTE
+radio structure with their own values (e.g.\ active power 0.13 and 0.90\,W, tail power 0.12 and 0.255\,W).}
 \label{tab:params}
 \input{tables/tab_params.tex}
 \end{table}
 
-\paragraph{Where the numbers come from.} Each of the 93 parameters carries a source tag (\cref{tab:params}). Most
+\paragraph{Where the numbers come from.} Each of the 93 parameters carries a source tag (main ones in
+\cref{tab:params}). Most
 are \emph{published measurements}: component powers \cite{CH13,CH10,GU24,KW19}, radio state machines
 \cite{HU12,NA21}, phone thermal constants \cite{HE19,KANG19,PU23} and aging rates \cite{SCH14,KEIL16}. The OCV
 curve, $R_1$, $\tau_1$, the low-SOC rise $A_R$ and the activation energies are our \emph{fits} to PyBaMM \cite{SULZER21} runs of the Ai2020 and Marquis2019 parameter sets \cite{AI20,MQ19}; they agree with published Arrhenius
 fits \cite{BARC22,SUN23}. \emph{Derived} values are computed from cited numbers, e.g.\ $R_{\mathrm{th}}$ from
-measured heating curves \cite{HE19}. \emph{Labelled assumptions} (pack resistance, brown-out margin, burst
-multiplier, throttle shape) get wide ranges. Only \emph{one constant is calibrated}: $\Delta P_{\mathrm{awake}}$
-is set so that the black-screen idle run of the Bonn iPhone 14 Pro \cite{BONN26} lasts the observed 55.0\,h (exact
-value 0.0877\,W, used as 0.090\,W; the blind prior 0.10\,W gives $-5.1$\,\%). All other runs are hold-outs
-(\cref{sec:validation}). The aging rates $k_H,k_L$ follow the manufacturers' statement of SOH 0.80 after 1000
-cycles \cite{AP-BATT,GOOG}.
+measured heating curves \cite{HE19}. \emph{Labeled assumptions} (pack resistance, brown-out margin, burst
+multiplier, throttle shape) get wide ranges. Only \emph{one discharge constant is calibrated to phone data}:
+$\Delta P_{\mathrm{awake}}$ is set so that the black-screen idle run of the Bonn iPhone 14 Pro \cite{BONN26} lasts
+the observed 55.0\,h (exact value 0.0877\,W, used as 0.090\,W; the blind prior 0.10\,W gives $-5.1$\,\%). All
+other phone runs are hold-outs (\cref{sec:validation}). The two aging rates $k_H,k_L$ are calibrated to the
+manufacturers' statement of SOH 0.80 after 1000 cycles \cite{AP-BATT,GOOG}.
 
-\paragraph{Uncertainty.} 68 parameters carry an independent prior (LU when the range spans a factor of three or
-more); the rest are definitions, fitted shape constants or negligible terms. The default set is \emph{optimistic}: several defaults sit at the low-power end of their ranges
-($\Delta P_{\mathrm{awake}}$, $P_{d0}$, the 5G tail, Wi-Fi active power). At 25\,$^\circ$C the median TTEs are 3--38\,\% shorter than the nominal ones, except for throttled gaming
-(\cref{sec:uq}). Other devices keep the same physics; only their capacity
-and screen size change, and the pack resistance is scaled as $R\cdot Q=\text{const}$.
+\paragraph{Uncertainty.} Sixty-eight parameters carry an independent uniform, log-uniform or triangular prior
+(\cref{tab:params}); the rest are definitions, fitted shape constants, the calibrated aging rates, fixed thresholds
+($\Delta T_{\mathrm{thr}}$, $T_{\mathrm{shut}}$) or negligible terms. The nominal (default) set is
+\emph{optimistic}: several defaults sit at the low-power end of their ranges ($\Delta P_{\mathrm{awake}}$, $P_{d0}$,
+the 5G tail, Wi-Fi active power). We keep them because they are the cited point values (or, for $\Delta P_{\mathrm{awake}}$,
+the calibrated one), while the priors are wide and extend mostly towards higher power to cover older or less
+efficient hardware. At 25\,$^\circ$C the median TTEs
+are 3--38\,\% shorter than the nominal ones, except for throttled gaming (\cref{sec:uq}); for an unknown phone the
+median and its 90\,\% interval (\cref{tab:baseline}) are the forecast to quote.
 
-\paragraph{Data and licences.} The Bonn iPhone traces
+\paragraph{Usage scenarios.}\label{sec:usage} Usage is built from 19 activity primitives with fixed screen,
+processor, radio and peripheral settings and a sub-second burst envelope (their powers are in
+\cref{fig:power_breakdown}a). Scenarios S1--S8, S16 and CM (camera) run one primitive at a time
+(\cref{tab:baseline}). The cold hike S9
+alternates GNSS tracking (570\,s) with a 30\,s, 4.1\,W photo burst every 10\,min, starting at 20\,$^\circ$C
+indoors. S10a and S10b are the social feed S4 and the scheduled day S12 started cold-soaked ($T_0=\Tamb$),
+usually on an aged pack; S11a
+and S11c are the social feed and the video call on LTE at weak signal ($-110$\,dBm unless stated). The scheduled
+day S12 runs from 07:00: reading 30\,min, navigation 45\,min, standby with a 4\,min social check every 30\,min
+until 16:45 (with 30\,min of video and 30\,min of social feed from 11:45), navigation 45\,min, LTE video call
+30\,min, gaming 18:00--19:00, video 2\,h, social feed 1\,h, reading 1\,h, standby 8\,h (9.5\,h screen-on). The
+random days S13 (typical) and S14 (heavy) are a CTMC
+(F6--F8): from idle, sessions start at $\lambda_{\mathrm{on}}=4$\,h$^{-1}$, and activity $j$ is chosen with
+probability $p_j$ and lasts an exponential time of mean $d_j$. Typical $p_j$/$d_j$: social 0.55/5\,min, video
+0.12/15, game 0.05/20, navigation 0.04/20, video call 0.04/10, camera 0.08/2, audio 0.12/30; heavy: 0.45/8,
+0.20/25, 0.15/30, 0.05/25, 0.05/15, 0.05/3, 0.05/30. Wi-Fi and LTE alternate with mean sojourns of 2.5\,h.
+
+\paragraph{Data and licenses.} The Bonn iPhone traces
 \cite{BONN26,SCH26} and the LG HG2 cell data \cite{KOL20} are CC BY 4.0, the Oxford degradation data \cite{OX17}
 ODbL v1.0, and the Ai2020 set (via PyBaMM) BSD-3. The NASA battery data \cite{NASA07} are public without a stated
-licence; we use them only for a secondary check and acknowledge the repository and its donors. Published
+license; we use them only for a secondary check and acknowledge the repository and its donors. Published
 specifications and reviews \cite{APL14P,NBC22,NBC23,NBC24,LMAG22,GPX} enter only as cited facts.

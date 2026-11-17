@@ -60,10 +60,10 @@ def main() -> None:
         ["deterministic schedule", "of primitives, or a", "usage CTMC path", "(screen, $b$, APL, $x_c$,",
          "radio, GNSS, camera)"])
     box(ax, 20.5, 13.5, 21.0, 19.0, "Component load model",
-        ["OLED: $P_{d0}$ + area·$b^{\\gamma}$·APL", "SoC: DVFS, near-cubic in $x_c$",
+        ["OLED: $P_{d0}$ + area·$b^{\\gamma}$·APL", "SoC: DVFS, superlinear in $x_c$",
          "radios: exact Poisson tails", "floor, GNSS, camera, audio", "$P=\\Sigma_k P_k$ at the battery"])
     box(ax, 46.0, 13.5, 22.5, 19.0, "Constant-power ECM",
-        ["states $z,\\ v_1$", "OCV $U(z,T)$, $R_0(z,T)$, $R_1\\Vert C_1$",
+        ["states $z,\\ v_1$", "OCV $U_{oc}(z,T)$, $R_0(z,T)$, $R_1$, $\\tau_1$",
          "$I=2P/(\\tilde U+\\sqrt{D})$, $V=\\tilde U-R_0I$", "burst peak $V_{pk}$ at $P+\\Delta P_b$",
          "($v_1$ frozen, sub-second)"])
     box(ax, 46.0, 1.0, 22.5, 8.6, "Lumped thermal node $T$",
@@ -71,7 +71,7 @@ def main() -> None:
     box(ax, 20.5, 1.0, 21.0, 8.6, "Skin $T_s$ and throttle",
         ["hot spot $T_s$, logistic cap $\\sigma(T_s)$"], top_pad=2.2)
     box(ax, 46.0, 36.0, 22.5, 7.8, "Slow aging states (L3)",
-        ["$Q_{cal},\\ Q_H,\\ Q_L$ $\\rightarrow$ SOH, $r_{growth}$"], top_pad=2.0)
+        ["$q_{cal},\\ q_H,\\ q_L$ $\\rightarrow$ SOH, $r_g$"], top_pad=2.0)
     box(ax, 74.0, 1.0, 25.0, 42.8, "Outputs",
         ["SOC: coulombic $s(t)$,", "energy fraction $\\varsigma(t)$", "",
          "TTE = first event:", "charge  $z\\leq 0$", "cut-off  $V\\leq V_{cut}$", "brown-out  $V_{pk}\\leq V_{sys}$",

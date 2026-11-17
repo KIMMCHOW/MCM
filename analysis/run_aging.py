@@ -65,9 +65,11 @@ LABELS = {
     "A6c": "charging in a 0 °C room at 0.5C (JEITA rule)",
     "A7": "1 FCE/day (heavy user, ΔSOC 0.95)",
 }
-SHORT = {"A1": "A1 100 % nightly", "A2": "A2 80 % limit", "A3": "A3 optimised", "A4": "A4 35 °C climate",
-         "A5": "A5 car, 45 °C", "A6a": "A6a fast 1.5C", "A6b": "A6b 0 °C, 1C",
-         "A6c": "A6c 0 °C, 0.5C", "A7": "A7 1 FCE/day"}
+# Display labels use H1-H7 (charging habits) so that they do not collide with the assumption codes A1-A12 of the
+# paper; the JSON keys stay A1-A7.
+SHORT = {"A1": "H1 100 % nightly", "A2": "H2 80 % limit", "A3": "H3 optimized", "A4": "H4 35 °C climate",
+         "A5": "H5 car, 45 °C", "A6a": "H6a fast 1.5C", "A6b": "H6b 0 °C, 1C",
+         "A6c": "H6c 0 °C, 0.5C", "A7": "H7 1 FCE/day"}
 # §11.3 [PROTO]: SOH at 1/2/3 years, years to SOH 0.8 (None = beyond 3 years)
 PROTO = {"A1": ((0.883, 0.834, 0.795), 2.86), "A2": ((0.897, 0.853, 0.818), None),
          "A3": ((0.889, 0.841, 0.804), None), "A4": ((0.796, 0.709, 0.641), 0.96),
@@ -405,7 +407,7 @@ def _deg(T):
 def make_figure(o, series):
     apply()
     fig = plt.figure(figsize=(W1, 2.6))
-    gs = fig.add_gridspec(1, 3, width_ratios=[1.6, 1, 1], wspace=0.36)
+    gs = fig.add_gridspec(1, 3, width_ratios=[1.6, 1, 1], wspace=0.52)
     ax1, ax2, ax3 = (fig.add_subplot(gs[0, i]) for i in range(3))
 
     # (a) SOH vs years, direct end labels inside the axes
@@ -420,7 +422,7 @@ def make_figure(o, series):
         ends.append(s[-1])
     ax1.plot([0, 3], [0.8, 0.8], color=MUTED, lw=0.8, ls=(0, (3, 2)), zorder=1)
     ax1.text(0.04, 0.802, "SOH 0.8", color=INK2, fontsize=6.5, va="bottom")
-    ly = _repel(ends, 0.0205)
+    ly = _repel(ends, 0.023)
     for sid, y_end, y_lab in zip(ORDER, ends, ly):
         ax1.annotate(SHORT[sid], xy=(3.0, y_end), xytext=(3.18, y_lab), textcoords="data", fontsize=6.2,
                      color=INK, va="center", ha="left",
@@ -440,7 +442,7 @@ def make_figure(o, series):
     soh = np.asarray(g["soh"])
     tcol = {25.0: SEQ_BLUE[4], 0.0: SEQ_BLUE[7], -10.0: SEQ_BLUE[9], -20.0: SEQ_BLUE[12]}
     d = np.asarray(g["tte_S13_h"])
-    ax2.plot(soh, 100 * d / d[0], color=INK, lw=1.1, ls=(0, (4, 2)), label="S13 mean (L0)")
+    ax2.plot(soh, 100 * d / d[0], color=INK, lw=1.1, ls=(0, (4, 2)), label="S13 F6 mean")
     for T in T_S4:
         tte = np.asarray(g["S4"][f"{T:g}"]["tte_h"])
         ax2.plot(soh, 100 * tte / tte[0], color=tcol[T], lw=1.6, label=f"S4 {_deg(T)}")
@@ -462,8 +464,8 @@ def make_figure(o, series):
     for k, s in enumerate(o["A1"]["soh_1_2_3yr"], 1):
         y = float(np.interp(-s, -soh, soff10))
         ax3.plot([s], [y], marker="o", ms=3.2, color=INK, zorder=5)
-        ax3.annotate(("A1, " if k == 1 else "") + f"{k} y", xy=(s, y), xytext=(2 if k == 1 else 0, 4.5),
-                     textcoords="offset points", fontsize=6.2, color=INK2, ha="right" if k == 1 else "center",
+        ax3.annotate(f"{k} y", xy=(s, y), xytext=(0, 5.5),
+                     textcoords="offset points", fontsize=6.2, color=INK2, ha="center",
                      va="bottom")
     ax3.set_xlim(1.0, 0.6)
     ax3.set_xticks([1.0, 0.9, 0.8, 0.7, 0.6])

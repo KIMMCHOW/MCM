@@ -1,7 +1,7 @@
 % T1: resolved RP-63 parameters (generated, then re-laid out for the paper as two panels; values unchanged).
 % UQ: U uniform, LU log-uniform, T triangular with mode = value. Source tags: fit = our fit to open data or
-% PyBaMM; der. = derived from cited numbers; assum. = engineering assumption; cal. = the single calibrated
-% constant.
+% PyBaMM; der. = derived from cited numbers; assum. = engineering assumption; cal. = calibrated (Delta P_awake to
+% the Bonn idle run; k_H, k_L to the 1000-cycle rating).
 \scriptsize
 \setlength{\tabcolsep}{2.0pt}
 \renewcommand{\arraystretch}{0.94}
@@ -10,7 +10,7 @@
 Symbol & Meaning & Value & UQ range & Source \\
 \midrule
 \multicolumn{5}{@{}l}{\textit{Cell and pack}} \\
-$Q_n$ & capacity & 4.70 Ah & T(4.56, 4.80) & \cite{PIX9,MR24} \\
+$Q_n$ & capacity & 4.70 A\,h & T(4.56, 4.80) & \cite{PIX9,MR24} \\
 $R_{0,\mathrm{ref}}$ & $R_0$ at $\soc=0.5$ & 60 m$\Omega$ & LU(35, 130) & assum. \cite{PINE,BU802a,HE19,LEE20} \\
 $A_R$ & low-SOC rise & 0.80 & U(0.50, 2.00) & fit \cite{AI20} \\
 $E_{a,R_0}$ & act.\ energy & 18 kJ/mol & T(12, 27) & fit \cite{BARC22,SUN23,LEE20} \\
@@ -27,7 +27,7 @@ $k_S$ & entropic mult. & 1.0 & U(0.5, 1.5) & fit \cite{AI20} \\
 $C_{\mathrm{th}}$ & heat capacity & 150 J/K & T(100, 230) & \cite{MAL99,HE19,KANG19} \\
 $R_{\mathrm{th}}$ & to ambient & 3.0 K/W & T(2.0, 4.0) & der. \cite{HE19} \\
 $R_{\mathrm{skin}}$ & skin hot spot & 5.5 K/W & T(4.0, 9.0) & \cite{PU23,KANG19} \\
-$T_{\mathrm{lim}}$ & skin limit & 45 \textdegree C & U(41, 48) & \cite{CHI15,KANG19,UL-TS} \\
+$T_{\mathrm{lim}}$ & skin limit & 45 $^\circ$C & U(41, 48) & \cite{CHI15,KANG19,UL-TS} \\
 $w_{\mathrm{thr}}$ & throttle width & 1.0 K & U(0.5, 3.0) & assum. \cite{AOSP-TH} \\
 $P_{\mathrm{fl}}$ & throttled floor & 0.5 W & U(0.3, 1.0) & assum. \\
 $k_{\mathrm{env}}$ & case, pocket & 1.0 & U(0.8, 1.5) & assum. \cite{KANG19} \\
@@ -59,7 +59,7 @@ $\gamma_{\mathrm{sig}}$ & per 10 dB & 0.26 & LU(0.10, 1.00) & der. \cite{DI13} \
 \multicolumn{5}{@{}l}{\textit{Aging (rates in $10^{-3}$\,d$^{-1/2}$ and $10^{-3}$\,FCE$^{-1/2}$)}} \\
 $k_c$ & calendar & 1.413 & U(1.05, 2.09) & \cite{SCH14,KEIL16} \\
 $E_{\mathrm{cal}}$ & calendar $E_a$ & 58 kJ/mol & U(20, 60) & \cite{SCH14,CA21,SCM18} \\
-$k_H$\,/\,$k_L$ & SEI / plating & 2.697 / 1.288 & calibrated & \cite{AP-BATT,GOOG} \\
+$k_H$\,/\,$k_L$ & SEI / plating & 2.697 / 1.288 & fixed & \textbf{cal.} \cite{AP-BATT,GOOG} \\
 $\gamma_R$ & $R$ growth & 2.5 & LU(1.5, 7.0) & \cite{SCH14,KEIL16} \\
 \bottomrule
 \end{tabular}
