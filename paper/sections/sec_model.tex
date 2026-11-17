@@ -1,0 +1,164 @@
+\section{The Continuous-Time Model}\label{sec:model}
+
+\subsection{From an energy bucket to a constant-power circuit (L0, L1)}\label{sec:L0L1}
+The simplest reasonable description treats the battery as a bucket of usable energy $E$ drained by the phone's
+power demand $P(t)$:
+\begin{equation}
+  \frac{\dd E}{\dd t} = -\frac{P(t)}{3600}\quad[\mathrm{W\,h\,s^{-1}}],\qquad
+  \TTE_0=\frac{E_u}{\bar P}\ \ \text{for constant } \bar P. \label{eq:L0}
+\end{equation}
+L0 already explains most day-to-day variation: TTE is inversely proportional to mean power. It cannot explain why
+the same phone dies early in the cold, why a phone at ``20\,\%'' can shut down, or why gaming time depends on the
+room temperature. These effects come from the battery's voltage.
+
+A lithium-ion cell has an open-circuit voltage $\Ocv(\soc)$ that falls with SOC, and a series resistance. The
+PMIC's DC--DC converters hold the rail voltages fixed, so the phone draws constant \emph{power}, not constant current
+(A1). With $\tilde U=\Ocv-v_1$ and $V=\tilde U-R_0I$, the power balance $P=VI$ gives $R_0I^2-\tilde UI+P=0$. The
+physical (high-voltage) root, written without cancellation, is
+\begin{equation}
+  D=\tilde U^{2}-4R_0P,\qquad I=\frac{2P}{\tilde U+\sqrt D},\qquad V=\frac{\tilde U+\sqrt D}{2}. \label{eq:current}
+\end{equation}
+This makes the model nonlinear in an important way: as $\Ocv$ falls, the current \emph{rises} to keep the power
+constant, which raises the resistive loss and pulls $V$ down further. No solution exists when
+$P>\Pmax=\tilde U^2/(4R_0)$; a phone asked for more than $\Pmax$ suffers a voltage collapse. Charge conservation
+closes L1:
+\begin{equation}
+  \frac{\dd\soc}{\dd t}=-\frac{I}{3600\,Q_{\max}},\qquad Q_{\max}=Q_n(1-q_{\mathrm{loss}}). \label{eq:soc}
+\end{equation}
+
+\subsection{Component load model}\label{sec:load}
+The battery-side power demand is the sum of component powers (A2), each driven by a field of $\bm u(t)$:
+\begin{equation}
+  P=P_{\mathrm{susp}}+a\,\Delta P_{\mathrm{awake}}+(1-a)\lambda E_{\mathrm{wake}}+P_{\mathrm{disp}}+P_{\mathrm{SoC}}(T_s)
+  +P_{\mathrm{net}}+g P_G+c_r\Delta P_{\mathrm{cam}}+c_f\Delta P_{\mathrm{camf}}+au\,\Delta P_{\mathrm{aud}}
+  +bt\,\Delta P_{\mathrm{BT}}+P_{\mathrm{sens}}. \label{eq:load}
+\end{equation}
+Here $a\in\{0,1\}$ means the application processor is awake. The floor terms are the suspend power, the awake
+overhead and the energy of background wake-ups while asleep.
+
+\paragraph{Display.} OLED pixel power is linear in linear-light pixel intensity \cite{DZ11}. The content term
+therefore scales with the panel area $A$ and the average picture level (APL), and black pixels cost only the fixed
+driver overhead $P_{d0}$ \cite{CH13}:
+\begin{equation}
+  P_{\mathrm{disp}}=s_{\mathrm{scr}}\Big[P_{d0}+p_cA\Big(\frac{b}{0.5}\Big)^{\gamma_b}\frac{m_{\mathrm{APL}}\mathrm{APL}}{\mathrm{APL_{ref}}}
+  +\kappa_{RR}\max(f_r-60\,\mathrm{Hz},0)\Big]. \label{eq:display}
+\end{equation}
+The slider value $b$ maps to luminance as $b^{\gamma_b}$; $m_{\mathrm{APL}}<1$ represents a dark theme and
+$\kappa_{RR}$ the cost of high refresh rates \cite{AT20}.
+
+\paragraph{SoC with DVFS.} Dynamic power is $CV^2f$ \cite{LX}. A utilisation-tracking governor sets
+$f\propto x_c$ (demanded throughput), and the operating-point voltage is affine in $f$. Hence
+\begin{equation}
+  P_{\mathrm{SoC,dem}}(x_c)=P_{\mathrm{SoC,max}}\,x_c\,[v_0+(1-v_0)x_c]^2. \label{eq:dvfs}
+\end{equation}
+Power grows almost cubically: the last 20\,\% of throughput costs 37\,\% of the maximum SoC power.
+
+\paragraph{Radios.} Cellular radios stay in high-power states for a ``tail'' after each transfer
+\cite{HU12,NA21}. If bursts arrive as a Poisson process of rate $\lambda$ and restart the timers (A6), the radio
+is in the connected-active state exactly when a burst arrived within the inactivity timer $T_{\mathrm{act}}$,
+and in the tail state when the last burst arrived between $T_{\mathrm{act}}$ and $T_{\mathrm{tail}}$ ago. The
+time-averaged power is then exact:
+\begin{equation}
+  \Phi=m\Big[(P_{\mathrm{tail}}-P_{\mathrm{idle}})(1-e^{-\lambda T_{\mathrm{tail}}})+(P_{\mathrm{act}}-P_{\mathrm{tail}})(1-e^{-\lambda T_{\mathrm{act}}})
+  +\lambda e^{-\lambda T_{\mathrm{tail}}}E_{\mathrm{pro}}+e_b(d_{dl}+\kappa_{ul}d_{ul})\Big], \label{eq:radio}
+\end{equation}
+where $\lambda e^{-\lambda T_{\mathrm{tail}}}$ is the rate of promotions from idle and $e_b$ the energy per bit.
+Real-time media (calls) use a measured connected power $P_{rt}$. Weak signal multiplies cellular traffic energy
+by $m=1+\gamma_{\mathrm{sig}}\max(0,(\mathrm{RSRP_{ref}}-\mathrm{RSRP})/10\,\mathrm{dB})$, which reproduces the
+$+52$\,\% energy between $-85$ and $-105$\,dBm measured by \cite{DI13}. Wi-Fi, LTE and 5G non-standalone (NSA)
+differ only in their parameters (\cref{tab:params}).
+
+\paragraph{Peripherals.} GNSS ($P_G$, \cite{KW19}), rear and front camera pipelines \cite{CX13}, audio and
+Bluetooth \cite{CH10} add constant increments while active.
+
+\subsection{Electro-thermal equivalent circuit with throttling (L2)}\label{sec:L2}
+\paragraph{Polarisation and OCV.} A first-order Thevenin branch represents diffusion and charge-transfer
+overpotentials:
+\begin{equation}
+  \frac{\dd v_1}{\dd t}=\frac{R_1(T)\,I-v_1}{\tau_1(T)}. \label{eq:rc}
+\end{equation}
+The OCV uses the Chen--Rinc\'on-Mora form \cite{CRM06} fitted to the LiCoO$_2$/graphite pouch-cell OCV of Ai et
+al.\ \cite{AI20} (RMSE 7\,mV), stretched to a modern 4.45\,V charge limit, plus a reversible entropic term:
+\begin{equation}
+  \Ocv(\soc,T)=-b_0e^{-b_1\soc}+a_0+a_1\soc+a_2\soc^2+a_3\soc^3+\Delta V_{hv}\soc^{p}+(T-T_{\mathrm{ref}})\,k_S\frac{\partial U}{\partial T}(\soc). \label{eq:ocv}
+\end{equation}
+
+\paragraph{Temperature-dependent resistance.} Ion transport is thermally activated. With
+$a_R(T;E)=\exp[(E/R_g)(1/T-1/T_{\mathrm{ref}})]$,
+\begin{equation}
+  R_0(\soc,T)=R_{0\infty}\big[1+A_Re^{-\soc/\soc_0}\big]a_R(T;E_{a,R_0})(1+r_g),\quad
+  R_1=R_{1,\mathrm{ref}}\,a_R(T;E_{a,R_1})(1+r_g),\quad \tau_1=\tau_{1,\mathrm{ref}}\,a_R(T;E_{a,\tau}), \label{eq:resist}
+\end{equation}
+where the factor $1+A_Re^{-\soc/\soc_0}$ captures the resistance rise near empty and $r_g$ the growth with aging.
+At $-20\,^\circ$C the pack resistance is $3.6\times$ its 25\,$^\circ$C value.
+
+\paragraph{Thermal balance.} All power delivered to the phone becomes heat inside it (A4). The battery adds its
+irreversible Joule heat and the reversible entropic heat \cite{BERN85}. A single lumped node (A3) then obeys
+\begin{equation}
+  C_{\mathrm{th}}\frac{\dd T}{\dd t}=P+I^2R_0+\frac{v_1^2}{R_1}-I\,T\,k_S\frac{\partial U}{\partial T}-\frac{T-\Tamb}{k_{\mathrm{env}}R_{\mathrm{th}}},
+  \qquad T_s=\Tamb+\frac{R_{\mathrm{skin}}}{R_{\mathrm{th}}}(T-\Tamb), \label{eq:thermal}
+\end{equation}
+where $k_{\mathrm{env}}$ represents a case, a pocket or a hand, and $T_s$ is the hot-spot skin temperature
+\cite{KANG19,PU23}.
+
+\paragraph{Thermal throttling.} The OS keeps the skin below $T_{\lim}\approx45\,^\circ$C \cite{CHI15}. We model
+graded mitigation \cite{AOSP-TH} as a smooth logistic cap on SoC power above a floor $P_{fl}$:
+\begin{equation}
+  P_{\mathrm{SoC}}=P_{fl}+(P_{\mathrm{SoC,dem}}-P_{fl})\,\sigma\!\Big(\frac{T_{\lim}-\Delta T_{\mathrm{thr}}-T_s}{w_{\mathrm{thr}}}\Big)\ \
+  \text{if } P_{\mathrm{SoC,dem}}>P_{fl},\qquad \sigma(y)=\frac1{1+e^{-y}}. \label{eq:throttle}
+\end{equation}
+The delivered performance ratio is $\rho_{\mathrm{perf}}=x_{\mathrm{eff}}/x_c$, where
+$P_{\mathrm{SoC,dem}}(x_{\mathrm{eff}})=P_{\mathrm{SoC}}$. The chain $T\to T_s\to P\to I\to T$ is the feedback
+loop of \cref{fig:architecture}.
+
+\paragraph{Bursts and brown-out.} Mean power hides sub-second peaks: radio promotions, CPU boosts and camera starts
+draw several watts for milliseconds \cite{HU12,LEE20}. During such a burst $v_1$ is frozen (A5), and the
+instantaneous terminal voltage is
+\begin{equation}
+  V_{pk}=\tfrac12\Big(\tilde U+\sqrt{\tilde U^2-4R_0(P+m_b\Delta P_b)}\Big). \label{eq:burst}
+\end{equation}
+The phone browns out when $V_{pk}\le V_{\mathrm{sys}}$, the minimum system voltage \cite{QC-SMB}. Because $R_0$
+multiplies the burst, a resistance that is harmless at 25\,$^\circ$C becomes decisive in the cold and on aged
+packs.
+
+\paragraph{The complete fast system.} For state $\bm x=(\soc,v_1,T)$ and input $\bm u(t)$, equations
+\eqref{eq:current}--\eqref{eq:throttle} form the system
+$\dot{\bm x}=\bm f(\bm x,\bm u(t),\Tamb;\bm\theta,q_{\mathrm{loss}})$. On the feasible set $\{D>0,\ 0\le\soc\le1\}$
+the right-hand side is locally Lipschitz in $\bm x$ and piecewise continuous in $t$. A unique solution therefore
+exists until the first event. The time scales range from 20--135\,s (RC) and 7.5\,min (thermal) to hours (SOC),
+so the system is only mildly stiff.
+
+\subsection{Aging layer (L3)}\label{sec:L3}
+Capacity fade follows square-root laws in time or charge throughput \cite{SCH14,SCM18}. We integrate each loss
+$q$ in squared form, $\dd(q^2)/\dd t=k^2(\text{stress})^2$. This is exact for time-varying stress and has no
+singularity at $q=0$. Three mechanisms are tracked: calendar loss (SEI growth at rest, accelerated by temperature
+and high SOC \cite{KEIL16}), SEI cycle loss (proportional to throughput) and lithium plating (charging at low
+temperature or high rate):
+\begin{align}
+  \frac{\dd q_{\mathrm{cal}}^2}{\dd t_d}&=\big[k_c\,a_{\deg}(T;E_{\mathrm{cal}})\,g(\soc)\big]^2, &
+  \frac{\dd q_H^2}{\dd n}&=\big[k_H\,a_{\deg}(T;E_H)\big]^2, &
+  \frac{\dd q_L^2}{\dd n_{ch}}&=\big[k_L\,a_R(T;E_L)\,e^{\beta_L(c_{ch}-c_{\mathrm{ref}})}\big]^2, \label{eq:aging}
+\end{align}
+with $a_{\deg}=1/a_R$, $g(\soc)$ the SOC stress (high when the cell is held near 4.45\,V), $n$ the full
+equivalent cycles and $c_{ch}$ the charge C-rate. Then $q_{\mathrm{loss}}=q_{\mathrm{cal}}+q_H+q_L$,
+$\mathrm{SOH}=1-q_{\mathrm{loss}}$, and $r_g=\gamma_Rq_{\mathrm{loss}}$. The constants are calibrated so that SOH
+reaches 0.80 after 1000 cycles, as stated for current phones \cite{AP-BATT,GOOG}. Aging thus enters a discharge
+through two channels: smaller $Q_{\max}$ and larger $R_0,R_1$.
+
+\subsection{SOC outputs and time-to-empty}\label{sec:events}
+The fuel gauge reports 0\,\% when the load voltage reaches $\Vcut\approx3.40$\,V \cite{QC-FG,LEE20}, not when
+$\soc=0$. The \emph{displayed} SOC is therefore $s=(\soc-\soc_e)/(1-\soc_e)$ with $\Ocv(\soc_e)=\Vcut$. The
+problem's glossary defines SOC as remaining \emph{energy} relative to full; we also report the energy fraction
+$\varsigma=\int_{\soc_e}^{\soc}\Ocv\,\dd\zeta\big/\!\int_{\soc_e}^{1}\Ocv\,\dd\zeta$. The two differ by at most
+2.4 points. TTE is the first time any event function crosses zero:
+\begin{equation}
+  \TTE=\inf\{t>0:\ \min_i g_i(\bm x(t),\bm u(t))\le0\},\qquad
+  \begin{aligned}
+  &g_1=\soc,\ \ g_2=V-\Vcut\ \text{(cut-off)},\ \ g_3=V_{pk}-V_{\mathrm{sys}}\ \text{(brown-out)},\\
+  &g_4=D\ \text{(infeasible power)},\ \ g_5=T_{\mathrm{shut}}-T\ \text{(thermal shutdown)}.
+  \end{aligned}\label{eq:tte}
+\end{equation}
+The \emph{stranded charge} $s_{\mathrm{off}}=s(\TTE)$ is the displayed SOC at shutdown. It returns once the phone
+warms up, because $\soc$ is not reset \cite{LEE20}. Single trajectories are integrated with LSODA
+($\mathrm{rtol}=10^{-7}$) segment by segment between input switches, with terminal events. Batches of thousands
+of parameter samples use a vectorised RK4 scheme ($h=2$\,s) that agrees with LSODA to within 0.2\,\% of TTE.
