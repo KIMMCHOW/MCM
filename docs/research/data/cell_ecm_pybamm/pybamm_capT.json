@@ -1,0 +1,120 @@
+{
+ "Ai2020": {
+  "T25_C0.1": {
+   "Q_Ah": 2.4599,
+   "E_Wh": null
+  },
+  "T25_C0.2": {
+   "Q_Ah": 2.4539,
+   "E_Wh": null
+  },
+  "T25_C0.5": {
+   "Q_Ah": 2.4364,
+   "E_Wh": null
+  },
+  "T10_C0.1": {
+   "Q_Ah": 2.4597,
+   "E_Wh": null
+  },
+  "T10_C0.2": {
+   "Q_Ah": 2.453,
+   "E_Wh": null
+  },
+  "T10_C0.5": {
+   "Q_Ah": 2.4326,
+   "E_Wh": null
+  },
+  "T0_C0.1": {
+   "Q_Ah": 2.4592,
+   "E_Wh": null
+  },
+  "T0_C0.2": {
+   "Q_Ah": 2.4515,
+   "E_Wh": null
+  },
+  "T0_C0.5": {
+   "Q_Ah": 2.4195,
+   "E_Wh": null
+  },
+  "T-10_C0.1": {
+   "Q_Ah": 2.4567,
+   "E_Wh": null
+  },
+  "T-10_C0.2": "fail input set 0: IDA_CONV_FAIL: Convergence test failures occurr",
+  "T-10_C0.5": {
+   "Q_Ah": 1.327,
+   "E_Wh": null
+  },
+  "T-20_C0.1": {
+   "Q_Ah": 0.6306,
+   "E_Wh": null
+  },
+  "T-20_C0.2": {
+   "Q_Ah": 0.3307,
+   "E_Wh": null
+  },
+  "T-20_C0.5": "fail input set 0: IDA_ERR_FAIL: Error test failures occurred too "
+ },
+ "Marquis2019": {
+  "T25_C0.1": {
+   "Q_Ah": 0.8707,
+   "E_Wh": null
+  },
+  "T25_C0.2": {
+   "Q_Ah": 0.8685,
+   "E_Wh": null
+  },
+  "T25_C0.5": {
+   "Q_Ah": 0.8628,
+   "E_Wh": null
+  },
+  "T10_C0.1": {
+   "Q_Ah": 0.8695,
+   "E_Wh": null
+  },
+  "T10_C0.2": {
+   "Q_Ah": 0.8662,
+   "E_Wh": null
+  },
+  "T10_C0.5": {
+   "Q_Ah": 0.8574,
+   "E_Wh": null
+  },
+  "T0_C0.1": {
+   "Q_Ah": 0.8681,
+   "E_Wh": null
+  },
+  "T0_C0.2": {
+   "Q_Ah": 0.8635,
+   "E_Wh": null
+  },
+  "T0_C0.5": {
+   "Q_Ah": 0.8512,
+   "E_Wh": null
+  },
+  "T-10_C0.1": {
+   "Q_Ah": 0.8657,
+   "E_Wh": null
+  },
+  "T-10_C0.2": {
+   "Q_Ah": 0.8591,
+   "E_Wh": null
+  },
+  "T-10_C0.5": {
+   "Q_Ah": 0.84,
+   "E_Wh": null
+  },
+  "T-20_C0.1": {
+   "Q_Ah": 0.8616,
+   "E_Wh": null
+  },
+  "T-20_C0.2": {
+   "Q_Ah": 0.8515,
+   "E_Wh": null
+  },
+  "T-20_C0.5": {
+   "Q_Ah": 0.6493,
+   "E_Wh": null
+  }
+ }
+}
