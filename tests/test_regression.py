@@ -224,7 +224,7 @@ def test_v6_band():
         assert rel(pred[k]["model_h"], tte) < 0.01, k
     n_pass = sum(v["pass_"] for v in pred.values())
     assert n_pass == 9  # 9 of these 14 model rows pass; the spec's '11 of 16' adds the GM-power and standby rows
-    assert abs(100 / 442.7 - 0.23) < 0.005  # standby drain band row (S1)
+    assert abs(100 / lsoda("SB-W", 25.0).tte_h - 0.23) < 0.005  # standby drain band row (S1, model run)
 
 
 # ------------------------------------------------------------------------------------------- analytic

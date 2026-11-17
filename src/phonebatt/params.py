@@ -146,6 +146,8 @@ class Params:
     # ---- switches (structural variants) ----------------------------------------------------------
     burst: bool = True  # burst envelope / brown-out event enabled (X7 sets False)
     throttling: bool = True  # skin-temperature throttling enabled
+    load_heat: bool = True  # A4: the delivered power P is dissipated inside the enclosure (E7 term P).  False for
+    # a bare cell on a tester (hg2_cell, nasa_b0005), whose load is external  [REVIEW 2026-11-17]
     ocv_table: Any = None  # optional (z_grid, U_grid) replacing the CRM06 OCV (e.g. HG2 cell, NMC)
     dudt_table: Any = None  # optional (z_grid, dUdT_grid [V/K]) replacing the Ai2020 table
 
@@ -267,7 +269,7 @@ def pixel8a(**ov) -> Params:
 
 
 _NO_LOADS = dict(P_susp=0.0, P_awake=0.0, E_wake=0.0, P_d0=0.0, p_c=0.0, k_RR=0.0, P_SoC_max=0.0, m_b=0.0,
-                 burst=False, throttling=False)
+                 burst=False, throttling=False, load_heat=False)  # cell on a tester: the load is external
 
 
 def hg2_cell(ocv_table=None, R_sigma=0.038, split=(6, 1), C_th=None, R_th=None, Q_Ah=3.0, **ov) -> Params:
@@ -513,7 +515,7 @@ def param_table(p: Params = RP63) -> dict:
     out = {}
     for f in fields(p):
         v = getattr(p, f.name)
-        if f.name in ("ocv_table", "dudt_table", "burst", "throttling", "r_growth"):
+        if f.name in ("ocv_table", "dudt_table", "burst", "throttling", "load_heat", "r_growth"):
             continue
         e = UQ_SPEC.get(f.name, ("fixed", v, v, v))
         out[f.name] = dict(value=v, unit=UNITS.get(f.name, "-"), dist=e[0], lo=e[1], mode=e[2], hi=e[3])

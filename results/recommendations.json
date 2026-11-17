@@ -1,0 +1,1163 @@
+{
+ "meta": {
+  "spec": "FINAL_SPEC 2026-11-17",
+  "seed": 2026,
+  "solver": "smooth metrics (F5 fixed points, F6 Dynkin); LSODA for L2 TTE; rk4_batch h = 10 s for the O8 L2 coverage",
+  "h_s": 10.0,
+  "script": "analysis/run_recommendations.py",
+  "phonebatt_version": "1.0.0",
+  "generated_utc": "2026-11-17T16:44:44Z",
+  "git_sha": "911187e14a6588cb33d93d9fa2aa8108ae7a7c5c",
+  "git_src_dirty": true,
+  "runtime_s": 37.3,
+  "n_theta": 1024,
+  "Tamb_C": 25.0
+ },
+ "base": {
+  "s12_Pbar_W": 0.4953557969825413,
+  "s12_tte_inf_h": 35.910433001890674,
+  "ctmc_mu_h": 41.24787940559493,
+  "Eu_Wh": 17.788441159639707,
+  "vectorised_max_abs_diff_pp": 0.0
+ },
+ "levers": {
+  "skip_game": {
+   "label": "Skip 3D gaming (GM -> standby)",
+   "short": "Skip 3D gaming (1 h)",
+   "kind": "gain",
+   "s12_pct": 34.89952201703428,
+   "ctmc_pct": 36.94120419598084,
+   "s12_ci90_pct": [
+    17.6015314033268,
+    33.946985142612114
+   ],
+   "ctmc_ci90_pct": [
+    19.731849846275065,
+    35.989877287769865
+   ],
+   "ctmc_ci90_usage_pct": [
+    5.558281013146925,
+    70.69865230540603
+   ],
+   "s12_median_pct": 24.645037536329525,
+   "ctmc_median_pct": 26.75668572072474,
+   "p_gain_s12": 1.0,
+   "p_gain_ctmc": 1.0,
+   "rank_ctmc_median": 1.0,
+   "rank_ctmc_ci90": [
+    1.0,
+    1.0
+   ],
+   "proto": {
+    "s12_pct": 34.9,
+    "ctmc_pct": 36.9
+   },
+   "dev_pp": {
+    "s12": -0.0004779829657195478,
+    "ctmc": 0.04120419598083913
+   },
+   "rank_s12_median": 1.0,
+   "rank_s12_ci90": [
+    1.0,
+    1.0
+   ],
+   "s12_L2_tte_h": 48.08788742379041,
+   "s12_L2_pct": 37.694241805517194,
+   "s12_L2_proto_pct": 37.7
+  },
+  "dark_theme": {
+   "label": "Dark theme (APL x0.25 on RD, SO, SO-L, NV)",
+   "short": "Dark theme",
+   "kind": "gain",
+   "s12_pct": 7.563699006597169,
+   "ctmc_pct": 4.566623807150805,
+   "s12_ci90_pct": [
+    4.016940151956243,
+    13.980464746466362
+   ],
+   "ctmc_ci90_pct": [
+    2.4048383212790405,
+    8.29352327469322
+   ],
+   "ctmc_ci90_usage_pct": [
+    1.9687514087007285,
+    10.380030753077595
+   ],
+   "s12_median_pct": 8.696498924032802,
+   "ctmc_median_pct": 5.2051177562880575,
+   "p_gain_s12": 1.0,
+   "p_gain_ctmc": 1.0,
+   "rank_ctmc_median": 2.0,
+   "rank_ctmc_ci90": [
+    2.0,
+    6.0
+   ],
+   "proto": {
+    "s12_pct": 7.6,
+    "ctmc_pct": 4.6
+   },
+   "dev_pp": {
+    "s12": -0.03630099340283088,
+    "ctmc": -0.03337619284919491
+   },
+   "rank_s12_median": 2.0,
+   "rank_s12_ci90": [
+    2.0,
+    4.0
+   ],
+   "s12_L2_tte_h": 35.40516349709662,
+   "s12_L2_pct": 1.3786923257779193,
+   "s12_L2_proto_pct": 1.4
+  },
+  "voice_call": {
+   "label": "Voice call instead of video call",
+   "short": "Voice call, not video",
+   "kind": "gain",
+   "s12_pct": 4.785287890657797,
+   "ctmc_pct": 4.025199926288492,
+   "s12_ci90_pct": [
+    3.8179917268521515,
+    5.667513997447919
+   ],
+   "ctmc_ci90_pct": [
+    3.252264050602233,
+    4.794378328641778
+   ],
+   "ctmc_ci90_usage_pct": [
+    0.6504763467596175,
+    9.661296413520438
+   ],
+   "s12_median_pct": 4.757760782437415,
+   "ctmc_median_pct": 4.018432688402496,
+   "p_gain_s12": 1.0,
+   "p_gain_ctmc": 1.0,
+   "rank_ctmc_median": 4.0,
+   "rank_ctmc_ci90": [
+    2.0,
+    6.0
+   ],
+   "proto": {
+    "s12_pct": 4.8,
+    "ctmc_pct": 4.0
+   },
+   "dev_pp": {
+    "s12": -0.014712109342203128,
+    "ctmc": 0.02519992628849188
+   },
+   "rank_s12_median": 4.0,
+   "rank_s12_ci90": [
+    2.0,
+    5.0
+   ],
+   "s12_L2_tte_h": 35.23879432981724,
+   "s12_L2_pct": 0.9023129800506791,
+   "s12_L2_proto_pct": 0.9
+  },
+  "brightness_m01": {
+   "label": "Brightness -0.1 on all screen-on states",
+   "short": "Brightness \u22120.1",
+   "kind": "gain",
+   "s12_pct": 4.434708111309416,
+   "ctmc_pct": 3.0644367982469056,
+   "s12_ci90_pct": [
+    2.0594302710727264,
+    8.733581172637187
+   ],
+   "ctmc_ci90_pct": [
+    1.4185099726407346,
+    6.054270654594012
+   ],
+   "ctmc_ci90_usage_pct": [
+    1.335947514292396,
+    6.268818746731983
+   ],
+   "s12_median_pct": 4.711799888338009,
+   "ctmc_median_pct": 3.240694694050217,
+   "p_gain_s12": 1.0,
+   "p_gain_ctmc": 1.0,
+   "rank_ctmc_median": 5.0,
+   "rank_ctmc_ci90": [
+    3.0,
+    8.0
+   ],
+   "proto": {
+    "s12_pct": 4.4,
+    "ctmc_pct": 3.1
+   },
+   "dev_pp": {
+    "s12": 0.0347081113094152,
+    "ctmc": -0.035563201753094464
+   },
+   "rank_s12_median": 4.0,
+   "rank_s12_ci90": [
+    3.0,
+    6.0
+   ],
+   "s12_L2_tte_h": 35.1871496365048,
+   "s12_L2_pct": 0.7544342257551184,
+   "s12_L2_proto_pct": 0.8
+  },
+  "refresh_60": {
+   "label": "Cap refresh at 60 Hz",
+   "short": "Refresh capped at 60 Hz",
+   "kind": "gain",
+   "s12_pct": 4.052746225408965,
+   "ctmc_pct": 4.724313947730185,
+   "s12_ci90_pct": [
+    1.474235958045541,
+    4.505942314887465
+   ],
+   "ctmc_ci90_pct": [
+    1.7517047458942892,
+    5.2436261965683375
+   ],
+   "ctmc_ci90_usage_pct": [
+    1.5492848954000884,
+    6.001535850046427
+   ],
+   "s12_median_pct": 2.9203321051758824,
+   "ctmc_median_pct": 3.3883908899542847,
+   "p_gain_s12": 1.0,
+   "p_gain_ctmc": 1.0,
+   "rank_ctmc_median": 5.0,
+   "rank_ctmc_ci90": [
+    2.0,
+    7.0
+   ],
+   "proto": {
+    "s12_pct": 4.1,
+    "ctmc_pct": 4.7
+   },
+   "dev_pp": {
+    "s12": -0.047253774591034414,
+    "ctmc": 0.024313947730185248
+   },
+   "rank_s12_median": 6.0,
+   "rank_s12_ci90": [
+    4.0,
+    7.0
+   ],
+   "s12_L2_tte_h": 35.159025723614285,
+   "s12_L2_pct": 0.6739045732890858,
+   "s12_L2_proto_pct": 0.7
+  },
+  "vcall_wifi": {
+   "label": "Video call over Wi-Fi instead of LTE",
+   "short": "Video call on Wi-Fi, not LTE",
+   "kind": "gain",
+   "s12_pct": 3.911578209220279,
+   "ctmc_pct": 1.5530344827808795,
+   "s12_ci90_pct": [
+    0.5884363592472331,
+    8.673149587118365
+   ],
+   "ctmc_ci90_pct": [
+    0.2341516253440623,
+    3.349982773362414
+   ],
+   "ctmc_ci90_usage_pct": [
+    0.08952156389132382,
+    5.4901506064829375
+   ],
+   "s12_median_pct": 4.391298707449421,
+   "ctmc_median_pct": 1.7225039504726647,
+   "p_gain_s12": 0.982421875,
+   "p_gain_ctmc": 0.982421875,
+   "rank_ctmc_median": 7.0,
+   "rank_ctmc_ci90": [
+    5.0,
+    10.0
+   ],
+   "proto": {
+    "s12_pct": 3.9,
+    "ctmc_pct": 1.6
+   },
+   "dev_pp": {
+    "s12": 0.011578209220278968,
+    "ctmc": -0.04696551721912057
+   },
+   "rank_s12_median": 4.0,
+   "rank_s12_ci90": [
+    2.0,
+    7.0
+   ],
+   "s12_L2_tte_h": 35.18017980499074,
+   "s12_L2_pct": 0.7344768993418738,
+   "s12_L2_proto_pct": null
+  },
+  "half_bg": {
+   "label": "Halve background wake-ups",
+   "short": "Halve background wake-ups",
+   "kind": "gain",
+   "s12_pct": 0.07117995328296267,
+   "ctmc_pct": 0.43013901924660036,
+   "s12_ci90_pct": [
+    0.04747657182795795,
+    0.1576857586381185
+   ],
+   "ctmc_ci90_pct": [
+    0.23512099655578989,
+    0.5562985813679865
+   ],
+   "ctmc_ci90_usage_pct": [
+    0.2015687580333425,
+    0.7491609132185706
+   ],
+   "s12_median_pct": 0.08393586470710757,
+   "ctmc_median_pct": 0.37148155379631564,
+   "p_gain_s12": 1.0,
+   "p_gain_ctmc": 1.0,
+   "rank_ctmc_median": 10.0,
+   "rank_ctmc_ci90": [
+    9.0,
+    10.0
+   ],
+   "proto": {
+    "s12_pct": 0.1,
+    "ctmc_pct": 0.4
+   },
+   "dev_pp": {
+    "s12": -0.028820046717037334,
+    "ctmc": 0.03013901924660034
+   },
+   "rank_s12_median": 9.0,
+   "rank_s12_ci90": [
+    9.0,
+    9.0
+   ],
+   "s12_L2_tte_h": 34.928478314452114,
+   "s12_L2_pct": 0.013758070593983263,
+   "s12_L2_proto_pct": 0.0
+  },
+  "standby_5g": {
+   "label": "Avoid: standby on 5G NSA without Wi-Fi",
+   "short": "Avoid: 5G NSA standby",
+   "kind": "avoid",
+   "s12_pct": -4.357941318318714,
+   "ctmc_pct": -4.452729990317961,
+   "s12_ci90_pct": [
+    -10.899019616260357,
+    -3.5193550382531344
+   ],
+   "ctmc_ci90_pct": [
+    -11.783135813244908,
+    -3.838068313015161
+   ],
+   "ctmc_ci90_usage_pct": [
+    -14.322445156947508,
+    -3.812187074775703
+   ],
+   "s12_median_pct": -7.001905236564531,
+   "ctmc_median_pct": -7.605837935297949,
+   "p_gain_s12": 0.0,
+   "p_gain_ctmc": 0.0,
+   "rank_ctmc_median": 12.0,
+   "rank_ctmc_ci90": [
+    11.0,
+    13.0
+   ],
+   "proto": {
+    "s12_pct": -4.4,
+    "ctmc_pct": -4.5
+   },
+   "dev_pp": {
+    "s12": 0.04205868168128646,
+    "ctmc": 0.047270009682039316
+   },
+   "rank_s12_median": 11.0,
+   "rank_s12_ci90": [
+    10.0,
+    12.0
+   ],
+   "s12_L2_tte_h": 34.61520334946345,
+   "s12_L2_pct": -0.8832694573698174,
+   "s12_L2_proto_pct": -1.5
+  },
+  "weak_signal": {
+   "label": "Avoid: weak signal (-110 dBm) all day",
+   "short": "Avoid: weak signal (\u2212110 dBm)",
+   "kind": "avoid",
+   "s12_pct": -3.9123531345762075,
+   "ctmc_pct": -5.675011058420676,
+   "s12_ci90_pct": [
+    -15.321627111624673,
+    -1.6813825869983943
+   ],
+   "ctmc_ci90_pct": [
+    -20.123318339833084,
+    -2.6593434695831895
+   ],
+   "ctmc_ci90_usage_pct": [
+    -21.2401733738549,
+    -2.258748147196317
+   ],
+   "s12_median_pct": -5.18421388229886,
+   "ctmc_median_pct": -7.541831312033704,
+   "p_gain_s12": 0.0,
+   "p_gain_ctmc": 0.0,
+   "rank_ctmc_median": 12.0,
+   "rank_ctmc_ci90": [
+    11.0,
+    13.0
+   ],
+   "proto": {
+    "s12_pct": -3.9,
+    "ctmc_pct": -5.7
+   },
+   "dev_pp": {
+    "s12": -0.01235313457620757,
+    "ctmc": 0.024988941579324297
+   },
+   "rank_s12_median": 10.0,
+   "rank_s12_ci90": [
+    10.0,
+    12.0
+   ],
+   "s12_L2_tte_h": 34.64652407372542,
+   "s12_L2_pct": -0.7935860961099439,
+   "s12_L2_proto_pct": -0.8
+  },
+  "brightness_p02": {
+   "label": "Avoid: brightness +0.2 (outdoors)",
+   "short": "Avoid: brightness +0.2",
+   "kind": "avoid",
+   "s12_pct": -10.348687262314527,
+   "ctmc_pct": -7.493728156473189,
+   "s12_ci90_pct": [
+    -20.50942575920041,
+    -4.431779554799831
+   ],
+   "ctmc_ci90_pct": [
+    -15.531419791700792,
+    -3.1374425118202294
+   ],
+   "ctmc_ci90_usage_pct": [
+    -15.78099332933335,
+    -3.097042644586256
+   ],
+   "s12_median_pct": -10.479832249640552,
+   "ctmc_median_pct": -7.6896167791601355,
+   "p_gain_s12": 0.0,
+   "p_gain_ctmc": 0.0,
+   "rank_ctmc_median": 12.0,
+   "rank_ctmc_ci90": [
+    11.0,
+    13.0
+   ],
+   "proto": {
+    "s12_pct": -10.3,
+    "ctmc_pct": -7.5
+   },
+   "dev_pp": {
+    "s12": -0.04868726231452669,
+    "ctmc": 0.006271843526810983
+   },
+   "rank_s12_median": 12.0,
+   "rank_s12_ci90": [
+    10.0,
+    12.0
+   ],
+   "s12_L2_tte_h": 33.925539116288746,
+   "s12_L2_pct": -2.8580452018412528,
+   "s12_L2_proto_pct": null
+  },
+  "os_coalesce": {
+   "label": "OS: tail-aware coalescing of background traffic (x5)",
+   "short": "OS: coalesce background \u00d75",
+   "kind": "os",
+   "s12_pct": 0.11394875405645877,
+   "ctmc_pct": 0.6989112687564081,
+   "s12_ci90_pct": [
+    0.07599620709620836,
+    0.2525504367708396
+   ],
+   "ctmc_ci90_pct": [
+    0.38023553837303936,
+    0.9036657013567125
+   ],
+   "ctmc_ci90_usage_pct": [
+    0.32573863037024586,
+    1.2191382076419337
+   ],
+   "s12_median_pct": 0.13438327998646082,
+   "ctmc_median_pct": 0.6011069149656545,
+   "p_gain_s12": 1.0,
+   "p_gain_ctmc": 1.0,
+   "rank_ctmc_median": 9.0,
+   "rank_ctmc_ci90": [
+    8.0,
+    9.0
+   ],
+   "proto": {
+    "s12_pct": 0.1,
+    "ctmc_pct": 0.7
+   },
+   "dev_pp": {
+    "s12": 0.013948754056458762,
+    "ctmc": -0.0010887312435918783
+   },
+   "rank_s12_median": 8.0,
+   "rank_s12_ci90": [
+    8.0,
+    8.0
+   ],
+   "s12_L2_tte_h": 34.931362214005084,
+   "s12_L2_pct": 0.022015791688900777,
+   "s12_L2_proto_pct": null
+  },
+  "os_frame_cap": {
+   "label": "OS: thermal-aware frame cap (game x_c 0.80 -> 0.64)",
+   "short": "OS: game frame cap",
+   "kind": "os",
+   "s12_pct": 3.42279929778444,
+   "ctmc_pct": 2.7320432685448592,
+   "s12_ci90_pct": [
+    0.4001752638216427,
+    5.224628201224002
+   ],
+   "ctmc_ci90_pct": [
+    0.3245577318443893,
+    4.513253193130717
+   ],
+   "ctmc_ci90_usage_pct": [
+    0.16492871267537623,
+    4.801212029295321
+   ],
+   "s12_median_pct": 1.4951450037054559,
+   "ctmc_median_pct": 1.30869973286305,
+   "p_gain_s12": 1.0,
+   "p_gain_ctmc": 1.0,
+   "rank_ctmc_median": 8.0,
+   "rank_ctmc_ci90": [
+    3.0,
+    10.0
+   ],
+   "proto": {
+    "s12_pct": 3.4,
+    "ctmc_pct": 2.7
+   },
+   "dev_pp": {
+    "s12": 0.02279929778444023,
+    "ctmc": 0.03204326854485906
+   },
+   "rank_s12_median": 7.0,
+   "rank_s12_ci90": [
+    4.0,
+    7.0
+   ],
+   "s12_L2_tte_h": 35.06944212655182,
+   "s12_L2_pct": 0.4173920472340553,
+   "s12_L2_proto_pct": null
+  },
+  "wifi_share_80": {
+   "label": "Prefer Wi-Fi: Wi-Fi share 50 -> 80 %",
+   "short": "Prefer Wi-Fi (50 \u2192 80 % of time)",
+   "kind": "gain",
+   "s12_pct": null,
+   "ctmc_pct": 3.704883734946396,
+   "s12_ci90_pct": [
+    null,
+    null
+   ],
+   "ctmc_ci90_pct": [
+    1.6069182955317562,
+    6.330662698102987
+   ],
+   "ctmc_ci90_usage_pct": [
+    1.2196760786723029,
+    6.829027330581908
+   ],
+   "s12_median_pct": null,
+   "ctmc_median_pct": 3.5553191399134265,
+   "p_gain_s12": null,
+   "p_gain_ctmc": 0.9970703125,
+   "rank_ctmc_median": 4.0,
+   "rank_ctmc_ci90": [
+    2.0,
+    7.0
+   ],
+   "proto": {
+    "s12_pct": null,
+    "ctmc_pct": 3.7
+   },
+   "dev_pp": {
+    "s12": null,
+    "ctmc": 0.0048837349463957125
+   },
+   "ctmc_mu_h": 42.776065380703116
+  }
+ },
+ "s12_L2_base_h": 34.92367349079924,
+ "s12_L2_note": "L2 TTE of the S12 day with each lever (LSODA): non-smooth, the shutdown lands in the evening of day 2. The package lever 'standby_5g' keeps each state's background rate (the \u00a712.1 smooth-metric definition); final_proto 'recs' used SB-5's own rate (1/60 s^-1), so its -1.5 % is not the same lever.",
+ "ranking": {
+  "by": "S13 Dynkin mean (central)",
+  "order": [
+   "skip_game",
+   "refresh_60",
+   "dark_theme",
+   "voice_call",
+   "wifi_share_80",
+   "brightness_m01",
+   "os_frame_cap",
+   "vcall_wifi",
+   "os_coalesce",
+   "half_bg",
+   "standby_5g",
+   "weak_signal",
+   "brightness_p02"
+  ],
+  "p_skip_game_rank1": 1.0,
+  "note": "ranks over the parameter sample: 1 = largest TTE gain among all 13 items"
+ },
+ "energy_share_S12": {
+  "shares": {
+   "soc": 0.40037306575690035,
+   "disp": 0.2723030710119233,
+   "net": 0.14457783278803993,
+   "awake": 0.07191800361883238,
+   "susp": 0.04037501957548485,
+   "gnss": 0.03406642276681534,
+   "aud": 0.016822924823118687,
+   "cam": 0.012617193617339015,
+   "sens": 0.005930081000149337,
+   "wake": 0.001016385041396754
+  },
+  "implied_Pbar_W": 0.49535579698254123,
+  "proto_method_shares": {
+   "disp": 0.3206727667346103,
+   "soc": 0.29386022971475245,
+   "net": 0.1702594593455928,
+   "awake": 0.08469293097862593,
+   "susp": 0.04754690861957947,
+   "gnss": 0.04011770414777018,
+   "aud": 0.01981121192482478,
+   "cam": 0.014858408943618584,
+   "sens": 0.006983452203500736,
+   "wake": 0.0011969273871248304
+  },
+  "proto_method_implied_Pbar_W": 0.4206372313291499,
+  "proto": {
+   "disp": 0.321,
+   "soc": 0.294,
+   "net": 0.17,
+   "awake": 0.085,
+   "susp": 0.048,
+   "gnss": 0.04,
+   "aud": 0.02,
+   "cam": 0.015,
+   "sens": 0.007
+  },
+  "note": "'shares' use the SoC power at the F5 fixed point, consistent with the lever metric (P\u0304 = 0.4954 W). The \u00a712.1 [PROTO] shares are reproduced by 'proto_method_shares', which takes the game's skin temperature from its unthrottled demand (T_s = 46.5 \u00b0C) and so throttles the game SoC to 0.58 W instead of 2.37 W; that implies P\u0304 = 0.421 W, inconsistent with the [PROTO] lever base 0.4954 W."
+ },
+ "scenario_levers": {
+  "video_wifi_vs_5g": {
+   "tte_wifi_h": 32.3169663340692,
+   "tte_5g_h": 21.103695906130934,
+   "gain_pct": 53.13415468937195,
+   "gain_ci90_pct": [
+    33.864442657947585,
+    101.57219387728325
+   ],
+   "proto": {
+    "tte_wifi_h": 32.32,
+    "tte_5g_h": 21.1,
+    "gain_pct": 53.0
+   }
+  },
+  "vcall_wifi_vs_lte": {
+   "tte_wifi_h": 10.827243635378919,
+   "tte_lte_h": 6.9346984973257735,
+   "gain_pct": 56.13142575058203,
+   "gain_ci90_pct": [
+    6.930070319801843,
+    117.75518762233607
+   ],
+   "proto": {
+    "tte_wifi_h": 10.83,
+    "tte_lte_h": 6.93,
+    "gain_pct": 56.0
+   }
+  },
+  "voice_vs_video_call_lte": {
+   "tte_voice_h": 12.288040525055735,
+   "tte_video_h": 6.9346984973257735,
+   "gain_pct": 77.1964639817343,
+   "gain_ci90_pct": [
+    37.76426402225345,
+    123.78766341424688
+   ]
+  },
+  "keep_warm_S9": {
+   "cells": {
+    "-10|1.0": {
+     "s_off_cold_pct": 7.17674405646167,
+     "tte_cold_h": 25.330084874626646,
+     "event": "cutoff",
+     "s_off_warm_pct": 1.6957974381471452,
+     "tte_warm_h": 26.992708367637885,
+     "stranded_avoided_pp": 5.480946618314525
+    },
+    "-20|1.0": {
+     "s_off_cold_pct": 16.901372048614103,
+     "tte_cold_h": 22.666003938392898,
+     "event": "cutoff",
+     "s_off_warm_pct": 1.6957974381471452,
+     "tte_warm_h": 26.992708367637885,
+     "stranded_avoided_pp": 15.205574610466957
+    },
+    "-10|0.8": {
+     "s_off_cold_pct": 22.249943050193245,
+     "tte_cold_h": 16.99907895866112,
+     "event": "cutoff",
+     "s_off_warm_pct": 2.7187677644174495,
+     "tte_warm_h": 21.325,
+     "stranded_avoided_pp": 19.5311752857758
+    },
+    "-20|0.8": {
+     "s_off_cold_pct": 44.18876474494714,
+     "tte_cold_h": 12.331788753052408,
+     "event": "cutoff",
+     "s_off_warm_pct": 2.7187677644174495,
+     "tte_warm_h": 21.325,
+     "stranded_avoided_pp": 41.46999698052969
+    }
+   },
+   "note": "S9 cold hike (TRK + 30 s photo bursts), T0 = 20 \u00b0C; 'warm' = the same pack at 25 \u00b0C ambient",
+   "proto_s_off_range_pct": [
+    7.2,
+    44.2
+   ]
+  },
+  "hot_car_gaming": {
+   "tte_25C_h": 5.681229423608784,
+   "tte_35C_h": 10.287942880004694,
+   "rho_perf_25C_L2": 0.852854001657935,
+   "rho_perf_35C_L2": 0.523038068450686,
+   "rho_perf_35C_F5": 0.5305539300316034,
+   "proto": {
+    "tte_25C_h": 5.68,
+    "tte_35C_h": 10.29,
+    "rho_perf_35C_F5": 0.531
+   }
+  },
+  "weak_signal": {
+   "social_lte_85_h": 14.463876076076328,
+   "social_lte_110_h": 12.733184158383025,
+   "social_loss_pct": -11.965616329884888,
+   "vcall_85_h": 6.9346984973257735,
+   "vcall_110_h": 5.325888954684327,
+   "vcall_loss_pct": -23.199415854371342,
+   "social_loss_ci90_pct": [
+    -34.9488070164896,
+    -5.454825894274748
+   ],
+   "proto": {
+    "social_loss_pct": -12.0,
+    "vcall_loss_pct": -23.0
+   }
+  },
+  "standby_rat": {
+   "tte_h": {
+    "SB-W": 442.7139911409599,
+    "SB-L": 378.28231483721345,
+    "SB-5": 173.78398118748436
+   },
+   "wifi_vs_lte_pct": 17.03269589313827,
+   "lte_vs_5g_pct": 117.6738685881002,
+   "proto_tte_h": {
+    "SB-W": 442.7,
+    "SB-L": 378.3,
+    "SB-5": 173.8
+   }
+  }
+ },
+ "os": {
+  "O1": {
+   "mechanism": "cap dPb <= max(0, 0.9 dPb_safe) with F4 evaluated online",
+   "m_b_sweep_m10C_soh0p8": {
+    "1": {
+     "s_off_pct": 8.538205040554265,
+     "tte_h": 12.149444187537572,
+     "event": "brownout",
+     "burst_delivered_frac": 1.0,
+     "gain_tte_pct": 0.0
+    },
+    "0.5": {
+     "s_off_pct": 2.559554571469932,
+     "tte_h": 12.876881131538196,
+     "event": "brownout",
+     "burst_delivered_frac": 0.5,
+     "gain_tte_pct": 5.987409240883634
+    },
+    "0": {
+     "s_off_pct": 1.5181392777156724,
+     "tte_h": 13.00016412796857,
+     "event": "cutoff",
+     "burst_delivered_frac": 0.0,
+     "gain_tte_pct": 7.002130527943273
+    }
+   },
+   "m20C_soh0p8": {
+    "s_off_pct": [
+     23.26305226732642,
+     2.4140804768636333
+    ],
+    "tte_h": [
+     10.228895848206303,
+     12.7801366565418
+    ],
+    "note": "m_b = 1 vs 0 (= the online governor's TTE and s_off, see AN12)"
+   },
+   "proto": {
+    "s_off_pct": [
+     8.5,
+     2.6,
+     1.5
+    ],
+    "tte_h": [
+     12.15,
+     12.88,
+     13.0
+    ]
+   },
+   "online_governor_AN12": {
+    "s_off_pct": 1.5181392777156724,
+    "tte_h": 13.00016412796857,
+    "event": "cutoff",
+    "burst_delivered_frac": 0.977025865713418,
+    "gain_tte_pct": 7.002130527943273,
+    "note": "cap 0.9*dPb_safe evaluated on the state; identical TTE/s_off to m_b = 0, but delivers the burst amplitude in full until the cap binds",
+    "source": "results/stranded.json (AN12)"
+   }
+  },
+  "O2": {
+   "mechanism": "game x_c 0.80 -> 0.64 (-20 % frequency demand)",
+   "steady_game_power_W": [
+    3.115821167235649,
+    2.722367464049733
+   ],
+   "s12_pct": 3.42279929778444,
+   "s12_ci90_pct": [
+    0.4001752638216427,
+    5.224628201224002
+   ],
+   "ctmc_pct": 2.7320432685448592,
+   "ctmc_ci90_pct": [
+    0.3245577318443893,
+    4.513253193130717
+   ],
+   "S7_L2_tte_h": [
+    5.681229423608784,
+    6.459425824632786
+   ],
+   "S7_L2_gain_pct": 13.697676031003914,
+   "S7_perf_vs_requested_0p80": [
+    0.852854001657935,
+    0.779982599511708
+   ],
+   "note": "performance = time-mean delivered x_eff / 0.80; reactive throttling oscillates around its mean, the frame cap holds x_c = 0.64 (rho relative to 0.64 shown in S7_rho_capped)",
+   "S7_rho_capped": 0.9749782493896352,
+   "proto": {
+    "steady_game_power_W": [
+     3.116,
+     2.722
+    ],
+    "s12_pct": 3.4,
+    "ctmc_pct": 2.7
+   }
+  },
+  "O3": {
+   "mechanism": "background burst rate lambda -> lambda/5 in standby states (E14)",
+   "standby": {
+    "S1": {
+     "base_h": 442.7139911409599,
+     "coalesced_h": 453.2479680977483,
+     "gain_pct": 2.379409092005491,
+     "gain_ci90_pct": [
+      1.3332493862185202,
+      5.674539753518417
+     ]
+    },
+    "S2a": {
+     "base_h": 378.28231483721345,
+     "coalesced_h": 474.32867519418267,
+     "gain_pct": 25.39012705320389,
+     "gain_ci90_pct": [
+      10.932901793608972,
+      40.03582739132926
+     ]
+    },
+    "S2b": {
+     "base_h": 173.78398118748436,
+     "coalesced_h": 289.7361297110246,
+     "gain_pct": 66.72200034273983,
+     "gain_ci90_pct": [
+      61.970135051492804,
+      152.1731257650638
+     ]
+    }
+   },
+   "day_s12_pct": 0.11394875405645877,
+   "day_ctmc_pct": 0.6989112687564081,
+   "day_ctmc_ci90_pct": [
+    0.38023553837303936,
+    0.9036657013567125
+   ],
+   "proto": {
+    "standby_gain_pct": {
+     "S1": 2.4,
+     "S2a": 25.4,
+     "S2b": 66.7
+    },
+    "day_pct": [
+     0.1,
+     0.7
+    ]
+   }
+  },
+  "O4": {
+   "mechanism": "RAT steering: LTE or Wi-Fi for low-throughput states, 5G only for bulk",
+   "avoided_standby_5g_ctmc_pct": -4.452729990317961,
+   "avoided_standby_5g_ci90_pct": [
+    -11.783135813244908,
+    -3.838068313015161
+   ],
+   "streaming_5g_vs_wifi_pct": -34.69778169158474,
+   "ctmc_all_cellular_on_5g_pct": -8.631448728299084,
+   "ctmc_all_cellular_on_5g_mu_h": 37.687589843190366,
+   "literature": "XU20 measured -24.8 % (cited, not computed here)",
+   "proto": {
+    "standby_5g_pct": -4.5,
+    "streaming_pct": -35.0
+   }
+  },
+  "O5": {
+   "mechanism": "defer bulk transfers while RSRP < -100 dBm (m_sig)",
+   "avoided_ctmc_pct": -5.675011058420676,
+   "avoided_ctmc_ci90_pct": [
+    -20.123318339833084,
+    -2.6593434695831895
+   ],
+   "avoided_social_lte_pct": -11.965616329884888,
+   "proto": {
+    "ctmc_pct": -5.7,
+    "social_pct": -12.0
+   }
+  },
+  "O6": {
+   "mechanism": "adaptive refresh (LTPO): 120 Hz only while scrolling; bound = 60 Hz cap",
+   "s12_pct": 4.052746225408965,
+   "ctmc_pct": 4.724313947730185,
+   "s12_ci90_pct": [
+    1.474235958045541,
+    4.505942314887465
+   ],
+   "ctmc_ci90_pct": [
+    1.7517047458942892,
+    5.2436261965683375
+   ],
+   "proto": [
+    4.1,
+    4.7
+   ]
+  },
+  "O7": {
+   "mechanism": "remap displayed 0 % to z*(T, SOH, dPb) from F4 (battery temperature measured); show 'X % unavailable until warm'",
+   "S10a_F4_vs_L2": {
+    "0|1.0": {
+     "s_off_L2_pct": 1.4278866407255744,
+     "event": "brownout",
+     "T_end_C": 3.4022340157840176,
+     "s_off_F4_pct": 1.4259058546730894,
+     "err_pp": -0.0019807860524851187
+    },
+    "0|0.8": {
+     "s_off_L2_pct": 3.7882297295658214,
+     "event": "brownout",
+     "T_end_C": 3.407631819942253,
+     "s_off_F4_pct": 3.7800890004633,
+     "err_pp": -0.008140729102521643
+    },
+    "-10|1.0": {
+     "s_off_L2_pct": 2.755397085569294,
+     "event": "brownout",
+     "T_end_C": -6.5909739183990155,
+     "s_off_F4_pct": 2.748976868123014,
+     "err_pp": -0.006420217446280463
+    },
+    "-10|0.8": {
+     "s_off_L2_pct": 8.538205040554265,
+     "event": "brownout",
+     "T_end_C": -6.606442886635932,
+     "s_off_F4_pct": 8.500755152102517,
+     "err_pp": -0.03744988845174879
+    },
+    "-20|1.0": {
+     "s_off_L2_pct": 6.381103264559891,
+     "event": "brownout",
+     "T_end_C": -16.60399993832675,
+     "s_off_F4_pct": 6.348560197615388,
+     "err_pp": -0.032543066944502874
+    },
+    "-20|0.8": {
+     "s_off_L2_pct": 23.26305226732642,
+     "event": "brownout",
+     "T_end_C": -16.616903426175156,
+     "s_off_F4_pct": 23.09062492927646,
+     "err_pp": -0.17242733804996302
+    }
+   },
+   "S9_s_off_pct": {
+    "-10|1.0": 7.17674405646167,
+    "-20|1.0": 16.901372048614103,
+    "-10|0.8": 22.249943050193245,
+    "-20|0.8": 44.18876474494714
+   },
+   "note": "F4 uses the battery temperature at shutdown (T_end of the L2 run) and dPb = 3 W; the S9 shutdowns are explicit 30 s bursts against V_cut, which F4 (sub-second envelope) does not cover - there the gauge needs the burst size"
+  },
+  "O8": {
+   "mechanism": "EKF on (z, v1) + online P\u0304, \u03c3\u00b2 and the IG law (F6-F7) -> remaining time with a 90 % band",
+   "S13_typical": {
+    "E_frac=1": {
+     "mu_dynkin_h": 41.24787940559493,
+     "ig_q05_q50_q95_h": [
+      30.252200360809564,
+      40.59040838359451,
+      54.48617333826436
+     ],
+     "coverage_L0": 0.9111,
+     "mc_L0_q05_q50_q95_h": [
+      29.519887910429954,
+      41.40598296934098,
+      52.76377995292002
+     ]
+    },
+    "E_frac=0.5": {
+     "mu_dynkin_h": 21.035081745752745,
+     "ig_q05_q50_q95_h": [
+      13.433026787847945,
+      20.36393060037103,
+      30.92621914597599
+     ],
+     "coverage_L0": 0.9194,
+     "mc_L0_q05_q50_q95_h": [
+      12.879134551859943,
+      21.15638537407959,
+      28.808572233099184
+     ]
+    },
+    "L2_400_paths": {
+     "n": 400,
+     "mean_h": 39.699930099769254,
+     "coverage_raw_IG": 0.8825,
+     "L2_over_dynkin": 0.9624720269712651,
+     "coverage_IG_scaled": 0.87,
+     "note": "L2 Monte Carlo (h = 10 s, seed 7); 'scaled' multiplies the IG quantiles by the in-sample L2/Dynkin mean ratio (optimistic)",
+     "runtime_s": 15.53474760055542
+    }
+   },
+   "display_example": "41 h (30-54 h) from a full charge at 07:00"
+  },
+  "O9": {
+   "mechanism": "charging defaults (E17-E21)",
+   "soh_2yr": {
+    "A1": 0.8335913279032781,
+    "A2": 0.8525220464304901,
+    "A3": 0.8411598325935765,
+    "A4": 0.7091456718261574,
+    "A5": 0.7738216220467307,
+    "A6b": 0.7831530675219427,
+    "A6c": 0.8527143149872611
+   },
+   "limit80_pp": 1.8930718527212065,
+   "obc_pp": 0.7568504690298461,
+   "hot_climate_pp": -12.444565607712066,
+   "car_dashboard_pp": -5.9769705856547395,
+   "jeita_cold_pp": 6.956124746531844,
+   "proto": {
+    "limit80_pp": 1.9,
+    "obc_pp": 0.7,
+    "hot_climate_pp": -12.5,
+    "jeita_cold_pp": 7.0
+   },
+   "uq_AN13": {
+    "diff_vs_A1_2yr_pp": {
+     "A2": {
+      "q05_q50_q95": [
+       0.4141440819370096,
+       1.3142441467958177,
+       2.85884454398985
+      ],
+      "p_positive": 1.0
+     },
+     "A3": {
+      "q05_q50_q95": [
+       0.04846645285524366,
+       0.5421223334511227,
+       1.3128014377147832
+      ],
+      "p_positive": 1.0
+     },
+     "A4": {
+      "q05_q50_q95": [
+       -13.697049547777945,
+       -9.150057002740791,
+       -5.280359855514692
+      ],
+      "p_positive": 0.0
+     },
+     "A5": {
+      "q05_q50_q95": [
+       -6.200397364124622,
+       -2.8517284360095374,
+       -1.3666992514218153
+      ],
+      "p_positive": 0.0
+     },
+     "A6a": {
+      "q05_q50_q95": [
+       -4.187729035784069,
+       -1.4412524821691364,
+       -0.2813273917497867
+      ],
+      "p_positive": 0.0
+     },
+     "A6b": {
+      "q05_q50_q95": [
+       -13.517868580446995,
+       -3.836020767917997,
+       1.806349833471702
+      ],
+      "p_positive": 0.1640625
+     },
+     "A6c": {
+      "q05_q50_q95": [
+       -6.053614275902005,
+       0.4618234485190942,
+       3.653002444283427
+      ],
+      "p_positive": 0.578125
+     },
+     "A7": {
+      "q05_q50_q95": [
+       -2.1516575825224145,
+       -1.507046138861201,
+       -0.7844100694664047
+      ],
+      "p_positive": 0.0
+     }
+    },
+    "diff_A6c_vs_A6b_2yr_pp": {
+     "q05_q50_q95": [
+      1.2337418299798548,
+      4.097951746672674,
+      11.424187339590528
+     ],
+     "p_positive": 1.0
+    },
+    "n": 128,
+    "source": "results/aging.json (AN13)"
+   }
+  }
+ }
+}

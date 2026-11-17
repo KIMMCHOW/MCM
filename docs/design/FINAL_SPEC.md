@@ -620,6 +620,13 @@ an [ASSUMPTION] for the other phones).
 | LG HG2 cell | 3.0 (C/20: 2.78 measured) | – | KOL20 | cell only: no PCM, no device loads. CAL at 25 °C only: NMC OCV from the C/20 curve, `R0 + R1 = 0.038 Ω` split 6:1, cell `C_th`, `R_th` from the 25 °C 2C temperature rise. All other temperatures predicted with RP-63 activation energies |
 | NASA B0005 cell | 1.86 (fresh) | – | NASA07 | measured fade and EIS `R_e`, `R_ct` growth inserted directly |
 
+**[REVIEW 2026-11-17] Cell-only devices and the heat balance.** Assumption A4 ("all device power ends up as heat
+inside the phone") holds for a phone, not for a bare cell on a tester, whose load is external. For the HG2 and NASA
+cells the term `P` is therefore dropped from E7: `C_th·dT/dt = I²R0 + v1²/R1 − I·T·k_S·∂U/∂T − (T − T_amb)/(k_env·R_th)`
+(`Params.load_heat = False`). This is also the heat definition used by the HG2 thermal [CAL] (`I·(U − V)`). With the
+phone form of E7, the calibrated HG2 cell at 2C (20.9 W delivered) would heat to the 68 °C shutdown in 0.31 h,
+whereas the data show a 3.7 K rise over the 0.45 h discharge; with `P` dropped the model gives 0.455 h and +4.7 K.
+
 ---
 
 ## 5. Usage: activity primitives, scenarios and CTMC profiles
@@ -809,6 +816,13 @@ g5 = T_shut − T              "thermal"     battery at 68 °C
 * Combined event function (one call per step):
   `g = min(z/0.01, (V − V_cut)/0.1, (V_pk − V_sys)/0.1 [if active], (T_shut − T)/10, D/Ũ²)`. It is NaN when
   `D < 0`, which `rk4_batch` already treats as an immediate event. The event type is the argmin at the crossing.
+* **[REVIEW 2026-11-17] Steps that end at an input switch need two evaluations of `g`.** First with the input the
+  step was integrated with: a crossing inside the step (for example the cut-off at the very end of a burst that
+  is followed by a lighter segment). Then with the new input (§6.1): an event that only the new input causes is
+  placed at the switching instant itself, not interpolated back into the step. Evaluating only the new input, as
+  a literal reading of "one call per step" suggests (and as `final_proto.py:mc_L2` does), misses the first kind
+  whenever the next input is lighter: on S9 (−10 °C, SOH 0.8) 5 of 48 parameter samples ended one full 600 s
+  period late (+1.1 to +2.4 % TTE, against the 0.2 % of T1).
 * CTMC inputs: sample each path as jump times, map them to the step grid, and hold the usage state constant within
   an RK4 step (all four stages use the state at the step start). The error is at most `h` per sojourn and has no
   bias.

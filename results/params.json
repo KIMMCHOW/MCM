@@ -1,0 +1,1185 @@
+{
+ "meta": {
+  "spec": "FINAL_SPEC 2026-11-17",
+  "seed": null,
+  "solver": null,
+  "h_s": null,
+  "script": "analysis/run_params.py",
+  "phonebatt_version": "1.0.0",
+  "generated_utc": "2026-11-17T14:14:29Z",
+  "git_sha": "911187e14a6588cb33d93d9fa2aa8108ae7a7c5c",
+  "git_src_dirty": true,
+  "note": "value/unit/dist/lo/mode/hi from phonebatt.params (code); source/conf transcribed from FINAL_SPEC \u00a74. Units SI as in the code (J/mol, Ohm, W, W/cm2, s, K)."
+ },
+ "Q_n": {
+  "value": 4.7,
+  "unit": "Ah",
+  "dist": "T",
+  "lo": 4.56,
+  "mode": 4.7,
+  "hi": 4.8,
+  "source": "PIX9, MR24",
+  "conf": "H",
+  "section": "4.1"
+ },
+ "b0": {
+  "value": 0.60117,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 0.60117,
+  "mode": 0.60117,
+  "hi": 0.60117,
+  "source": "[RUN] CRM06 fit to AI20",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "b1": {
+  "value": 36.426,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 36.426,
+  "mode": 36.426,
+  "hi": 36.426,
+  "source": "[RUN] CRM06 fit to AI20",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "a0": {
+  "value": 3.6193,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 3.6193,
+  "mode": 3.6193,
+  "hi": 3.6193,
+  "source": "[RUN] CRM06 fit to AI20",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "a1": {
+  "value": 0.44311,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 0.44311,
+  "mode": 0.44311,
+  "hi": 0.44311,
+  "source": "[RUN] CRM06 fit to AI20",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "a2": {
+  "value": -0.48605,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": -0.48605,
+  "mode": -0.48605,
+  "hi": -0.48605,
+  "source": "[RUN] CRM06 fit to AI20",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "a3": {
+  "value": 0.63127,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 0.63127,
+  "mode": 0.63127,
+  "hi": 0.63127,
+  "source": "[RUN] CRM06 fit to AI20",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "dV_hv": {
+  "value": 0.242,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 0.242,
+  "mode": 0.242,
+  "hi": 0.242,
+  "source": "cell_ecm a.2 construction",
+  "conf": "L",
+  "section": "4.1"
+ },
+ "p_hv": {
+  "value": 3.86,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 3.86,
+  "mode": 3.86,
+  "hi": 3.86,
+  "source": "cell_ecm a.2 construction",
+  "conf": "L",
+  "section": "4.1"
+ },
+ "dU": {
+  "value": 0.0,
+  "unit": "V",
+  "dist": "U",
+  "lo": -0.02,
+  "mode": 0.0,
+  "hi": 0.02,
+  "source": "OVEJ19 (mechanism) [ASSUMPTION]",
+  "conf": "L",
+  "section": "4.1"
+ },
+ "k_S": {
+  "value": 1.0,
+  "unit": "-",
+  "dist": "U",
+  "lo": 0.5,
+  "mode": 1.0,
+  "hi": 1.5,
+  "source": "[RUN] AI20 entropic fit",
+  "conf": "M-L",
+  "section": "4.1"
+ },
+ "R0_ref": {
+  "value": 0.06,
+  "unit": "Ohm",
+  "dist": "LU",
+  "lo": 0.035,
+  "mode": 0.06,
+  "hi": 0.13,
+  "source": "PINE, BU802a, cell_ecm a.3; plausibility HE19, LEE20 [ASSUMPTION]",
+  "conf": "L",
+  "section": "4.1"
+ },
+ "A_R": {
+  "value": 0.8,
+  "unit": "-",
+  "dist": "U",
+  "lo": 0.5,
+  "mode": 0.8,
+  "hi": 2.0,
+  "source": "[RUN] AI20",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "z0": {
+  "value": 0.139,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 0.139,
+  "mode": 0.139,
+  "hi": 0.139,
+  "source": "[RUN] AI20",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "Ea_R0": {
+  "value": 18000.0,
+  "unit": "J/mol",
+  "dist": "T",
+  "lo": 12000.0,
+  "mode": 18000.0,
+  "hi": 27000.0,
+  "source": "[RUN], BARC22, SUN23, LEE20",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "R1_ref": {
+  "value": 0.01,
+  "unit": "Ohm",
+  "dist": "LU",
+  "lo": 0.003,
+  "mode": 0.01,
+  "hi": 0.025,
+  "source": "[RUN] AI20, cell_ecm a.3",
+  "conf": "M/L",
+  "section": "4.1"
+ },
+ "tau1_ref": {
+  "value": 30.0,
+  "unit": "s",
+  "dist": "U",
+  "lo": 10.0,
+  "mode": 30.0,
+  "hi": 60.0,
+  "source": "[RUN]",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "Ea_R1": {
+  "value": 30000.0,
+  "unit": "J/mol",
+  "dist": "T",
+  "lo": 25000.0,
+  "mode": 30000.0,
+  "hi": 55000.0,
+  "source": "[RUN], BARC22",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "Ea_tau": {
+  "value": 21000.0,
+  "unit": "J/mol",
+  "dist": "U",
+  "lo": 15000.0,
+  "mode": 21000.0,
+  "hi": 27000.0,
+  "source": "[RUN] MQ19",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "V_cut": {
+  "value": 3.4,
+  "unit": "V",
+  "dist": "U",
+  "lo": 3.3,
+  "mode": 3.4,
+  "hi": 3.5,
+  "source": "QC-FG, LEE20",
+  "conf": "M/H",
+  "section": "4.1"
+ },
+ "d_sys": {
+  "value": 0.1,
+  "unit": "V",
+  "dist": "U",
+  "lo": 0.0,
+  "mode": 0.1,
+  "hi": 0.2,
+  "source": "QC-SMB [ASSUMPTION]",
+  "conf": "M/L",
+  "section": "4.1"
+ },
+ "T_shut_C": {
+  "value": 68.0,
+  "unit": "degC",
+  "dist": "fixed",
+  "lo": 68.0,
+  "mode": 68.0,
+  "hi": 68.0,
+  "source": "KANG19",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "eta_c": {
+  "value": 0.99,
+  "unit": "-",
+  "dist": "U",
+  "lo": 0.98,
+  "mode": 0.99,
+  "hi": 1.0,
+  "source": "PLETT-N",
+  "conf": "M",
+  "section": "4.1"
+ },
+ "C_th": {
+  "value": 150.0,
+  "unit": "J/K",
+  "dist": "T",
+  "lo": 100.0,
+  "mode": 150.0,
+  "hi": 230.0,
+  "source": "MAL99, HE19, KANG19",
+  "conf": "M",
+  "section": "4.2"
+ },
+ "R_th": {
+  "value": 3.0,
+  "unit": "K/W",
+  "dist": "T",
+  "lo": 2.0,
+  "mode": 3.0,
+  "hi": 4.0,
+  "source": "HE19 [DERIVED]",
+  "conf": "M/L",
+  "section": "4.2"
+ },
+ "R_skin": {
+  "value": 5.5,
+  "unit": "K/W",
+  "dist": "T",
+  "lo": 4.0,
+  "mode": 5.5,
+  "hi": 9.0,
+  "source": "PU23, KANG19",
+  "conf": "M",
+  "section": "4.2"
+ },
+ "T_lim_C": {
+  "value": 45.0,
+  "unit": "degC",
+  "dist": "U",
+  "lo": 41.0,
+  "mode": 45.0,
+  "hi": 48.0,
+  "source": "CHI15, KANG19, UL-TS",
+  "conf": "H",
+  "section": "4.2"
+ },
+ "dT_thr": {
+  "value": 2.0,
+  "unit": "K",
+  "dist": "fixed",
+  "lo": 2.0,
+  "mode": 2.0,
+  "hi": 2.0,
+  "source": "[ASSUMPTION]",
+  "conf": "L",
+  "section": "4.2"
+ },
+ "w_thr": {
+  "value": 1.0,
+  "unit": "K",
+  "dist": "U",
+  "lo": 0.5,
+  "mode": 1.0,
+  "hi": 3.0,
+  "source": "AOSP-TH [ASSUMPTION]",
+  "conf": "L",
+  "section": "4.2"
+ },
+ "P_fl": {
+  "value": 0.5,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.3,
+  "mode": 0.5,
+  "hi": 1.0,
+  "source": "[ASSUMPTION]",
+  "conf": "L",
+  "section": "4.2"
+ },
+ "k_env": {
+  "value": 1.0,
+  "unit": "-",
+  "dist": "U",
+  "lo": 0.8,
+  "mode": 1.0,
+  "hi": 1.5,
+  "source": "KANG19 [ASSUMPTION]",
+  "conf": "L",
+  "section": "4.2"
+ },
+ "dT_ch": {
+  "value": 8.0,
+  "unit": "K",
+  "dist": "U",
+  "lo": 5.0,
+  "mode": 8.0,
+  "hi": 12.0,
+  "source": "KANG19 [ASSUMPTION]",
+  "conf": "L",
+  "section": "4.2"
+ },
+ "eta_charger": {
+  "value": 0.9,
+  "unit": "-",
+  "dist": "U",
+  "lo": 0.85,
+  "mode": 0.9,
+  "hi": 0.95,
+  "source": "[ASSUMPTION]",
+  "conf": "L",
+  "section": "4.2"
+ },
+ "P_susp": {
+  "value": 0.02,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.01,
+  "mode": 0.02,
+  "hi": 0.03,
+  "source": "CH13, CH15, HU12",
+  "conf": "H/M",
+  "section": "4.3"
+ },
+ "P_awake": {
+  "value": 0.09,
+  "unit": "W",
+  "dist": "LU",
+  "lo": 0.05,
+  "mode": 0.09,
+  "hi": 0.25,
+  "source": "[CAL] BONN26 (V1.1); prior CH10, AOSP",
+  "conf": "M/L",
+  "section": "4.3"
+ },
+ "E_wake": {
+  "value": 0.1,
+  "unit": "J",
+  "dist": "LU",
+  "lo": 0.05,
+  "mode": 0.1,
+  "hi": 0.3,
+  "source": "[DERIVED]",
+  "conf": "L",
+  "section": "4.3"
+ },
+ "P_d0": {
+  "value": 0.12,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.08,
+  "mode": 0.12,
+  "hi": 0.25,
+  "source": "CH13, GU24",
+  "conf": "M",
+  "section": "4.3"
+ },
+ "p_c": {
+  "value": 0.002566735112936345,
+  "unit": "W/cm2",
+  "dist": "U",
+  "lo": 0.00123,
+  "mode": 0.002566735112936345,
+  "hi": 0.00513,
+  "source": "GU24, CH13",
+  "conf": "M",
+  "section": "4.3"
+ },
+ "A_disp": {
+  "value": 97.4,
+  "unit": "cm2",
+  "dist": "fixed",
+  "lo": 97.4,
+  "mode": 97.4,
+  "hi": 97.4,
+  "source": "definition: 2.455 d^2, d = 6.3 in, 19.5:9",
+  "conf": "-",
+  "section": "4.3"
+ },
+ "APL_ref": {
+  "value": 0.7,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 0.7,
+  "mode": 0.7,
+  "hi": 0.7,
+  "source": "DZ11",
+  "conf": "H",
+  "section": "4.3"
+ },
+ "gamma_b": {
+  "value": 2.0,
+  "unit": "-",
+  "dist": "U",
+  "lo": 1.0,
+  "mode": 2.0,
+  "hi": 2.9,
+  "source": "CH13, DH21",
+  "conf": "M/L",
+  "section": "4.3"
+ },
+ "k_RR": {
+  "value": 0.0028,
+  "unit": "W/Hz",
+  "dist": "U",
+  "lo": 0.001,
+  "mode": 0.0028,
+  "hi": 0.0033,
+  "source": "AT20",
+  "conf": "M/L",
+  "section": "4.3"
+ },
+ "P_SoC_max": {
+  "value": 5.0,
+  "unit": "W",
+  "dist": "U",
+  "lo": 3.0,
+  "mode": 5.0,
+  "hi": 7.0,
+  "source": "CH13",
+  "conf": "M",
+  "section": "4.3"
+ },
+ "v0": {
+  "value": 0.446,
+  "unit": "-",
+  "dist": "U",
+  "lo": 0.35,
+  "mode": 0.446,
+  "hi": 0.55,
+  "source": "LX [DERIVED]",
+  "conf": "M",
+  "section": "4.3"
+ },
+ "P_G": {
+  "value": 0.27,
+  "unit": "W",
+  "dist": "T",
+  "lo": 0.14,
+  "mode": 0.27,
+  "hi": 0.45,
+  "source": "KW19, CH13, CH10",
+  "conf": "H",
+  "section": "4.3"
+ },
+ "P_cam": {
+  "value": 1.15,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.9,
+  "mode": 1.15,
+  "hi": 2.0,
+  "source": "CX13 [DERIVED], CH13",
+  "conf": "M",
+  "section": "4.3"
+ },
+ "P_camf": {
+  "value": 0.3,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.2,
+  "mode": 0.3,
+  "hi": 0.5,
+  "source": "GU24",
+  "conf": "M",
+  "section": "4.3"
+ },
+ "P_aud": {
+  "value": 0.05,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.02,
+  "mode": 0.05,
+  "hi": 0.15,
+  "source": "CH13, HE20",
+  "conf": "M",
+  "section": "4.3"
+ },
+ "P_BT": {
+  "value": 0.04,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.03,
+  "mode": 0.04,
+  "hi": 0.05,
+  "source": "CH10",
+  "conf": "H",
+  "section": "4.3"
+ },
+ "m_b": {
+  "value": 1.0,
+  "unit": "-",
+  "dist": "U",
+  "lo": 0.5,
+  "mode": 1.0,
+  "hi": 2.0,
+  "source": "HU12, NA21, LEE20, CH13 (\u00a73.7) [ASSUMPTION]",
+  "conf": "L",
+  "section": "4.3"
+ },
+ "wifi_P_idle": {
+  "value": 0.004,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.002,
+  "mode": 0.004,
+  "hi": 0.01,
+  "source": "HU12, CH15",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "wifi_P_tail": {
+  "value": 0.12,
+  "unit": "W",
+  "dist": "fixed",
+  "lo": 0.12,
+  "mode": 0.12,
+  "hi": 0.12,
+  "source": "HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "wifi_T_tail": {
+  "value": 0.24,
+  "unit": "s",
+  "dist": "fixed",
+  "lo": 0.24,
+  "mode": 0.24,
+  "hi": 0.24,
+  "source": "HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "wifi_P_act": {
+  "value": 0.13,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.1,
+  "mode": 0.13,
+  "hi": 0.3,
+  "source": "HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "wifi_T_act": {
+  "value": 0.24,
+  "unit": "s",
+  "dist": "fixed",
+  "lo": 0.24,
+  "mode": 0.24,
+  "hi": 0.24,
+  "source": "HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "wifi_E_pro": {
+  "value": 0.0098,
+  "unit": "J",
+  "dist": "fixed",
+  "lo": 0.0098,
+  "mode": 0.0098,
+  "hi": 0.0098,
+  "source": "HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "wifi_e_b": {
+  "value": 0.015,
+  "unit": "W/(Mbit/s)",
+  "dist": "LU",
+  "lo": 0.005,
+  "mode": 0.015,
+  "hi": 0.06,
+  "source": "SU14, NA21, HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "wifi_P_rt": {
+  "value": 0.3,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.13,
+  "mode": 0.3,
+  "hi": 0.8,
+  "source": "SU14",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "lte_P_idle": {
+  "value": 0.015,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.005,
+  "mode": 0.015,
+  "hi": 0.035,
+  "source": "HU12 [DERIVED], CH15",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "lte_P_tail": {
+  "value": 0.12,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.066,
+  "mode": 0.12,
+  "hi": 0.178,
+  "source": "NA21",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "lte_T_tail": {
+  "value": 10.0,
+  "unit": "s",
+  "dist": "U",
+  "lo": 5.0,
+  "mode": 10.0,
+  "hi": 11.6,
+  "source": "NA21",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "lte_P_act": {
+  "value": 0.6,
+  "unit": "W",
+  "dist": "LU",
+  "lo": 0.3,
+  "mode": 0.6,
+  "hi": 1.3,
+  "source": "GU24, HU12 [DERIVED]",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "lte_T_act": {
+  "value": 0.1,
+  "unit": "s",
+  "dist": "U",
+  "lo": 0.08,
+  "mode": 0.1,
+  "hi": 0.2,
+  "source": "XU20",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "lte_E_pro": {
+  "value": 0.31,
+  "unit": "J",
+  "dist": "U",
+  "lo": 0.1,
+  "mode": 0.31,
+  "hi": 0.5,
+  "source": "HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "lte_e_b": {
+  "value": 0.03,
+  "unit": "W/(Mbit/s)",
+  "dist": "LU",
+  "lo": 0.014,
+  "mode": 0.03,
+  "hi": 0.08,
+  "source": "SU14, NA21, HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "lte_P_rt": {
+  "value": 1.2,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.6,
+  "mode": 1.2,
+  "hi": 2.6,
+  "source": "HU12, GU24",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "nr_P_idle": {
+  "value": 0.03,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.015,
+  "mode": 0.03,
+  "hi": 0.06,
+  "source": "GU24",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "nr_P_tail": {
+  "value": 0.255,
+  "unit": "W",
+  "dist": "U",
+  "lo": 0.249,
+  "mode": 0.255,
+  "hi": 0.593,
+  "source": "NA21",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "nr_T_tail": {
+  "value": 10.3,
+  "unit": "s",
+  "dist": "U",
+  "lo": 10.2,
+  "mode": 10.3,
+  "hi": 21.4,
+  "source": "NA21, XU20",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "nr_P_act": {
+  "value": 0.9,
+  "unit": "W",
+  "dist": "LU",
+  "lo": 0.5,
+  "mode": 0.9,
+  "hi": 1.8,
+  "source": "NA21, GU24, XU20",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "nr_T_act": {
+  "value": 0.1,
+  "unit": "s",
+  "dist": "U",
+  "lo": 0.08,
+  "mode": 0.1,
+  "hi": 0.2,
+  "source": "XU20",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "nr_E_pro": {
+  "value": 1.0,
+  "unit": "J",
+  "dist": "U",
+  "lo": 0.5,
+  "mode": 1.0,
+  "hi": 2.0,
+  "source": "NA21 [DERIVED]",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "nr_e_b": {
+  "value": 0.03,
+  "unit": "W/(Mbit/s)",
+  "dist": "LU",
+  "lo": 0.014,
+  "mode": 0.03,
+  "hi": 0.08,
+  "source": "SU14, NA21, HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "nr_P_rt": {
+  "value": 1.4,
+  "unit": "W",
+  "dist": "U",
+  "lo": 1.2,
+  "mode": 1.4,
+  "hi": 3.0,
+  "source": "XU20, GU24",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "k_ul": {
+  "value": 5.0,
+  "unit": "-",
+  "dist": "U",
+  "lo": 2.0,
+  "mode": 5.0,
+  "hi": 8.4,
+  "source": "NA21, HU12",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "gamma_sig": {
+  "value": 0.26,
+  "unit": "-",
+  "dist": "LU",
+  "lo": 0.1,
+  "mode": 0.26,
+  "hi": 1.0,
+  "source": "DI13 [DERIVED]",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "RSRP_ref": {
+  "value": -85.0,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": -85.0,
+  "mode": -85.0,
+  "hi": -85.0,
+  "source": "definition",
+  "conf": "-",
+  "section": "4.4"
+ },
+ "m_max": {
+  "value": 3.5,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 3.5,
+  "mode": 3.5,
+  "hi": 3.5,
+  "source": "DI13 (Tx/Rx current ratios)",
+  "conf": "M",
+  "section": "4.4"
+ },
+ "k_c": {
+  "value": 0.0014132445909935771,
+  "unit": "d^-1/2",
+  "dist": "U",
+  "lo": 0.00105,
+  "mode": 0.0014132445909935771,
+  "hi": 0.00209,
+  "source": "SCH14, KEIL16",
+  "conf": "M",
+  "section": "4.5"
+ },
+ "E_cal": {
+  "value": 58000.0,
+  "unit": "J/mol",
+  "dist": "U",
+  "lo": 20000.0,
+  "mode": 58000.0,
+  "hi": 60000.0,
+  "source": "SCH14 via CA21, SCM18",
+  "conf": "M",
+  "section": "4.5"
+ },
+ "g_hi": {
+  "value": 1.75,
+  "unit": "-",
+  "dist": "U",
+  "lo": 1.3,
+  "mode": 1.75,
+  "hi": 1.9,
+  "source": "KEIL16",
+  "conf": "M",
+  "section": "4.5"
+ },
+ "k_HV": {
+  "value": 1.0,
+  "unit": "-",
+  "dist": "U",
+  "lo": 0.0,
+  "mode": 1.0,
+  "hi": 1.5,
+  "source": "SCH14, NEL18",
+  "conf": "L",
+  "section": "4.5"
+ },
+ "k_H": {
+  "value": 0.002697,
+  "unit": "FCE^-1/2",
+  "dist": "fixed",
+  "lo": 0.002697,
+  "mode": 0.002697,
+  "hi": 0.002697,
+  "source": "calibrated (\u00a711.1): AP-BATT, GOOG",
+  "conf": "M/L",
+  "section": "4.5",
+  "spec_range": "follows the calibration (\u00a711.1)"
+ },
+ "k_L": {
+  "value": 0.001288,
+  "unit": "FCE^-1/2",
+  "dist": "fixed",
+  "lo": 0.001288,
+  "mode": 0.001288,
+  "hi": 0.001288,
+  "source": "calibrated (\u00a711.1): AP-BATT, GOOG",
+  "conf": "M/L",
+  "section": "4.5",
+  "spec_range": "follows the calibration (\u00a711.1)"
+ },
+ "w_L": {
+  "value": 0.3,
+  "unit": "-",
+  "dist": "U",
+  "lo": 0.1,
+  "mode": 0.3,
+  "hi": 0.5,
+  "source": "WAL14, WU17 [ASSUMPTION]",
+  "conf": "L",
+  "section": "4.5"
+ },
+ "E_H": {
+  "value": 33000.0,
+  "unit": "J/mol",
+  "dist": "U",
+  "lo": 25000.0,
+  "mode": 33000.0,
+  "hi": 45000.0,
+  "source": "SCM18",
+  "conf": "M",
+  "section": "4.5"
+ },
+ "E_L": {
+  "value": 55500.0,
+  "unit": "J/mol",
+  "dist": "U",
+  "lo": 40000.0,
+  "mode": 55500.0,
+  "hi": 70000.0,
+  "source": "SCM18",
+  "conf": "M",
+  "section": "4.5"
+ },
+ "beta_L": {
+  "value": 2.64,
+  "unit": "h",
+  "dist": "U",
+  "lo": 0.5,
+  "mode": 2.64,
+  "hi": 2.64,
+  "source": "SCM18",
+  "conf": "M/L",
+  "section": "4.5"
+ },
+ "c_ref": {
+  "value": 1.0,
+  "unit": "1/h",
+  "dist": "fixed",
+  "lo": 1.0,
+  "mode": 1.0,
+  "hi": 1.0,
+  "source": "SCM18 (definition)",
+  "conf": "-",
+  "section": "4.5"
+ },
+ "gamma_R": {
+  "value": 2.5,
+  "unit": "-",
+  "dist": "LU",
+  "lo": 1.5,
+  "mode": 2.5,
+  "hi": 7.0,
+  "source": "SCH14, KEIL16",
+  "conf": "L",
+  "section": "4.5"
+ },
+ "N_80": {
+  "value": 1000.0,
+  "unit": "FCE",
+  "dist": "fixed",
+  "lo": 1000.0,
+  "mode": 1000.0,
+  "hi": 1000.0,
+  "source": "AP-BATT, GOOG",
+  "conf": "H",
+  "section": "4.5",
+  "spec_range": "{500, 800, 1000} (scenario choice)"
+ },
+ "self_discharge_per_month": {
+  "value": 0.001,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 0.001,
+  "mode": 0.001,
+  "hi": 0.001,
+  "source": "ZIL19",
+  "conf": "M/L",
+  "section": "4.5",
+  "spec_range": "0.05-2 %/month (storage only)"
+ },
+ "q_loss": {
+  "value": 0.0,
+  "unit": "-",
+  "dist": "fixed",
+  "lo": 0.0,
+  "mode": 0.0,
+  "hi": 0.0,
+  "source": "state input",
+  "conf": "-",
+  "section": "2.10",
+  "spec_range": "state of health input (0 = new)"
+ },
+ "_checks": {
+  "n_compared": 84,
+  "mismatches": [],
+  "fields_without_source": [],
+  "uq_entries_not_in_transcription": []
+ },
+ "_derived": {
+  "z_e": 0.026301632012810154,
+  "U1_V": 4.44963,
+  "mean_ocv_V": 3.8699462011549883,
+  "E_n_Wh": 18.188747145428447,
+  "E_u_Wh": 17.788441159639707,
+  "V_sys_V": 3.3,
+  "A_disp_cm2": 97.4,
+  "p_c_A_W": 0.25,
+  "R_vs_T": {
+   "40": {
+    "R0_mOhm": 42.373153125356836,
+    "R1_mOhm": 5.600574175202295,
+    "tau1_s": 19.99327972235049
+   },
+   "25": {
+    "R0_mOhm": 60.0,
+    "R1_mOhm": 10.0,
+    "tau1_s": 30.0
+   },
+   "10": {
+    "R0_mOhm": 88.14886246647723,
+    "R1_mOhm": 18.986391702251527,
+    "tau1_s": 46.99276078594793
+   },
+   "0": {
+    "R0_mOhm": 116.62386831025451,
+    "R1_mOhm": 30.273338723517163,
+    "tau1_s": 65.14235858327638
+   },
+   "-10": {
+    "R0_mOhm": 157.615101292864,
+    "R1_mOhm": 50.01239183006509,
+    "tau1_s": 92.57113578655918
+   },
+   "-20": {
+    "R0_mOhm": 218.14377423716766,
+    "R1_mOhm": 85.9645288880719,
+    "tau1_s": 135.25233014849567
+   }
+  },
+  "proto": {
+   "z_e": 0.0263,
+   "U1_V": 4.4496,
+   "mean_ocv_V": 3.8699,
+   "E_n_Wh": 18.189,
+   "E_u_Wh": 17.788
+  }
+ },
+ "_usage_factors": {
+  "lam_on_mul": {
+   "dist": "LU",
+   "lo": 0.7,
+   "mode": 1.0,
+   "hi": 1.3
+  },
+  "d_mul_social": {
+   "dist": "LU",
+   "lo": 0.7,
+   "mode": 1.0,
+   "hi": 1.3
+  },
+  "d_mul_video": {
+   "dist": "LU",
+   "lo": 0.7,
+   "mode": 1.0,
+   "hi": 1.3
+  },
+  "d_mul_game": {
+   "dist": "LU",
+   "lo": 0.7,
+   "mode": 1.0,
+   "hi": 1.3
+  },
+  "d_mul_nav": {
+   "dist": "LU",
+   "lo": 0.7,
+   "mode": 1.0,
+   "hi": 1.3
+  },
+  "d_mul_vcall": {
+   "dist": "LU",
+   "lo": 0.7,
+   "mode": 1.0,
+   "hi": 1.3
+  },
+  "d_mul_camera": {
+   "dist": "LU",
+   "lo": 0.7,
+   "mode": 1.0,
+   "hi": 1.3
+  },
+  "d_mul_audio": {
+   "dist": "LU",
+   "lo": 0.7,
+   "mode": 1.0,
+   "hi": 1.3
+  },
+  "conn_mul_wifi": {
+   "dist": "LU",
+   "lo": 0.5,
+   "mode": 1.0,
+   "hi": 2.0
+  },
+  "conn_mul_cell": {
+   "dist": "LU",
+   "lo": 0.5,
+   "mode": 1.0,
+   "hi": 2.0
+  },
+  "p_typical": {
+   "dist": "Dirichlet",
+   "concentration": 50.0,
+   "base": [
+    0.55,
+    0.12,
+    0.05,
+    0.04,
+    0.04,
+    0.08,
+    0.12
+   ]
+  },
+  "p_heavy": {
+   "dist": "Dirichlet",
+   "concentration": 50.0,
+   "base": [
+    0.45,
+    0.2,
+    0.15,
+    0.05,
+    0.05,
+    0.05,
+    0.05
+   ]
+  }
+ }
+}

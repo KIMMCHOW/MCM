@@ -15,6 +15,7 @@ switch resolved in the order charge, cutoff, brownout, thermal; otherwise the ar
 from __future__ import annotations
 
 import math
+import warnings
 from dataclasses import dataclass, fields, replace
 from typing import NamedTuple
 
@@ -74,7 +75,7 @@ def rhs_from_state(x, st: dict, inp: Inputs, p: Params):
     """Right-hand side of §2.13 given the algebraic state ``st`` (E3, E4, E7)."""
     z, v1, T = x[0], x[1], x[2]
     I, R0_, R1_ = st["I"], st["R0"], st["R1"]
-    q = I * st["V"] + I * I * R0_ + v1 * v1 / R1_ - I * T * p.k_S * st["dUdT"]
+    q = (I * st["V"] if p.load_heat else 0.0) + I * I * R0_ + v1 * v1 / R1_ - I * T * p.k_S * st["dUdT"]
     dz = -I / (3600.0 * p.Q_max)
     dv1 = (R1_ * I - v1) / st["tau1"]
     dT = (q - (T - inp.Tamb) / (p.k_env * p.R_th)) / p.C_th
@@ -187,6 +188,7 @@ class Segment:
         self._st = None
         self._Q = float(p.Q_max)
         self._kS, self._Rth_env, self._Cth = float(p.k_S), float(p.k_env) * float(p.R_th), float(p.C_th)
+        self._load_heat = bool(p.load_heat)
 
     def state(self, x) -> dict:
         key = (float(x[0]), float(x[1]), float(x[2]))
@@ -202,7 +204,8 @@ class Segment:
         st = self.state(x)
         z, v1, T = float(x[0]), float(x[1]), float(x[2])
         I = st["I"]
-        q = I * st["V"] + I * I * st["R0"] + v1 * v1 / st["R1"] - I * T * self._kS * st["dUdT"]
+        q = (I * st["V"] if self._load_heat else 0.0) + I * I * st["R0"] + v1 * v1 / st["R1"] \
+            - I * T * self._kS * st["dUdT"]
         return [-I / (3600.0 * self._Q), (st["R1"] * I - v1) / st["tau1"],
                 (q - (T - self.Tamb) / self._Rth_env) / self._Cth]
 
@@ -398,7 +401,15 @@ def _bcast(v, n: int) -> np.ndarray:
 
 class _Driver:
     """Holds the per-step inputs for rk4_batch.  The event call at the end of each step advances the step
-    index, so all four RK4 stages of a step use the input at the step start (§6.3)."""
+    index, so all four RK4 stages of a step use the input at the step start (§6.3).
+
+    At a step whose end is an input switch the event function is evaluated twice (§6.1): first with the input
+    the step was integrated with (a smooth crossing inside the step, e.g. the cut-off at the very end of a burst
+    followed by a lighter segment), then with the new input (an event at the switching instant, whose time is
+    then the switch time itself: the returned g is 0, so rk4_batch's interpolation gives frac = 1).
+    [REVIEW 2026-11-17] Before this, only the new input was tested, so a crossing in the last step of a heavy
+    segment was missed whenever the next segment was lighter (S9: +1–2.4 % TTE on ≈ 10 % of parameter samples).
+    """
 
     def __init__(self, tables, step_index, h: float, p: Params):
         self.tables = tables  # dict of (m, n) arrays: Pns, dem, dPb, Tamb
@@ -407,6 +418,7 @@ class _Driver:
         self.p = p
         self.t0 = 0.0
         self.k = None
+        self.idx = None
         self.cols = None
         self.inp = None
         self._ev_x = None
@@ -416,7 +428,10 @@ class _Driver:
         self.cols = cols
         self.p = p_sub
         self.k = None
+        self.idx = None
+        self.inp = None
         self._ev_x = None
+        self._p_vec = p_sub.n_samples() > 1  # array-valued parameters must be subset with the columns
         m = len(cols)
         self.alive = np.ones(m, dtype=bool)  # mirrors rk4_batch's crossing rule to record detection states
         self.det = np.full((8, m), np.nan)  # 5 event components + P, V, T_s at the detection step
@@ -434,6 +449,7 @@ class _Driver:
         idx = self.step_index(k)
         if np.ndim(idx) > 0:
             idx = idx[self.cols]
+        self.idx = idx
         self.inp = self.inputs_for(idx, self.cols)
 
     def f(self, t, x):
@@ -445,16 +461,39 @@ class _Driver:
         return rhs_batch(x, self.inp, self.p)
 
     def event(self, t, x):
+        k_old, idx_old, inp_old = self.k, self.idx, self.inp
         self.set_step(int(round((self.t0 + t) / self.h)))
         st = fast_state(x, self.inp, self.p)
         self._ev_x, self._ev_st = x, st
         comps = event_components(x, self.inp, self.p, st)
         g = np.where(comps[4] > 0, np.min(comps, axis=0), np.nan)
+        m = g.shape[0]
+        extra = [np.broadcast_to(st[key], (m,)).copy() for key in ("P", "V", "Ts")]
+        if k_old is not None and self.k != k_old:
+            changed = np.broadcast_to(np.asarray(self.idx) != np.asarray(idx_old), (m,))
+            if changed.any():
+                cols = np.nonzero(changed)[0]
+                full = cols.size == m
+                xs = x if full else x[:, cols]
+                inp_s = inp_old if full else Inputs(*(np.broadcast_to(a, (m,))[cols] for a in inp_old))
+                ps = self.p if (full or not self._p_vec) else _take(self.p, cols, m)
+                st_o = fast_state(xs, inp_s, ps)
+                c_o = event_components(xs, inp_s, ps, st_o)
+                g_o = np.where(c_o[4] > 0, np.min(c_o, axis=0), np.nan)
+                smooth = ~(g_o > 0)  # crossed during the step, under the input it was integrated with
+                at_switch = ~smooth & ~(g[cols] > 0)  # violated only by the new input: TTE = switch time
+                g[cols[at_switch]] = 0.0
+                cs = cols[smooth]
+                if cs.size:
+                    g[cs] = g_o[smooth]
+                    comps[:, cs] = c_o[:, smooth]
+                    for e, key in zip(extra, ("P", "V", "Ts")):
+                        e[cs] = np.broadcast_to(st_o[key], (cols.size,))[smooth]
         new = self.alive & ~(g > 0)  # same test as rk4_batch (g <= 0 or non-finite)
         if new.any():
             self.det[:5, new] = comps[:, new]
-            for i, key in enumerate(("P", "V", "Ts"), 5):
-                self.det[i, new] = np.broadcast_to(st[key], new.shape)[new]
+            for i, e in enumerate(extra, 5):
+                self.det[i, new] = e[new]
             self.alive &= ~new
         return g
 
@@ -492,6 +531,13 @@ def run_batch(schedules_or_ctmc, Tamb_C, theta: dict | None = None, s0=1.0, h: f
     ``paths``.
     """
     pb = with_theta(p, theta)
+    # RK4 is stable on the RC mode only for h < 2.785*tau1.  tau1 shrinks when hot (Arrhenius) and UQ samples
+    # tau1_ref down to 10 s, so check the smallest tau1 at a conservative hot-cell temperature.
+    T_hot = float(np.max(Tamb_C)) + 25.0 + 273.15
+    tau_min = float(np.min(cell.tau1(T_hot, pb)))
+    if h > 2.5 * tau_min:
+        warnings.warn(f"run_batch: h = {h} s exceeds 2.5*tau1_min = {2.5 * tau_min:.1f} s at "
+                      f"{T_hot - 273.15:.0f} C; RK4 may be inaccurate or unstable for some samples")
     sizes = [pb.n_samples(), np.size(Tamb_C), np.size(s0), np.size(T0_C) if T0_C is not None else 1,
              n or 1, paths.n if paths is not None else 1]
     N = max(sizes)
@@ -514,7 +560,6 @@ def run_batch(schedules_or_ctmc, Tamb_C, theta: dict | None = None, s0=1.0, h: f
         sch = _as_schedule(schedules_or_ctmc)
         rem = np.mod(sch.durations / h, 1.0)
         if np.any(np.minimum(rem, 1 - rem) > 1e-9):
-            import warnings
             warnings.warn("segment durations are not multiples of h; switches are rounded to the step grid")
         us = [u for _, u in sch]
         tables = _input_tables(us, pb, Tamb_C, N)
