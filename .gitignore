@@ -11,3 +11,5 @@ paper/*.fls
 paper/*.fdb_latexmk
 paper/*.synctex.gz
 data/raw/
+paper/main.pdf.tmp
+paper/figures/png/
