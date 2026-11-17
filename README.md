@@ -41,20 +41,40 @@ docs/design/       模型设计方案与最终规格
 ## 运行方式
 
 ```bash
-pip install -r requirements.txt
-# 运行全部分析（生成 results/*.json 与 paper/figures/*.pdf）
-PYTHONPATH=src python3 analysis/run_all.py
-# 运行测试（快速集 < 1 分钟；完整集含收敛与蒙特卡洛检验，约数分钟）
+pip install -r requirements.txt pytest
+# 单元与回归测试（快速部分约 1 分钟；加 -m slow 运行慢速测试）
 python3 -m pytest -q -m "not slow"
-python3 -m pytest -q -m slow
+# 运行全部分析（生成 results/*.json、paper/figures/*.pdf、paper/tables/*.tex；全量约 2 小时）
+PYTHONPATH=src:analysis python3 analysis/run_all.py
+# 只跑某几项，例如功耗分解与电芯图
+PYTHONPATH=src:analysis python3 analysis/run_all.py --only run_power,run_cell_maps
 # 编译论文
 cd paper && latexmk -pdf main.tex
 ```
+
+各分析脚本与输出的对应关系见 `analysis/README.md`；每组分析的要点摘要见 `results/*_summary.md`。
+
+## 主要结论（参考机 RP-63：6.3 英寸 OLED，4.70 Ah / 4.45 V 电芯，25 °C）
+
+| 场景 | 平均功耗 | 续航（名义值） |
+|---|---|---|
+| 待机（家中 Wi-Fi） | 0.040 W | 443 h |
+| 刷社交媒体（Wi-Fi） | 1.06 W | 16.6 h |
+| 看视频：Wi-Fi / LTE / 5G | 0.55 / 0.69 / 0.84 W | 32.3 / 25.5 / 21.1 h |
+| 导航 | 1.49 W | 11.8 h |
+| 3D 游戏（15 / 25 / 35 °C） | 降频后约 3.9 / 2.9 / 1.7 W | 4.4 / 5.7 / 10.3 h |
+| 典型一天（随机使用，CTMC） | 0.44 W | 均值约 40 h，标准差约 7 h |
+
+- **25 °C 下续航是“能量问题”**：内阻几乎不影响续航（弹性 −0.007），屏幕、SoC、射频决定一切。
+- **低温 + 老化是“电压问题”**：−20 °C、SOH 0.8 时，拍照的瞬时大功率会让手机在显示 44 % 电量时关机；刷社交媒体时则在 23 % 关机。按模型推导的“峰值功率调速器”能把后者降到 2.4 %，续航多 25 %。拍照这种长脉冲只能靠“低温感知电量显示”提前预警，或者给手机保暖。
+- **游戏是“散热问题”**：温控降频决定续航，环境越热续航反而越长，但性能只剩约一半。
+- **影响意外小的因素**：后台同步减半只多 0.1–0.4 %；静止时的 GPS、蓝牙耳机、传感器功耗都很小。
+- **最有效的用户行为**：少玩 3D 游戏（+37 %）、刷新率限 60 Hz（+4.7 %）、深色模式（+4.6 %）、视频通话改语音、优先 Wi-Fi、避免弱信号和 5G 待机。
 
 ## 进度
 
 - [x] 项目骨架、论文模板、批量 RK4 积分器
 - [x] 参数调研与最终模型规格（docs/design/FINAL_SPEC.md）
 - [x] 核心模型实现与测试（`src/phonebatt`，`tests/`：数值验收 T1–T5 与规格 §15.3 回归表）
-- [ ] 续航预测、验证、不确定性与敏感性分析
-- [ ] 论文撰写与审稿修订
+- [x] 续航预测、验证、不确定性、敏感性、老化与建议（17 项分析）
+- [ ] 论文撰写与审稿修订（进行中）
