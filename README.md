@@ -30,6 +30,7 @@
 
 ```
 src/phonebatt/     模型代码（参数、功耗子模型、电-热-老化常微分方程、续航事件检测、批量积分器）
+tests/             数值验收测试与回归测试（pytest）
 analysis/          各项分析脚本（续航场景、验证、不确定性、敏感性、老化、建议）
 results/           分析结果（JSON）
 paper/             LaTeX 论文源码与图表（paper/figures/）
@@ -43,6 +44,9 @@ docs/design/       模型设计方案与最终规格
 pip install -r requirements.txt
 # 运行全部分析（生成 results/*.json 与 paper/figures/*.pdf）
 PYTHONPATH=src python3 analysis/run_all.py
+# 运行测试（快速集 < 1 分钟；完整集含收敛与蒙特卡洛检验，约数分钟）
+python3 -m pytest -q -m "not slow"
+python3 -m pytest -q -m slow
 # 编译论文
 cd paper && latexmk -pdf main.tex
 ```
@@ -51,6 +55,6 @@ cd paper && latexmk -pdf main.tex
 
 - [x] 项目骨架、论文模板、批量 RK4 积分器
 - [x] 参数调研与最终模型规格（docs/design/FINAL_SPEC.md）
-- [ ] 核心模型实现与测试
+- [x] 核心模型实现与测试（`src/phonebatt`，`tests/`：数值验收 T1–T5 与规格 §15.3 回归表）
 - [ ] 续航预测、验证、不确定性与敏感性分析
 - [ ] 论文撰写与审稿修订
