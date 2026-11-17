@@ -1,0 +1,24 @@
+% AI Use Report (does not count toward the 25-page limit)
+\clearpage
+\section*{Report on Use of AI}
+\addcontentsline{toc}{section}{Report on Use of AI}
+
+Following the COMAP AI use policy, we disclose the generative-AI assistance used in preparing this solution.
+All AI output was reviewed, tested, and edited by the team; responsibility for every equation, number, and
+claim in this report rests with the team.
+
+\begin{enumerate}[leftmargin=1.5em,label=\arabic*.]
+  \item \textbf{Anthropic Claude (Claude Code agentic coding assistant), November 2026.}\\
+  \emph{Purpose:} literature search assistance (locating published smartphone power measurements, Li-ion
+  equivalent-circuit and aging parameters, and open-licensed datasets); drafting and reviewing the model
+  specification; writing and debugging the Python simulation code (ODE integration, sensitivity and Monte Carlo
+  analyses, figures); drafting and proof-reading \LaTeX{} text.\\
+  \emph{Query (summary):} ``Help us solve 2026 MCM Problem A: develop a continuous-time model of smartphone
+  battery state of charge, predict time-to-empty, perform sensitivity analysis and give recommendations.''\\
+  \emph{Output (summary):} research notes with source lists; candidate model formulations; Python modules
+  implementing the coupled electro-thermal equivalent-circuit model; analysis scripts; draft paper sections.\\
+  \emph{How we verified it:} every cited value was traced to its original publication or specification page
+  listed in the References; numerical code was checked with unit tests (energy balance, analytic limits,
+  convergence under step refinement), and all figures and tables were regenerated from the released code.
+  Citations proposed by the assistant that could not be verified were discarded.
+\end{enumerate}

@@ -1,0 +1,50 @@
+% ---------------------------------------------------------------
+% Preamble for 2026 MCM Problem A solution
+% ---------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{newtxtext,newtxmath}
+\usepackage[a4paper,margin=0.9in,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,multirow,makecell}
+\usepackage{siunitx}
+\sisetup{detect-all, per-mode=symbol, group-minimum-digits=4}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\usepackage{caption,subcaption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=green!40!black,urlcolor=blue!60!black]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+\usepackage{wrapfig}
+
+\definecolor{mcmblue}{RGB}{0,51,102}
+\newcommand{\teamnumber}{0000000}
+\newcommand{\problemletter}{A}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Team \#\teamnumber}
+\rhead{\small Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Key-finding box
+\newtcolorbox{keybox}[1][]{enhanced,breakable,colback=mcmblue!4,colframe=mcmblue!70,
+  boxrule=0.6pt,arc=2pt,left=4pt,right=4pt,top=3pt,bottom=3pt,fonttitle=\bfseries\small,title={#1}}
+
+% Notation helpers
+\newcommand{\soc}{z}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\TTE}{\mathrm{TTE}}
+\newcommand{\Tamb}{T_{\mathrm{amb}}}
+\newcommand{\Vcut}{V_{\mathrm{cut}}}
+\newcommand{\Pmax}{P_{\max}}
+\newcommand{\Ocv}{U_{\mathrm{oc}}}
